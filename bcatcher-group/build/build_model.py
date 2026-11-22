@@ -963,7 +963,7 @@ an.add_chart(ch, "I5")
 bu = ws_new("Budget Y1-Y2", GOLD)
 title(bu, "OPERATING BUDGETS - YEARS 1 & 2 BY QUARTER AND COST CENTRE", "Approved-budget format: each cost centre's revenue, staff, operating categories, set-up and capex by quarter.")
 bu.column_dimensions["A"].width = 50
-qhdr = [f"Q{i} {2027 + (i-1)//4}" for i in range(1, 9)]
+qhdr = [f"Q{(i-1)%4+1} {2027 + (i-1)//4}" for i in range(1, 9)]
 cols = [L(2 + i) for i in range(8)] + ["J", "K"]
 for i, h in enumerate(qhdr + ["FY2027", "FY2028"]):
     put(bu, f"{cols[i]}4", h, f_hdr, fill=fill_hdr, align=Alignment(horizontal="center"))

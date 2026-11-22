@@ -1,0 +1,60 @@
+Entity,Category,Item,Rate,Driver,Start month,End month,2027,2028,2029,2030,2031
+B-Catcher,Premises & Office,"Serviced office (Sydney CBD, 12-25 desks)",9000,Fixed $/month,1,12,108000,0,0,0,0
+B-Catcher,Premises & Office,"Serviced office (expanded, 25 desks)",15000,Fixed $/month,13,24,0,185400,0,0,0
+B-Catcher,Premises & Office,Office lease incl. outgoings (~300 sqm),20000,Fixed $/month,25,,0,0,254616,262254,270122
+B-Catcher,Premises & Office,"Utilities, cleaning, consumables",120,$/FTE/month,1,,20352,36487,46824,62390,73176
+B-Catcher,Board & Governance,Independent Chair fee,7500,Fixed $/month,1,,90000,92700,95481,98345,101296
+B-Catcher,Board & Governance,Two independent non-executive directors,10000,Fixed $/month,13,,0,123600,127308,131127,135061
+B-Catcher,Board & Governance,Independent investment committee member,2500,Fixed $/month,7,,15000,30900,31827,32782,33765
+B-Catcher,Insurance,Directors & officers insurance,3000,Fixed $/month,1,,36000,37080,38192,39338,40518
+B-Catcher,Insurance,"General liability, office & contents",600,Fixed $/month,1,,7200,7416,7638,7868,8104
+B-Catcher,"Professional Fees (Legal, Audit, Tax)","External audit & tax (group, 3 entities)",7000,Fixed $/month,1,,84000,86520,89116,91789,94543
+B-Catcher,"Professional Fees (Legal, Audit, Tax)",Ongoing corporate & investment legal,8000,Fixed $/month,7,,48000,98880,101846,104902,108049
+B-Catcher,"Professional Fees (Legal, Audit, Tax)",Bookkeeping & payroll bureau (pre controller),3500,Fixed $/month,1,9,31500,0,0,0,0
+B-Catcher,"Licensing, Regulatory & Compliance","ASIC annual review fees, registers, company secretarial",600,Fixed $/month,1,,7200,7416,7638,7868,8104
+B-Catcher,"Technology, Hosting & Software","Business software (M365, Xero, HRIS, payroll)",180,$/FTE/month,1,,30528,54730,70236,93586,109764
+B-Catcher,"Technology, Hosting & Software",AI productivity tools (all staff),120,$/FTE/month,1,,20352,36487,46824,62390,73176
+B-Catcher,Investment Origination & Due Diligence,Pipeline due diligence on deals not proceeding,8000,Fixed $/month,7,,48000,98880,101846,104902,108049
+B-Catcher,Investment Origination & Due Diligence,"Property & market data (CoreLogic, research)",3500,Fixed $/month,4,,31500,43260,44558,45895,47271
+B-Catcher,Travel & General,"Travel, accommodation & entertainment",5000,Fixed $/month,1,12,60000,0,0,0,0
+B-Catcher,Travel & General,"Travel, accommodation & entertainment",6000,Fixed $/month,13,,0,74160,76385,78676,81037
+B-Catcher,Travel & General,"Bank fees, subscriptions, memberships, sundry",2000,Fixed $/month,1,,24000,24720,25462,26225,27012
+B-Catcher,Travel & General,Staff training & conferences,100,$/FTE/month,1,,16960,30406,39020,51992,60980
+Honey Pot,"Licensing, Regulatory & Compliance",Principal licensee fee (CAR arrangement),12000,Fixed $/month,4,24,108000,148320,0,0,0
+Honey Pot,"Licensing, Regulatory & Compliance",ASIC industry funding levy (own AFSL),2500,Fixed $/month,25,,0,0,31827,32782,33765
+Honey Pot,"Licensing, Regulatory & Compliance",External compliance consultant & monitoring,6000,Fixed $/month,5,,48000,74160,76385,78676,81037
+Honey Pot,"Licensing, Regulatory & Compliance",AFCA membership & complaint levies,700,Fixed $/month,7,,4200,8652,8912,9179,9454
+Honey Pot,"Licensing, Regulatory & Compliance",Sanctions / PEP screening & AML monitoring tools,1500,Fixed $/month,7,,9000,18540,19096,19669,20259
+Honey Pot,"Licensing, Regulatory & Compliance",Annual independent AML/CTF review,2000,Fixed $/month,13,,0,24720,25462,26225,27012
+Honey Pot,Insurance,Professional indemnity insurance (AFSL),4500,Fixed $/month,7,,27000,55620,57289,59007,60777
+Honey Pot,Insurance,PI uplift with distribution volume,0.02%,% of capital placed,7,,1458,10000,22500,39000,58000
+Honey Pot,Marketing & Investor Acquisition,Brand & content (always-on),10000,Fixed $/month,6,,70000,123600,127308,131127,135061
+Honey Pot,Marketing & Investor Acquisition,Performance marketing - wholesale investors,0.15%,% of capital placed,7,,10938,75000,168750,292500,435000
+Honey Pot,Marketing & Investor Acquisition,Investor events & webinars,6000,Fixed $/month,7,,36000,74160,76385,78676,81037
+Honey Pot,Broker Network & Distribution,"Broker onboarding: due diligence, accreditation, training",1500,$/new broker,1,,19336,52144,73774,89740,102562
+Honey Pot,Broker Network & Distribution,"Broker CRM, LMS & portal seats",60,$/active broker/month,1,,2625,20394,47502,79988,114802
+Honey Pot,Broker Network & Distribution,"Broker roadshows, PD events & annual conference",8000,Fixed $/month,7,,48000,98880,101846,104902,108049
+Honey Pot,Broker Network & Distribution,BDM incentive pool,0.10%,% of capital placed,7,,7292,50000,112500,195000,290000
+Honey Pot,Broker Network & Distribution,Broker file reviews & supervision sampling (external),2500,Fixed $/month,10,,7500,30900,31827,32782,33765
+Honey Pot,"Technology, Hosting & Software",CRM & marketing automation licences,200,$/FTE/month,1,,10000,19158,24825,38683,45245
+Honey Pot,Travel & General,Interstate travel (BDMs & roadshows),6000,Fixed $/month,5,,48000,74160,76385,78676,81037
+Honey Pot,"Professional Fees (Legal, Audit, Tax)",Distribution legal (offer & marketing reviews),5000,Fixed $/month,7,,30000,61800,63654,65564,67531
+BHive,"Technology, Hosting & Software",Cloud hosting - base environments (AWS Sydney),7000,Fixed $/month,3,,70000,86520,89116,91789,94543
+BHive,"Technology, Hosting & Software",Cloud hosting - variable per investor,0.6,$/investor/month,1,,78,1391,5543,13856,27519
+BHive,"Technology, Hosting & Software","Engineering tooling (GitHub, CI, monitoring, logging)",250,$/FTE/month,1,,15950,26110,32464,39994,47947
+BHive,"Technology, Hosting & Software",Build partner support & maintenance retainer,8000,Fixed $/month,9,,32000,98880,101846,104902,108049
+BHive,"Technology, Hosting & Software",Registry / fund-admin platform fees,4000,Fixed $/month,7,,24000,49440,50923,52451,54024
+BHive,"Technology, Hosting & Software",AI support agent & AI ops tooling,3000,Fixed $/month,7,,18000,37080,38192,39338,40518
+BHive,"Technology, Hosting & Software",Security operations (MDR/SIEM service),6000,Fixed $/month,7,,36000,74160,76385,78676,81037
+BHive,"Technology, Hosting & Software",Annual penetration testing,4000,Fixed $/month,13,,0,49440,50923,52451,54024
+BHive,"Technology, Hosting & Software",SOC 2 Type II annual audit,5000,Fixed $/month,19,,0,30900,63654,65564,67531
+BHive,Investor Servicing & Onboarding,Identity verification & AML onboarding checks,35,$/new investor,1,,1701,12017,27849,49719,76159
+BHive,Investor Servicing & Onboarding,E-signature & document processing,12,$/new investor,1,,583,4120,9548,17047,26112
+BHive,Investor Servicing & Onboarding,Ongoing AML monitoring & notifications,1,$/investor/month,1,,130,2317,9239,23093,45864
+BHive,Investor Servicing & Onboarding,Helpdesk & support tooling,1200,Fixed $/month,7,,7200,14832,15277,15735,16207
+BHive,"Licensing, Regulatory & Compliance",Market-operator partner fixed platform fee,15000,Fixed $/month,19,,0,92700,190962,196691,202592
+BHive,"Licensing, Regulatory & Compliance",Market surveillance tooling & transaction reporting,3000,Fixed $/month,19,,0,18540,38192,39338,40518
+BHive,Insurance,Cyber liability insurance,3000,Fixed $/month,7,,18000,37080,38192,39338,40518
+BHive,Insurance,Technology PI / errors & omissions,1500,Fixed $/month,7,,9000,18540,19096,19669,20259
+BHive,Marketing & Investor Acquisition,"Product marketing, app store & UX research",3000,Fixed $/month,7,,18000,37080,38192,39338,40518
+BHive,"Professional Fees (Legal, Audit, Tax)",Technology & privacy legal,3000,Fixed $/month,7,,18000,37080,38192,39338,40518

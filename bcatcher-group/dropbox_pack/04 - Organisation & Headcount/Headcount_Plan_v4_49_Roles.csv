@@ -1,0 +1,50 @@
+Entity,Department,Role,Type,Start month,FTE,Step month,FTE from step,End month,Base salary,Loaded cost p.a. (2027 $),Notes,FTE end 2027,FTE end 2028,FTE end 2029,FTE end 2030,FTE end 2031,Cost 2027,Cost 2028,Cost 2029,Cost 2030,Cost 2031
+B-Catcher,Executive,Group CEO / Managing Director,Employee,1,1,,,,260000,315770,Accountable executive; corporate raise; board.,1,1,1,1,1,315770,326822,338261,350100,362353
+B-Catcher,Finance,Fractional CFO (contract),Contractor,1,0.4,,,24,230000,110400,Until full-time CFO.,0.4,0.4,0,0,0,110400,114264,0,0,0
+B-Catcher,Finance,Chief Financial Officer,Employee,25,1,,,,220000,267190,"Treasury, audit, client-money oversight.",0,0,1,1,1,0,0,286221,296238,306607
+B-Catcher,Finance,Financial Controller / Group Accountant,Employee,7,1,,,,140000,170030,"Month-end, consolidation, GST/BAS, commissions.",1,1,1,1,1,85015,175981,182140,188515,195113
+B-Catcher,Finance,Fund Accountant / Investment Operations,Employee,31,1,,,,115000,139668,"Trust accounting, distributions.",0,0,1,1,1,0,0,74808,154852,160272
+B-Catcher,Risk & Compliance,Head of Risk & Compliance (Group),Employee,1,0.5,13,1,,200000,121450,Fractional until month 13.,0.5,1,1,1,1,121450,251402,260201,269308,278733
+B-Catcher,Risk & Compliance,Risk & Compliance Analyst,Employee,43,1,,,,110000,133595,,0,0,0,1,1,0,0,0,74060,153303
+B-Catcher,Investments,Chief Investment Officer,Employee,1,1,,,,240000,291480,Chairs investment committee; credit & PE origination early.,1,1,1,1,1,291480,301682,312241,323169,334480
+B-Catcher,Investments,Property Investment Director,Employee,4,1,,,,200000,242900,Residential & commercial trusts.,1,1,1,1,1,182175,251402,260201,269308,278733
+B-Catcher,Investments,Private Credit & Equity Director,Employee,13,1,,,,205000,248972,"Credit, PE, pre-IPO, placements.",0,1,1,1,1,0,257687,266706,276040,285702
+B-Catcher,Investments,Investment Analyst #1,Employee,7,1,,,,115000,139668,AI-assisted due diligence.,1,1,1,1,1,69834,144556,149615,154852,160272
+B-Catcher,Investments,Investment Analyst #2,Employee,37,1,,,,115000,139668,,0,0,0,1,1,0,0,0,154852,160272
+B-Catcher,Investments,Asset Manager - Property #1,Employee,25,1,,,,150000,182175,,0,0,1,1,1,0,0,195150,201981,209050
+B-Catcher,Investments,Asset Manager - Property #2,Employee,49,1,,,,150000,182175,,0,0,0,0,1,0,0,0,0,209050
+B-Catcher,Operations,Executive Assistant / Office Manager,Employee,13,1,,,,90000,109305,,0,1,1,1,1,0,113131,117090,121188,125430
+B-Catcher,Operations,People & Culture (fractional),Contractor,25,0.2,,,,150000,36000,,0,0,0.2,0.2,0.2,0,0,38564,39914,41311
+Honey Pot,Executive,Managing Director / Head of Distribution,Employee,3,1,,,,230000,279335,Owns broker strategy and P&L.,1,1,1,1,1,232779,289112,299231,309704,320543
+Honey Pot,Compliance,Distribution Compliance Manager (Responsible Manager),Employee,6,1,,,,175000,212538,RG 105 responsible manager for own AFSL.,1,1,1,1,1,123980,219976,227675,235644,243892
+Honey Pot,Compliance,Compliance Officer - Supervision & Monitoring,Employee,37,1,,,,120000,145740,,0,0,0,1,1,0,0,0,161585,167240
+Honey Pot,Distribution,Broker Network Manager,Employee,6,1,,,,160000,194320,,1,1,1,1,1,113353,201121,208160,215446,222987
+Honey Pot,Distribution,BDM - NSW,Employee,7,1,,,,150000,182175,Base; incentives in opex.,1,1,1,1,1,91088,188551,195150,201981,209050
+Honey Pot,Distribution,BDM - VIC,Employee,16,1,,,,150000,182175,,0,1,1,1,1,0,141413,195150,201981,209050
+Honey Pot,Distribution,BDM - QLD,Employee,28,1,,,,150000,182175,,0,0,1,1,1,0,0,146363,201981,209050
+Honey Pot,Distribution,BDM - WA/SA,Employee,40,1,,,,150000,182175,,0,0,0,1,1,0,0,0,151486,209050
+Honey Pot,Distribution,BDM - Family Office & Institutional,Employee,52,1,,,,170000,206465,,0,0,0,0,1,0,0,0,0,177693
+Honey Pot,Distribution,Investor Relations Manager (Wholesale direct),Employee,31,1,,,,150000,182175,Direct investor channel.,0,0,1,1,1,0,0,97575,201981,209050
+Honey Pot,Distribution,Broker Accreditation & Training Coordinator,Employee,37,1,,,,105000,127522,Earlier accreditation run by Network Manager + LMS.,0,0,0,1,1,0,0,0,141386,146335
+Honey Pot,Operations,Broker & Commission Operations Officer #1,Employee,7,1,,,,100000,121450,"Commission ledger, clawbacks.",1,1,1,1,1,60725,125701,130100,134654,139367
+Honey Pot,Operations,Broker & Commission Operations Officer #2,Employee,49,1,,,,100000,121450,,0,0,0,0,1,0,0,0,0,139367
+Honey Pot,Investor Services,Investor Services Officer #1,Employee,7,1,,,,90000,109305,Application exceptions; AI agent handles tier 1.,1,1,1,1,1,54652,113131,117090,121188,125430
+Honey Pot,Investor Services,Investor Services Officer #2,Employee,37,1,,,,90000,109305,,0,0,0,1,1,0,0,0,121188,125430
+Honey Pot,Marketing,Head of Marketing & Growth,Employee,5,1,,,,170000,206465,,1,1,1,1,1,137643,213691,221170,228911,236923
+Honey Pot,Marketing,Digital Marketing & Content Executive,Employee,31,1,,,,105000,127522,AI content tools before this hire.,0,0,1,1,1,0,0,68303,141386,146335
+BHive,Technology,Chief Technology Officer,Employee,1,1,,,,250000,303625,"Architecture, vendors, security.",1,1,1,1,1,303625,314252,325251,336634,348417
+BHive,Product,Head of Product,Employee,4,1,,,,190000,230755,,1,1,1,1,1,173066,238831,247191,255842,264797
+BHive,Product,UX/UI Designer (contract),Contractor,2,0.5,19,0.3,,140000,84000,,0.5,0.3,0.3,0.3,0.3,77000,69552,53990,55879,57835
+BHive,Technology,Senior Full-stack Engineer #1,Employee,3,1,,,,185000,224682,MVP co-built with external partner.,1,1,1,1,1,187235,232546,240686,249110,257828
+BHive,Technology,Backend & Integrations Engineer,Employee,4,1,,,,175000,212538,"Registry, banking, KYC APIs.",1,1,1,1,1,159403,219976,227675,235644,243892
+BHive,Technology,DevOps & Cloud Security Engineer,Employee,6,1,,,,185000,224682,,1,1,1,1,1,131065,232546,240686,249110,257828
+BHive,Technology,QA / Test Automation Engineer (contract),Contractor,6,0.5,,,,135000,81000,,0.5,0.5,0.5,0.5,0.5,47250,83835,86769,89806,92949
+BHive,Technology,Senior Full-stack Engineer #2,Employee,19,1,,,,185000,224682,Takes over from build partner.,0,1,1,1,1,0,116273,240686,249110,257828
+BHive,Technology,Registry & Tokenisation Engineer,Employee,25,1,,,,190000,230755,,0,0,1,1,1,0,0,247191,255842,264797
+BHive,Technology,Full-stack Engineer #3,Employee,43,1,,,,160000,194320,,0,0,0,1,1,0,0,0,107723,222987
+BHive,Technology,Data & AI Engineer,Employee,37,1,,,,175000,212538,"AI support agent, AML monitoring, reporting automation.",0,0,0,1,1,0,0,0,235644,243892
+BHive,Technology,Information Security Lead (fractional vCISO),Contractor,4,0.2,19,0.4,,260000,62400,,0.2,0.4,0.4,0.4,0.4,46800,96876,133689,138368,143211
+BHive,Market Operations,Head of Secondary Market,Employee,16,1,,,,200000,242900,"Partner selection, market rules, surveillance.",0,1,1,1,1,0,188551,260201,269308,278733
+BHive,Market Operations,Market Operations & Surveillance Analyst,Employee,49,1,,,,140000,170030,,0,0,0,0,1,0,0,0,0,195113
+BHive,Operations,Platform Support Specialist #1,Employee,7,1,,,,85000,103232,Backed by AI support agent.,1,1,1,1,1,51616,106846,110585,114456,118462
+BHive,Operations,Platform Support Specialist #2,Employee,43,1,,,,85000,103232,,0,0,0,1,1,0,0,0,57228,118462
