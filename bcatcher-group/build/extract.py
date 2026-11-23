@@ -40,12 +40,15 @@ fr = wb['Funding & Returns']
 rows = {fr.cell(r,1).value: r for r in range(1, fr.max_row+1) if fr.cell(r,1).value}
 D["rounds"] = [[n, fr.cell(rows[n],2).value, fr.cell(rows[n],3).value, fr.cell(rows[n],6).value] for n in ["Seed","Series A","Series B (optional)"]]
 D["founder_pct"] = fr.cell(rows["Founders & existing holders (B-Catcher + BHive)"],6).value
+D["esop_pct"] = fr.cell(rows["Group executive share pool (parent ESOP, created before Seed)"],6).value
+D["founder_check"] = fr.cell(rows["Founder control check: founders' ownership vs 51% floor"],2).value
+D["minority"] = fr.cell(rows["Less: key-people minority stakes in Honey Pot & BHive (at EBITDA multiple)"],2).value
 uses = ["Team - salaries, on-costs & hiring (all entities)","Platform & technology build (capitalised)","Licensing, legal, structuring & compliance set-up",
         "Technology, hosting & security (recurring)","Marketing, broker network & investor servicing","Regulatory, insurance, professional fees & governance",
         "Premises, origination, travel & general"]
 D["uses"] = [[u, fr.cell(rows[u],2).value] for u in uses]
 D["returns"] = [[n, fr.cell(rows[n],2).value, fr.cell(rows[n],5).value, fr.cell(rows[n],6).value] for n in ["Seed investors","Series A investors","Series B investors"]]
-D["exit"] = {k: fr.cell(rows[l],2).value for k,l in [("ebitda_rr","Exit run-rate EBITDA (Q4 year 5 x 4)"),("rev_rr","Exit run-rate net revenue (Q4 year 5 x 4)"),("eq","Equity value (average of methods + year-5 cash)")]}
+D["exit"] = {k: fr.cell(rows[l],2).value for k,l in [("ebitda_rr","Exit run-rate EBITDA (Q4 year 5 x 4)"),("rev_rr","Exit run-rate net revenue (Q4 year 5 x 4)"),("eq","Equity value to B-Catcher Group shareholders")]}
 # scenarios
 sc = wb['Scenarios']
 cases = [sc.cell(4,c).value for c in range(2, sc.max_column+1) if sc.cell(4,c).value]

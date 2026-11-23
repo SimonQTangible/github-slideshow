@@ -428,7 +428,7 @@ s.addText("The whole team", { x: 7.9, y: 1.9, w: 4.6, h: 0.45, fontSize: 16, bol
     { text: "Fractional contractors", options: { bold: true, breakLine: true } }, { text: con.join(" · ") },
   ], { x: 7.9, y: 2.35, w: 4.6, h: 3.3, fontSize: 10, paraSpaceAfter: 2, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "hc-list" });
 }
-s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. Outsourced service desk, accountants, analysts and build partner, plus AI agents and commission-only BDMs, do the rest.`,
+s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. Equity to recruit from established finance firms: 1.5% group pool for C-suite, plus 15% non-voting pools in Honey Pot (senior brokers) and BHive (platform leaders). Founders keep at least 51%.`,
   { x: 7.9, y: 5.75, w: 4.6, h: 0.85, fontSize: 11, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "hc-note" });
 
 // 13 ENTITY PROFITABILITY
@@ -501,11 +501,11 @@ RR.forEach(([n, amt, pre, own], i) => {
 s.addChart(pres.charts.BAR, [{ name: "Use of funds", labels: D.uses.map(u => u[0].replace(" (all entities)", "").replace(" (capitalised)", "").replace(" (recurring)", "")), values: D.uses.map(u => +(u[1] / 1e6).toFixed(2)) }], {
   ...chartBase, x: 0.6, y: 5.15, w: 12.1, h: 1.85, barDir: "bar", chartColors: [HEX.slate], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "$0.0\"m\"",
   showLegend: false, showTitle: false, valAxisHidden: true, catAxisOrientation: "maxMin", catAxisLabelFontSize: 9, dataLabelFontSize: 9, objectName: "uof-chart" });
-s.addNotes("Use of funds = gross spend in the first 24 months by bucket. Founders and existing B-Catcher/BHive holders retain " + pct(D.founder_pct) + " after all three rounds, before any ESOP. Valuations are placeholders for negotiation.");
+s.addNotes("Use of funds = gross spend in the first 24 months by bucket. Founders and existing B-Catcher/BHive holders retain " + pct(D.founder_pct) + " after all three rounds and a " + pct(D.esop_pct, 1) + " group executive share pool (floor: 51%). Key brokers and platform hires receive non-voting shares in Honey Pot and BHive instead. Valuations are placeholders for negotiation.");
 
 // 17 RETURNS
 s = content("The raise", "Illustrative returns at the end of year 5",
-  `Exit run-rate: ${$m(D.exit.rev_rr)} revenue and ${$m(D.exit.ebitda_rr)} EBITDA (Q4 2031 annualised); equity value ${$m(D.exit.eq, 0)} on blended ${I["Exit multiple - EBITDA (year 5)"]}x EBITDA / ${I["Exit multiple - revenue (year 5)"]}x revenue`);
+  `Exit run-rate: ${$m(D.exit.rev_rr)} revenue and ${$m(D.exit.ebitda_rr)} EBITDA (Q4 2031 annualised); equity value ${$m(D.exit.eq, 0)} after subsidiary key-people stakes, on blended ${I["Exit multiple - EBITDA (year 5)"]}x EBITDA / ${I["Exit multiple - revenue (year 5)"]}x revenue`);
 const RT = D.returns.filter(r => r[1] > 0);
 RT.forEach(([n, inv, moic, irr], i) => {
   const x = 0.6 + i * (RT.length === 2 ? 6.15 : 4.1);
@@ -514,7 +514,7 @@ RT.forEach(([n, inv, moic, irr], i) => {
   s.addText(moic.toFixed(1) + "x", { x: x + 0.3, y: 2.6, w: 3.2, h: 1.1, fontSize: 60, bold: true, color: [C.accent1, C.accent2, C.accent3][i], margin: 0, isTextBox: true, objectName: "ret-m" + i });
   s.addText(`money multiple on ${$m(inv, 1)}\n~${pct(irr)} p.a. IRR`, { x: x + 0.3, y: 3.75, w: 3.2, h: 1.0, fontSize: 15, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "ret-d" + i });
 });
-s.addText("Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution (ESOP, later rounds) that is not modelled. Upside case reaches EBITDA break-even in " + D.scen.rows["First month EBITDA positive"][2] + ".",
+s.addText("Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution from later rounds (not modelled). Ownership includes the 1.5% group executive pool; exit value is after the 15% key-people stakes in Honey Pot and BHive. Founders keep at least 51%. Upside case reaches EBITDA break-even in " + D.scen.rows["First month EBITDA positive"][2] + ".",
   { x: 0.6, y: 5.6, w: 12.1, h: 0.7, fontSize: 13, italic: true, color: C.text2, margin: 0, isTextBox: true, objectName: "ret-note" });
 
 // 18 REGULATORY GATES

@@ -85,6 +85,6 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Investors | 58 | 525 | 1,625 | 3,558 | 6,425 |
 | Brokers | 18 | 68 | 140 | 215 | 285 |
 | Revenue | $0.42m | $3.63m | $9.50m | $17.94m | $28.76m |
-| EBITDA | ($4.68m) | ($3.40m) | ($0.18m) | $5.56m | $13.31m |
-| Cash | $7.78m | $3.65m | $7.96m | $13.14m | $23.87m |
+| EBITDA | ($4.70m) | ($3.42m) | ($0.20m) | $5.54m | $13.29m |
+| Cash | $7.76m | $3.61m | $7.90m | $13.05m | $23.78m |
 

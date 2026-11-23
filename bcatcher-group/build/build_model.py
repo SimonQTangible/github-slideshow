@@ -1077,10 +1077,13 @@ c0 = r
 put(fr, f"A{r}", "Founders & existing holders (B-Catcher + BHive)")
 put(fr, f"E{r}", "=FounderShares", f_link, "num")
 r += 1
+put(fr, f"A{r}", "Group executive share pool (parent ESOP, created before Seed)")
+put(fr, f"E{r}", f"=EsopPct*(1+SeedAmt/SeedPre)*E{c0}/(1-EsopPct*(1+SeedAmt/SeedPre))", f_base, "num")
+r += 1
 put(fr, f"A{r}", "Seed")
 put(fr, f"B{r}", "=SeedAmt", f_link, "money")
 put(fr, f"C{r}", "=SeedPre", f_link, "money")
-put(fr, f"D{r}", f"=C{r}/E{c0}", f_base, "$0.000")
+put(fr, f"D{r}", f"=C{r}/SUM(E{c0}:E{r-1})", f_base, "$0.000")
 put(fr, f"E{r}", f"=B{r}/D{r}", f_base, "num")
 r += 1
 put(fr, f"A{r}", "Series A")
@@ -1095,7 +1098,7 @@ put(fr, f"C{r}", "=SeriesBPre", f_link, "money")
 put(fr, f"D{r}", f"=IF(B{r}=0,0,C{r}/SUM(E{c0}:E{r-1}))", f_base, "$0.000")
 put(fr, f"E{r}", f"=IF(B{r}=0,0,B{r}/D{r})", f_base, "num")
 r += 1
-put(fr, f"A{r}", "Total (fully diluted, pre-ESOP)", f_bold, border=b_tot)
+put(fr, f"A{r}", "Total (fully diluted, incl. ESOP pool)", f_bold, border=b_tot)
 put(fr, f"B{r}", f"=SUM(B{c0}:B{r-1})", f_bold, "money", border=b_tot)
 put(fr, f"E{r}", f"=SUM(E{c0}:E{r-1})", f_bold, "num", border=b_tot)
 ctot = r
@@ -1105,7 +1108,9 @@ put(fr, f"A{r+1}", "Post-money valuation after Series A", f_base)
 put(fr, f"B{r+1}", f"=SeriesAPre+SeriesAAmt", f_base, "money")
 put(fr, f"A{r+2}", "Post-money valuation after Series B (if raised)", f_base)
 put(fr, f"B{r+2}", f"=IF(SeriesBAmt=0,0,SeriesBPre+SeriesBAmt)", f_base, "money")
-r += 3
+put(fr, f"A{r+3}", "Founder control check: founders' ownership vs 51% floor", f_bold)
+put(fr, f"B{r+3}", f"=IF(F{c0}>=FounderFloor,\"OK - founders \"&TEXT(F{c0},\"0.0%\"),\"BREACH - founders \"&TEXT(F{c0},\"0.0%\"))", f_bold)
+r += 4
 section(fr, r, "USE OF FUNDS - FIRST 24 MONTHS (gross spend)", 6)
 r += 1
 uf0 = r
@@ -1150,7 +1155,9 @@ for lab, f, fmt in [("Exit run-rate EBITDA (Q4 year 5 x 4)", f"=4*SUMIF({q('P&L 
                     ("Exit run-rate net revenue (Q4 year 5 x 4)", f"=4*SUMIF({q('P&L Consolidated')}!$E$6:$BL$6,20,{q('P&L Consolidated')}!$E${CR['rev']}:$BL${CR['rev']})", "money"),
                     ("Enterprise value - EBITDA multiple", f"=MAX(0,B{r})*ExitEBITDAMult", "money"),
                     ("Enterprise value - revenue multiple", f"=B{r+1}*ExitRevMult", "money"),
-                    ("Equity value (average of methods + year-5 cash)", f"=AVERAGE(B{r+2},B{r+3})+'Annual Summary'!F{AR['cash']}", "money")]:
+                    ("Equity value (average of methods + year-5 cash)", f"=AVERAGE(B{r+2},B{r+3})+'Annual Summary'!F{AR['cash']}", "money"),
+                    ("Less: key-people minority stakes in Honey Pot & BHive (at EBITDA multiple)", f"=-(HPPool*MAX(0,'Annual Summary'!F{AR['eb_Honey Pot']})+BHPool*MAX(0,'Annual Summary'!F{AR['eb_BHive']}))*ExitEBITDAMult", "money"),
+                    ("Equity value to B-Catcher Group shareholders", f"=B{r+4}+B{r+5}", "money")]:
     put(fr, f"A{r}", lab, f_bold if "Equity" in lab else f_base)
     put(fr, f"B{r}", f, f_bold if "Equity" in lab else f_link, fmt)
     r += 1
@@ -1159,7 +1166,7 @@ r += 1
 for i, h in enumerate(["Investor", "Invested", "Ownership", "Value at Y5", "MOIC", "IRR (approx.)"]):
     put(fr, f"{L(1+i)}{r}", h, f_bold, fill=fill_sec)
 r += 1
-for lab, crow, mon in [("Seed investors", c0 + 1, "SeedMonth"), ("Series A investors", c0 + 2, "SeriesAMonth"), ("Series B investors", c0 + 3, "SeriesBMonth")]:
+for lab, crow, mon in [("Seed investors", c0 + 2, "SeedMonth"), ("Series A investors", c0 + 3, "SeriesAMonth"), ("Series B investors", c0 + 4, "SeriesBMonth")]:
     put(fr, f"A{r}", lab)
     put(fr, f"B{r}", f"=B{crow}", f_base, "money")
     put(fr, f"C{r}", f"=F{crow}", f_base, "pct")
@@ -1167,7 +1174,7 @@ for lab, crow, mon in [("Seed investors", c0 + 1, "SeedMonth"), ("Series A inves
     put(fr, f"E{r}", f"=IF(B{r}=0,0,D{r}/B{r})", f_bold, "mult")
     put(fr, f"F{r}", f"=IF(E{r}<=0,0,E{r}^(12/(60-{mon}+1))-1)", f_base, "pct")
     r += 1
-put(fr, f"A{r+1}", "Illustrative only. Exit value depends on achieving forecasts, market multiples and dilution from later rounds and an ESOP (not modelled).", f_sub)
+put(fr, f"A{r+1}", "Illustrative only. Exit value depends on achieving forecasts, market multiples and dilution from later rounds. The 12% ESOP pool is included in the cap table.", f_sub)
 
 # =====================================================================================
 # INVESTOR RETURNS (product-level net return to investors after all group fees)
@@ -1282,7 +1289,7 @@ section(ws, r, "  STATUS & LIMITATIONS", 3)
 for t in ["Planning model for board and investor discussion. Replace estimates with supplier quotes, signed issuer pipeline and legal fee proposals before external use.",
           "Regulated activities (AFSL, market operation, custody, credit) require external legal advice and authorisation before launch; costs here assume the partner/CAR routes in the v3 plan.",
           "Historic BHive projections ($731m AUM, $24.5m revenue) are NOT relied on. Historic B-Catcher mining, lottery and crypto-treasury activities are excluded from this group plan.",
-          "Irrecoverable GST is included via the cost factors (+6% opex, +5% set-up). Excluded: GST timing, debtor/creditor days, ESOP dilution, performance fees, trust-level costs borne by investment vehicles, retail/lending/card products."]:
+          "Irrecoverable GST is included via the cost factors (+6% opex, +5% set-up). Excluded: GST timing, debtor/creditor days, share-based payment expense (non-cash), performance fees, trust-level costs borne by investment vehicles, retail/lending/card products."]:
     r += 1
     put(ws, f"B{r}", t)
     ws[f"B{r}"].alignment = Alignment(wrap_text=False)

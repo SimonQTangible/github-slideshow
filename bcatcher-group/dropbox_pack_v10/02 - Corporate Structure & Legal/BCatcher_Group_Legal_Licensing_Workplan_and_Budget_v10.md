@@ -53,6 +53,7 @@ Costs and timing for every legal, licensing and regulatory workstream. Regulator
 | B-Catcher | Ongoing corporate & investment legal | $8,000 (Fixed $/month) | 7 | $50,880 | $114,532 |
 | B-Catcher | Bookkeeping & payroll bureau (pre controller) | $3,500 (Fixed $/month) | 1 | $33,390 | - |
 | B-Catcher | ASIC annual review fees, registers, company secretarial | $600 (Fixed $/month) | 1 | $7,632 | $8,590 |
+| B-Catcher | Share plan administration, annual independent share valuation & grant documents (v10) | $1,500 (Fixed $/month) | 1 | $19,080 | $21,475 |
 | B-Catcher | Outsourced HR, payroll & recruitment support | $1,500 (Fixed $/month) | 10 | $4,770 | $21,475 |
 | Honey Pot | Principal licensee fee (CAR arrangement) | $12,000 (Fixed $/month) | 4 | $114,480 | - |
 | Honey Pot | ASIC industry funding levy (own AFSL) | $2,500 (Fixed $/month) | 25 | - | $35,791 |

@@ -134,6 +134,10 @@ INPUT_SECTIONS = [
     ]),
     ("CORPORATE FUNDING (equity into B-Catcher Group)", [
         ("FounderShares", "Existing shares (B-Catcher + BHive founders, merged)", "shares", 10_000_000, 10_000_000, 10_000_000, "Merger ratio between legacy B-Catcher and BHive holders TO BE CONFIRMED.", "num"),
+        ("EsopPct", "Group executive share pool (parent) - % of fully diluted shares after Seed", "%", 0.015, 0.015, 0.015, "v10: created before Seed (inside the pre-money). Capped so founders stay at or above 51% after all three rounds. For group C-suite only.", "pct"),
+        ("HPPool", "Honey Pot key-people pool (non-voting B-class shares / options in Honey Pot Pty Ltd)", "% of Honey Pot", 0.15, 0.15, 0.15, "v10: for senior brokers (Queen tier), Head of Distribution, Broker Relationship Manager. Parent keeps 85% and all votes.", "pct"),
+        ("BHPool", "BHive key-people pool (non-voting B-class shares / options in BHive Pty Ltd)", "% of BHive", 0.15, 0.15, 0.15, "v10: for a future CTO / Head of Product and senior platform hires. Parent keeps 85% and all votes.", "pct"),
+        ("FounderFloor", "Founder ownership floor in B-Catcher Group (parent)", "%", 0.51, 0.51, 0.51, "Founder requirement: never below 51% of the parent.", "pct"),
         ("SeedAmt", "Seed round amount", "$", 6_000_000, 6_000_000, 6_000_000, "v8: $6m (SAFE / note at $14m cap) funds re-based build, licensing and launch to month 9 with the 4-person core team.", "money"),
         ("SeedMonth", "Seed round close", "model month", 1, 1, 1, "", "int"),
         ("SeedPre", "Seed pre-money valuation (SAFE / note cap)", "$", 14_000_000, 14_000_000, 14_000_000, "v8: $14m cap (was $18m priced) - in line with Australian fintech seed ranges; BHive prior pitch $10.5m pre.", "money"),
@@ -290,6 +294,7 @@ OPEX = [
     ("B-Catcher", "Professional Fees (Legal, Audit, Tax)", "Ongoing corporate & investment legal", 8_000, "Fixed $/month", 7, None, ""),
     ("B-Catcher", "Professional Fees (Legal, Audit, Tax)", "Bookkeeping & payroll bureau (pre controller)", 3_500, "Fixed $/month", 1, 9, ""),
     ("B-Catcher", "Licensing, Regulatory & Compliance", "ASIC annual review fees, registers, company secretarial", 600, "Fixed $/month", 1, None, ""),
+    ("B-Catcher", "Professional Fees (Legal, Audit, Tax)", "Share plan administration, annual independent share valuation & grant documents (v10)", 1_500, "Fixed $/month", 1, None, "v10: ESS market-value valuation each grant cycle, plan register, offer letters."),
     ("B-Catcher", "Technology, Hosting & Software", "Business software (M365, Xero, HRIS, payroll)", 180, "$/FTE/month", 1, None, ""),
     ("B-Catcher", "Technology, Hosting & Software", "AI productivity tools (all staff)", 120, "$/FTE/month", 1, None, "AI-native operating model."),
     ("B-Catcher", "Investment Origination & Due Diligence", "Pipeline due diligence on deals not proceeding", 8_000, "Fixed $/month", 7, None, ""),

@@ -20,17 +20,17 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 | Licensing, legal, structuring & compliance set-up | $1,986,075 |
 | Technology, hosting & security (recurring) | $1,329,354 |
 | Marketing, broker network & investor servicing | $1,472,060 |
-| Regulatory, insurance, professional fees & governance | $1,852,176 |
-| Premises, origination, travel & general | $1,297,048 |
+| Regulatory, insurance, professional fees & governance | $1,890,908 |
+| Premises, origination, travel & general | $1,298,985 |
 
 ## Illustrative returns (end of year 5)
 | Investor | Invested | MOIC | IRR |
 |---|---|---|---|
-| Seed investors | $6,000,000 | 6.6x | 46% |
-| Series A investors | $8,000,000 | 3.8x | 37% |
-| Series B investors | $5,000,000 | 3.0x | 48% |
+| Seed investors | $6,000,000 | 6.4x | 45% |
+| Series A investors | $8,000,000 | 3.7x | 36% |
+| Series B investors | $5,000,000 | 2.9x | 47% |
 
-Exit basis: Q4 2031 annualised revenue $34.01m and EBITDA $17.17m; equity value $177.72m (average of 10x EBITDA and 4x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.
+Exit basis: Q4 2031 annualised revenue $34.01m and EBITDA $17.14m; equity value $172.04m (average of 10x EBITDA and 4x revenue, plus cash, less the 15% key-people stakes in Honey Pot and BHive). Illustrative only; later rounds not modelled.
 
 ## Evidence still required before external circulation (from Content Brief)
 - Verified market sizing and competitors
