@@ -33,12 +33,16 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 **Total BHive set-up: $2,761,500** (capex amortised over 36 months). Plus Honey Pot CRM/commission system $75,000.
 
 ## Release plan
-- **MVP (months 3-8):** onboarding, KYC/AML, wholesale verification, offers & data room, e-sign subscriptions, registry reconciliation, wallet/portfolio, broker portal, admin portal
-- **Launch (month 7):** live with first offers; platform support + AI tier-1 agent
-- **Months 13-18:** mobile apps, SOC 2 Type I, PE buy-back requests in the wallet
+- **Core platform & BHive wallet, built up front (months 3-8):** onboarding, KYC/AML, wholesale verification, offer marketplace & data room, e-sign subscriptions, registry reconciliation, investor wallet (holdings, documents, distributions, tax), broker portal, admin console
+- **Launch (month 7):** live with first offers; outsourced service desk + AI tier-1 agent
+- **Release 2 (months 10-15):** buy-back requests in the wallet, investor comms hub, referral & Founding Member features, analytics
+- **Mobile apps (months 13-18)**; SOC 2 Type I
+- **Release 3 (months 16-21):** SMSF, company & trust accounts; auto-reinvest; tax reporting pack
 - **Months 22-30:** secondary engine and operator integration built
+- **Release 4 (months 28-33):** private-credit income marketplace, regular-investment plans, portfolio tools
 - **Month 31:** secondary market activated with licensed operator (40% fee share + $15k/month), once AUM is ~$150m
 - **Months 34-39:** tokenised register pilot only after legal register opinion
+- **Release 5 (months 40-48):** new offerings module (managed portfolios, insurance; retail-ready module subject to licence)
 
 ## Platform P&L (incl. intercompany licence income)
 | $ | 2027 | 2028 | 2029 | 2030 | 2031 |
