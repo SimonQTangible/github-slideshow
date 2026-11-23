@@ -11,18 +11,18 @@ Investors on BHive - year end,38.89,305.56,905.56,1972.22,3572.22,
 Active accredited brokers - year end,12.5,42.5,80,120,160,
 Offers launched,0.58,4,9,16,24,53.58
 Secondary market value traded,0,0,3299482.0,20012136.64,48300264.07,71611882.71
-Units bought back under buy-back facility (at valuation),0,83447.43,1134618.36,3784705.33,7464329.23,12467100.35
-Bought-back units held for resale - year end,0,60199.04,639999.23,1455920.81,2713362.51,
-Buy-back liquidity reserve required - year end,0,134552.05,1296559.87,2801562.25,5033277.41,
+Units bought back under buy-back facility (at valuation),0,364384.32,1068134.56,1261568.44,2488109.74,5182197.06
+Bought-back units held for resale - year end,0,254951.91,210052.87,477826.22,890478.06,
+Buy-back liquidity reserve required - year end,0,441247.8,1296559.87,2801562.25,5033277.41,
 REVENUE BY ENTITY (external),,,,,,
 Honey Pot - distribution,169166.67,1160000,2610000,4640000,6960000,15539166.67
 B-Catcher - structuring & management,90341.94,763305.7,2084560.27,4257901.09,7289051.19,14485160.19
 BHive - platform & marketplace,19840.28,164889.45,452303.73,948440.8,1645755.06,3231229.32
-BHive - buy-back resale gains,0,630.48,20870.51,141169.94,297617.76,460288.7
-GROUP NET REVENUE,279348.89,2088825.62,5167734.51,9987511.84,16192424.01,33715844.88
+BHive - buy-back resale gains,0,4936.66,70258.64,60465.03,127520.93,263181.26
+GROUP NET REVENUE,279348.89,2093131.81,5217122.64,9906806.93,16022327.18,33518737.45
 CONSOLIDATED P&L,,,,,,
 "Cost of sales (broker commissions, partner share, fund admin)",71518.06,496177.89,1134310.49,2052494.23,3132501.14,6887001.81
-Gross profit,207830.84,1592647.73,4033424.03,7935017.61,13059922.87,26828843.07
+Gross profit,207830.84,1596953.92,4082812.15,7854312.7,12889826.03,26631735.64
 Staff costs (salaries & on-costs),1268177.08,1638410.18,1772451.56,1834487.37,1898694.43,8412220.61
 Recruitment & onboarding,85750,44500,0,0,0,130250
 Premises & Office,64554,69176.45,72061.42,74223.26,76449.96,356465.09
@@ -36,25 +36,25 @@ Broker Network & Distribution,94475.26,299256.82,461046.14,665056.11,889528.68,2
 Investor Servicing & Onboarding,35339.22,87707.93,125387.77,189419.13,283227.54,721081.59
 Investment Origination & Due Diligence,136740,275133.6,283387.61,319688.21,329278.86,1344228.28
 Travel & General,146015,191938.44,198371.33,204322.47,210452.14,951099.37
-Set-up & launch costs (expensed),1666875,257250,157500,0,0,2081625
-Contingency,168654.93,184272.24,206995.19,232370.6,262496.18,1054789.15
-Total operating expenses,4895680.53,5552627.27,6119350.64,6714269.97,7411114.29,30693042.68
-EBITDA,-4687849.69,-3959979.53,-2085926.62,1220747.65,5648808.58,-3864199.61
-EBITDA margin,-16.78,-1.9,-0.4,0.12,0.35,
+Set-up & launch costs (expensed),1728825,257250,157500,0,0,2143575
+Contingency,171752.43,184272.24,206995.19,232370.6,262496.18,1057886.65
+Total operating expenses,4960728.03,5552627.27,6119350.64,6714269.97,7411114.29,30758090.18
+EBITDA,-4752897.19,-3955673.35,-2036538.49,1140042.74,5478711.75,-4126354.54
+EBITDA margin,-17.01,-1.89,-0.39,0.12,0.34,
 R&D tax incentive,32520.6,23825.91,21472.49,22224.03,23001.87,123044.89
-Depreciation & amortisation,202562.5,400750,556062.5,419562.5,224000,1802937.5
-Interest income,136504.86,202697.46,185952.64,191248.06,274966.57,991369.59
+Depreciation & amortisation,204312.5,458500,664125,577645.83,372750,2277333.33
+Interest income,135267.25,192830.57,168790.96,194795.67,293767.01,985451.46
 Income tax,0,0,0,0,0,0
-NET PROFIT AFTER TAX,-4721386.73,-4134206.16,-2434563.99,1014657.24,5722777.02,-4552722.62
+NET PROFIT AFTER TAX,-4789421.84,-4197516.87,-2510400.03,779416.6,5422730.63,-5295191.52
 ENTITY EBITDA (incl. intercompany charges),,,,,,
-B-Catcher,-2209187.6,-1168521.32,-8495.34,2000740.94,4858337.35,3472874.04
+B-Catcher,-2304235.1,-1228521.32,-68495.34,1940740.94,4798337.35,3137826.54
 Honey Pot,-1658126.93,-1785478.4,-964489.22,-199173.35,675536.29,-3931731.6
-BHive,-820535.15,-1005979.82,-1112942.06,-580819.94,114934.94,-3405342.04
+BHive,-790535.15,-941673.64,-1003553.94,-601524.85,4838.1,-3332449.48
 CASH & FUNDING,,,,,,
-Operating cash flow,-4551344.83,-3724761.47,-1876148.07,1433468.2,5945999.18,-2772786.99
-Capital expenditure,-1055250,-346500,-425250,-47250,0,-1874250
+Operating cash flow,-4617629.94,-3730322.18,-1843921.62,1356310.89,5794702.79,-3040860.06
+Capital expenditure,-1118250,-535500,-582750,-257250,0,-2493750
 Equity raised (net),13440000,0,4800000,0,0,18240000
-Closing cash - year end,7833405.17,3701944.66,5620746.4,6191043.02,10879600.5,
+Closing cash - year end,7704120.06,3183345.97,5601573.39,6432860.94,11814911.88,
 PEOPLE,,,,,,
 FTE - B-Catcher (year end),2.3,4.3,4.4,4.4,4.4,
 FTE - Honey Pot (year end),2,2,2,2,2,
@@ -63,17 +63,17 @@ FTE - GROUP (year end),5.6,6.9,7,7,7,
 People employed or contracted (year end),8,9,9,9,9,
 UNIT ECONOMICS,,,,,,
 Group revenue / capital placed,0.05,0.05,0.06,0.06,0.07,
-Gross profit / capital placed,0.04,0.04,0.04,0.05,0.05,
-Revenue per FTE,49883.73,302728.35,738247.79,1426787.41,2313203.43,
+Gross profit / capital placed,0.04,0.04,0.05,0.05,0.05,
+Revenue per FTE,49883.73,303352.44,745303.23,1415258.13,2288903.88,
 Capital placed per active broker,326666.67,658823.53,787500,933333.33,1050000,
-Operating cost per $1 of capital placed,0.84,0.14,0.07,0.04,0.03,
+Operating cost per $1 of capital placed,0.85,0.14,0.07,0.04,0.03,
 KEY METRICS,,,,,,
-Peak funding requirement (lowest cumulative pre-financing cash),13105812.0,,,,,
+Peak funding requirement (lowest cumulative pre-financing cash),12996616.98,,,,,
 Total equity raised,19000000,,,,,
-Lowest month-end cash balance,1258468.14,,,,,
+Lowest month-end cash balance,1209109.46,,,,,
 Month of lowest cash,2027-09-30 00:00:00,,,,,
 First month of positive group EBITDA,2030-07-31 00:00:00,,,,,
-First month of positive pre-financing cash flow,2030-07-31 00:00:00,,,,,
-Lowest headroom over minimum cash buffer,508468.14,,,,,
+First month of positive pre-financing cash flow,2029-10-31 00:00:00,,,,,
+Lowest headroom over minimum cash buffer,459109.46,,,,,
 Funding adequate? (cash never below buffer),YES,,,,,
-Total one-off set-up & build cost,3955875,,,,,
+Total one-off set-up & build cost,4637325,,,,,

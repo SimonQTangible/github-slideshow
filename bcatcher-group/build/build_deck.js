@@ -215,7 +215,7 @@ mk.forEach(([h, t], i) => {
 });
 stat(s, 0.6, 4.9, 3.8, $m(D.trade[4]), "value traded in 2031 at " + pct(D.inputs["Secondary market turnover"]) + " annual turnover", C.accent3, C.text2, "mk-s1");
 stat(s, 4.7, 4.9, 3.8, pct(D.inputs["Exchange fee per trade (BHive schedule)"], 2), "exchange fee per trade (BHive schedule)", C.accent3, C.text2, "mk-s2");
-stat(s, 8.8, 4.9, 3.9, "Buy-back windows", "Secondary market first; group buys the residual at 15/10/5% (tokens) or 10/8/5% (trust units) below valuation. Discretionary, capped at 5% a year, reserve held in cash", C.accent2, C.text2, "mk-s3");
+stat(s, 8.8, 4.9, 3.9, "Buy-back bridge", "Exit route from year 2 until the secondary market opens: discretionary, capped at 5% a year, at 20/15/10/5% (tokens) or 10/8/5% (trust units) below valuation; reserve held in cash", C.accent2, C.text2, "mk-s3");
 
 // 8 PRODUCTS & FEES
 pres.addSection({ title: "Economics" });
@@ -298,7 +298,7 @@ s.addText("By entity", { x: 8.9, y: 1.9, w: 3.5, h: 0.45, fontSize: 17, bold: tr
   s.addShape(pres.shapes.OVAL, { x: 8.9, y: 2.55 + i * 0.75, w: 0.3, h: 0.3, fill: { color: col }, line: { color: col }, objectName: "su-dot" + i });
   s.addText([{ text: e + "  ", options: { bold: true } }, { text: $k(D.setup_ent[e] || 0) }], { x: 9.35, y: 2.45 + i * 0.75, w: 3.2, h: 0.5, fontSize: 15, color: C.text1, margin: 0, isTextBox: true, objectName: "su-e" + i });
 });
-s.addText("Largest items: MVP build partner ($650k), secondary market engine ($450k), mobile apps ($180k), own AFSL application ($150k), market-operator legal ($120k). Includes 10% contingency and irrecoverable GST.",
+s.addText("Largest items: core platform & BHive wallet built up front ($650k), secondary market engine ($450k), four platform releases ($590k), mobile apps ($180k), own AFSL ($150k). Includes 10% contingency and irrecoverable GST.",
   { x: 8.9, y: 4.85, w: 3.6, h: 1.7, fontSize: 13, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "su-note" });
 
 // 12 TEAM / HEADCOUNT

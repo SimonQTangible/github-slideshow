@@ -1,6 +1,6 @@
-# BHive - Build Plan & Budget - Version 8
+# BHive - Build Plan & Budget - Version 9
 
-**B-Catcher Group** | 06 - BHive - Wallet & Secondary Market | Version 8.0 | 23 November 2026  
+**B-Catcher Group** | 06 - BHive - Wallet & Secondary Market | Version 9.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Requirements remain as in *Product & Technical Requirements v1*. This adds the build sequence, vendor stack, budget, team and platform economics.
@@ -9,12 +9,16 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 | Item | Cost | Months | Treatment |
 |---|---|---|---|
 | Discovery, architecture & UX design | $99,750 | 2-3 | Capex |
-| MVP build partner: investor, broker & admin portals, wallet | $682,500 | 3-8 | Capex |
+| Core platform & BHive wallet (built up front): investor & broker portals, admin console, wallet (holdings, documents, distributions, tax), offer marketplace | $682,500 | 3-8 | Capex |
 | Identity/KYC/AML provider integration | $26,250 | 4-6 | Capex |
 | E-signature, document vault & CRM integration | $31,500 | 5-6 | Capex |
 | Registry / fund administrator integration | $63,000 | 5-7 | Capex |
 | Banking & payment reconciliation integration | $42,000 | 5-7 | Capex |
+| Platform release 2: buy-back requests in wallet, investor comms hub, referral & Founding Member features, analytics | $126,000 | 10-15 | Capex |
 | Mobile apps (iOS & Android) | $189,000 | 13-18 | Capex |
+| Platform release 3: SMSF, company & trust accounts; auto-reinvest; tax reporting pack | $126,000 | 16-21 | Capex |
+| Platform release 4: private-credit income marketplace, regular-investment plans, portfolio tools | $157,500 | 28-33 | Capex |
+| Platform release 5: new offerings module (managed portfolios, insurance, retail-ready module subject to licence) | $210,000 | 40-48 | Capex |
 | Secondary market engine: listings, order book, transfer & settlement workflow | $472,500 | 22-30 | Capex |
 | Market-operator partner integration | $63,000 | 27-30 | Capex |
 | Tokenised register pilot: smart contracts & audit | $94,500 | 34-39 | Capex |
@@ -26,7 +30,7 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 | Secondary market pen test & surveillance validation | $52,500 | 30 | Opex |
 | Cloud landing zone, environments, domains & app store accounts | $15,750 | 2 | Capex |
 
-**Total BHive set-up: $2,142,000** (capex amortised over 36 months). Plus Honey Pot CRM/commission system $75,000.
+**Total BHive set-up: $2,761,500** (capex amortised over 36 months). Plus Honey Pot CRM/commission system $75,000.
 
 ## Release plan
 - **MVP (months 3-8):** onboarding, KYC/AML, wholesale verification, offers & data room, e-sign subscriptions, registry reconciliation, wallet/portfolio, broker portal, admin portal
@@ -42,14 +46,14 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 | Technology fees (0.25% p.a.) | $2,340 | $44,889 | $174,055 | $418,410 | $805,004 |
 | Offer onboarding fees | $17,500 | $120,000 | $270,000 | $480,000 | $720,000 |
 | Exchange fees (0.25%) | - | - | $8,249 | $50,030 | $120,751 |
-| Buy-back resale gains | - | $630 | $20,871 | $141,170 | $297,618 |
-| Intercompany licence income | $270,000 | $540,000 | $540,000 | $540,000 | $540,000 |
+| Buy-back resale gains | - | $4,937 | $70,259 | $60,465 | $127,521 |
+| Intercompany licence income | $300,000 | $600,000 | $600,000 | $600,000 | $600,000 |
 | Operator share (cost of sales) | - | - | ($3,299) | ($20,012) | ($48,300) |
 | Staff costs | ($249,200) | ($182,574) | ($164,540) | ($170,299) | ($176,260) |
 | Total operating expenses | ($1,110,375) | ($1,711,500) | ($2,122,817) | ($2,190,419) | ($2,320,138) |
-| EBITDA | ($820,535) | ($1,005,980) | ($1,112,942) | ($580,820) | $114,935 |
+| EBITDA | ($790,535) | ($941,674) | ($1,003,554) | ($601,525) | $4,838 |
 | R&D tax incentive (accrued) | $32,521 | $23,826 | $21,472 | $22,224 | $23,002 |
-| Capitalised build | $960,750 | $346,500 | $425,250 | $47,250 | - |
+| Capitalised build | $1,023,750 | $535,500 | $582,750 | $257,250 | - |
 | Value traded on secondary market | - | - | $3,299,482 | $20,012,137 | $48,300,264 |
 | Investors on platform | 39 | 306 | 906 | 1,972 | 3,572 |
 
@@ -88,15 +92,15 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 ## Vendor stack to procure (RFP list)
 Build partner; AWS Sydney; identity/KYC/AML provider; e-signature; CRM (shared with Honey Pot); fund administrator & registry; banking/payment reconciliation; document vault; MDR/SIEM security; penetration tester; SOC 2 auditor; licensed market operator; AI support agent tooling.
 
-## Buy-back facility (kept from BHive and B-Catcher)
-v8 (capped): requests go to the BHive secondary market first; the group buys only the residual. Property tokens: 15% (year 3), 10% (year 4), 5% (year 5) below independent valuation. Trust units (PE / pre-IPO): 10% (year 1), 8% (year 2), 5% (year 4). Discretionary and capped at 5% of eligible units a year; resale within ~4 months with a price haircut (3% Base, 8.5% Downside) plus 1.5% costs; 1.5% cash reserve on top of the minimum buffer. Model assumes the group buys 3% of eligible units a year (5% Downside = cap).
+## Buy-back facility (the exit bridge until the secondary market)
+v9: available from year 2 for property tokens (20% yrs 1-2, 15% yr 3, 10% yr 4, 5% yr 5 below independent valuation) and PE trust units (10% / 8% / 5%). Discretionary and capped at 5% of eligible units a year. Before the secondary market opens (month 31) the model assumes 4% of eligible units are bought back a year (5% Downside = cap); after it opens, requests go to the secondary market first and the group buys only the residual (1% a year). Resale within ~4 months with a price haircut plus 1.5% costs; 1.5% cash reserve on top of the minimum buffer.
 
 | $ | 2027 | 2028 | 2029 | 2030 | 2031 |
 |---|---|---|---|---|---|
-| Units bought back (valuation) | - | $83,447 | $1,134,618 | $3,784,705 | $7,464,329 |
-| Resale gains | - | $630 | $20,871 | $141,170 | $297,618 |
-| Units held for resale (year end) | - | $60,199 | $639,999 | $1,455,921 | $2,713,363 |
-| Cash reserve required (year end) | - | $134,552 | $1,296,560 | $2,801,562 | $5,033,277 |
+| Units bought back (valuation) | - | $364,384 | $1,068,135 | $1,261,568 | $2,488,110 |
+| Resale gains | - | $4,937 | $70,259 | $60,465 | $127,521 |
+| Units held for resale (year end) | - | $254,952 | $210,053 | $477,826 | $890,478 |
+| Cash reserve required (year end) | - | $441,248 | $1,296,560 | $2,801,562 | $5,033,277 |
 
 Requires a legal and capital-adequacy opinion before launch ($40k in set-up).
 

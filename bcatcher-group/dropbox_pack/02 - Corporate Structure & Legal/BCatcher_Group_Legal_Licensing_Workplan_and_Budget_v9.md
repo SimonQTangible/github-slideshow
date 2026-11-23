@@ -1,6 +1,6 @@
-# Legal, Licensing & Corporate Workplan and Budget - Version 8
+# Legal, Licensing & Corporate Workplan and Budget - Version 9
 
-**B-Catcher Group** | 02 - Corporate Structure & Legal | Version 8.0 | 23 November 2026  
+**B-Catcher Group** | 02 - Corporate Structure & Legal | Version 9.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Costs and timing for every legal, licensing and regulatory workstream. Regulatory scope remains as in *Corporate & Regulatory Implementation v1*; this document adds owners, months and money.
@@ -75,7 +75,7 @@ Costs and timing for every legal, licensing and regulatory workstream. Regulator
 2. **Month 4** - Honey Pot appointed corporate authorised representative of a principal licensee ($25k + $12k/month to month 24).
 3. **Month 4-6** - AML/CTF program and AUSTRAC enrolment; wholesale-client verification procedures (s761G, s761GA, s708).
 4. **Month 13-20** - Honey Pot own AFSL application ($150k); responsible managers under RG 105; licence from month 25 (ASIC levy $2.5k/month).
-5. **Month 22-27** - BHive market-operator partner route, market rules and operating agreement ($120k); activation month 31 (deferred in v8 until AUM covers fixed costs).
+5. **Month 22-27** - BHive market-operator partner route, market rules and operating agreement ($120k); activation month 31 (deferred in v9 until AUM covers fixed costs).
 6. **Month 22-24** - digital-token legal register opinion ($40k) before any tokenised register pilot.
 7. **Not modelled** - ACL for mortgage/credit brokers, retail MIS, payments/card, lending. Each needs a separate business case.
 

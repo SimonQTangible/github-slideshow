@@ -30,12 +30,16 @@ Honey Pot,Distribution Infrastructure,Learning management system & broker accred
 Honey Pot,Brand & Marketing Launch,Launch campaign & national broker roadshow,94500,6,3,Opex
 Honey Pot,Brand & Marketing Launch,Marketing compliance review of launch materials,15750,6,1,Opex
 BHive,Technology Build (Capitalised),"Discovery, architecture & UX design",99750,2,2,Capex
-BHive,Technology Build (Capitalised),"MVP build partner: investor, broker & admin portals, wallet",682500,3,6,Capex
+BHive,Technology Build (Capitalised),"Core platform & BHive wallet (built up front): investor & broker portals, admin console, wallet (holdings, documents, distributions, tax), offer marketplace",682500,3,6,Capex
 BHive,Technology Build (Capitalised),Identity/KYC/AML provider integration,26250,4,3,Capex
 BHive,Technology Build (Capitalised),"E-signature, document vault & CRM integration",31500,5,2,Capex
 BHive,Technology Build (Capitalised),Registry / fund administrator integration,63000,5,3,Capex
 BHive,Technology Build (Capitalised),Banking & payment reconciliation integration,42000,5,3,Capex
+BHive,Technology Build (Capitalised),"Platform release 2: buy-back requests in wallet, investor comms hub, referral & Founding Member features, analytics",126000,10,6,Capex
 BHive,Technology Build (Capitalised),Mobile apps (iOS & Android),189000,13,6,Capex
+BHive,Technology Build (Capitalised),"Platform release 3: SMSF, company & trust accounts; auto-reinvest; tax reporting pack",126000,16,6,Capex
+BHive,Technology Build (Capitalised),"Platform release 4: private-credit income marketplace, regular-investment plans, portfolio tools",157500,28,6,Capex
+BHive,Technology Build (Capitalised),"Platform release 5: new offerings module (managed portfolios, insurance, retail-ready module subject to licence)",210000,40,9,Capex
 BHive,Technology Build (Capitalised),"Secondary market engine: listings, order book, transfer & settlement workflow",472500,22,9,Capex
 BHive,Technology Build (Capitalised),Market-operator partner integration,63000,27,4,Capex
 BHive,Technology Build (Capitalised),Tokenised register pilot: smart contracts & audit,94500,34,6,Capex
@@ -46,5 +50,5 @@ BHive,Security & Certification,Privacy impact assessment & data processing agree
 BHive,Security & Certification,SOC 2 Type I readiness & audit,73500,10,6,Opex
 BHive,Security & Certification,Secondary market pen test & surveillance validation,52500,30,1,Opex
 BHive,Technology Build (Capitalised),"Cloud landing zone, environments, domains & app store accounts",15750,2,1,Capex
-B-Catcher,Contingency,Set-up contingency (on all lines above),359625,1,12,Opex
-TOTAL,,,3955875
+B-Catcher,Contingency,Set-up contingency (on all lines above),421575,1,12,Opex
+TOTAL,,,4637325

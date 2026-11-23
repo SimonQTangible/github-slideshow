@@ -1,6 +1,6 @@
-# Capital Raise Summary - Version 8
+# Capital Raise Summary - Version 9
 
-**B-Catcher Group** | 07 - Investor Deck & Capital Raise | Version 8.0 | 23 November 2026  
+**B-Catcher Group** | 07 - Investor Deck & Capital Raise | Version 9.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 ## The ask
@@ -16,12 +16,12 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 | Use | Amount |
 |---|---|
 | Team - salaries, on-costs & hiring (all entities) | $3,036,837 |
-| Platform & technology build (capitalised) | $1,401,750 |
-| Licensing, legal, structuring & compliance set-up | $1,924,125 |
+| Platform & technology build (capitalised) | $1,653,750 |
+| Licensing, legal, structuring & compliance set-up | $1,986,075 |
 | Technology, hosting & security (recurring) | $1,323,804 |
 | Marketing, broker network & investor servicing | $1,082,893 |
 | Regulatory, insurance, professional fees & governance | $1,844,163 |
-| Premises, origination, travel & general | $1,236,485 |
+| Premises, origination, travel & general | $1,239,582 |
 
 ## Illustrative returns (end of year 5)
 | Investor | Invested | MOIC | IRR |
@@ -30,7 +30,7 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 | Series A investors | $8,000,000 | 1.9x | 16% |
 | Series B investors | $5,000,000 | 1.5x | 15% |
 
-Exit basis: Q4 2031 annualised revenue $19.21m and EBITDA $7.88m; equity value $88.71m (average of 10x EBITDA and 4x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.
+Exit basis: Q4 2031 annualised revenue $19.00m and EBITDA $7.67m; equity value $88.18m (average of 10x EBITDA and 4x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.
 
 ## Evidence still required before external circulation (from Content Brief)
 - Verified market sizing and competitors

@@ -1,6 +1,6 @@
-# Financial Model v8 - Read Me
+# Financial Model v9 - Read Me
 
-**B-Catcher Group** | 03 - Financial Models & Budgets | Version 8.0 | 23 November 2026  
+**B-Catcher Group** | 03 - Financial Models & Budgets | Version 9.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 ## Status

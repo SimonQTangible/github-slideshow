@@ -1,6 +1,6 @@
-# Organisation Structure & Headcount Plan - Version 8
+# Organisation Structure & Headcount Plan - Version 9
 
-**B-Catcher Group** | 04 - Organisation & Headcount | Version 8.0 | 23 November 2026  
+**B-Catcher Group** | 04 - Organisation & Headcount | Version 9.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Supersedes the v4 plan (49 roles) and `BCatcher_BHive_Headcount_Org_Structure_36_Months.xlsx`. Every role below is costed monthly in the model.

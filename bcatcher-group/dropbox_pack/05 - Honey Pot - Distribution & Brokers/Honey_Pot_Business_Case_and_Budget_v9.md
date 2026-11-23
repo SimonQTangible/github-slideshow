@@ -1,6 +1,6 @@
-# Honey Pot - Business Case & Budget - Version 8
+# Honey Pot - Business Case & Budget - Version 9
 
-**B-Catcher Group** | 05 - Honey Pot - Distribution & Brokers | Version 8.0 | 23 November 2026  
+**B-Catcher Group** | 05 - Honey Pot - Distribution & Brokers | Version 9.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Procedures remain as in the *Broker Network Operating Manual v1*. This document adds the economics, budget, staffing and targets.

@@ -5,7 +5,7 @@ Three linked deliverables for the B-Catcher / Honey Pot / BHive group, all gener
 | File | What it is |
 |---|---|
 | `BCatcher_Group_Integrated_Financial_Model.xlsx` | 60-month, formula-driven model (~38,000 formulas, zero errors). Inputs with Base/Downside/Upside, every set-up cost, 49-role headcount plan, every recurring cost, revenue by entity, three cost-centre P&Ls, consolidated P&L, cash flow, balance sheet, annual summary, Y1–Y2 quarterly budgets, funding/cap table/returns, scenario & stress results. |
-| `BCatcher_Group_Investor_Deck_v8.pptx` | 21-slide investor deck built from the model's Base case. |
+| `BCatcher_Group_Investor_Deck_v9.pptx` | 21-slide investor deck built from the model's Base case. |
 | `BCatcher_Group_Launch_Playbook_and_Budget_Book.docx` | Start-to-finish launch sequence (step, owner, month, cost), full set-up register, headcount plan, budgets, opex register, funding, scenarios, KPIs, open decisions. |
 
 ## Rebuild after changing assumptions
@@ -16,7 +16,7 @@ Edit `build/data.py` (inputs, roles, set-up items, opex lines), then:
 cd build
 python3 build_all.py                                   # model + scenario runs + recalc
 python3 extract.py ../BCatcher_Group_Integrated_Financial_Model.xlsx ../out/numbers.json
-NODE_PATH=<dir with pptxgenjs> node build_deck.js ../out/numbers.json ../BCatcher_Group_Investor_Deck_v8.pptx
+NODE_PATH=<dir with pptxgenjs> node build_deck.js ../out/numbers.json ../BCatcher_Group_Investor_Deck_v9.pptx
 python3 build_playbook.py ../out/numbers.json ../BCatcher_Group_Launch_Playbook_and_Budget_Book.docx
 ```
 

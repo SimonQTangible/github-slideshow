@@ -1,6 +1,6 @@
-# Launch Playbook & Execution Roadmap - Version 8
+# Launch Playbook & Execution Roadmap - Version 9
 
-**B-Catcher Group** | 01 - Business Plans & Strategy | Version 8.0 | 23 November 2026  
+**B-Catcher Group** | 01 - Business Plans & Strategy | Version 9.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Month 1 = January 2027. Costs are from the model's set-up and opex registers. The full formatted version is `BCatcher_Group_Launch_Playbook_and_Budget_Book.docx`.
@@ -33,7 +33,7 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | CAR appointment | Head of Distribution | 4 | $25,000 + $12k/month |
 | Compliance framework; AML/CTF program | Head of Risk, Compliance & Ops | 3-6 | $100,000 |
 | Broker agreements; CRM & commission system; LMS | Honey Pot | 3-6 | $155,000 |
-| BHive MVP (3 portals + wallet) and integrations | Product owner + build partner | 3-8 | $805,000 |
+| BHive core platform & wallet built up front (portals, admin, wallet, marketplace) and integrations | Product owner + build partner | 3-8 | $805,000 |
 | Privacy assessment; pre-launch pen test | vCISO + build partner | 5-6 | $65,000 |
 | Launch campaign & broker roadshow | Head of Distribution | 6-8 | $105,000 |
 
@@ -51,7 +51,7 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Close Series A | CEO | 10 | $8,000,000 |
 | Own AFSL application | Head of Risk, Compliance & Ops | 13-20 | $150,000 |
 | Market-operator route & legal | Product owner + build partner | 22-27 | $120,000 |
-| Mobile apps; Investment Analyst hire (m13); PE buy-back windows open (capped) | Product owner + CEO/CIO | 13-18 | $180,000 |
+| Platform release 2 + mobile apps; Investment Analyst hire (m13); buy-back bridge opens (m19, capped) | Product owner + CEO/CIO | 10-19 | $300,000 |
 | SOC 2 Type I | vCISO | 10-15 | $70,000 |
 | Month-18 pivot gate | Board | 18 | - |
 
@@ -60,7 +60,7 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 |---|---|---|---|
 | Hire Fund Operations & Finance Officer (trigger ~1,000 investors) | Head of Risk, Compliance & Ops | 19 | $110k + on-costs |
 | Own AFSL granted; exit CAR | Head of Risk, Compliance & Ops | 24-25 | ASIC levy $2.5k/month |
-| Property-token buy-back ladder opens (15/10/5%, capped 5% a year) | CEO/CIO | 25 | 1.5% reserve |
+| Platform release 3 (SMSF/company/trust accounts, auto-reinvest, tax pack) | Product owner + build partner | 16-21 | $120,000 |
 | Expand build-partner retainer (no in-house engineers) | Product owner + build partner | 25 | $50k/month |
 | Close Series B (gated on volume) | CEO | 28 | $5,000,000 |
 | Secondary engine, operator route & integration; pen test | Product owner + build partner / vCISO | 22-30 | $680,000 |
@@ -69,6 +69,8 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Step | Owner | Month | Cost |
 |---|---|---|---|
 | Activate secondary market with licensed operator | Product owner + build partner | 31 | $15k/month + 40% fee share |
+| Platform release 4 (credit income marketplace, regular-investment plans, portfolio tools) | Product owner + build partner | 28-33 | $150,000 |
+| Platform release 5 (new offerings module) | Product owner + build partner / Board | 40-48 | $200,000 |
 | Token legal opinion; tokenised register pilot | Product owner / counsel | 30-39 | $130,000 |
 | Commission-only regional BDMs (VIC/QLD, WA/SA, family office) | Head of Distribution | 13-49 | 0.20% commission pool |
 | Capacity review: scale outsourced providers; hire only if they cannot hold service levels | CEO / Board | 37-49 | - |
@@ -81,7 +83,7 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Managed AUM | $5.16m | $39.11m | $112.33m | $238.28m | $420.83m |
 | Investors | 39 | 306 | 906 | 1,972 | 3,572 |
 | Brokers | 12 | 42 | 80 | 120 | 160 |
-| Revenue | $0.28m | $2.09m | $5.17m | $9.99m | $16.19m |
-| EBITDA | ($4.69m) | ($3.96m) | ($2.09m) | $1.22m | $5.65m |
-| Cash | $7.83m | $3.70m | $5.62m | $6.19m | $10.88m |
+| Revenue | $0.28m | $2.09m | $5.22m | $9.91m | $16.02m |
+| EBITDA | ($4.75m) | ($3.96m) | ($2.04m) | $1.14m | $5.48m |
+| Cash | $7.70m | $3.18m | $5.60m | $6.43m | $11.81m |
 

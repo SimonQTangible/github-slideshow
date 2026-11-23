@@ -1,12 +1,12 @@
-# Master Business Plan - Version 8 (fully costed)
+# Master Business Plan - Version 9 (fully costed)
 
-**B-Catcher Group** | 01 - Business Plans & Strategy | Version 8.0 | 23 November 2026  
+**B-Catcher Group** | 01 - Business Plans & Strategy | Version 9.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 ## 1. Executive summary
 B-Catcher Group is an Australian wholesale private-markets group made of three companies with one controlled lifecycle: **B-Catcher** (parent) originates, structures and manages property trusts, private credit and private equity / pre-IPO investments; **Honey Pot** recruits, accredits and supervises the broker network that distributes approved offers; **BHive** is the single investor-facing platform where investors are verified, subscribe, hold, receive reporting and, once licensed, trade on a secondary market.
 
-The group needs **$3,955,875** of one-off set-up and build spend and a total of **$13.11m** of cumulative funding before it becomes cash-flow positive in **Jul 2030**. It reaches positive EBITDA in **Jul 2030** and, by 2031, **$16.19m** revenue, **$5.65m** EBITDA and **$420.83m** of managed AUM with **7** FTE.
+The group needs **$4,637,325** of one-off set-up and build spend and a total of **$13.00m** of cumulative funding before it becomes cash-flow positive in **Oct 2029**. It reaches positive EBITDA in **Jul 2030** and, by 2031, **$16.02m** revenue, **$5.48m** EBITDA and **$420.83m** of managed AUM with **7** FTE.
 
 ## 2. Group structure
 | Entity | Role | Revenue | Regulatory route |
@@ -17,7 +17,7 @@ The group needs **$3,955,875** of one-off set-up and build spend and a total of 
 | Investment trusts / SPVs | Hold assets, issue units, carry trust-level debt | N/A - investor money and assets are never group revenue or group cash | External trustee, custodian, registry |
 
 ## 3. Products and fees
-v8 fees: the BHive entry and management fees are kept; the technology fee is cut to 0.25% and the property placement fee to 2.5%, so the ongoing fee on property is 1.5% p.a. all-in. Every offer shows one total-cost figure. Honey Pot's placement fee funds broker introduction commissions. See the Investor Returns sheet: investors keep about 70-79% of gross returns.
+v9 fees: the BHive entry and management fees are kept; the technology fee is cut to 0.25% and the property placement fee to 2.5%, so the ongoing fee on property is 1.5% p.a. all-in. Every offer shows one total-cost figure. Honey Pot's placement fee funds broker introduction commissions. See the Investor Returns sheet: investors keep about 70-79% of gross returns.
 
 | Product | Mix | Honey Pot placement fee (broker commissions) | B-Catcher entry fee | B-Catcher management fee |
 |---|---|---|---|---|
@@ -26,7 +26,7 @@ v8 fees: the BHive entry and management fees are kept; the technology fee is cut
 | Private equity / pre-IPO (UTEGBO trusts) | 20% | 5.0% (brokers 3.0%) | 1.5% | 1.50% p.a. |
 | ASX placements / IPO | 10% | 4.0% | - | - |
 
-BHive charges its 0.25% p.a. technology fee, $30,000 per offer onboarded and a 0.25% exchange fee per trade on 15% annual turnover (40% to the licensed operator). **Buy-back structure (v8, capped):** requests go to the BHive secondary market first; the group buys only the residual, at 15% / 10% / 5% below valuation for property tokens (years 3-5) and 10% / 8% / 5% for PE trust units, discretionary and capped at 5% of eligible units a year. Resale assumes a price haircut, and a 1.5% cash reserve is held on top of the minimum buffer. Brokers source 70% of capital and receive 60% of the placement fee. Performance fees are excluded.
+BHive charges its 0.25% p.a. technology fee, $30,000 per offer onboarded and a 0.25% exchange fee per trade on 15% annual turnover (40% to the licensed operator). **Buy-back structure (v9):** the buy-back is the investors' exit route until the secondary market opens - available from year 2 for property tokens (20% / 15% / 10% / 5% below valuation by holding year) and PE trust units (10% / 8% / 5%), discretionary and capped at 5% of eligible units a year. Once the secondary market is live (month 31) requests go there first and the group buys only the residual. Resale assumes a price haircut, and a 1.5% cash reserve is held on top of the minimum buffer. Brokers source 70% of capital and receive 60% of the placement fee. Performance fees are excluded.
 
 ## 4. Five-year forecast (consolidated)
 | $ | 2027 | 2028 | 2029 | 2030 | 2031 |
@@ -38,22 +38,22 @@ BHive charges its 0.25% p.a. technology fee, $30,000 per offer onboarded and a 0
 | Honey Pot revenue | $169,167 | $1,160,000 | $2,610,000 | $4,640,000 | $6,960,000 |
 | B-Catcher revenue | $90,342 | $763,306 | $2,084,560 | $4,257,901 | $7,289,051 |
 | BHive revenue | $19,840 | $164,889 | $452,304 | $948,441 | $1,645,755 |
-| Net revenue | $279,349 | $2,088,826 | $5,167,735 | $9,987,512 | $16,192,424 |
+| Net revenue | $279,349 | $2,093,132 | $5,217,123 | $9,906,807 | $16,022,327 |
 | Cost of sales | ($71,518) | ($496,178) | ($1,134,310) | ($2,052,494) | ($3,132,501) |
-| Gross profit | $207,831 | $1,592,648 | $4,033,424 | $7,935,018 | $13,059,923 |
+| Gross profit | $207,831 | $1,596,954 | $4,082,812 | $7,854,313 | $12,889,826 |
 | Staff costs | ($1,268,177) | ($1,638,410) | ($1,772,452) | ($1,834,487) | ($1,898,694) |
-| Total operating expenses | ($4,895,681) | ($5,552,627) | ($6,119,351) | ($6,714,270) | ($7,411,114) |
-| EBITDA | ($4,687,850) | ($3,959,980) | ($2,085,927) | $1,220,748 | $5,648,809 |
-| NPAT | ($4,721,387) | ($4,134,206) | ($2,434,564) | $1,014,657 | $5,722,777 |
-| Closing cash | $7,833,405 | $3,701,945 | $5,620,746 | $6,191,043 | $10,879,600 |
+| Total operating expenses | ($4,960,728) | ($5,552,627) | ($6,119,351) | ($6,714,270) | ($7,411,114) |
+| EBITDA | ($4,752,897) | ($3,955,673) | ($2,036,538) | $1,140,043 | $5,478,712 |
+| NPAT | ($4,789,422) | ($4,197,517) | ($2,510,400) | $779,417 | $5,422,731 |
+| Closing cash | $7,704,120 | $3,183,346 | $5,601,573 | $6,432,861 | $11,814,912 |
 | FTE | 6 | 7 | 7 | 7 | 7 |
 
 ## 5. Cost of setting up the business
 | Set-up category | Amount |
 |---|---|
-| Technology Build (Capitalised) | $1,779,750 |
+| Technology Build (Capitalised) | $2,399,250 |
 | Licensing & Regulatory | $689,850 |
-| Contingency | $359,625 |
+| Contingency | $421,575 |
 | Product & Investment Structuring | $299,250 |
 | Brand & Marketing Launch | $210,000 |
 | Security & Certification | $194,250 |
@@ -61,9 +61,9 @@ BHive charges its 0.25% p.a. technology fee, $30,000 per offer onboarded and a 0
 | Corporate & Legal Structure | $144,900 |
 | Corporate Raise Costs | $99,750 |
 | Office & Equipment | $15,750 |
-| **Total** | **$3,955,875** |
+| **Total** | **$4,637,325** |
 
-Full line-by-line register: folder 03, `Setup_Cost_Register_v8.csv`.
+Full line-by-line register: folder 03, `Setup_Cost_Register_v9.csv`.
 
 ## 6. Operating costs by category
 | Category | 2027 | 2028 | 2029 | 2030 | 2031 |
@@ -87,19 +87,19 @@ Full line-by-line register: folder 03, `Setup_Cost_Register_v8.csv`.
 | Series A | $8,000,000 | 10 | $35,000,000 | 17.1% |
 | Series B (optional) | $5,000,000 | 28 | $55,000,000 | 8.3% |
 
-Founders and legacy B-Catcher/BHive holders retain 52.2% before any ESOP. Lowest month-end cash with this plan: $1,258,468 (buffer $750k).
+Founders and legacy B-Catcher/BHive holders retain 52.2% before any ESOP. Lowest month-end cash with this plan: $1,209,109 (buffer $750k).
 
 ## 8. Scenarios
 | Case | Revenue 2031 | EBITDA 2031 | Peak funding | Extra equity needed | EBITDA positive |
 |---|---|---|---|---|---|
-| Base case | $16,192,424 | $5,648,809 | $13,105,812 | - | Jul 2030 |
-| Downside | $5,383,000 | ($3,193,738) | $28,956,979 | $14,408,207 | > 2031 |
-| Upside | $29,113,507 | $16,062,025 | $7,542,490 | - | Jun 2029 |
-| Stress: 50% placement shortfall | $8,096,212 | ($239,865) | $18,525,677 | $3,521,829 | Jul 2031 |
-| Stress: 6-month licensing delay | $12,976,708 | $3,232,961 | $15,872,297 | $297,810 | Jan 2031 |
-| Stress: 6-month broker ramp delay | $14,245,772 | $4,187,659 | $14,837,364 | - | Jul 2030 |
-| Stress: 25% technology build overrun | $16,192,424 | $5,648,809 | $13,610,351 | - | Jul 2030 |
-| Combined: Downside + 6-month delay | $4,299,652 | ($3,925,000) | $29,801,400 | $14,568,705 | > 2031 |
+| Base case | $16,022,327 | $5,478,712 | $12,996,617 | - | Jul 2030 |
+| Downside | $5,449,245 | ($3,127,493) | $27,390,761 | $12,841,989 | > 2031 |
+| Upside | $28,759,066 | $15,707,584 | $7,841,006 | - | Jun 2029 |
+| Stress: 50% placement shortfall | $8,011,164 | ($324,913) | $18,588,054 | $3,430,183 | Jul 2031 |
+| Stress: 6-month licensing delay | $12,856,455 | $3,112,709 | $15,914,306 | $283,596 | Jan 2031 |
+| Stress: 6-month broker ramp delay | $14,107,323 | $4,049,210 | $14,901,004 | - | Jul 2030 |
+| Stress: 25% technology build overrun | $16,022,327 | $5,478,712 | $13,627,482 | - | Jul 2030 |
+| Combined: Downside + 6-month delay | $4,341,563 | ($3,883,089) | $28,859,790 | $13,627,095 | > 2031 |
 
 **Board pivot gate (month 18):** if run-rate placements are below ~$40m p.a., cut outsourced and build-partner spend, defer the secondary-market build and stay under the principal licensee longer. At downside volumes the full three-company build does not pay for itself.
 

@@ -25,15 +25,15 @@ B-Catcher,Broker Network & Distribution,0,0,0,0,0,0
 B-Catcher,Investor Servicing & Onboarding,0,0,0,0,0,0
 B-Catcher,Investment Origination & Due Diligence,136740,275134,283388,319688,329279,1344229
 B-Catcher,Travel & General,95135,113329,117403,120926,124553,571346
-B-Catcher,BHive platform licence (intercompany),150000,300000,300000,300000,300000,1350000
-B-Catcher,"Set-up & launch costs (one-off, expensed)",1223775,0,0,0,0,1223775
-B-Catcher,Contingency,96613,57451,59582,63224,65897,342767
-B-Catcher,TOTAL OPERATING EXPENSES,2849061,2522849,2658245,2773478,2869713,13673346
-B-Catcher,EBITDA,-2209188,-1168521,-8495,2000741,4858337,3472874
+B-Catcher,BHive platform licence (intercompany),180000,360000,360000,360000,360000,1620000
+B-Catcher,"Set-up & launch costs (one-off, expensed)",1285725,0,0,0,0,1285725
+B-Catcher,Contingency,99711,57451,59582,63224,65897,345865
+B-Catcher,TOTAL OPERATING EXPENSES,2944109,2582849,2718245,2833478,2929713,14008394
+B-Catcher,EBITDA,-2304235,-1228521,-68495,1940741,4798337,3137827
 B-Catcher,Other income - R&D tax incentive (accrued),0,0,0,0,0,0
 B-Catcher,Memo: capitalised set-up spend,15750,0,0,0,0,15750
 B-Catcher,Depreciation & amortisation,3938,5250,5250,1312,0,15750
-B-Catcher,EBIT (before interest & tax - taxed at group level),-2213125,-1173771,-13745,1999428,4858337,3457124
+B-Catcher,EBIT (before interest & tax - taxed at group level),-2308173,-1233771,-73745,1939428,4798337,3122076
 Honey Pot,Placement fees - property trusts,65625,450000,1012500,1800000,2700000,6028125
 Honey Pot,Placement fees - private credit,21875,150000,337500,600000,900000,2009375
 Honey Pot,Placement fees - private equity / pre-IPO,58333,400000,900000,1600000,2400000,5358333
@@ -69,15 +69,15 @@ Honey Pot,EBIT (before interest & tax - taxed at group level),-1674533,-1811728,
 BHive,Technology / platform fees,2340,44889,174055,418410,805004,1444698
 BHive,Offer onboarding fees,17500,120000,270000,480000,720000,1607500
 BHive,Exchange fees,0,0,8249,50030,120751,179030
-BHive,Buy-back resale gains,0,630,20871,141170,297618,460289
-BHive,External revenue,19840,165520,473174,1089611,1943373,3691518
+BHive,Buy-back resale gains,0,4937,70259,60465,127521,263182
+BHive,External revenue,19840,169826,522562,1008906,1773276,3494410
 BHive,Platform licence from Honey Pot,120000,240000,240000,240000,240000,1080000
-BHive,Platform licence from B-Catcher,150000,300000,300000,300000,300000,1350000
-BHive,Intercompany revenue,270000,540000,540000,540000,540000,2430000
-BHive,TOTAL REVENUE,289840,705520,1013174,1629611,2483373,6121518
+BHive,Platform licence from B-Catcher,180000,360000,360000,360000,360000,1620000
+BHive,Intercompany revenue,300000,600000,600000,600000,600000,2700000
+BHive,TOTAL REVENUE,319840,769826,1122562,1608906,2373276,6194410
 BHive,Market-operator partner share,0,0,3299,20012,48300,71611
 BHive,Total cost of sales,0,0,3299,20012,48300,71611
-BHive,GROSS PROFIT,289840,705520,1009875,1609599,2435073,6049907
+BHive,GROSS PROFIT,319840,769826,1119263,1588894,2324976,6122799
 BHive,"Salaries, superannuation & on-costs",249200,182574,164540,170299,176260,942873
 BHive,Recruitment & onboarding,10500,0,0,0,0,10500
 BHive,Premises & Office,0,0,0,0,0,0
@@ -95,8 +95,8 @@ BHive,B-Catcher shared-services fee (intercompany),300000,300000,300000,300000,3
 BHive,"Set-up & launch costs (one-off, expensed)",105000,99750,157500,0,0,362250
 BHive,Contingency,26223,58520,78966,81910,87804,333423
 BHive,TOTAL OPERATING EXPENSES,1110375,1711500,2122817,2190419,2320138,9455249
-BHive,EBITDA,-820535,-1005980,-1112942,-580820,114935,-3405342
+BHive,EBITDA,-790535,-941674,-1003554,-601525,4838,-3332450
 BHive,Other income - R&D tax incentive (accrued),32521,23826,21472,22224,23002,123045
-BHive,Memo: capitalised set-up spend,960750,346500,425250,47250,0,1779750
-BHive,Depreciation & amortisation,182219,369250,524562,408406,224000,1708437
-BHive,EBIT (before interest & tax - taxed at group level),-970233,-1351404,-1616032,-967002,-86063,-4990734
+BHive,Memo: capitalised set-up spend,1023750,535500,582750,257250,0,2399250
+BHive,Depreciation & amortisation,183969,427000,632625,566490,372750,2182834
+BHive,EBIT (before interest & tax - taxed at group level),-941983,-1344848,-1614706,-1145790,-344910,-5392237

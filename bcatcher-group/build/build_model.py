@@ -351,8 +351,8 @@ add(G, "bhRev", "Total BHive external revenue (excl. buy-back gains)", lambda c,
 add(G, "bhPartner", "Market-operator partner share (cost of sales)", lambda c, p, m: f"={c}{R['bhSec']}*SecPartnerShare")
 
 sec(G, "BUY-BACK FACILITY (exit ladder / UTEGBO) - group buys units at a discount and resells at valuation")
-add(G, "bbP", "Property tokens bought back (at valuation)", lambda c, p, m: f"=IF({c}{R['k']}>=BBStartProp,{c}{R['aumOP']}*BBRate/12,0)")
-add(G, "bbE", "PE / trust units bought back (at valuation)", lambda c, p, m: f"=IF({c}{R['k']}>=BBStartPE,{c}{R['aumOE']}*BBRate/12,0)")
+add(G, "bbP", "Property tokens bought back (at valuation)", lambda c, p, m: f"=IF({c}{R['k']}>=BBStartProp,{c}{R['aumOP']}*IF({c}$3>=SecEff,BBRatePost,BBRate)/12,0)")
+add(G, "bbE", "PE / trust units bought back (at valuation)", lambda c, p, m: f"=IF({c}{R['k']}>=BBStartPE,{c}{R['aumOE']}*IF({c}$3>=SecEff,BBRatePost,BBRate)/12,0)")
 add(G, "bbNAV", "Total bought back (at valuation)", lambda c, p, m: f"={c}{R['bbP']}+{c}{R['bbE']}", bold=True)
 add(G, "bbCost", "Cash paid to investors (after ladder discount)", lambda c, p, m: f"={c}{R['bbP']}*(1-BBDiscProp)+{c}{R['bbE']}*(1-BBDiscPE)")
 add(G, "bbSoldNAV", "Units resold (valuation, after resale lag)", lambda c, p, m: f"=IF({c}$3>BBResaleMonths,INDEX($E${R['bbNAV']}:$BL${R['bbNAV']},{c}$3-BBResaleMonths),0)")
