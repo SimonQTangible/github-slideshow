@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>B-Catcher Group Org Chart</title>
+<style>
+  :root{
+    --ink:#1B1F2A; --slate:#3A4152; --mist:#F3F4F7; --line:#C9CED8;
+    --navy:#1F3A5F; --honey:#E8A317; --teal:#2A7F8A; --grey:#8C93A3; --pale:#F6D58E;
+    --navy-l:#E6ECF4; --honey-l:#FCF1D9; --teal-l:#E2F1F2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:#fff;color:var(--ink);font-family:Calibri,"Segoe UI",Arial,sans-serif;width:1800px;padding:34px 40px 28px}
+  h1{font-size:34px;font-weight:700}
+  .sub{font-size:16px;color:var(--slate);margin-top:4px}
+  .top{display:flex;justify-content:space-between;align-items:flex-end}
+  .stamp{font-size:13px;color:var(--grey);text-align:right;line-height:1.4}
+
+  .row{display:flex;justify-content:center;gap:28px;position:relative}
+  .card{border-radius:10px;padding:10px 14px;background:#fff;border:2px solid var(--line);font-size:14px;line-height:1.3;position:relative}
+  .card .t{font-weight:700;font-size:15px}
+  .card .m{color:var(--slate);font-size:12.5px;margin-top:3px}
+  .gov{background:var(--mist);border-color:var(--mist);width:330px;text-align:center}
+  .ceo{background:var(--ink);color:#fff;border-color:var(--ink);width:430px;text-align:center;padding:14px}
+  .ceo .m{color:#D8DCE4}
+  .vline{width:2px;background:var(--line);margin:0 auto}
+  .hbar{height:2px;background:var(--line);margin:0 auto;width:1240px}
+
+  .ents{display:grid;grid-template-columns:1.55fr 1fr 1fr;gap:22px;margin-top:0}
+  .drop{display:grid;grid-template-columns:1.55fr 1fr 1fr;gap:22px;width:100%}
+  .drop div{height:18px;border-left:2px solid var(--line);margin-left:50%}
+  .ent{border-radius:14px;padding:0 0 14px;background:var(--mist)}
+  .ent .hd{border-radius:14px 14px 0 0;padding:12px 16px;color:#fff}
+  .ent .hd .n{font-size:20px;font-weight:700}
+  .ent .hd .r{font-size:13px;opacity:.92;margin-top:2px}
+  .ent .hd .eq{float:right;font-size:12px;background:rgba(255,255,255,.22);border-radius:20px;padding:3px 10px;margin-top:3px}
+  .bc .hd{background:var(--navy)} .hp .hd{background:var(--honey);color:var(--ink)} .hp .hd .eq{background:rgba(0,0,0,.12)} .bh .hd{background:var(--teal)}
+  .body{padding:12px 14px 0}
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .lab{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--slate);margin:2px 0 6px}
+  .stack{display:flex;flex-direction:column;gap:8px}
+  .kids{margin-left:22px;padding-left:12px;border-left:2px solid var(--line);display:flex;flex-direction:column;gap:8px;margin-top:8px}
+
+  /* role types */
+  .core{border-width:2.5px}
+  .bc .core{border-color:var(--navy)} .hp .core{border-color:var(--honey)} .bh .core{border-color:var(--teal)}
+  .trig{border-style:dashed}
+  .bc .trig{border-color:var(--navy)} .hp .trig{border-color:#C98B0F}
+  .con{background:#FBFBFC;border-style:dotted;border-color:var(--grey)}
+  .ext{background:transparent;border:1.5px solid #D5D9E1;color:var(--slate)}
+  .ext .t{font-weight:600;font-size:14px}
+  .badge{position:absolute;top:-9px;right:10px;font-size:11px;font-weight:700;border-radius:10px;padding:1px 8px;color:#fff}
+  .b-core{background:var(--ink)} .b-trig{background:#5B6B86} .b-con{background:var(--grey)}
+
+  .out{margin-top:20px;border-radius:14px;border:2px dashed #D5D9E1;padding:12px 16px}
+  .out .lab{margin-bottom:8px}
+  .chips{display:flex;flex-wrap:wrap;gap:8px}
+  .chip{font-size:13.5px;background:var(--mist);border-radius:16px;padding:5px 12px;color:var(--slate)}
+
+  .foot{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:22px;margin-top:18px}
+  .box{background:var(--mist);border-radius:12px;padding:12px 16px;font-size:13.5px;line-height:1.45}
+  .box b{font-size:14px}
+  .leg{display:flex;flex-direction:column;gap:7px}
+  .li{display:flex;align-items:center;gap:10px}
+  .sw{width:34px;height:18px;border-radius:5px;background:#fff;border:2.5px solid var(--ink)}
+  .sw.trig{border-style:dashed;border-width:2px}
+  .sw.con{border-style:dotted;border-width:2px;border-color:var(--grey)}
+  .sw.ext{border:1.5px solid #D5D9E1}
+  table{border-collapse:collapse;width:100%;font-size:13.5px}
+  td,th{padding:3px 6px;text-align:right} td:first-child,th:first-child{text-align:left}
+  th{color:var(--slate);font-weight:700;border-bottom:1.5px solid var(--line)}
+  .note{font-size:12px;color:var(--grey);margin-top:12px}
+</style>
+</head>
+<body>
+  <div class="top">
+    <div>
+      <h1>B-Catcher Group - Organisation Chart</h1>
+      <div class="sub">Four core employees at launch, ten employees by year 3 as volume grows; specialists bought in. Base case, v10.3.</div>
+    </div>
+    <div class="stamp">Confidential planning document · 23 November 2026<br>Source: BCatcher_Group_Integrated_Financial_Model_v10.xlsx (Headcount)</div>
+  </div>
+
+  <!-- governance -->
+  <div class="row" style="margin-top:24px">
+    <div class="card gov"><div class="t">Shareholders</div><div class="m">Founders hold 59.8% of votes (floor 51%) · Seed & Series A investors</div></div>
+    <div class="card gov"><div class="t">Board of Directors</div><div class="m">Independent Chair (m1) · 2 independent NEDs (m13) · Founder directors</div></div>
+    <div class="card gov"><div class="t">Investment Committee</div><div class="m">CEO/CIO · Head of Risk (observer) · independent member (m7)</div></div>
+  </div>
+  <div class="vline" style="height:20px"></div>
+
+  <div class="row">
+    <div class="card ceo"><div class="t" style="font-size:18px">Group CEO &amp; Chief Investment Officer</div><div class="m">Acting CTO · responsible manager #1 · from month 1 · $300k</div></div>
+  </div>
+  <div class="vline" style="height:18px"></div>
+  <div class="hbar"></div>
+  <div class="drop"><div></div><div></div><div></div></div>
+
+  <div class="ents">
+    <!-- B-CATCHER -->
+    <div class="ent bc">
+      <div class="hd"><span class="eq">Parent · 3% non-voting executive pool</span><div class="n">B-Catcher (parent)</div><div class="r">Originate, invest, manage assets · group finance, risk &amp; shared services</div></div>
+      <div class="body cols">
+        <div>
+          <div class="lab">Risk, compliance &amp; operations</div>
+          <div class="card core"><span class="badge b-core">Core 2</span><div class="t">Head of Risk, Compliance &amp; Operations</div><div class="m">Responsible manager #2 · m1 (0.5 FTE → 1.0 from m5) · $210k</div></div>
+          <div class="kids">
+            <div class="card trig"><span class="badge b-trig">m19</span><div class="t">Fund Operations &amp; Finance Officer</div><div class="m">Reconciliations, distributions, registry · $110k</div></div>
+            <div class="card trig"><span class="badge b-trig">m22</span><div class="t">Compliance &amp; AML Officer</div><div class="m">AML/KYC, breach register, offer sign-off · $130k</div></div>
+            <div class="card trig"><span class="badge b-trig">m31</span><div class="t">Fund Accountant &amp; Registry Officer</div><div class="m">Unit pricing, registry, trade settlement · $115k</div></div>
+          </div>
+        </div>
+        <div>
+          <div class="lab">Investment &amp; finance (report to CEO/CIO)</div>
+          <div class="stack">
+            <div class="card trig"><span class="badge b-trig">m13</span><div class="t">Investment Analyst &amp; Asset Manager</div><div class="m">Due diligence, IC papers, asset reporting · $140k</div></div>
+            <div class="card trig"><span class="badge b-trig">m25</span><div class="t">Asset Manager - Property</div><div class="m">Portfolio, tenants, valuations · $165k</div></div>
+            <div class="card con"><span class="badge b-con">Contract</span><div class="t">Fractional CFO</div><div class="m">0.3 → 0.4 FTE · reporting, audit, treasury, raise</div></div>
+            <div class="card ext"><div class="t">Outsourced analysts, valuers &amp; property managers</div><div class="m">AI research &amp; DD tools</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HONEY POT -->
+    <div class="ent hp">
+      <div class="hd"><span class="eq">25% non-voting partner pool</span><div class="n">Honey Pot</div><div class="r">Brokers &amp; distribution · B-SMART marketing · investor communications</div></div>
+      <div class="body">
+        <div class="lab">Distribution</div>
+        <div class="card core"><span class="badge b-core">Core 3</span><div class="t">Head of Distribution (Honey Pot MD)</div><div class="m">From m3 · $235k</div></div>
+        <div class="kids">
+          <div class="card trig"><span class="badge b-trig">m19</span><div class="t">Broker Relationship Manager</div><div class="m">Broker onboarding, accreditation, supervision · $140k</div></div>
+          <div class="card ext"><div class="t">Commission-only regional BDMs</div><div class="m">VIC/QLD, WA/SA, family offices · 0.20% of capital</div></div>
+          <div class="card ext"><div class="t">Accredited brokers (Worker → Builder → Queen)</div><div class="m">18 (2027) → 140 (2029) → 285 (2031) · paid on cleared money</div></div>
+        </div>
+        <div class="lab" style="margin-top:14px">Investor communications</div>
+        <div class="card core"><span class="badge b-core">Core 4</span><div class="t">Investor Communications &amp; BDM</div><div class="m">From m5 · $150k · investors, platform customers, new issuers</div></div>
+        <div class="kids">
+          <div class="card ext"><div class="t">Freelance marketing + AI content tools</div><div class="m">B-SMART campaign</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BHIVE -->
+    <div class="ent bh">
+      <div class="hd"><span class="eq">25% non-voting platform pool</span><div class="n">BHive</div><div class="r">Investor platform &amp; wallet · secondary market from m31</div></div>
+      <div class="body">
+        <div class="lab">Product &amp; technology (report to CEO as acting CTO)</div>
+        <div class="stack">
+          <div class="card con"><span class="badge b-con">Contract</span><div class="t">Fractional Product Owner</div><div class="m">m2 · 0.6 → 0.4 FTE · runs releases 1-5</div></div>
+          <div class="card con"><span class="badge b-con">Contract</span><div class="t">Information Security Lead (vCISO)</div><div class="m">m4 · 0.2 FTE · security, SOC 2</div></div>
+          <div class="card con"><span class="badge b-con">Contract</span><div class="t">UX/UI Designer</div><div class="m">m2-12 · 0.5 FTE · core wallet build</div></div>
+          <div class="card ext"><div class="t">Build partner (engineering, DevOps, QA)</div><div class="m">$40k/month → $50k/month from m25</div></div>
+          <div class="card ext"><div class="t">Licensed market operator (from m31)</div><div class="m">Runs secondary-market trading</div></div>
+          <div class="card ext"><div class="t">Service desk + AI support agent</div><div class="m">Tier-1 investor &amp; broker support</div></div>
+          <div class="card" style="border-style:dashed;border-color:var(--teal);background:var(--teal-l)"><div class="t">Future: CTO / Head of Platform</div><div class="m">If the build is brought in-house · BHive equity 10%</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="out">
+    <div class="lab">Outsourced &amp; regulated partners (hold client money and assets; never group assets)</div>
+    <div class="chips">
+      <span class="chip">Principal licensee (CAR, m4-24)</span><span class="chip">Trustee / responsible entity</span><span class="chip">Custodian</span>
+      <span class="chip">Fund administrator &amp; registry</span><span class="chip">External compliance consultant</span><span class="chip">Bookkeeping &amp; fund accounting</span>
+      <span class="chip">External audit &amp; tax</span><span class="chip">Legal counsel</span><span class="chip">MDR security service</span><span class="chip">HR &amp; payroll bureau</span>
+    </div>
+  </div>
+
+  <div class="foot">
+    <div class="box leg">
+      <b>How to read the chart</b>
+      <div class="li"><span class="sw"></span>Core employee (4) - in place at launch</div>
+      <div class="li"><span class="sw trig"></span>Hired when volume triggers are met (6) - badge shows start month</div>
+      <div class="li"><span class="sw con"></span>Fractional contractor (4)</div>
+      <div class="li"><span class="sw ext"></span>Outsourced, commission-only or partner - not on payroll</div>
+      <div>Colours: <b style="color:var(--navy)">navy</b> B-Catcher · <b style="color:#B37D08">honey</b> Honey Pot · <b style="color:var(--teal)">teal</b> BHive</div>
+    </div>
+    <div class="box">
+      <b>Headcount (year end, FTE)</b>
+      <table style="margin-top:6px">
+        <tr><th></th><th>2027</th><th>2028</th><th>2029</th><th>2031</th></tr>
+        <tr><td>B-Catcher</td><td>2.3</td><td>5.3</td><td>7.4</td><td>7.4</td></tr>
+        <tr><td>Honey Pot</td><td>2.0</td><td>3.0</td><td>3.0</td><td>3.0</td></tr>
+        <tr><td>BHive</td><td>1.3</td><td>0.6</td><td>0.6</td><td>0.6</td></tr>
+        <tr><td><b>Group</b></td><td><b>5.6</b></td><td><b>8.9</b></td><td><b>11.0</b></td><td><b>11.0</b></td></tr>
+        <tr><td>Staff cost</td><td>$1.3m</td><td>$1.8m</td><td>$2.4m</td><td>$2.7m</td></tr>
+      </table>
+    </div>
+    <div class="box">
+      <b>Equity for key people (all non-voting)</b>
+      <div style="margin-top:6px">Honey Pot <b>25%</b> - Head of Distribution, Broker RM, Investor Comms &amp; BDM, Queen-tier brokers</div>
+      <div>BHive <b>25%</b> - future CTO, product owner, senior engineers</div>
+      <div>Parent <b>3%</b> - CFO/COO and Head of Investments recruited from banks and fund managers</div>
+      <div>Investment &amp; risk team - performance-fee share, phantom shares, retention bonuses</div>
+      <div class="note">Founders keep 59.8% of B-Catcher Group votes and, through it, 100% of Honey Pot and BHive votes.</div>
+    </div>
+  </div>
+</body>
+</html>
