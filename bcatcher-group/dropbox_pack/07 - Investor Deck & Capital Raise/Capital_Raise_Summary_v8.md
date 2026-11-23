@@ -30,7 +30,7 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 | Series A investors | $8,000,000 | 1.9x | 16% |
 | Series B investors | $5,000,000 | 1.5x | 15% |
 
-Exit basis: Q4 2031 annualised revenue $19.21m and EBITDA $7.88m; equity value $88.71m (average of 12x EBITDA and 5x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.
+Exit basis: Q4 2031 annualised revenue $19.21m and EBITDA $7.88m; equity value $88.71m (average of 10x EBITDA and 4x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.
 
 ## Evidence still required before external circulation (from Content Brief)
 - Verified market sizing and competitors
