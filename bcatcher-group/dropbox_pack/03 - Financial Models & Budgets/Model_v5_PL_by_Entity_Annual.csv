@@ -14,7 +14,7 @@ B-Catcher,Total cost of sales,585,11222,43514,104049,197018,356388
 B-Catcher,GROSS PROFIT,685803,1698612,3498808,6298149,10073823,22255195
 B-Catcher,"Salaries, superannuation & on-costs",1022793,1346131,1452378,1853311,2473758,8148371
 B-Catcher,Recruitment & onboarding,92250,0,0,46000,90750,229000
-B-Catcher,Premises & Office,119772,202976,277684,292309,309830,1202571
+B-Catcher,Premises & Office,119772,128816,137645,213632,228793,828658
 B-Catcher,Board & Governance,105000,247200,254616,262254,270122,1139192
 B-Catcher,Insurance,43200,44496,45831,47206,48622,229355
 B-Catcher,"Professional Fees (Legal, Audit, Tax)",168000,203940,210058,216360,222851,1021209
@@ -26,14 +26,14 @@ B-Catcher,Investor Servicing & Onboarding,0,0,0,0,0,0
 B-Catcher,Investment Origination & Due Diligence,79500,142140,146404,150796,155320,674160
 B-Catcher,Travel & General,93810,113527,121070,129947,141139,599493
 B-Catcher,BHive platform licence (intercompany),60000,120000,120000,120000,120000,540000
-B-Catcher,"Set-up & launch costs (one-off, expensed)",1009500,0,0,0,0,1009500
-B-Catcher,Contingency,82771,50282,56049,59094,62763,310959
-B-Catcher,TOTAL OPERATING EXPENSES,2913226,2522047,2749399,3260280,4002529,15447481
-B-Catcher,EBITDA,-2227423,-823436,749409,3037869,6071294,6807713
+B-Catcher,"Set-up & launch costs (one-off, expensed)",1006500,0,0,0,0,1006500
+B-Catcher,Contingency,82621,46574,49047,55160,58711,292113
+B-Catcher,TOTAL OPERATING EXPENSES,2910076,2444179,2602358,3177670,3917440,15051723
+B-Catcher,EBITDA,-2224273,-745568,896450,3120479,6156383,7203471
 B-Catcher,Other income - R&D tax incentive (accrued),0,0,0,0,0,0
-B-Catcher,Memo: capitalised set-up spend,45000,0,0,0,0,45000
-B-Catcher,Depreciation & amortisation,11250,15000,15000,3750,0,45000
-B-Catcher,EBIT (before interest & tax - taxed at group level),-2238673,-838436,734409,3034119,6071294,6762713
+B-Catcher,Memo: capitalised set-up spend,15000,0,0,0,0,15000
+B-Catcher,Depreciation & amortisation,3750,5000,5000,1250,0,15000
+B-Catcher,EBIT (before interest & tax - taxed at group level),-2228023,-750568,891450,3119229,6156383,7188471
 Honey Pot,Placement fees - property trusts,98438,675000,1518750,2632500,3915000,8839688
 Honey Pot,Placement fees - private credit,27344,187500,421875,731250,1087500,2455469
 Honey Pot,Placement fees - private equity / pre-IPO,72917,500000,1125000,1950000,2900000,6547917

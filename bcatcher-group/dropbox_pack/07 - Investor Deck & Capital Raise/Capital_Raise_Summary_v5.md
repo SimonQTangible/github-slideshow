@@ -15,12 +15,12 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 | Use | Amount |
 |---|---|
 | Team - salaries, on-costs & hiring (all entities) | $4,932,312 |
-| Platform & technology build (capitalised) | $1,455,000 |
-| Licensing, legal, structuring & compliance set-up | $1,826,500 |
+| Platform & technology build (capitalised) | $1,425,000 |
+| Licensing, legal, structuring & compliance set-up | $1,823,500 |
 | Technology, hosting & security (recurring) | $841,422 |
 | Marketing, broker network & investor servicing | $824,748 |
 | Regulatory, insurance, professional fees & governance | $1,704,862 |
-| Premises, origination, travel & general | $1,177,455 |
+| Premises, origination, travel & general | $1,099,437 |
 
 ## Illustrative returns (end of year 5)
 | Investor | Invested | MOIC | IRR |
@@ -28,7 +28,7 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 | Seed investors | $5,500,000 | 4.9x | 37% |
 | Series A investors | $7,500,000 | 2.9x | 28% |
 
-Exit basis: Q4 2031 annualised revenue $25.40m and EBITDA $10.19m; equity value $135.84m (average of 12x EBITDA and 5x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.
+Exit basis: Q4 2031 annualised revenue $25.40m and EBITDA $10.28m; equity value $136.81m (average of 12x EBITDA and 5x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.
 
 ## Evidence still required before external circulation (from Content Brief)
 - Verified market sizing and competitors

@@ -6,7 +6,7 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 ## 1. Executive summary
 B-Catcher Group is an Australian wholesale private-markets group made of three companies with one controlled lifecycle: **B-Catcher** (parent) originates, structures and manages property trusts, private credit and private equity / pre-IPO investments; **Honey Pot** recruits, accredits and supervises the broker network that distributes approved offers; **BHive** is the single investor-facing platform where investors are verified, subscribe, hold, receive reporting and, once licensed, trade on a secondary market.
 
-The group needs **$3,371,500** of one-off set-up and build spend and a total of **$11.42m** of cumulative funding before it becomes cash-flow positive in **Aug 2029**. It reaches positive EBITDA in **Aug 2029** and, by 2031, **$21.39m** revenue, **$6.94m** EBITDA and **$513.63m** of managed AUM with **24** FTE.
+The group needs **$3,338,500** of one-off set-up and build spend and a total of **$11.21m** of cumulative funding before it becomes cash-flow positive in **Aug 2029**. It reaches positive EBITDA in **Aug 2029** and, by 2031, **$21.39m** revenue, **$7.03m** EBITDA and **$513.63m** of managed AUM with **24** FTE.
 
 ## 2. Group structure
 | Entity | Role | Revenue | Regulatory route |
@@ -40,10 +40,10 @@ BHive charges 0.30% p.a. on platform AUM, $20,000 per offer onboarded and a 1.0%
 | Cost of sales | ($96,288) | ($670,121) | ($1,542,799) | ($2,730,016) | ($4,129,360) |
 | Gross profit | $300,641 | $2,276,169 | $5,683,038 | $10,736,707 | $17,261,319 |
 | Staff costs | ($1,951,813) | ($2,705,249) | ($3,571,812) | ($4,389,409) | ($5,718,801) |
-| Total operating expenses | ($5,194,904) | ($6,112,396) | ($7,094,287) | ($8,359,459) | ($10,320,451) |
-| EBITDA | ($4,894,263) | ($3,836,227) | ($1,411,250) | $2,377,249 | $6,940,869 |
-| NPAT | ($4,882,583) | ($4,039,259) | ($1,711,243) | $2,257,234 | $7,282,723 |
-| Closing cash | $6,722,236 | $2,636,027 | $1,265,685 | $3,859,609 | $11,182,656 |
+| Total operating expenses | ($5,191,754) | ($6,034,528) | ($6,947,247) | ($8,276,848) | ($10,235,362) |
+| EBITDA | ($4,891,113) | ($3,758,359) | ($1,264,209) | $2,459,859 | $7,025,957 |
+| NPAT | ($4,871,085) | ($3,948,920) | ($1,547,754) | $2,353,208 | $7,382,040 |
+| Closing cash | $6,756,234 | $2,750,364 | $1,533,510 | $4,220,909 | $11,643,272 |
 | FTE | 12 | 12 | 16 | 19 | 24 |
 
 ## 5. Cost of setting up the business
@@ -51,22 +51,22 @@ BHive charges 0.30% p.a. on platform AUM, $20,000 per offer onboarded and a 1.0%
 |---|---|
 | Technology Build (Capitalised) | $1,425,000 |
 | Licensing & Regulatory | $537,000 |
-| Contingency | $306,500 |
+| Contingency | $303,500 |
 | Product & Investment Structuring | $285,000 |
 | Brand & Marketing Launch | $200,000 |
 | Security & Certification | $185,000 |
 | Distribution Infrastructure | $155,000 |
 | Corporate & Legal Structure | $138,000 |
 | Corporate Raise Costs | $95,000 |
-| Office & Equipment | $45,000 |
-| **Total** | **$3,371,500** |
+| Office & Equipment | $15,000 |
+| **Total** | **$3,338,500** |
 
 Full line-by-line register: folder 03, `Setup_Cost_Register_v5.csv`.
 
 ## 6. Operating costs by category
 | Category | 2027 | 2028 | 2029 | 2030 | 2031 |
 |---|---|---|---|---|---|
-| Premises & Office | $119,772 | $202,976 | $277,684 | $292,309 | $309,830 |
+| Premises & Office | $119,772 | $128,816 | $137,645 | $213,632 | $228,793 |
 | Board & Governance | $105,000 | $247,200 | $254,616 | $262,254 | $270,122 |
 | Insurance | $98,658 | $165,736 | $182,908 | $204,220 | $228,177 |
 | Professional Fees (Legal, Audit, Tax) | $216,000 | $302,820 | $311,905 | $321,262 | $330,900 |
@@ -85,20 +85,20 @@ Full line-by-line register: folder 03, `Setup_Cost_Register_v5.csv`.
 | Series A | $7,500,000 | 10 | $40,000,000 | 15.8% |
 | Series B (optional) | - | 28 | $65,000,000 | 0.0% |
 
-Founders and legacy B-Catcher/BHive holders retain 64.5% before any ESOP. Lowest month-end cash with this plan: $778,060 (buffer $750k).
+Founders and legacy B-Catcher/BHive holders retain 64.5% before any ESOP. Lowest month-end cash with this plan: $810,979 (buffer $750k).
 
 ## 8. Scenarios
 | Case | Revenue 2031 | EBITDA 2031 | Peak funding | Extra equity needed | EBITDA positive |
 |---|---|---|---|---|---|
-| Base case | $21,390,679 | $6,940,869 | $11,415,057 | - | Aug 2029 |
-| Downside | $5,853,058 | ($5,842,326) | $30,549,358 | $18,949,358 | > 2031 |
-| Upside | $35,061,298 | $19,062,955 | $6,830,272 | - | Sep 2028 |
-| Stress: 50% placement shortfall | $10,695,340 | ($1,186,497) | $18,880,285 | $7,150,285 | Aug 2031 |
-| Stress: 6-month licensing delay | $17,163,123 | $3,655,635 | $14,892,081 | $3,162,081 | Aug 2030 |
-| Stress: 6-month broker ramp delay | $18,866,201 | $4,970,418 | $13,940,771 | $2,210,771 | Jul 2030 |
-| Stress: 25% technology build overrun | $21,390,679 | $6,940,869 | $11,813,558 | $179,319 | Aug 2029 |
-| Combined: Downside + 6-month delay | $4,682,325 | ($6,696,284) | $32,722,520 | $21,122,520 | > 2031 |
-| Downside + mitigation (defer post-launch hires 18 mths) | $5,853,058 | ($3,950,569) | $26,560,422 | $14,960,422 | > 2031 |
+| Base case | $21,390,679 | $7,025,957 | $11,211,837 | - | Aug 2029 |
+| Downside | $5,853,058 | ($5,742,261) | $30,053,330 | $18,453,330 | > 2031 |
+| Upside | $35,061,298 | $19,143,900 | $6,752,806 | - | Sep 2028 |
+| Stress: 50% placement shortfall | $10,695,340 | ($1,101,409) | $18,492,198 | $6,762,198 | Aug 2031 |
+| Stress: 6-month licensing delay | $17,163,123 | $3,740,724 | $14,588,502 | $2,858,502 | Jul 2030 |
+| Stress: 6-month broker ramp delay | $18,866,201 | $5,055,506 | $13,635,640 | $1,905,640 | Jul 2030 |
+| Stress: 25% technology build overrun | $21,390,679 | $7,025,957 | $11,610,339 | $146,400 | Aug 2029 |
+| Combined: Downside + 6-month delay | $4,682,325 | ($6,596,219) | $32,226,493 | $20,626,493 | > 2031 |
+| Downside + mitigation (defer post-launch hires 18 mths) | $5,853,058 | ($3,850,504) | $26,064,314 | $14,464,314 | > 2031 |
 
 **Board pivot gate (month 18):** if run-rate placements are below ~$40m p.a., freeze post-launch hiring, defer the secondary-market build, partner more of BHive's technology and stay under the principal licensee longer. At downside volumes the full three-company build does not pay for itself.
 

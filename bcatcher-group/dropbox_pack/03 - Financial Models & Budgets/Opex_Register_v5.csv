@@ -1,7 +1,6 @@
 Entity,Category,Item,Rate,Driver,Start month,End month,2027,2028,2029,2030,2031
-B-Catcher,Premises & Office,"Serviced office (Sydney CBD, 12-25 desks)",9000,Fixed $/month,1,12,108000,0,0,0,0
-B-Catcher,Premises & Office,"Serviced office (expanded, 25 desks)",15000,Fixed $/month,13,24,0,185400,0,0,0
-B-Catcher,Premises & Office,Office lease incl. outgoings (~300 sqm),20000,Fixed $/month,25,,0,0,254616,262254,270122
+B-Catcher,Premises & Office,"Serviced office (Sydney CBD, ~12 desks)",9000,Fixed $/month,1,36,108000,111240,114577,0,0
+B-Catcher,Premises & Office,"Serviced office (expanded, ~22 desks)",14000,Fixed $/month,37,,0,0,0,183578,189085
 B-Catcher,Premises & Office,"Utilities, cleaning, consumables",120,$/FTE/month,1,,11772,17576,23068,30054,39708
 B-Catcher,Board & Governance,Independent Chair fee,7500,Fixed $/month,1,,90000,92700,95481,98345,101296
 B-Catcher,Board & Governance,Two independent non-executive directors,10000,Fixed $/month,13,,0,123600,127308,131127,135061

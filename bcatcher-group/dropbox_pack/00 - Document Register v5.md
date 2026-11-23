@@ -9,11 +9,11 @@ Investors subscribe directly through **BHive**. **Honey Pot** manages brokers an
 ## Version 5 headline numbers (Base case)
 | Measure | Value |
 |---|---|
-| One-off set-up & build cost | $3,371,500 |
-| Peak funding requirement | $11,415,057 |
+| One-off set-up & build cost | $3,338,500 |
+| Peak funding requirement | $11,211,837 |
 | Equity plan | Seed $5.50m / Series A $7.50m |
 | First month positive group EBITDA | Aug 2029 |
-| 2031 net revenue / EBITDA | $21.39m / $6.94m |
+| 2031 net revenue / EBITDA | $21.39m / $7.03m |
 | 2031 managed AUM / investors / brokers | $513.63m / 4,365 / 160 |
 | Group FTE 2027 / 2031 | 12 / 24 |
 

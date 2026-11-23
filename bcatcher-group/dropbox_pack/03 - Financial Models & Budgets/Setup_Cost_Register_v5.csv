@@ -12,7 +12,7 @@ B-Catcher,Product & Investment Structuring,"Due diligence on first 3 offers (val
 B-Catcher,Product & Investment Structuring,Trustee / RE / custodian appointment & onboarding,30000,5,2,Opex
 B-Catcher,Brand & Marketing Launch,"Brand identity & design system (B-Catcher, Honey Pot, BHive)",65000,2,2,Opex
 B-Catcher,Brand & Marketing Launch,Group corporate website,30000,4,2,Opex
-B-Catcher,Office & Equipment,"Office fit-out, furniture & AV (Sydney)",45000,3,1,Capex
+B-Catcher,Office & Equipment,Meeting-room AV & minor fit-out (serviced office),15000,3,1,Capex
 B-Catcher,Corporate Raise Costs,"Data room, information memorandum & corporate deck",25000,1,2,Opex
 B-Catcher,Corporate Raise Costs,Independent financial model review / financial due diligence,30000,2,1,Opex
 B-Catcher,Corporate Raise Costs,Series A data room refresh & vendor due diligence,40000,11,2,Opex
@@ -43,5 +43,5 @@ BHive,Security & Certification,Privacy impact assessment & data processing agree
 BHive,Security & Certification,SOC 2 Type I readiness & audit,70000,10,6,Opex
 BHive,Security & Certification,Secondary market pen test & surveillance validation,50000,18,1,Opex
 BHive,Technology Build (Capitalised),"Cloud landing zone, environments, domains & app store accounts",15000,2,1,Capex
-B-Catcher,Contingency,Set-up contingency (on all lines above),306500,1,12,Opex
-TOTAL,,,3371500
+B-Catcher,Contingency,Set-up contingency (on all lines above),303500,1,12,Opex
+TOTAL,,,3338500

@@ -193,7 +193,7 @@ SETUP = [
     ("B-Catcher", "Product & Investment Structuring", "Trustee / RE / custodian appointment & onboarding", 30_000, 5, 2, "Opex", "N", "External trustee for wholesale trusts."),
     ("B-Catcher", "Brand & Marketing Launch", "Brand identity & design system (B-Catcher, Honey Pot, BHive)", 65_000, 2, 2, "Opex", "N", ""),
     ("B-Catcher", "Brand & Marketing Launch", "Group corporate website", 30_000, 4, 2, "Opex", "N", ""),
-    ("B-Catcher", "Office & Equipment", "Office fit-out, furniture & AV (Sydney)", 45_000, 3, 1, "Capex", "N", "Serviced office year 1; fit-out light."),
+    ("B-Catcher", "Office & Equipment", "Meeting-room AV & minor fit-out (serviced office)", 15_000, 3, 1, "Capex", "N", "Serviced office; no lease fit-out."),
     ("B-Catcher", "Corporate Raise Costs", "Data room, information memorandum & corporate deck", 25_000, 1, 2, "Opex", "N", ""),
     ("B-Catcher", "Corporate Raise Costs", "Independent financial model review / financial due diligence", 30_000, 2, 1, "Opex", "N", "Deck Content Brief: independently checked model."),
     ("B-Catcher", "Corporate Raise Costs", "Series A data room refresh & vendor due diligence", 40_000, 11, 2, "Opex", "N", ""),
@@ -255,9 +255,8 @@ DRIVERS = [
 # (entity, category, item, amount, driver, start, end, basis)
 OPEX = [
     # B-Catcher
-    ("B-Catcher", "Premises & Office", "Serviced office (Sydney CBD, 12-25 desks)", 9_000, "Fixed $/month", 1, 12, "Co-working while team < 25."),
-    ("B-Catcher", "Premises & Office", "Serviced office (expanded, 25 desks)", 15_000, "Fixed $/month", 13, 24, ""),
-    ("B-Catcher", "Premises & Office", "Office lease incl. outgoings (~300 sqm)", 20_000, "Fixed $/month", 25, None, "~$800/sqm p.a. gross."),
+    ("B-Catcher", "Premises & Office", "Serviced office (Sydney CBD, ~12 desks)", 9_000, "Fixed $/month", 1, 36, "Serviced/co-working space; no lease while team < 25."),
+    ("B-Catcher", "Premises & Office", "Serviced office (expanded, ~22 desks)", 14_000, "Fixed $/month", 37, None, "Still serviced space at year-5 team size."),
     ("B-Catcher", "Premises & Office", "Utilities, cleaning, consumables", 120, "$/FTE/month", 1, None, "B-Catcher per-FTE lines use total group FTE (shared services)."),
     ("B-Catcher", "Board & Governance", "Independent Chair fee", 7_500, "Fixed $/month", 1, None, "$90k p.a."),
     ("B-Catcher", "Board & Governance", "Two independent non-executive directors", 10_000, "Fixed $/month", 13, None, "$60k p.a. each."),
