@@ -79,13 +79,13 @@ Months until R&D refund received,12,months,12,12,12,
 Minimum cash buffer (regulatory capital + safety),750000,$,750000,750000,750000,AFSL financial requirements + 3 months fixed costs.
 CORPORATE FUNDING (equity into B-Catcher Group),,,,,,
 "Existing shares (B-Catcher + BHive founders, merged)",10000000,shares,10000000,10000000,10000000,Merger ratio between legacy B-Catcher and BHive holders TO BE CONFIRMED.
-Seed round amount,7000000,$,7000000,7000000,7000000,"Funds build, licensing and launch to month 9. Could be split pre-seed + seed."
+Seed round amount,5500000,$,5500000,5500000,5500000,"Funds build, licensing and launch to month 9 with the lean team."
 Seed round close,1,model month,1,1,1,
 Seed pre-money valuation,18000000,$,18000000,18000000,18000000,BHive prior Series A pitch: $10.5m pre.
-Series A amount,10000000,$,10000000,10000000,10000000,"Milestones: licences in place, platform live, first subscriptions, signed pipeline."
+Series A amount,7500000,$,7500000,7500000,7500000,"Milestones: licences in place, platform live, first subscriptions, signed pipeline."
 Series A close,10,model month,10,10,10,Three months after launch.
 Series A pre-money valuation,40000000,$,40000000,40000000,40000000,
-Series B / growth round amount (0 = none),6000000,$,6000000,6000000,6000000,"Milestones: secondary market live, ~$50m AUM, 60+ brokers."
+Series B / growth round amount (0 = none),0,$,0,0,0,Not needed in Base with the lean team; use for Downside or faster expansion.
 Series B close,28,model month,28,28,28,
 Series B pre-money valuation,65000000,$,65000000,65000000,65000000,
 "Capital-raising costs (legal, placement)",0.04,% of raise,0.04,0.05,0.04,

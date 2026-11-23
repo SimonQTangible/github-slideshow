@@ -1,6 +1,6 @@
-# Legal, Licensing & Corporate Workplan and Budget - Version 4
+# Legal, Licensing & Corporate Workplan and Budget - Version 5
 
-**B-Catcher Group** | 02 - Corporate Structure & Legal | Version 4.0 | 22 November 2026  
+**B-Catcher Group** | 02 - Corporate Structure & Legal | Version 5.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Costs and timing for every legal, licensing and regulatory workstream. Regulatory scope remains as in *Corporate & Regulatory Implementation v1*; this document adds owners, months and money.
@@ -48,6 +48,7 @@ Costs and timing for every legal, licensing and regulatory workstream. Regulator
 | B-Catcher | Ongoing corporate & investment legal | $8,000 (Fixed $/month) | 7 | $48,000 | $108,049 |
 | B-Catcher | Bookkeeping & payroll bureau (pre controller) | $3,500 (Fixed $/month) | 1 | $31,500 | - |
 | B-Catcher | ASIC annual review fees, registers, company secretarial | $600 (Fixed $/month) | 1 | $7,200 | $8,104 |
+| B-Catcher | Outsourced HR, payroll & recruitment support | $1,500 (Fixed $/month) | 10 | $4,500 | $20,259 |
 | Honey Pot | Principal licensee fee (CAR arrangement) | $12,000 (Fixed $/month) | 4 | $108,000 | - |
 | Honey Pot | ASIC industry funding levy (own AFSL) | $2,500 (Fixed $/month) | 25 | - | $33,765 |
 | Honey Pot | External compliance consultant & monitoring | $6,000 (Fixed $/month) | 5 | $48,000 | $81,037 |

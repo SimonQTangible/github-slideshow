@@ -1,6 +1,6 @@
-# BHive - Build Plan & Budget - Version 4
+# BHive - Build Plan & Budget - Version 5
 
-**B-Catcher Group** | 06 - BHive - Wallet & Secondary Market | Version 4.0 | 22 November 2026  
+**B-Catcher Group** | 06 - BHive - Wallet & Secondary Market | Version 5.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Requirements remain as in *Product & Technical Requirements v1*. This adds the build sequence, vendor stack, budget, team and platform economics.
@@ -43,10 +43,10 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 | Secondary transaction fees | - | $6,622 | $56,808 | $166,479 | $315,229 |
 | Intercompany licence income | $180,000 | $360,000 | $360,000 | $360,000 | $360,000 |
 | Operator share (cost of sales) | - | ($2,649) | ($22,723) | ($66,592) | ($126,092) |
-| Staff costs | ($1,177,061) | ($1,900,085) | ($2,414,597) | ($2,899,703) | ($3,367,030) |
-| Total operating expenses | ($2,018,635) | ($3,286,724) | ($3,727,073) | ($4,342,447) | ($4,872,212) |
-| EBITDA | ($1,805,958) | ($2,655,417) | ($2,621,906) | ($2,478,263) | ($1,980,965) |
-| R&D tax incentive (accrued) | $146,871 | $209,412 | $266,717 | $320,862 | $346,642 |
+| Staff costs | ($509,404) | ($593,169) | ($1,170,557) | ($1,211,527) | ($1,665,062) |
+| Total operating expenses | ($1,291,497) | ($1,999,414) | ($2,608,173) | ($2,664,413) | ($3,283,145) |
+| EBITDA | ($1,078,820) | ($1,368,107) | ($1,503,006) | ($800,229) | ($391,898) |
+| R&D tax incentive (accrued) | $66,477 | $77,409 | $152,758 | $158,104 | $195,466 |
 | Capitalised build | $861,667 | $473,333 | $90,000 | - | - |
 | Value traded on secondary market | - | $662,193 | $5,680,755 | $16,647,895 | $31,522,910 |
 | Investors on platform | 49 | 382 | 1,132 | 2,432 | 4,365 |
@@ -56,8 +56,8 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 |---|---|---|---|---|
 | Cloud hosting - base environments (AWS Sydney) | $7,000 Fixed $/month | $70,000 | $89,116 | $94,543 |
 | Cloud hosting - variable per investor | $0.60 $/investor/month | $78 | $5,543 | $27,519 |
-| Engineering tooling (GitHub, CI, monitoring, logging) | $250 $/FTE/month | $15,950 | $32,464 | $47,947 |
-| Build partner support & maintenance retainer | $8,000 Fixed $/month | $32,000 | $101,846 | $108,049 |
+| Engineering tooling (GitHub, CI, monitoring, logging) | $250 $/FTE/month | $6,825 | $14,322 | $21,947 |
+| Build partner retainer: maintenance, DevOps & QA | $16,000 Fixed $/month | $64,000 | $203,693 | $216,098 |
 | Registry / fund-admin platform fees | $4,000 Fixed $/month | $24,000 | $50,923 | $54,024 |
 | AI support agent & AI ops tooling | $3,000 Fixed $/month | $18,000 | $38,192 | $40,518 |
 | Security operations (MDR/SIEM service) | $6,000 Fixed $/month | $36,000 | $76,385 | $81,037 |
@@ -77,22 +77,14 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 ## Team
 | Role | Type | Start month | FTE | Base salary |
 |---|---|---|---|---|
-| Chief Technology Officer | Employee | 1 | 1.0 | $250,000 |
+| Head of Product & Delivery | Employee | 2 | 1.0 | $195,000 |
 | UX/UI Designer (contract) | Contractor | 2 | 0.5 | $140,000 |
-| Senior Full-stack Engineer #1 | Employee | 3 | 1.0 | $185,000 |
-| Head of Product | Employee | 4 | 1.0 | $190,000 |
-| Backend & Integrations Engineer | Employee | 4 | 1.0 | $175,000 |
+| Senior Full-stack Engineer | Employee | 4 | 1.0 | $185,000 |
 | Information Security Lead (fractional vCISO) | Contractor | 4 | 0.2 | $260,000 |
-| DevOps & Cloud Security Engineer | Employee | 6 | 1.0 | $185,000 |
-| QA / Test Automation Engineer (contract) | Contractor | 6 | 0.5 | $135,000 |
-| Platform Support Specialist #1 | Employee | 7 | 1.0 | $85,000 |
-| Head of Secondary Market | Employee | 16 | 1.0 | $200,000 |
-| Senior Full-stack Engineer #2 | Employee | 19 | 1.0 | $185,000 |
-| Registry & Tokenisation Engineer | Employee | 25 | 1.0 | $190,000 |
-| Data & AI Engineer | Employee | 37 | 1.0 | $175,000 |
-| Full-stack Engineer #3 | Employee | 43 | 1.0 | $160,000 |
-| Platform Support Specialist #2 | Employee | 43 | 1.0 | $85,000 |
-| Market Operations & Surveillance Analyst | Employee | 49 | 1.0 | $140,000 |
+| Chief Technology Officer | Employee | 25 | 1.0 | $240,000 |
+| Full-stack & Integrations Engineer | Employee | 25 | 1.0 | $175,000 |
+| Data & AI Engineer | Employee | 49 | 1.0 | $175,000 |
+| Platform & Market Operations Analyst | Employee | 49 | 1.0 | $120,000 |
 
 ## Vendor stack to procure (RFP list)
 Build partner; AWS Sydney; identity/KYC/AML provider; e-signature; CRM (shared with Honey Pot); fund administrator & registry; banking/payment reconciliation; document vault; MDR/SIEM security; penetration tester; SOC 2 auditor; licensed market operator; AI support agent tooling.

@@ -1,9 +1,9 @@
-# Investor Deck v4 - Slide Script
+# Investor Deck v5 - Slide Script
 
-**B-Catcher Group** | 07 - Investor Deck & Capital Raise | Version 4.0 | 22 November 2026  
+**B-Catcher Group** | 07 - Investor Deck & Capital Raise | Version 5.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
-Text of every slide in `BCatcher_Group_Investor_Deck_v4.pptx` (upload the .pptx to this folder). Chart data is listed under each slide.
+Text of every slide in `BCatcher_Group_Investor_Deck_v5.pptx` (upload the .pptx to this folder). Chart data is listed under each slide.
 
 ## Slide 1: B-Catcher Group
 - One controlled journey from broker introduction to investor ownership
@@ -103,7 +103,7 @@ Text of every slide in `BCatcher_Group_Investor_Deck_v4.pptx` (upload the .pptx 
 - *Chart* B-Catcher - investment & asset mgmt: 2027=0.14, 2028=1.11, 2029=2.94, 2030=5.8, 2031=9.67
 - *Chart* BHive - platform & marketplace: 2027=0.03, 2028=0.27, 2029=0.77, 2030=1.57, 2031=2.66
 
-## Slide 10: Five-year forecast: EBITDA positive from Oct 2030
+## Slide 10: Five-year forecast: EBITDA positive from Aug 2029
 - Base case, consolidated group, intercompany fees eliminated. All costs included: people, set-up, licensing, technology, distribution, overheads, contingency
 - $m | 2027 | 2028 | 2029 | 2030 | 2031
 - Capital placed through BHive | 7.3 | 50.0 | 112.5 | 195.0 | 290.0
@@ -111,13 +111,13 @@ Text of every slide in `BCatcher_Group_Investor_Deck_v4.pptx` (upload the .pptx 
 - Net revenue | 0.4 | 2.9 | 7.2 | 13.5 | 21.4
 - Cost of sales (broker commissions etc.) | (0.1) | (0.7) | (1.5) | (2.7) | (4.1)
 - Gross profit | 0.3 | 2.3 | 5.7 | 10.7 | 17.3
-- Staff costs | (3.2) | (5.3) | (6.8) | (8.5) | (9.9)
-- Other operating costs | (2.0) | (3.1) | (3.6) | (4.2) | (4.6)
+- Staff costs | (2.0) | (2.7) | (3.6) | (4.4) | (5.7)
+- Other operating costs | (1.8) | (3.0) | (3.5) | (4.0) | (4.6)
 - One-off set-up costs (expensed) | (1.4) | (0.4) | 0.0 | 0.0 | 0.0
-- EBITDA | (6.3) | (6.6) | (4.8) | (2.0) | 2.8
-- Net profit after tax | (6.2) | (6.6) | (4.9) | (1.9) | 3.2
-- Closing cash | 9.2 | 2.5 | 3.8 | 2.1 | 5.4
-- Group FTE (year end) | 20 | 26 | 32 | 41 | 45
+- EBITDA | (4.9) | (3.8) | (1.4) | 2.4 | 6.9
+- Net profit after tax | (4.9) | (4.0) | (1.7) | 2.3 | 7.3
+- Closing cash | 6.7 | 2.6 | 1.3 | 3.9 | 11.2
+- Group FTE (year end) | 12 | 12 | 16 | 19 | 25
 - Brackets = negative. Source: BCatcher_Group_Integrated_Financial_Model.xlsx (Annual Summary).
 
 ## Slide 11: It costs $3.37m one-off to set up and build the group
@@ -129,71 +129,64 @@ Text of every slide in `BCatcher_Group_Investor_Deck_v4.pptx` (upload the .pptx 
 - Largest items: MVP build partner ($480k), secondary market engine ($350k), own AFSL application ($150k), mobile apps ($180k), market-operator legal ($120k). Includes 10% contingency.
 - *Chart* Set-up cost: Technology Build (Capitalised)=1425.0, Licensing & Regulatory=537.0, Contingency=307.0, Product & Investment Structuring=285.0, Brand & Marketing Launch=200.0, Security & Certification=185.0, Distribution Infrastructure=155.0, Corporate & Legal Structure=138.0, Corporate Raise Costs=95.0, Office & Equipment=45.0
 
-## Slide 12: A lean, AI-native team: 20 FTE in year 1 rising to 45 by 2031
-- 49 costed roles with start month, salary, 12% super, payroll tax and on-costs; post-launch hiring gated on volume
+## Slide 12: A lean, AI-native team: 12 FTE in year 1 rising to 25 by 2031
+- 27 costed roles: one shared executive team across all three companies; CEO also covers CIO and acting CTO through the build; specialists only in years 4-5
 - Pre-launch & launch team (months 1-7)
-- Group CEO / Managing Director  ·  Fractional CFO  ·  Financial Controller / Group Accountant  ·  Head of Risk & Compliance  ·  Chief Investment Officer  ·  Property Investment Director  ·  Investment Analyst #1  ·  Managing Director / Head of Distribution  ·  Distribution Compliance Manager  ·  Broker Network Manager  ·  BDM - NSW  ·  Broker & Commission Operations Officer #1  ·  Investor Services Officer #1  ·  Head of Marketing & Growth  ·  Chief Technology Officer  ·  Head of Product  ·  UX/UI Designer  ·  Senior Full-stack Engineer #1  ·  Backend & Integrations Engineer  ·  DevOps & Cloud Security Engineer  ·  QA / Test Automation Engineer  ·  Information Security Lead
-- Staff cost $3.2m in 2027, $9.9m in 2031. AI agents handle tier-1 support, AML monitoring and first-pass due diligence.
-- *Chart* B-Catcher: 2027=5.9, 2028=8.4, 2029=11.2, 2030=13.2, 2031=14.2
-- *Chart* Honey Pot: 2027=7.0, 2028=8.0, 2029=11.0, 2030=15.0, 2031=17.0
-- *Chart* BHive: 2027=7.2, 2028=9.2, 2029=10.2, 2030=13.2, 2031=14.2
+- Group CEO & Chief Investment Officer  ·  Fractional CFO  ·  Finance & Operations Manager  ·  Head of Risk & Compliance  ·  Investment Director  ·  Head of Distribution & Marketing  ·  BDM #1  ·  Client Services & Broker Operations Officer  ·  Digital Marketing & Content  ·  Head of Product & Delivery  ·  Senior Full-stack Engineer  ·  Information Security Lead  ·  UX/UI Designer
+- Staff cost $2.0m in 2027, $5.7m in 2031. AI agents handle tier-1 support, AML monitoring and first-pass due diligence.
+- *Chart* B-Catcher: 2027=5.4, 2028=5.4, 2029=5.6, 2030=7.6, 2031=10.0
+- *Chart* Honey Pot: 2027=3.5, 2028=4.5, 2029=5.5, 2030=7.0, 2031=8.0
+- *Chart* BHive: 2027=2.7, 2028=2.5, 2029=4.5, 2030=4.5, 2031=6.5
 
 ## Slide 13: B-Catcher earns the margin; Honey Pot and BHive feed it
 - EBITDA by cost centre including intercompany shared-services and platform licence fees ($m)
 - Why the split matters / Honey Pot pays away ~42% of its fees to brokers; its value is the AUM it feeds B-Catcher. / BHive's platform cost is mostly fixed; margin grows with AUM and secondary turnover. / Separate P&Ls let each entity be licensed, capitalised or sold independently.
-- *Chart* B-Catcher: 2027=-2.42, 2028=-1.53, 2029=-0.45, 2030=1.9, 2031=5.22
-- *Chart* Honey Pot: 2027=-2.09, 2028=-2.38, 2029=-1.68, 2030=-1.38, 2031=-0.44
-- *Chart* BHive: 2027=-1.81, 2028=-2.66, 2029=-2.62, 2030=-2.48, 2031=-1.98
+- *Chart* B-Catcher: 2027=-2.23, 2028=-0.82, 2029=0.75, 2030=3.04, 2031=6.07
+- *Chart* Honey Pot: 2027=-1.59, 2028=-1.64, 2029=-0.66, 2030=0.14, 2031=1.26
+- *Chart* BHive: 2027=-1.08, 2028=-1.37, 2029=-1.5, 2030=-0.8, 2031=-0.39
 
-## Slide 14: Peak funding need is $20.2m; cash flow turns positive in Aug 2030
-- Cumulative cash before financing vs closing cash with the three planned equity rounds (quarter end, $m)
-- $20.2m
+## Slide 14: Peak funding need is $11.4m; cash flow turns positive in Aug 2029
+- Cumulative cash before financing vs closing cash with the planned equity rounds (quarter end, $m)
+- $11.4m
 - peak cumulative burn before break-even
-- $0.9m
+- $0.8m
 - lowest cash balance (buffer $0.75m)
-- Oct 2030
+- Aug 2029
 - first month of positive group EBITDA
-- *Chart* Closing cash (with equity rounds): Q1 27=5.42, Q2 27=3.17, Q3 27=1.21, Q4 27=9.19, Q1 28=7.23, Q2 28=5.13, Q3 28=3.78, Q4 28=2.5, Q1 29=0.93, Q2 29=5.22, Q3 29=4.4, Q4 29=3.75, Q1 30=2.81, Q2 30=1.99, Q3 30=1.94, Q4 30=2.14, Q1 31=2.2, Q2 31=2.41, Q3 31=3.75, Q4 31=5.35
-- *Chart* Cumulative cash before financing: Q1 27=-1.3, Q2 27=-3.55, Q3 27=-5.51, Q4 27=-7.13, Q1 28=-9.09, Q2 28=-11.19, Q3 28=-12.54, Q4 28=-13.82, Q1 29=-15.39, Q2 29=-16.86, Q3 29=-17.68, Q4 29=-18.33, Q1 30=-19.27, Q2 30=-20.09, Q3 30=-20.14, Q4 30=-19.94, Q1 31=-19.88, Q2 31=-19.67, Q3 31=-18.33, Q4 31=-16.73
+- *Chart* Closing cash (with equity rounds): Q1 27=4.03, Q2 27=2.23, Q3 27=0.78, Q4 27=6.72, Q1 28=5.35, Q2 28=3.96, Q3 28=3.26, Q4 28=2.64, Q1 29=1.8, Q2 29=1.08, Q3 29=1.11, Q4 29=1.27, Q1 30=1.26, Q2 30=1.43, Q3 30=2.55, Q4 30=3.86, Q1 31=4.81, Q2 31=6.11, Q3 31=8.51, Q4 31=11.18
+- *Chart* Cumulative cash before financing: Q1 27=-1.25, Q2 27=-3.05, Q3 27=-4.5, Q4 27=-5.76, Q1 28=-7.13, Q2 28=-8.52, Q3 28=-9.22, Q4 28=-9.84, Q1 29=-10.68, Q2 29=-11.4, Q3 29=-11.37, Q4 29=-11.21, Q1 30=-11.22, Q2 30=-11.05, Q3 30=-9.93, Q4 30=-8.62, Q1 31=-7.67, Q2 31=-6.37, Q3 31=-3.97, Q4 31=-1.3
 
 ## Slide 15: Results hinge on placement volume, not cost overruns
 - Results from running the full model under each case. A 25% tech overrun is absorbed; a 50% volume shortfall is not
 -  | Base | Downside | Upside | -50% volume | 6-mth licence delay | +25% tech cost | Downside + hiring freeze
 - Net revenue 2031 | $21.4m | $5.9m | $35.1m | $10.7m | $17.2m | $21.4m | $5.9m
-- EBITDA 2031 | $2.8m | -$10.2m | $15.0m | -$5.3m | -$0.5m | $2.8m | -$8.3m
-- Peak funding need | $20.2m | $46.9m | $11.6m | $34.0m | $26.5m | $20.6m | $39.4m
-- Extra equity beyond $23m | - | $25.8m | - | $12.7m | $5.2m | $0.2m | $18.3m
-- First EBITDA-positive month | Oct 2030 | > 2031 | Jun 2029 | > 2031 | Sep 2031 | Oct 2030 | > 2031
+- EBITDA 2031 | $6.9m | -$5.8m | $19.1m | -$1.2m | $3.7m | $6.9m | -$4.0m
+- Peak funding need | $11.4m | $30.5m | $6.8m | $18.9m | $14.9m | $11.8m | $26.6m
+- Extra equity beyond $13.0m | - | $18.9m | - | $7.2m | $3.2m | $0.2m | $15.0m
+- First EBITDA-positive month | Aug 2029 | > 2031 | Sep 2028 | Aug 2031 | Aug 2030 | Aug 2029 | > 2031
 - Board pivot gate (month 18):  if run-rate placements are below ~$40m p.a., freeze post-launch hiring, defer the secondary-market build and partner more of BHive's technology. At downside volumes the full three-company build does not pay for itself.
 
-## Slide 16: Raising $23m in three milestone-gated rounds
-- Covers the $20.2m peak burn plus a $0.75m regulatory-capital and cash buffer and raising costs
+## Slide 16: Raising $13.0m in two milestone-gated rounds
+- Covers the $11.4m peak burn plus a $0.75m regulatory-capital and cash buffer and raising costs
 - Seed
-- $7m
-- Month 1  ·  $18m pre-money  ·  20.5%
+- $5.5m
+- Month 1  ·  $18m pre-money  ·  19.7%
 - Milestones funded: Build platform, appoint licensee and trustee, first 3 offers documented, launch to wholesale investors (month 7)
 - Series A
-- $10m
-- Month 10  ·  $40m pre-money  ·  18.3%
+- $7.5m
+- Month 10  ·  $40m pre-money  ·  15.8%
 - Milestones funded: Licensed distribution live, platform in production, first subscriptions reconciled, signed issuer pipeline
-- Series B
-- $6m
-- Month 28  ·  $65m pre-money  ·  8.5%
-- Milestones funded: Secondary market live with licensed operator, ~$50m AUM, 60+ accredited brokers, own AFSL
-- *Chart* Use of funds: Team - salaries, on-costs & hiring=9.07, Platform & technology build=1.46, Licensing, legal, structuring & compliance set-up=1.83, Technology, hosting & security=0.82, Marketing, broker network & investor servicing=0.82, Regulatory, insurance, professional fees & governance=1.68, Premises, origination, travel & general=1.23
+- *Chart* Use of funds: Team - salaries, on-costs & hiring=4.93, Platform & technology build=1.46, Licensing, legal, structuring & compliance set-up=1.83, Technology, hosting & security=0.84, Marketing, broker network & investor servicing=0.82, Regulatory, insurance, professional fees & governance=1.7, Premises, origination, travel & general=1.18
 
 ## Slide 17: Illustrative returns at the end of year 5
-- Exit run-rate: $25.4m revenue and $5.9m EBITDA (Q4 2031 annualised); equity value $104m on blended 12x EBITDA / 5x revenue
+- Exit run-rate: $25.4m revenue and $10.2m EBITDA (Q4 2031 annualised); equity value $136m on blended 12x EBITDA / 5x revenue
 - Seed investors
-- 3.1x
-- money multiple on $7m / ~25% p.a. IRR
+- 4.9x
+- money multiple on $5.5m / ~37% p.a. IRR
 - Series A investors
-- 1.9x
-- money multiple on $10m / ~16% p.a. IRR
-- Series B investors
-- 1.5x
-- money multiple on $6m / ~15% p.a. IRR
-- Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution (ESOP, later rounds) that is not modelled. Upside case reaches EBITDA break-even in Jun 2029.
+- 2.9x
+- money multiple on $7.5m / ~28% p.a. IRR
+- Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution (ESOP, later rounds) that is not modelled. Upside case reaches EBITDA break-even in Sep 2028.
 
 ## Slide 18: Nothing regulated goes live until its gate is passed
 - Seven launch gates from the Master Business Plan; costs for each are in the set-up budget
@@ -248,8 +241,8 @@ Text of every slide in `BCatcher_Group_Investor_Deck_v4.pptx` (upload the .pptx 
 - Cyber & data
 - MFA, SOC 2, pen tests, MDR service, tested recovery
 
-## Slide 21: The ask: $7m Seed to build, license and launch
-- Part of a $23m milestone-gated plan to a $514m AUM, $21m-revenue group by 2031
+## Slide 21: The ask: $5.5m Seed to build, license and launch
+- Part of a $13.0m milestone-gated plan to a $514m AUM, $21m-revenue group by 2031
 - Confirm entities, cap table and merger ratio of legacy B-Catcher and BHive holders / Appoint financial services counsel and principal licensee / Select first two asset types and issuer partners / Commission BHive build partner and custody/registry providers
 - Forecasts are planning assumptions, not guarantees. Founder bios, market evidence and legal opinions to be added before external use.
 

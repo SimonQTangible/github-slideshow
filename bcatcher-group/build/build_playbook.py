@@ -149,7 +149,7 @@ table(["Measure", "Base case"], [
     ["Operating model", "Investors subscribe directly through BHive; Honey Pot manages brokers and distribution behind that process; B-Catcher originates and manages the investments"],
     ["One-off set-up and build cost (all three entities)", money(km["setup"])],
     ["Peak funding requirement (cumulative burn before break-even)", money(km["peak"])],
-    ["Equity plan", "Seed " + money(D["rounds"][0][1]) + " (month 1)  ·  Series A " + money(D["rounds"][1][1]) + " (month 10)  ·  Series B " + money(D["rounds"][2][1]) + " (month 28)"],
+    ["Equity plan", "  ·  ".join(f"{r[0].replace(' (optional)','')} {money(r[1])}" for r in D["rounds"] if r[1])],
     ["Lowest cash balance with the equity plan", money(km["mincash"])],
     ["First month of positive group EBITDA", km["ebm"]],
     ["Wholesale launch / secondary market live", f"Month {I['Controlled wholesale launch (first subscriptions)']} (Jul 2027) / month {I['BHive secondary market activation']} (Jul 2028)"],
@@ -177,55 +177,55 @@ phases = [
         ("Shareholders' agreement, constitution, ESOP plan", "CEO / counsel", "2-3", money(40000)),
         ("Group tax structuring (trusts, GST, transfer pricing, R&D)", "Fractional CFO", "2-3", money(35000)),
         ("Appoint Chair, adopt board charter, delegation matrix, risk appetite", "Board", "1", "Chair $90k p.a."),
-        ("Hire CEO, CIO, CTO, Head of Risk (0.5), fractional CFO; product head month 4", "CEO", "1-4", "See section 4"),
+        ("Hire CEO & CIO (acting CTO), Head of Risk (0.5), fractional CFO; Head of Product (m2); Investment Director & Head of Distribution (m3)", "CEO", "1-3", "See section 4"),
     ]),
     ("Phase 1 - Legal perimeter & design (months 1-3)", "Gate 2: written regulatory opinion", [
         ("Financial services perimeter opinion: AFSL, MIS, market, credit, AML scope per entity", "External counsel", "1-3", money(90000)),
         ("Decide licensing route: Honey Pot as CAR under principal licensee; BHive via licensed market operator", "Board", "3", "Decision"),
         ("Brand identity & design system for all three brands", "Marketing", "2-3", money(65000)),
-        ("BHive discovery, architecture & UX design; select build partner (RFP)", "CTO", "2-3", money(95000)),
-        ("Cloud landing zone, environments, domains", "CTO", "2", money(15000)),
+        ("BHive discovery, architecture & UX design; select build partner (RFP)", "Head of Product & Delivery", "2-3", money(95000)),
+        ("Cloud landing zone, environments, domains", "Head of Product & Delivery", "2", money(15000)),
     ]),
     ("Phase 2 - Counterparties, products & build (months 3-6)", "Gates 3 & 4: counterparties signed, platform tested", [
-        ("Appoint trustee / RE / custodian; onboard fund administrator & registry", "CIO / CFO", "5-6", money(30000)),
-        ("Trust deed & IM templates: property, private credit, PE / pre-IPO (UTEGBO)", "CIO / counsel", "3-6", money(130000)),
-        ("Due diligence on first 3 offers (valuation, QS, building, legal)", "Property Director", "4-6", money(105000)),
-        ("CAR appointment under principal licensee", "Honey Pot MD", "4", money(25000) + " + $12k/month"),
-        ("Compliance framework: compliance plan, breach, IDR, conflicts, DDO/TMD", "Compliance Manager", "3-5", money(65000)),
+        ("Appoint trustee / RE / custodian; onboard fund administrator & registry", "CEO/CIO / Fractional CFO", "5-6", money(30000)),
+        ("Trust deed & IM templates: property, private credit, PE / pre-IPO (UTEGBO)", "CEO/CIO / counsel", "3-6", money(130000)),
+        ("Due diligence on first 3 offers (valuation, QS, building, legal)", "Investment Director", "4-6", money(105000)),
+        ("CAR appointment under principal licensee", "Head of Distribution", "4", money(25000) + " + $12k/month"),
+        ("Compliance framework: compliance plan, breach, IDR, conflicts, DDO/TMD", "Head of Risk & Compliance", "3-5", money(65000)),
         ("AML/CTF program, AUSTRAC enrolment, independent review", "Head of Risk", "4-6", money(35000)),
-        ("Broker agreement suite & commission policy", "Honey Pot MD / counsel", "3-4", money(45000)),
-        ("Broker CRM & commission system; LMS & accreditation content", "Broker Network Manager", "3-6", money(110000)),
-        ("BHive MVP: investor, broker & admin portals, wallet (build partner)", "CTO", "3-8", money(480000)),
-        ("Integrations: KYC, e-sign, registry, banking reconciliation", "Backend engineer", "4-7", money(155000)),
-        ("Privacy impact assessment; pre-launch penetration test", "DevOps / vCISO", "5-6", money(65000)),
-        ("Launch campaign, broker roadshow, marketing compliance review", "Head of Marketing", "6-8", money(105000)),
+        ("Broker agreement suite & commission policy", "Head of Distribution / counsel", "3-4", money(45000)),
+        ("Broker CRM & commission system; LMS & accreditation content", "Head of Distribution", "3-6", money(110000)),
+        ("BHive MVP: investor, broker & admin portals, wallet (build partner)", "Head of Product & Delivery", "3-8", money(480000)),
+        ("Integrations: KYC, e-sign, registry, banking reconciliation", "Senior engineer + build partner", "4-7", money(155000)),
+        ("Privacy impact assessment; pre-launch penetration test", "vCISO + build partner", "5-6", money(65000)),
+        ("Launch campaign, broker roadshow, marketing compliance review", "Head of Distribution & Marketing", "6-8", money(105000)),
     ]),
     ("Phase 3 - Controlled wholesale launch (month 7)", "Gate 5: licensed distribution and complete audit trail", [
-        ("First offers published to verified wholesale investors in BHive", "CIO / Honey Pot MD", "7", "-"),
-        ("Accredit first brokers; issue referral links; supervise first files", "Broker Network Manager", "7+", "$1,500 per broker"),
-        ("First subscriptions reconciled to register; first investor reports", "Financial Controller", "7-9", "-"),
-        ("Insurance in force: PI, cyber, D&O, technology E&O", "CFO", "7", "~$11k/month"),
+        ("First offers published to verified wholesale investors in BHive", "CEO/CIO / Head of Distribution", "7", "-"),
+        ("Accredit first brokers; issue referral links; supervise first files", "Head of Distribution", "7+", "$1,500 per broker"),
+        ("First subscriptions reconciled to register; first investor reports", "Finance & Operations Manager", "7-9", "-"),
+        ("Insurance in force: PI, cyber, D&O, technology E&O", "Fractional CFO", "7", "~$11k/month"),
         ("Monthly KPI pack: capital placed, brokers, conversion, onboarding time, complaints", "CEO", "7+", "-"),
     ]),
     ("Phase 4 - Series A & scale distribution (months 10-18)", "Milestones: licence, live platform, signed pipeline", [
         ("Close Series A", "CEO / CFO", "10", money(D["rounds"][1][1])),
-        ("Hire CFO-track, Private Credit & Equity Director, BDM VIC, Head of Secondary Market", "CEO", "13-16", "See section 4"),
-        ("Own AFSL application for Honey Pot (responsible managers, ASIC)", "Compliance Manager", "13-20", money(150000)),
-        ("Market-operator route: partner, market rules, operating agreement", "Head of Secondary Market", "13-18", money(120000)),
-        ("Secondary market engine; operator integration; mobile apps", "CTO", "10-18", money(590000)),
+        ("Hire BDM #2 (m19); CTO and second engineer (m25) only if the month-18 volume gate is met", "CEO", "19-25", "See section 4"),
+        ("Own AFSL application for Honey Pot (responsible managers, ASIC)", "Head of Risk & Compliance", "13-20", money(150000)),
+        ("Market-operator route: partner, market rules, operating agreement", "Head of Product & Delivery", "13-18", money(120000)),
+        ("Secondary market engine; operator integration; mobile apps", "Head of Product & Delivery", "10-18", money(590000)),
         ("SOC 2 Type I readiness & audit", "vCISO", "10-15", money(70000)),
         ("Month-18 pivot gate: placements run-rate vs plan; hiring decision", "Board", "18", "Decision"),
     ]),
-    ("Phase 5 - Marketplace live & Series B (months 19-30)", "Gate 6: secondary market authorised", [
+    ("Phase 5 - Marketplace live (months 19-30)", "Gate 6: secondary market authorised", [
         ("Secondary-market pen test & surveillance validation", "vCISO", "18", money(50000)),
-        ("Controlled secondary-market activation with licensed operator", "Head of Secondary Market", "19", "$15k/month + 40% fee share"),
-        ("Own AFSL granted; exit CAR arrangement", "Honey Pot MD", "24-25", "ASIC levy $2.5k/month"),
-        ("Digital token legal register opinion; tokenised register pilot", "CTO / counsel", "22-30", money(130000)),
-        ("Close Series B", "CEO / CFO", "28", money(D["rounds"][2][1])),
+        ("Controlled secondary-market activation with licensed operator", "Head of Product & Delivery", "19", "$15k/month + 40% fee share"),
+        ("Own AFSL granted; exit CAR arrangement", "Head of Distribution", "24-25", "ASIC levy $2.5k/month"),
+        ("Digital token legal register opinion; tokenised register pilot", "Head of Product / counsel", "22-30", money(130000)),
+        ("Hire CTO and second engineer (gate passed)", "CEO", "25", "See section 4"),
     ]),
     ("Phase 6 - Scale (months 31-60)", "Gate 7: any new product approved separately", [
-        ("National BDM coverage (QLD, WA/SA, family office)", "Honey Pot MD", "28-52", "See section 4"),
-        ("Second asset manager, analyst, compliance officer as AUM grows", "CIO / Head of Risk", "31-49", "See section 4"),
+        ("BDM #3 (m37) and BDM #4 (m49)", "Head of Distribution", "37-49", "See section 4"),
+        ("Asset manager (m37); CFO, compliance analyst, credit director, data engineer (year 5)", "CEO / Head of Risk", "37-49", "See section 4"),
         ("Retail, payments, lending or BHive card only as separately funded projects", "Board", "-", "Not in model"),
     ]),
 ]
@@ -287,12 +287,12 @@ table(["Category"] + YRS, [[k] + [money(v) for v in vals] for k, vals in D["cats
 doc.add_heading("7. Funding plan, milestones and returns", 1)
 ms = ["Build platform, appoint licensee and trustee, document first 3 offers, wholesale launch (month 7)",
       "Licensed distribution live, platform in production, first subscriptions reconciled, signed issuer pipeline",
-      "Secondary market live with licensed operator, ~$50m AUM, 60+ accredited brokers, own AFSL"]
+      "Optional - not needed in Base; for Downside or faster expansion"]
 table(["Round", "Amount", "Pre-money", "Post-round %", "Milestones it funds"],
-      [[r[0], money(r[1]), money(r[2]), f"{r[3]*100:.1f}%", ms[i]] for i, r in enumerate(D["rounds"])], widths=[2.5, 2, 2, 2, 8.5], size=8, right_from=-1)
-para(f"Founders and existing B-Catcher/BHive holders retain {D['founder_pct']*100:.1f}% after all three rounds, before any ESOP. Valuations are negotiating placeholders.", size=9)
+      [[r[0], money(r[1]), money(r[2]), f"{r[3]*100:.1f}%", ms[i]] for i, r in enumerate(D["rounds"]) if r[1]], widths=[2.5, 2, 2, 2, 8.5], size=8, right_from=-1)
+para(f"Founders and existing B-Catcher/BHive holders retain {D['founder_pct']*100:.1f}% after all planned rounds, before any ESOP. Valuations are negotiating placeholders.", size=9)
 table(["Use of funds - first 24 months", "Amount"], [[u, money(v)] for u, v in D["uses"]], widths=[11, 3], size=8)
-table(["Investor", "Invested", "MOIC at year 5", "IRR"], [[n, money(a), f"{x:.1f}x", f"{y*100:.0f}%"] for n, a, x, y in D["returns"]], widths=[5, 3, 3, 3], size=8)
+table(["Investor", "Invested", "MOIC at year 5", "IRR"], [[n, money(a), f"{x:.1f}x", f"{y*100:.0f}%"] for n, a, x, y in D["returns"] if a], widths=[5, 3, 3, 3], size=8)
 
 # ------------------------------------------------------------------ SCENARIOS
 doc.add_heading("8. Scenarios, stress tests and the pivot gate", 1)
@@ -305,7 +305,7 @@ table(["Case", "Revenue 2031", "EBITDA 2031", "Peak funding", "Extra equity", "E
 para("What this tells the board:", bold=True)
 bullets([
     ("Volume is the risk. ", "A 25% technology overrun costs ~$0.4m; a 50% placement shortfall adds ~$14m to the funding need."),
-    ("The cost base is mostly fixed. ", "Deferring post-launch hires by 18 months saves ~$7.6m in the downside but does not make it viable on its own."),
+    ("The cost base is mostly fixed. ", "Deferring post-launch hires by 18 months reduces the downside funding need, but does not make it viable on its own."),
     ("Month-18 pivot gate. ", "If run-rate placements are below ~$40m p.a. at month 18: freeze post-launch hiring, defer the secondary-market build, partner more of BHive's technology and operate Honey Pot under the principal licensee for longer."),
 ])
 

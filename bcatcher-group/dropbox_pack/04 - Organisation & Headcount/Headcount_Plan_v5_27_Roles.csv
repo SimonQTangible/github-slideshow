@@ -1,0 +1,28 @@
+Entity,Department,Role,Type,Start month,FTE,Step month,FTE from step,End month,Base salary,Loaded cost p.a. (2027 $),Notes,FTE end 2027,FTE end 2028,FTE end 2029,FTE end 2030,FTE end 2031,Cost 2027,Cost 2028,Cost 2029,Cost 2030,Cost 2031
+B-Catcher,Executive,Group CEO & Chief Investment Officer (acting CTO to month 24),Employee,1,1,,,,300000,364350,"One executive for strategy, raise, investment committee and build-partner oversight. Replaces separate CEO, CIO and CTO roles.",1,1,1,1,1,364350,377102,390301,403961,418100
+B-Catcher,Finance,Fractional CFO (contract),Contractor,1,0.4,25,0.6,48,230000,110400,Fractional for 4 years; replaces full-time CFO hire until year 5.,0.4,0.4,0.6,0.6,0,110400,114264,177395,183604,0
+B-Catcher,Finance,Chief Financial Officer,Employee,49,1,,,,220000,267190,"Year 5 only, when AUM > $300m.",0,0,0,0,1,0,0,0,0,306607
+B-Catcher,Finance,Finance & Operations Manager,Employee,7,1,,,,145000,176102,"Combines financial controller, fund accounting, commission ledger and office management.",1,1,1,1,1,88051,182266,188645,195248,202082
+B-Catcher,Finance,Fund & Commission Accountant,Employee,37,1,,,,110000,133595,Second finance hire once 30+ trusts and 100+ brokers.,0,0,0,1,1,0,0,0,148119,153303
+B-Catcher,Risk & Compliance,Head of Risk & Compliance (Group; Honey Pot responsible manager),Employee,1,0.5,5,1,,205000,124486,One compliance head for all entities; RG 105 responsible manager for Honey Pot. Replaces separate distribution compliance manager.,1,1,1,1,1,207477,257687,266706,276040,285702
+B-Catcher,Risk & Compliance,Compliance & Risk Analyst,Employee,49,1,,,,110000,133595,Year 5 only; external compliance consultant covers monitoring before.,0,0,0,0,1,0,0,0,0,153303
+B-Catcher,Investments,"Investment Director (property, credit & PE)",Employee,3,1,,,,215000,261118,One generalist director across all products; replaces separate property and credit/PE directors.,1,1,1,1,1,217598,270257,279716,289506,299638
+B-Catcher,Investments,Investment Analyst,Employee,10,1,,,,115000,139668,AI-assisted due diligence and asset reporting.,1,1,1,1,1,34917,144556,149615,154852,160272
+B-Catcher,Investments,Asset Manager,Employee,37,1,,,,150000,182175,When managed AUM passes ~$150m.,0,0,0,1,1,0,0,0,201981,209050
+B-Catcher,Investments,Credit & PE Investment Director,Employee,49,1,,,,205000,248972,Year 5 specialist hire.,0,0,0,0,1,0,0,0,0,285702
+Honey Pot,Executive,Head of Distribution & Marketing (Honey Pot MD),Employee,3,1,,,,235000,285408,"Combines MD, broker network manager and head of marketing.",1,1,1,1,1,237840,295397,305736,316436,327512
+Honey Pot,Distribution,BDM #1 (NSW/ACT),Employee,7,1,,,,150000,182175,Also runs broker accreditation with the LMS.,1,1,1,1,1,91088,188551,195150,201981,209050
+Honey Pot,Distribution,BDM #2 (VIC/QLD),Employee,19,1,,,,150000,182175,,0,1,1,1,1,0,94276,195150,201981,209050
+Honey Pot,Distribution,BDM #3 (WA/SA & family office),Employee,37,1,,,,155000,188248,,0,0,0,1,1,0,0,0,208713,216018
+Honey Pot,Distribution,BDM #4,Employee,49,1,,,,150000,182175,Year 5 only.,0,0,0,0,1,0,0,0,0,209050
+Honey Pot,Operations,Client Services & Broker Operations Officer,Employee,7,1,,,,95000,115378,"Combines investor services, commission operations and tier-2 platform support; AI agent handles tier 1.",1,1,1,1,1,57689,119416,123595,127921,132398
+Honey Pot,Operations,Client Services Officer #2,Employee,31,1,,,,90000,109305,,0,0,1,1,1,0,0,58545,121188,125430
+Honey Pot,Marketing,Digital Marketing & Content (contract),Contractor,7,0.5,37,1,,110000,66000,Part-time contractor; AI content tools.,0.5,0.5,0.5,1,1,33000,68310,70701,146351,151473
+BHive,Product,Head of Product & Delivery,Employee,2,1,,,,195000,236828,"Runs the build partner, backlog, releases and the market-operator integration. Replaces separate CTO, head of product and head of secondary market until month 25.",1,1,1,1,1,217092,245116,253696,262575,271765
+BHive,Technology,Senior Full-stack Engineer,Employee,4,1,,,,185000,224682,"In-house owner of code, integrations and DevOps alongside build partner.",1,1,1,1,1,168512,232546,240686,249110,257828
+BHive,Technology,Chief Technology Officer,Employee,25,1,,,,240000,291480,Hired once platform is live and in-house team grows.,0,0,1,1,1,0,0,312241,323169,334480
+BHive,Technology,Full-stack & Integrations Engineer,Employee,25,1,,,,175000,212538,Takes over work from build partner.,0,0,1,1,1,0,0,227675,235644,243892
+BHive,Technology,Data & AI Engineer,Employee,49,1,,,,175000,212538,Year 5 only.,0,0,0,0,1,0,0,0,0,243892
+BHive,Technology,Information Security Lead (fractional vCISO),Contractor,4,0.2,19,0.3,,260000,62400,"Fractional; covers security, SOC 2 and market-surveillance controls.",0.2,0.3,0.3,0.3,0.3,46800,80730,100267,103776,107408
+BHive,Product,UX/UI Designer (contract),Contractor,2,0.5,13,0.2,,140000,84000,,0.5,0.2,0.2,0.2,0.2,77000,34776,35993,37253,38557
+BHive,Operations,Platform & Market Operations Analyst,Employee,49,1,,,,120000,145740,Year 5 only; licensed operator runs surveillance before.,0,0,0,0,1,0,0,0,0,167240

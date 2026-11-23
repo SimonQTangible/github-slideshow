@@ -1,6 +1,6 @@
-# Honey Pot - Business Case & Budget - Version 4
+# Honey Pot - Business Case & Budget - Version 5
 
-**B-Catcher Group** | 05 - Honey Pot - Distribution & Brokers | Version 4.0 | 22 November 2026  
+**B-Catcher Group** | 05 - Honey Pot - Distribution & Brokers | Version 5.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Procedures remain as in the *Broker Network Operating Manual v1*. This document adds the economics, budget, staffing and targets.
@@ -15,9 +15,9 @@ Honey Pot is the distribution engine: it pays away most of its fees to brokers a
 | Placement fees | $227,865 | $1,562,500 | $3,515,625 | $6,093,750 | $9,062,500 |
 | Broker commissions | ($95,703) | ($656,250) | ($1,476,562) | ($2,559,375) | ($3,806,250) |
 | Gross profit | $132,161 | $906,250 | $2,039,062 | $3,534,375 | $5,256,250 |
-| Staff costs | ($814,221) | ($1,492,696) | ($1,905,969) | ($2,770,502) | ($3,236,791) |
-| Total operating expenses | ($2,219,787) | ($3,287,415) | ($3,720,756) | ($4,919,037) | ($5,697,904) |
-| EBITDA | ($2,087,625) | ($2,381,165) | ($1,681,693) | ($1,384,662) | ($441,654) |
+| Staff costs | ($419,616) | ($765,949) | ($948,878) | ($1,324,571) | ($1,579,981) |
+| Total operating expenses | ($1,720,182) | ($2,550,934) | ($2,696,716) | ($3,394,766) | ($3,994,777) |
+| EBITDA | ($1,588,020) | ($1,644,684) | ($657,653) | $139,609 | $1,261,473 |
 | Active brokers (year end) | 12 | 42 | 80 | 120 | 160 |
 
 ## Commission & fee schedule
@@ -69,30 +69,21 @@ Commissions are paid only on cleared, accepted subscriptions; clawback on refund
 | Broker roadshows, PD events & annual conference | $8,000 Fixed $/month | $48,000 | $101,846 | $108,049 |
 | BDM incentive pool | 0.10% of capital | $7,292 | $112,500 | $290,000 |
 | Broker file reviews & supervision sampling (external) | $2,500 Fixed $/month | $7,500 | $31,827 | $33,765 |
-| CRM & marketing automation licences | $200 $/FTE/month | $10,000 | $24,825 | $45,245 |
+| CRM & marketing automation licences | $200 $/FTE/month | $5,000 | $12,731 | $21,610 |
 | Interstate travel (BDMs & roadshows) | $6,000 Fixed $/month | $48,000 | $76,385 | $81,037 |
 | Distribution legal (offer & marketing reviews) | $5,000 Fixed $/month | $30,000 | $63,654 | $67,531 |
 
 ## Team
 | Role | Start month | Base salary |
 |---|---|---|
-| Managing Director / Head of Distribution | 3 | $230,000 |
-| Head of Marketing & Growth | 5 | $170,000 |
-| Distribution Compliance Manager (Responsible Manager) | 6 | $175,000 |
-| Broker Network Manager | 6 | $160,000 |
-| BDM - NSW | 7 | $150,000 |
-| Broker & Commission Operations Officer #1 | 7 | $100,000 |
-| Investor Services Officer #1 | 7 | $90,000 |
-| BDM - VIC | 16 | $150,000 |
-| BDM - QLD | 28 | $150,000 |
-| Investor Relations Manager (Wholesale direct) | 31 | $150,000 |
-| Digital Marketing & Content Executive | 31 | $105,000 |
-| Compliance Officer - Supervision & Monitoring | 37 | $120,000 |
-| Broker Accreditation & Training Coordinator | 37 | $105,000 |
-| Investor Services Officer #2 | 37 | $90,000 |
-| BDM - WA/SA | 40 | $150,000 |
-| Broker & Commission Operations Officer #2 | 49 | $100,000 |
-| BDM - Family Office & Institutional | 52 | $170,000 |
+| Head of Distribution & Marketing (Honey Pot MD) | 3 | $235,000 |
+| BDM #1 (NSW/ACT) | 7 | $150,000 |
+| Client Services & Broker Operations Officer | 7 | $95,000 |
+| Digital Marketing & Content (contract) | 7 | $110,000 |
+| BDM #2 (VIC/QLD) | 19 | $150,000 |
+| Client Services Officer #2 | 31 | $90,000 |
+| BDM #3 (WA/SA & family office) | 37 | $155,000 |
+| BDM #4 | 49 | $150,000 |
 
 ## KPIs
 Active compliant brokers; productive brokers; qualified referrals; referral-to-subscription conversion; capital per broker; cost of acquisition; time-to-subscribe; complaints & breaches; clawbacks; net fee yield.

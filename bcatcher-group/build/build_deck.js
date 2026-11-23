@@ -266,7 +266,7 @@ s.addText("Largest items: MVP build partner ($480k), secondary market engine ($3
 
 // 12 TEAM / HEADCOUNT
 s = content("Financials", `A lean, AI-native team: ${D.fte[0].toFixed(0)} FTE in year 1 rising to ${D.fte[4].toFixed(0)} by 2031`,
-  "49 costed roles with start month, salary, 12% super, payroll tax and on-costs; post-launch hiring gated on volume");
+  `${D.roles.length} costed roles: one shared executive team across all three companies; CEO also covers CIO and acting CTO through the build; specialists only in years 4-5`);
 s.addChart(pres.charts.BAR, [
   { name: "B-Catcher", labels: YRS, values: D.fte_bc.map(v => +v.toFixed(1)) },
   { name: "Honey Pot", labels: YRS, values: D.fte_hp.map(v => +v.toFixed(1)) },
@@ -299,7 +299,7 @@ s.addText([
 
 // 14 CASH CURVE
 s = content("Financials", `Peak funding need is ${$m(D.km.peak)}; cash flow turns positive in ${D.km.cfm}`,
-  "Cumulative cash before financing vs closing cash with the three planned equity rounds (quarter end, $m)");
+  "Cumulative cash before financing vs closing cash with the planned equity rounds (quarter end, $m)");
 const qlab = Array.from({ length: 20 }, (_, i) => "Q" + ((i % 4) + 1) + " " + String(27 + Math.floor(i / 4)));
 s.addChart(pres.charts.LINE, [
   { name: "Closing cash (with equity rounds)", labels: qlab, values: D.cash_q.map(v => +m(v, 2)) },
@@ -318,7 +318,7 @@ const sr = D.scen.rows, cases = D.scen.cases;
 const pick = [0, 1, 2, 3, 4, 6, 8];
 const short = ["Base", "Downside", "Upside", "-50% volume", "6-mth licence delay", "+25% tech cost", "Downside + hiring freeze"];
 const metr = [["Net revenue 2031", "Net revenue Y5", v => $m(v)], ["EBITDA 2031", "EBITDA Y5", v => $m(v)], ["Peak funding need", "Peak funding requirement", v => $m(v)],
-  ["Extra equity beyond $23m", "Extra equity needed to hold buffer", v => (v > 0 ? $m(v) : "-")], ["First EBITDA-positive month", "First month EBITDA positive", v => (typeof v === "string" && v.includes("Beyond") ? "> 2031" : v)]];
+  [`Extra equity beyond ${$m(D.km.raised, 1)}`, "Extra equity needed to hold buffer", v => (v > 0 ? $m(v) : "-")], ["First EBITDA-positive month", "First month EBITDA positive", v => (typeof v === "string" && v.includes("Beyond") ? "> 2031" : v)]];
 const stbl = [[{ text: "", options: { fill: { color: HEX.ink } } }].concat(short.map(h => ({ text: h, options: { bold: true, color: HEX.white, fill: { color: HEX.ink }, fontSize: 12, align: "center" } })))];
 metr.forEach(([lab, key, f], i) => stbl.push([{ text: lab, options: { bold: true, fontSize: 13, color: HEX.ink, fill: { color: i % 2 ? HEX.white : HEX.mist } } }].concat(
   pick.map(j => ({ text: String(f(sr[key][j])), options: { fontSize: 13, align: "center", color: (key.startsWith("Extra") && sr[key][j] > 0) ? HEX.red : HEX.ink, bold: key.startsWith("Extra") && sr[key][j] > 0, fill: { color: i % 2 ? HEX.white : HEX.mist } } })))));
@@ -330,20 +330,22 @@ s.addText([{ text: "Board pivot gate (month 18):  ", options: { bold: true, colo
 
 // 16 THE RAISE
 pres.addSection({ title: "The raise" });
-s = content("The raise", `Raising ${$m(D.km.raised, 0)} in three milestone-gated rounds`,
+s = content("The raise", `Raising ${$m(D.km.raised, 1)} in ${["one","two","three"][D.rounds.filter(r => r[1] > 0).length - 1]} milestone-gated rounds`,
   `Covers the ${$m(D.km.peak)} peak burn plus a $0.75m regulatory-capital and cash buffer and raising costs`);
 const ms = ["Build platform, appoint licensee and trustee, first 3 offers documented, launch to wholesale investors (month 7)",
   "Licensed distribution live, platform in production, first subscriptions reconciled, signed issuer pipeline",
   "Secondary market live with licensed operator, ~$50m AUM, 60+ accredited brokers, own AFSL"];
-D.rounds.forEach(([n, amt, pre, own], i) => {
-  const x = 0.6 + i * 4.1;
+const RR = D.rounds.filter(r => r[1] > 0);
+const cw = RR.length === 2 ? 5.95 : 3.8, cg = RR.length === 2 ? 6.15 : 4.1;
+RR.forEach(([n, amt, pre, own], i) => {
+  const x = 0.6 + i * cg;
   const fill = [HEX.honey, HEX.navy, HEX.teal][i], tc = i === 0 ? HEX.ink : HEX.white;
-  card(s, x, 1.85, 3.8, 1.6, fill, "r-head" + i);
+  card(s, x, 1.85, cw, 1.6, fill, "r-head" + i);
   s.addText(n.replace(" (optional)", ""), { x: x + 0.3, y: 1.95, w: 3.2, h: 0.45, fontSize: 18, bold: true, color: tc, margin: 0, isTextBox: true, objectName: "r-n" + i });
-  s.addText($m(amt, 0), { x: x + 0.3, y: 2.4, w: 3.2, h: 0.75, fontSize: 36, bold: true, color: tc, margin: 0, isTextBox: true, objectName: "r-a" + i });
-  s.addText(`${["Month 1", "Month 10", "Month 28"][i]}  ·  ${$m(pre, 0)} pre-money  ·  ${pct(own, 1)}`, { x: x + 0.3, y: 3.05, w: 3.4, h: 0.35, fontSize: 12, color: tc, margin: 0, isTextBox: true, objectName: "r-d" + i });
-  card(s, x, 3.55, 3.8, 1.55, HEX.mist, "r-ms" + i);
-  s.addText([{ text: "Milestones funded: ", options: { bold: true } }, { text: ms[i] }], { x: x + 0.25, y: 3.65, w: 3.35, h: 1.4, fontSize: 12.5, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "r-mst" + i });
+  s.addText($m(amt, 1), { x: x + 0.3, y: 2.4, w: 3.2, h: 0.75, fontSize: 36, bold: true, color: tc, margin: 0, isTextBox: true, objectName: "r-a" + i });
+  s.addText(`${["Month 1", "Month 10", "Month 28"][i]}  ·  ${$m(pre, 0)} pre-money  ·  ${pct(own, 1)}`, { x: x + 0.3, y: 3.05, w: cw - 0.4, h: 0.35, fontSize: 12, color: tc, margin: 0, isTextBox: true, objectName: "r-d" + i });
+  card(s, x, 3.55, cw, 1.55, HEX.mist, "r-ms" + i);
+  s.addText([{ text: "Milestones funded: ", options: { bold: true } }, { text: ms[i] }], { x: x + 0.25, y: 3.65, w: cw - 0.45, h: 1.4, fontSize: 12.5, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "r-mst" + i });
 });
 s.addChart(pres.charts.BAR, [{ name: "Use of funds", labels: D.uses.map(u => u[0].replace(" (all entities)", "").replace(" (capitalised)", "").replace(" (recurring)", "")), values: D.uses.map(u => +(u[1] / 1e6).toFixed(2)) }], {
   ...chartBase, x: 0.6, y: 5.15, w: 12.1, h: 1.85, barDir: "bar", chartColors: [HEX.slate], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "$0.0\"m\"",
@@ -353,12 +355,13 @@ s.addNotes("Use of funds = gross spend in the first 24 months by bucket. Founder
 // 17 RETURNS
 s = content("The raise", "Illustrative returns at the end of year 5",
   `Exit run-rate: ${$m(D.exit.rev_rr)} revenue and ${$m(D.exit.ebitda_rr)} EBITDA (Q4 2031 annualised); equity value ${$m(D.exit.eq, 0)} on blended ${I["Exit multiple - EBITDA (year 5)"]}x EBITDA / ${I["Exit multiple - revenue (year 5)"]}x revenue`);
-D.returns.forEach(([n, inv, moic, irr], i) => {
-  const x = 0.6 + i * 4.1;
-  card(s, x, 1.9, 3.8, 3.4, HEX.mist, "ret-card" + i);
+const RT = D.returns.filter(r => r[1] > 0);
+RT.forEach(([n, inv, moic, irr], i) => {
+  const x = 0.6 + i * (RT.length === 2 ? 6.15 : 4.1);
+  card(s, x, 1.9, RT.length === 2 ? 5.95 : 3.8, 3.4, HEX.mist, "ret-card" + i);
   s.addText(n, { x: x + 0.3, y: 2.05, w: 3.2, h: 0.45, fontSize: 17, bold: true, color: C.text1, margin: 0, isTextBox: true, objectName: "ret-n" + i });
   s.addText(moic.toFixed(1) + "x", { x: x + 0.3, y: 2.6, w: 3.2, h: 1.1, fontSize: 60, bold: true, color: [C.accent1, C.accent2, C.accent3][i], margin: 0, isTextBox: true, objectName: "ret-m" + i });
-  s.addText(`money multiple on ${$m(inv, 0)}\n~${pct(irr)} p.a. IRR`, { x: x + 0.3, y: 3.75, w: 3.2, h: 1.0, fontSize: 15, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "ret-d" + i });
+  s.addText(`money multiple on ${$m(inv, 1)}\n~${pct(irr)} p.a. IRR`, { x: x + 0.3, y: 3.75, w: 3.2, h: 1.0, fontSize: 15, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "ret-d" + i });
 });
 s.addText("Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution (ESOP, later rounds) that is not modelled. Upside case reaches EBITDA break-even in " + D.scen.rows["First month EBITDA positive"][2] + ".",
   { x: 0.6, y: 5.6, w: 12.1, h: 0.7, fontSize: 13, italic: true, color: C.text2, margin: 0, isTextBox: true, objectName: "ret-note" });
@@ -423,8 +426,8 @@ risks.forEach(([h, t, col], i) => {
 
 // 21 CLOSE
 s = pres.addSlide({ masterName: "DARK", sectionTitle: "Execution" });
-s.addText(`The ask: ${$m(D.rounds[0][1], 0)} Seed to build, license and launch`, { placeholder: "title" });
-s.addText(`Part of a ${$m(D.km.raised, 0)} milestone-gated plan to a ${$m(D.aum[4], 0)} AUM, ${$m(D.rev[4], 0)}-revenue group by 2031`, { placeholder: "body" });
+s.addText(`The ask: ${$m(D.rounds[0][1], 1)} Seed to build, license and launch`, { placeholder: "title" });
+s.addText(`Part of a ${$m(D.km.raised, 1)} milestone-gated plan to a ${$m(D.aum[4], 0)} AUM, ${$m(D.rev[4], 0)}-revenue group by 2031`, { placeholder: "body" });
 const nexts = ["Confirm entities, cap table and merger ratio of legacy B-Catcher and BHive holders", "Appoint financial services counsel and principal licensee", "Select first two asset types and issuer partners", "Commission BHive build partner and custody/registry providers"];
 s.addText(nexts.map((t, i) => ({ text: t, options: { bullet: true, breakLine: i < nexts.length - 1 } })),
   { x: 0.8, y: 5.0, w: 11.5, h: 1.6, fontSize: 15, color: C.background1, paraSpaceAfter: 6, margin: 0, isTextBox: true, objectName: "close-next" });
