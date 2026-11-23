@@ -121,10 +121,10 @@ INPUT_SECTIONS = [
     ]),
     ("CORPORATE FUNDING (equity into B-Catcher Group)", [
         ("FounderShares", "Existing shares (B-Catcher + BHive founders, merged)", "shares", 10_000_000, 10_000_000, 10_000_000, "Merger ratio between legacy B-Catcher and BHive holders TO BE CONFIRMED.", "num"),
-        ("SeedAmt", "Seed round amount", "$", 5_000_000, 5_000_000, 5_000_000, "Funds build, licensing and launch to month 9 with the 3-person core team.", "money"),
+        ("SeedAmt", "Seed round amount", "$", 5_500_000, 5_500_000, 5_500_000, "Funds build, licensing and launch to month 9 with the 4-person core team.", "money"),
         ("SeedMonth", "Seed round close", "model month", 1, 1, 1, "", "int"),
         ("SeedPre", "Seed pre-money valuation", "$", 18_000_000, 18_000_000, 18_000_000, "BHive prior Series A pitch: $10.5m pre.", "money"),
-        ("SeriesAAmt", "Series A amount", "$", 7_000_000, 7_000_000, 7_000_000, "Milestones: licences in place, platform live, first subscriptions, signed pipeline.", "money"),
+        ("SeriesAAmt", "Series A amount", "$", 7_000_000, 7_000_000, 7_000_000, "Milestones: licences in place, platform live, first subscriptions, signed pipeline; funds buy-back reserve.", "money"),
         ("SeriesAMonth", "Series A close", "model month", 10, 10, 10, "Three months after launch.", "int"),
         ("SeriesAPre", "Series A pre-money valuation", "$", 40_000_000, 40_000_000, 40_000_000, "", "money"),
         ("SeriesBAmt", "Series B / growth round amount (0 = none)", "$", 0, 0, 0, "Not needed in Base with the lean team; use for Downside or faster expansion.", "money"),
@@ -152,11 +152,12 @@ BROKER_NAMES = ["BrokerY1", "BrokerY2", "BrokerY3", "BrokerY4", "BrokerY5"]
 # (entity, dept, role, type, start, fte1, step_month, fte2, end_month, salary, note)
 E, C = "Employee", "Contractor"
 ROLES = [
-    # v6 THREE-PERSON CORE: 3 employees run all three companies. Everything else is fractional, outsourced,
+    # v7 FOUR-PERSON CORE: 4 employees run all three companies. Everything else is fractional, outsourced,
     # AI-driven or commission-only (costed in Opex, not headcount).
-    ("B-Catcher", "Executive", "Group CEO & Chief Investment Officer (acting CTO)", E, 1, 1, None, None, None, 300_000, "Employee 1 of 3. Strategy, raise, investment committee, origination, build-partner oversight; responsible manager #1."),
-    ("B-Catcher", "Risk & Compliance", "Head of Risk, Compliance & Operations (responsible manager)", E, 1, 0.5, 5, 1, None, 210_000, "Employee 2 of 3. RG 105 responsible manager #2; compliance, AML, finance operations and oversight of outsourced providers."),
-    ("Honey Pot", "Executive", "Head of Distribution (Honey Pot MD & BDM)", E, 3, 1, None, None, None, 235_000, "Employee 3 of 3. The only salaried sales role; manages commission-only BDMs, brokers and AI-driven marketing."),
+    ("B-Catcher", "Executive", "Group CEO & Chief Investment Officer (acting CTO)", E, 1, 1, None, None, None, 300_000, "Employee 1 of 4. Strategy, raise, investment committee, origination, build-partner oversight; responsible manager #1."),
+    ("B-Catcher", "Risk & Compliance", "Head of Risk, Compliance & Operations (responsible manager)", E, 1, 0.5, 5, 1, None, 210_000, "Employee 2 of 4. RG 105 responsible manager #2; compliance, AML, finance operations and oversight of outsourced providers."),
+    ("Honey Pot", "Executive", "Head of Distribution (Honey Pot MD & BDM)", E, 3, 1, None, None, None, 235_000, "Employee 3 of 4. Leads broker distribution; manages commission-only BDMs, brokers and AI-driven marketing."),
+    ("Honey Pot", "Distribution", "Investor Communications & Business Development Manager", E, 5, 1, None, None, None, 150_000, "Employee 4 of 4. Voice of the group to investors and BHive platform customers (updates, reporting, newsletters, webinars, events, IR inbox); second BDM for direct investors, family offices and new issuers."),
     # Fractional contractors (not employees)
     ("B-Catcher", "Finance", "Fractional CFO (contract)", C, 1, 0.3, 25, 0.4, None, 230_000, "Contract. Reporting, audit, treasury, raise support."),
     ("BHive", "Product", "Fractional Product Owner (contract)", C, 2, 0.6, 19, 0.4, None, 190_000, "Contract. Runs the build partner backlog and releases."),
@@ -245,7 +246,7 @@ DRIVERS = [
 # (entity, category, item, amount, driver, start, end, basis)
 OPEX = [
     # B-Catcher
-    ("B-Catcher", "Premises & Office", "Co-working memberships & meeting rooms (3 people)", 3_500, "Fixed $/month", 1, None, "Hybrid; investor meetings in hired rooms."),
+    ("B-Catcher", "Premises & Office", "Co-working memberships & meeting rooms (4 people)", 3_500, "Fixed $/month", 1, None, "Hybrid; investor meetings in hired rooms."),
     ("B-Catcher", "Professional Fees (Legal, Audit, Tax)", "Outsourced bookkeeping, fund & commission accounting", 6_000, "Fixed $/month", 7, None, "Replaces finance & operations manager and accountants."),
     ("B-Catcher", "Professional Fees (Legal, Audit, Tax)", "Outsourced accounting - volume", 0.80, "$/investor/month", 7, None, "Scales with investor and transaction volume."),
     ("B-Catcher", "Investment Origination & Due Diligence", "Outsourced investment analysis & asset-management support", 7_000, "Fixed $/month", 7, 36, "Replaces investment director and analyst; external analysts, valuers, property managers."),

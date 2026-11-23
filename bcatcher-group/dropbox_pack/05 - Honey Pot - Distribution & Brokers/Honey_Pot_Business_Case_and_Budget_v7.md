@@ -1,6 +1,6 @@
-# Honey Pot - Business Case & Budget - Version 6
+# Honey Pot - Business Case & Budget - Version 7
 
-**B-Catcher Group** | 05 - Honey Pot - Distribution & Brokers | Version 6.0 | 23 November 2026  
+**B-Catcher Group** | 05 - Honey Pot - Distribution & Brokers | Version 7.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Procedures remain as in the *Broker Network Operating Manual v1*. This document adds the economics, budget, staffing and targets.
@@ -15,9 +15,9 @@ Honey Pot is the distribution engine: it pays away most of its fees to brokers a
 | Placement fees | $227,865 | $1,562,500 | $3,515,625 | $6,093,750 | $9,062,500 |
 | Broker commissions | ($95,703) | ($656,250) | ($1,476,562) | ($2,559,375) | ($3,806,250) |
 | Gross profit | $132,161 | $906,250 | $2,039,062 | $3,534,375 | $5,256,250 |
-| Staff costs | ($237,840) | ($295,397) | ($305,736) | ($316,436) | ($327,512) |
-| Total operating expenses | ($1,561,559) | ($2,227,252) | ($2,290,396) | ($2,727,403) | ($3,231,992) |
-| EBITDA | ($1,429,397) | ($1,321,002) | ($251,333) | $806,972 | $2,024,258 |
+| Staff costs | ($359,290) | ($483,948) | ($500,886) | ($518,417) | ($536,562) |
+| Total operating expenses | ($1,710,689) | ($2,418,399) | ($2,488,220) | ($2,932,138) | ($3,443,878) |
+| EBITDA | ($1,578,527) | ($1,512,149) | ($449,157) | $602,237 | $1,812,372 |
 | Active brokers (year end) | 12 | 42 | 80 | 120 | 160 |
 
 ## Commission & fee schedule
@@ -71,7 +71,7 @@ Commissions are paid only on cleared, accepted subscriptions; clawback on refund
 | Broker roadshows, PD events & annual conference | $8,000 Fixed $/month | $48,000 | $101,846 | $108,049 |
 | Sales commissions: BDM incentive + commission-only regional BDMs | 0.20% of capital | $14,583 | $225,000 | $580,000 |
 | Broker file reviews & supervision sampling (external) | $2,500 Fixed $/month | $7,500 | $31,827 | $33,765 |
-| CRM & marketing automation licences | $200 $/FTE/month | $2,000 | $2,546 | $2,701 |
+| CRM & marketing automation licences | $200 $/FTE/month | $3,600 | $5,092 | $5,402 |
 | Interstate travel (BDMs & roadshows) | $6,000 Fixed $/month | $48,000 | $76,385 | $81,037 |
 | Distribution legal (offer & marketing reviews) | $5,000 Fixed $/month | $30,000 | $63,654 | $67,531 |
 | AI marketing content & campaign tools | $1,500 Fixed $/month | $10,500 | $19,096 | $20,259 |
@@ -81,6 +81,7 @@ Commissions are paid only on cleared, accepted subscriptions; clawback on refund
 | Role | Start month | Base salary |
 |---|---|---|
 | Head of Distribution (Honey Pot MD & BDM) | 3 | $235,000 |
+| Investor Communications & Business Development Manager | 5 | $150,000 |
 
 ## KPIs
 Active compliant brokers; productive brokers; qualified referrals; referral-to-subscription conversion; capital per broker; cost of acquisition; time-to-subscribe; complaints & breaches; clawbacks; net fee yield.

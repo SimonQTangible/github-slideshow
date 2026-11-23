@@ -1,6 +1,6 @@
-# Launch Playbook & Execution Roadmap - Version 6
+# Launch Playbook & Execution Roadmap - Version 7
 
-**B-Catcher Group** | 01 - Business Plans & Strategy | Version 6.0 | 23 November 2026  
+**B-Catcher Group** | 01 - Business Plans & Strategy | Version 7.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Month 1 = January 2027. Costs are from the model's set-up and opex registers. The full formatted version is `BCatcher_Group_Launch_Playbook_and_Budget_Book.docx`.
@@ -79,6 +79,6 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Investors | 49 | 382 | 1,132 | 2,432 | 4,365 |
 | Brokers | 12 | 42 | 80 | 120 | 160 |
 | Revenue | $0.38m | $2.84m | $7.15m | $13.85m | $22.47m |
-| EBITDA | ($4.08m) | ($2.77m) | $0.47m | $5.29m | $11.82m |
-| Cash | $6.60m | $3.48m | $3.27m | $7.77m | $15.96m |
+| EBITDA | ($4.24m) | ($2.97m) | $0.27m | $5.08m | $11.60m |
+| Cash | $6.94m | $3.63m | $3.22m | $7.50m | $15.71m |
 

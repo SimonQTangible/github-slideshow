@@ -177,7 +177,7 @@ phases = [
         ("Shareholders' agreement, constitution, ESOP plan", "CEO / counsel", "2-3", money(40000)),
         ("Group tax structuring (trusts, GST, transfer pricing, R&D)", "Fractional CFO", "2-3", money(35000)),
         ("Appoint Chair, adopt board charter, delegation matrix, risk appetite", "Board", "1", "Chair $90k p.a."),
-        ("Hire the 3 employees: CEO & CIO (m1), Head of Risk, Compliance & Ops (m1, 0.5 to m4), Head of Distribution (m3); contract fractional CFO, product owner, vCISO, UX. No further hires planned", "CEO", "1-3", "See section 4"),
+        ("Hire the 4 employees: CEO & CIO (m1), Head of Risk, Compliance & Ops (m1, 0.5 to m4), Head of Distribution (m3), Investor Communications & BDM (m5); contract fractional CFO, product owner, vCISO, UX. No further hires planned", "CEO", "1-3", "See section 4"),
     ]),
     ("Phase 1 - Legal perimeter & design (months 1-3)", "Gate 2: written regulatory opinion", [
         ("Financial services perimeter opinion: AFSL, MIS, market, credit, AML scope per entity", "External counsel", "1-3", money(90000)),
@@ -198,7 +198,7 @@ phases = [
         ("BHive MVP: investor, broker & admin portals, wallet (build partner)", "Product owner + build partner", "3-8", money(480000)),
         ("Integrations: KYC, e-sign, registry, banking reconciliation", "Senior engineer + build partner", "4-7", money(155000)),
         ("Privacy impact assessment; pre-launch penetration test", "vCISO + build partner", "5-6", money(65000)),
-        ("Launch campaign, broker roadshow, marketing compliance review", "Head of Distribution", "6-8", money(105000)),
+        ("Launch campaign, broker roadshow, marketing compliance review", "Head of Distribution + Investor Comms & BDM", "6-8", money(105000)),
     ]),
     ("Phase 3 - Controlled wholesale launch (month 7)", "Gate 5: licensed distribution and complete audit trail", [
         ("First offers published to verified wholesale investors in BHive", "CEO/CIO / Head of Distribution", "7", "-"),

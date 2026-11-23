@@ -265,8 +265,8 @@ s.addText("Largest items: MVP build partner ($480k), secondary market engine ($3
   { x: 8.9, y: 4.85, w: 3.6, h: 1.7, fontSize: 13, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "su-note" });
 
 // 12 TEAM / HEADCOUNT
-s = content("Financials", `Three employees run all three companies`,
-  `${D.roles.length} costed roles: 3 employees (CEO & CIO, Head of Risk & Ops, Head of Distribution) plus fractional contractors; everything else is outsourced, AI-driven or commission-only`);
+s = content("Financials", `Four employees run all three companies`,
+  `${D.roles.length} costed roles: 4 employees (CEO & CIO, Head of Risk & Ops, Head of Distribution, Investor Comms & BDM) plus fractional contractors; everything else is outsourced, AI-driven or commission-only`);
 s.addChart(pres.charts.BAR, [
   { name: "B-Catcher", labels: YRS, values: D.fte_bc.map(v => +v.toFixed(1)) },
   { name: "Honey Pot", labels: YRS, values: D.fte_hp.map(v => +v.toFixed(1)) },

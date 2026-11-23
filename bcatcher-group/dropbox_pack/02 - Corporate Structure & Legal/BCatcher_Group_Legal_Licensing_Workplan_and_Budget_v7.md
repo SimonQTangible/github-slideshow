@@ -1,6 +1,6 @@
-# Legal, Licensing & Corporate Workplan and Budget - Version 6
+# Legal, Licensing & Corporate Workplan and Budget - Version 7
 
-**B-Catcher Group** | 02 - Corporate Structure & Legal | Version 6.0 | 23 November 2026  
+**B-Catcher Group** | 02 - Corporate Structure & Legal | Version 7.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Costs and timing for every legal, licensing and regulatory workstream. Regulatory scope remains as in *Corporate & Regulatory Implementation v1*; this document adds owners, months and money.

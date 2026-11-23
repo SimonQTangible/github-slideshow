@@ -1,6 +1,6 @@
-# BHive - Build Plan & Budget - Version 6
+# BHive - Build Plan & Budget - Version 7
 
-**B-Catcher Group** | 06 - BHive - Wallet & Secondary Market | Version 6.0 | 23 November 2026  
+**B-Catcher Group** | 06 - BHive - Wallet & Secondary Market | Version 7.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Requirements remain as in *Product & Technical Requirements v1*. This adds the build sequence, vendor stack, budget, team and platform economics.

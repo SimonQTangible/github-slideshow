@@ -1,12 +1,12 @@
 Entity,Category,Item,Rate,Driver,Start month,End month,2027,2028,2029,2030,2031
-B-Catcher,Premises & Office,Co-working memberships & meeting rooms (3 people),3500,Fixed $/month,1,,42000,43260,44558,45895,47271
+B-Catcher,Premises & Office,Co-working memberships & meeting rooms (4 people),3500,Fixed $/month,1,,42000,43260,44558,45895,47271
 B-Catcher,"Professional Fees (Legal, Audit, Tax)","Outsourced bookkeeping, fund & commission accounting",6000,Fixed $/month,7,,36000,74160,76385,78676,81037
 B-Catcher,"Professional Fees (Legal, Audit, Tax)",Outsourced accounting - volume,0.8,$/investor/month,7,,104,1854,7391,18474,36692
 B-Catcher,Investment Origination & Due Diligence,Outsourced investment analysis & asset-management support,7000,Fixed $/month,7,36,42000,86520,89116,0,0
 B-Catcher,Investment Origination & Due Diligence,Outsourced investment analysis & asset-management support (scaled),15000,Fixed $/month,37,,0,0,0,196691,202592
 Honey Pot,Investor Servicing & Onboarding,Outsourced investor & broker service desk (with AI agent),4000,Fixed $/month,7,,24000,49440,50923,52451,54024
 Honey Pot,Investor Servicing & Onboarding,Outsourced service desk - volume,2,$/investor/month,7,,259,4635,18477,46186,91729
-B-Catcher,Premises & Office,"Utilities, cleaning, consumables",120,$/FTE/month,1,,5940,5933,6111,6294,6483
+B-Catcher,Premises & Office,"Utilities, cleaning, consumables",120,$/FTE/month,1,,6900,7416,7638,7868,8104
 B-Catcher,Board & Governance,Independent Chair fee,7500,Fixed $/month,1,,90000,92700,95481,98345,101296
 B-Catcher,Board & Governance,Two independent non-executive directors,10000,Fixed $/month,13,,0,123600,127308,131127,135061
 B-Catcher,Board & Governance,Independent investment committee member,2500,Fixed $/month,7,,15000,30900,31827,32782,33765
@@ -16,14 +16,14 @@ B-Catcher,"Professional Fees (Legal, Audit, Tax)","External audit & tax (group, 
 B-Catcher,"Professional Fees (Legal, Audit, Tax)",Ongoing corporate & investment legal,8000,Fixed $/month,7,,48000,98880,101846,104902,108049
 B-Catcher,"Professional Fees (Legal, Audit, Tax)",Bookkeeping & payroll bureau (pre controller),3500,Fixed $/month,1,9,31500,0,0,0,0
 B-Catcher,"Licensing, Regulatory & Compliance","ASIC annual review fees, registers, company secretarial",600,Fixed $/month,1,,7200,7416,7638,7868,8104
-B-Catcher,"Technology, Hosting & Software","Business software (M365, Xero, HRIS, payroll)",180,$/FTE/month,1,,8910,8899,9166,9441,9724
-B-Catcher,"Technology, Hosting & Software",AI productivity tools (all staff),120,$/FTE/month,1,,5940,5933,6111,6294,6483
+B-Catcher,"Technology, Hosting & Software","Business software (M365, Xero, HRIS, payroll)",180,$/FTE/month,1,,10350,11124,11458,11801,12155
+B-Catcher,"Technology, Hosting & Software",AI productivity tools (all staff),120,$/FTE/month,1,,6900,7416,7638,7868,8104
 B-Catcher,Investment Origination & Due Diligence,Pipeline due diligence on deals not proceeding,8000,Fixed $/month,7,,48000,98880,101846,104902,108049
 B-Catcher,Investment Origination & Due Diligence,"Property & market data (CoreLogic, research)",3500,Fixed $/month,4,,31500,43260,44558,45895,47271
 B-Catcher,Travel & General,"Travel, accommodation & entertainment",5000,Fixed $/month,1,12,60000,0,0,0,0
 B-Catcher,Travel & General,"Travel, accommodation & entertainment",6000,Fixed $/month,13,,0,74160,76385,78676,81037
 B-Catcher,Travel & General,"Bank fees, subscriptions, memberships, sundry",2000,Fixed $/month,1,,24000,24720,25462,26225,27012
-B-Catcher,Travel & General,Staff training & conferences,100,$/FTE/month,1,,4950,4944,5092,5245,5402
+B-Catcher,Travel & General,Staff training & conferences,100,$/FTE/month,1,,5750,6180,6365,6556,6753
 B-Catcher,"Professional Fees (Legal, Audit, Tax)","Outsourced HR, payroll & recruitment support",1500,Fixed $/month,10,,4500,18540,19096,19669,20259
 Honey Pot,"Licensing, Regulatory & Compliance",Principal licensee fee (CAR arrangement),12000,Fixed $/month,4,24,108000,148320,0,0,0
 Honey Pot,"Licensing, Regulatory & Compliance",ASIC industry funding levy (own AFSL),2500,Fixed $/month,25,,0,0,31827,32782,33765
@@ -41,7 +41,7 @@ Honey Pot,Broker Network & Distribution,"Broker CRM, LMS & portal seats",60,$/ac
 Honey Pot,Broker Network & Distribution,"Broker roadshows, PD events & annual conference",8000,Fixed $/month,7,,48000,98880,101846,104902,108049
 Honey Pot,Broker Network & Distribution,Sales commissions: BDM incentive + commission-only regional BDMs,0.20%,% of capital placed,7,,14583,100000,225000,390000,580000
 Honey Pot,Broker Network & Distribution,Broker file reviews & supervision sampling (external),2500,Fixed $/month,10,,7500,30900,31827,32782,33765
-Honey Pot,"Technology, Hosting & Software",CRM & marketing automation licences,200,$/FTE/month,1,,2000,2472,2546,2623,2701
+Honey Pot,"Technology, Hosting & Software",CRM & marketing automation licences,200,$/FTE/month,1,,3600,4944,5092,5245,5402
 Honey Pot,Travel & General,Interstate travel (BDMs & roadshows),6000,Fixed $/month,5,,48000,74160,76385,78676,81037
 Honey Pot,"Professional Fees (Legal, Audit, Tax)",Distribution legal (offer & marketing reviews),5000,Fixed $/month,7,,30000,61800,63654,65564,67531
 BHive,"Technology, Hosting & Software",Cloud hosting - base environments (AWS Sydney),7000,Fixed $/month,3,,70000,86520,89116,91789,94543
