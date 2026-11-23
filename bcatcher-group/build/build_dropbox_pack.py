@@ -314,7 +314,7 @@ hp += "## Team\n" + md_table(["Role", "Start month", "Base salary"], [[r[2], int
 hp += "## KPIs\nActive compliant brokers; productive brokers; qualified referrals; referral-to-subscription conversion; capital per broker; cost of acquisition; time-to-subscribe; complaints & breaches; clawbacks; net fee yield.\n"
 F[f"{f05}/Honey_Pot_Business_Case_and_Budget_v8.md"] = hp
 F[f"{f05}/Honey_Pot_Broker_Commission_Schedule_v8.csv"] = to_csv([["Product", "Mix of capital", "Placement fee % of capital", "Broker share of fee", "Broker commission % of capital", "Honey Pot retained % of capital", "Condition"]] +
-                                                                [[p, mx, f, 0.6, round(f * 0.6, 4), round(f * 0.4, 4), "Cleared & accepted subscriptions only; clawback on refund"] for p, mx, f in [("Property trusts", 0.45, 0.03), ("Private credit", 0.25, 0.015), ("PE / pre-IPO", 0.2, 0.05), ("ASX placements / IPO", 0.1, 0.04)]])
+                                                                [[p, mx, f, 0.6, round(f * 0.6, 4), round(f * 0.4, 4), "Cleared & accepted subscriptions only; clawback on refund"] for p, mx, f in [("Property trusts", 0.45, I["Placement fee - property trusts"]), ("Private credit", 0.25, I["Placement fee - private credit"]), ("PE / pre-IPO", 0.2, I["Placement fee - private equity / pre-IPO"]), ("ASX placements / IPO", 0.1, I["Placement fee - ASX placements / IPO"])]])
 
 # =====================================================================  06 BHIVE
 f06 = "06 - BHive - Wallet & Secondary Market"
