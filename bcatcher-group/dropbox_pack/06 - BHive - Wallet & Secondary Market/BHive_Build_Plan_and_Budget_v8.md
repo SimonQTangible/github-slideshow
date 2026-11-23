@@ -31,7 +31,7 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 ## Release plan
 - **MVP (months 3-8):** onboarding, KYC/AML, wholesale verification, offers & data room, e-sign subscriptions, registry reconciliation, wallet/portfolio, broker portal, admin portal
 - **Launch (month 7):** live with first offers; platform support + AI tier-1 agent
-- **Months 10-18:** secondary engine (listings, order book, transfer & settlement workflow), operator integration, mobile apps, SOC 2 Type I
+- **Months 13-18:** mobile apps, SOC 2 Type I, PE buy-back requests in the wallet
 - **Months 22-30:** secondary engine and operator integration built
 - **Month 31:** secondary market activated with licensed operator (40% fee share + $15k/month), once AUM is ~$150m
 - **Months 34-39:** tokenised register pilot only after legal register opinion
@@ -89,7 +89,7 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 Build partner; AWS Sydney; identity/KYC/AML provider; e-signature; CRM (shared with Honey Pot); fund administrator & registry; banking/payment reconciliation; document vault; MDR/SIEM security; penetration tester; SOC 2 auditor; licensed market operator; AI support agent tooling.
 
 ## Buy-back facility (kept from BHive and B-Catcher)
-Property tokens: BHive exit ladder - buy-back at 25% (year 3), 15% (year 4) and 10% (year 5) below independent valuation. Trust units (PE / pre-IPO): UTEGBO windows at 15% (year 1), 10% (year 2) and 8% (year 4). The group buys exercised units, resells them through BHive / Honey Pot at valuation within ~3 months, and holds a cash reserve of 2% of eligible AUM. Model assumes 4% of eligible holdings exercise each year (8% Downside).
+v8 (capped): requests go to the BHive secondary market first; the group buys only the residual. Property tokens: 15% (year 3), 10% (year 4), 5% (year 5) below independent valuation. Trust units (PE / pre-IPO): 10% (year 1), 8% (year 2), 5% (year 4). Discretionary and capped at 5% of eligible units a year; resale within ~4 months with a price haircut (3% Base, 8.5% Downside) plus 1.5% costs; 1.5% cash reserve on top of the minimum buffer. Model assumes the group buys 3% of eligible units a year (5% Downside = cap).
 
 | $ | 2027 | 2028 | 2029 | 2030 | 2031 |
 |---|---|---|---|---|---|

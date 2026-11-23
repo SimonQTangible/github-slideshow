@@ -23,7 +23,7 @@ Honey Pot is the distribution engine: it pays away most of its fees to brokers a
 ## Commission & fee schedule
 | Product | Placement fee (paid by issuer) | Broker share | Broker receives (% of capital) | Honey Pot retains |
 |---|---|---|---|---|
-| Property trusts | 3.0% | 60% | 1.80% | 1.20% |
+| Property trusts | 2.5% | 60% | 1.50% | 1.00% |
 | Private credit | 1.5% | 60% | 0.90% | 0.60% |
 | PE / pre-IPO | 5.0% | 60% | 3.00% | 2.00% |
 | ASX placements / IPO | 4.0% | 60% | 2.40% | 1.60% |
