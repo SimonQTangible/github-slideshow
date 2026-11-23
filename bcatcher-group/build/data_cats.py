@@ -1,0 +1,1 @@
+CATS=['Premises & Office', 'Board & Governance', 'Insurance', 'Professional Fees (Legal, Audit, Tax)', 'Licensing, Regulatory & Compliance', 'Technology, Hosting & Software', 'Marketing & Investor Acquisition', 'Broker Network & Distribution', 'Investor Servicing & Onboarding', 'Investment Origination & Due Diligence', 'Travel & General']

@@ -1,0 +1,137 @@
+Assumption,Live (Base),Unit,Base,Downside,Upside,Basis / source
+TIMING,,,,,,
+Controlled wholesale launch (first subscriptions),7,model month,7,9,6,"Execution Roadmap: build days 61-120, launch days 121-180. Month 7 = Jul 2027."
+BHive secondary market activation,31,model month,31,37,25,v8: deferred from month 19 to month 31 (AUM ~$150m) - fixed operator costs exceed fees at low AUM. Gated on licensed partner.
+CAPITAL PLACED (run-rate per operating year after launch),,,,,,
+Capital placed - operating year 1,20000000,$ p.a.,20000000,10000000,40000000,v8 conservative base (was $25m). Needs 2-3 signed anchor issuers. Validate against signed pipeline.
+Capital placed - operating year 2,60000000,$ p.a.,60000000,30000000,110000000,Prior model Y2 $30m. ~60 brokers x ~$0.8m + direct.
+Capital placed - operating year 3,120000000,$ p.a.,120000000,60000000,210000000,~100 brokers x ~$1m + direct.
+Capital placed - operating year 4,200000000,$ p.a.,200000000,95000000,320000000,BHive model Y4 new AUM $175m; ~140 brokers.
+Capital placed - operating year 5,280000000,$ p.a.,280000000,135000000,450000000,BHive model Y5 new AUM $481m (not relied on; deliberately lower). ~180 brokers.
+Months to reach run-rate after launch,6,months,6,9,4,Linear ramp from launch; year-1 placements land below run-rate.
+PRODUCT MIX (% of capital placed),,,,,,
+Residential & commercial property trusts,0.45,%,0.45,0.45,0.45,Master Business Plan v3 phase-one catalogue.
+Private credit,0.25,%,0.25,0.25,0.25,
+Private company equity / pre-IPO (incl. UTEGBO-style unit trusts),0.2,%,0.2,0.2,0.2,B-Catcher UTEGBO term sheet (2025).
+ASX placements / IPO allocations (third-party issuers),0.1,%,0.1,0.1,0.1,Must sum to 100% with lines above.
+HONEY POT - DISTRIBUTION ECONOMICS,,,,,,
+Placement fee - property trusts,0.025,% of capital,0.025,0.02,0.025,v8: cut from 3.0% to lower total investor cost. Paid by the trust; disclosed as part of the all-in cost.
+Placement fee - private credit,0.015,% of capital,0.015,0.0125,0.015,Market range 1-2%.
+Placement fee - private equity / pre-IPO,0.05,% of capital,0.05,0.04,0.05,Market range 4-6% for private raises.
+Placement fee - ASX placements / IPO,0.04,% of capital,0.04,0.035,0.04,Typical lead-manager/stamping fees 4-6%; Honey Pot share.
+Share of capital sourced via brokers,0.7,%,0.7,0.6,0.75,Remainder is direct/Honey Pot IR.
+Broker share of placement fee (commission),0.6,% of fee,0.6,0.65,0.55,Honey Pot Operating Manual: commissions on cleared subscriptions only.
+Average investor subscription,150000,$,150000,120000,175000,Wholesale investors; s708/s761G thresholds.
+Active accredited brokers - end op. year 1,25,brokers,25,12,40,
+Active accredited brokers - end op. year 2,60,brokers,60,30,90,
+Active accredited brokers - end op. year 3,100,brokers,100,50,150,
+Active accredited brokers - end op. year 4,140,brokers,140,70,200,
+Active accredited brokers - end op. year 5,180,brokers,180,90,250,
+Broker churn (replaced each year),0.15,% p.a.,0.15,0.2,0.1,Drives onboarding cost of replacement brokers.
+B-CATCHER - INVESTMENT & ASSET MANAGEMENT ECONOMICS,,,,,,
+Property trust gearing (debt / gross asset value),0.45,%,0.45,0.4,0.5,"Memo only (gross asset value); fees follow BHive schedule on equity AUM. Debt sits in the trust, not the group."
+Property entry fee (BHive schedule),0.015,% of equity raised,0.015,0.01,0.02,BHive Capital Finance Model: entry fee 1.5% of new AUM at each property class launch.
+Entry fee - credit & PE products (BHive schedule),0.015,% of capital,0.015,0.01,0.015,BHive entry fee 1.5% applied to all B-Catcher products (not ASX placements).
+Management fee - property (BHive schedule),0.0125,% AUM p.a.,0.0125,0.01,0.0125,BHive Capital Finance Model: 1.25% p.a. on average AUM. Trustee/custody fees borne separately by the trust.
+Net management fee - private credit,0.01,% AUM p.a.,0.01,0.0085,0.011,
+Net management fee - private equity,0.015,% AUM p.a.,0.015,0.0125,0.0175,BHive Private Property Fund 1.5-2.0% p.a.
+Property equity AUM revaluation growth,0.03,% p.a.,0.03,0,0.04,BHive model used 5%; reduced.
+PE AUM revaluation growth,0.05,% p.a.,0.05,0,0.08,
+Property AUM run-off (sales/redemptions),0.05,% p.a.,0.05,0.08,0.04,
+Private credit run-off (loan repayments),0.4,% p.a.,0.4,0.5,0.35,Avg loan term ~2.5 years.
+PE AUM run-off (exits / buy-backs),0.1,% p.a.,0.1,0.12,0.08,UTEGBO buy-back windows yr1/2/4.
+Fund administration borne by manager,0.0005,% AUM p.a.,0.0005,0.0006,0.0004,"Trust-level costs (RE, custody, valuations, trust audit) are borne by the vehicles, not the group."
+BHIVE - PLATFORM & MARKETPLACE ECONOMICS,,,,,,
+Technology / platform fee,0.0025,% AUM p.a.,0.0025,0.002,0.0025,v8: cut from 0.5% so the all-in ongoing fee is 1.5% p.a. on property (1.25% management + 0.25% technology).
+Average offer size,10000000,$,10000000,7500000,12500000,"v8: larger offers (was $5m) - fewer trusts to administer, value and report."
+"Offer onboarding fee (data room, workflows, registry set-up)",30000,$ per offer,30000,20000,35000,"Prior model $7,500 issuer fee; covers data room, workflows, registry set-up, investor reporting."
+Secondary market turnover,0.15,% of AUM p.a.,0.15,0.08,0.2,BHive Capital Finance Model: 15% of average AUM traded per year.
+Exchange fee per trade (BHive schedule),0.0025,% of value,0.0025,0.002,0.003,BHive Capital Finance Model: 0.25% per trade.
+Licensed market-operator partner share,0.4,% of fee,0.4,0.5,0.35,Partner route avoids BHive holding its own market licence.
+Turnover achieved in first 12 months live,0.5,% of run-rate,0.5,0.35,0.6,
+BUY-BACK FACILITY (BHive exit ladder for property tokens; UTEGBO windows for trust units),,,,,,
+Buy-back exercised BEFORE the secondary market is live (the exit bridge; cap 5%),0.04,% of eligible AUM p.a.,0.04,0.05,0.03,"v9: until the secondary market opens (month 31) the buy-back is the investors' exit route. Discretionary, capped at 5% of eligible units a year (Downside = cap hit every year)."
+Buy-back exercised AFTER the secondary market is live (residual only),0.01,% of eligible AUM p.a.,0.01,0.02,0.005,"v9: once the secondary market is live, requests go there first (30 days); the group buys only the residual."
+Buy-back discount - property tokens (blended ladder),0.12,% below valuation,0.12,0.1,0.12,"v9 ladder: 20% (yrs 1-2), 15% (yr 3), 10% (yr 4), 5% (yr 5) below independent valuation - available from year 1 as the bridge to the secondary market."
+Buy-back discount - PE / pre-IPO trust units (blended),0.08,% below valuation,0.08,0.06,0.08,"v8 windows: 10% (yr 1), 8% (yr 2), 5% (yr 4) below valuation (was 15/10/8)."
+Trust-unit buy-back available from operating month,13,op. month,13,13,13,UTEGBO first window at end of year 1.
+Property-token buy-back available from operating month,13,op. month,13,13,13,"v9: from operating year 2 (was year 3), so every investor has an exit route before the secondary market opens."
+Months to resell bought-back units,4,months,4,9,3,Resold via BHive secondary market / Honey Pot.
+Resale costs + price haircut on resale,0.045,% of value,0.045,0.1,0.03,"v8: 1.5% costs plus a resale price haircut (3% Base, 8.5% Downside) - units are not assumed to resell at full valuation."
+Buy-back liquidity reserve held in cash,0.015,% of eligible AUM,0.015,0.02,0.0125,v8: sized to the 5% annual cap x ~4-month resale (max ~1.7% of eligible AUM held at once). Held on top of the minimum cash buffer.
+INVESTOR NET RETURNS (product level - disclosure; does not drive group P&L),,,,,,
+Assumed investor holding period - property & PE,5,years,5,5,5,Up-front fees spread over the hold.
+Assumed investor holding period - private credit,3,years,3,3,3,
+Property gross rental yield on purchase price (rent received by the trust),0.07,% p.a.,0.07,0.065,0.075,"v9.1: 7% gross rent (founder assumption) - suits commercial, industrial, medical/childcare and other leased assets; residential gross yields are typically 3-5%."
+"Less: vacancy, letting and non-recoverable outgoings",0.01,% of property value p.a.,0.01,0.015,0.0075,"On net leases most outgoings are recovered from tenants; allowance for vacancy, letting fees and unrecovered costs."
+Interest rate on trust debt (geared series),0.065,% p.a.,0.065,0.075,0.06,"Debt sits in the trust, not with the investor."
+"Trust-level costs (trustee, custody, valuations, audit)",0.004,% of GAV p.a.,0.004,0.005,0.0035,
+Private credit: interest charged to borrowers,0.1,% p.a.,0.1,0.095,0.105,Senior first-mortgage loans; all borrower fees passed through to investors (v8 policy).
+Private credit: expected loss allowance,0.005,% p.a.,0.005,0.015,0.003,
+Private credit: trust-level costs,0.003,% p.a.,0.003,0.004,0.0025,
+"PE / pre-IPO: target gross return (high risk, not assured)",0.15,% p.a.,0.15,0.05,0.22,Illustrative target only; wide range of outcomes including loss.
+INTERCOMPANY CHARGES (eliminated on consolidation),,,,,,
+B-Catcher shared-services fee charged to Honey Pot,25000,$ / month,25000,25000,25000,"Finance, compliance, office, executive. From month 3."
+B-Catcher shared-services fee charged to BHive,25000,$ / month,25000,25000,25000,From month 1.
+BHive platform licence charged to Honey Pot,20000,$ / month,20000,20000,20000,"Broker portal, CRM, commission ledger. From launch."
+BHive platform licence charged to B-Catcher,30000,$ / month,30000,30000,30000,"v9: $30k (v7 $10k) - BHive runs investor onboarding, reporting, registry and wallet for every B-Catcher fund. From launch."
+PEOPLE COSTS,,,,,,
+Superannuation guarantee,0.12,% of salary,0.12,0.12,0.12,SG rate 12% from 1 Jul 2025.
+Payroll tax,0.0545,% of salary,0.0545,0.0545,0.0545,NSW 5.45%; applied to all wages (conservative - ignores $1.2m threshold).
+Workers compensation,0.01,% of salary,0.01,0.01,0.01,Office-based premium estimate.
+"Leave loading, benefits, training",0.03,% of salary,0.03,0.03,0.03,
+Contractor premium over salary equivalent (no on-costs),0.2,%,0.2,0.25,0.15,Fractional / contract roles.
+Annual wage growth,0.035,% p.a.,0.035,0.045,0.03,
+Recruitment fee for employee hires,0.15,% of salary,0.15,0.18,0.12,Agency/search fee; founders excluded (month 1 hires).
+IT equipment & onboarding per new starter,3500,$,3500,4000,3000,"Laptop, peripherals, licences set-up."
+OTHER COST & FINANCE ASSUMPTIONS,,,,,,
+Non-salary cost escalation,0.03,% p.a.,0.03,0.04,0.025,
+"Set-up cost factor (vs quoted/estimated, incl. irrecoverable GST)",1.05,x,1.05,1.2,1,v8: +5% for GST that cannot be recovered (input-taxed financial supplies). Downside adds 15% overrun.
+Recurring opex factor (incl. irrecoverable GST),1.06,x,1.06,1.16,1.03,v8: +6% irrecoverable GST on non-staff costs (financial supplies are input-taxed; reduced input tax credits only on some items). Confirm with tax adviser.
+Opex contingency,0.05,% of non-staff opex,0.05,0.08,0.05,
+Set-up contingency,0.1,% of set-up,0.1,0.1,0.1,
+Amortisation period - capitalised platform,36,months,36,36,36,Straight line from month after spend.
+Company tax rate (base-rate entity),0.25,%,0.25,0.25,0.25,Tax-consolidated group; losses carried forward.
+Interest earned on cash,0.035,% p.a.,0.035,0.03,0.04,
+Claim R&D tax incentive? (1 = yes),1,flag,1,0,1,Requires AusIndustry registration each year.
+Eligible share of BHive technology staff cost,0.3,%,0.3,0.3,0.35,Core/supporting R&D only; needs R&D adviser sign-off.
+Refundable R&D tax offset rate,0.435,%,0.435,0.435,0.435,Turnover < $20m: 18.5% premium over 25% rate.
+Months until R&D refund received,12,months,12,12,12,
+Minimum cash buffer (regulatory capital + safety),750000,$,750000,750000,750000,AFSL financial requirements + 3 months fixed costs.
+CORPORATE FUNDING (equity into B-Catcher Group),,,,,,
+"Existing shares (B-Catcher + BHive founders, merged)",10000000,shares,10000000,10000000,10000000,Merger ratio between legacy B-Catcher and BHive holders TO BE CONFIRMED.
+Seed round amount,6000000,$,6000000,6000000,6000000,"v8: $6m (SAFE / note at $14m cap) funds re-based build, licensing and launch to month 9 with the 4-person core team."
+Seed round close,1,model month,1,1,1,
+Seed pre-money valuation (SAFE / note cap),14000000,$,14000000,14000000,14000000,v8: $14m cap (was $18m priced) - in line with Australian fintech seed ranges; BHive prior pitch $10.5m pre.
+Series A amount,8000000,$,8000000,8000000,8000000,"Milestones: licences in place, platform live, first subscriptions, signed pipeline; funds buy-back reserve."
+Series A close,10,model month,10,10,10,Three months after launch.
+Series A pre-money valuation,35000000,$,35000000,35000000,35000000,"v8: $35m (was $40m), set by licences live and first subscriptions."
+Series B / growth round amount (0 = none),5000000,$,5000000,5000000,5000000,v8: $5m growth round once the secondary market and own AFSL are live; gated on volume.
+Series B close,28,model month,28,28,28,
+Series B pre-money valuation,55000000,$,55000000,55000000,55000000,v8: $55m (was $65m).
+"Capital-raising costs (legal, placement)",0.04,% of raise,0.04,0.05,0.04,
+Exit multiple - EBITDA (year 5),10,x,10,8,12,v8: 10x (was 12x) - about 60% of revenue is transactional.
+Exit multiple - revenue (year 5),4,x,4,3,5,v8: 4x (was 5x).
+STRESS LEVERS (single value - applied on top of the active scenario),,,,,,
+Capital-placed multiplier,1,x,,,,1.0 = scenario; 0.5 = 50% placement shortfall.
+Licensing delay to launch & secondary market,0,months,,,,Revenue shifts right; costs do not.
+Broker recruitment ramp delay,0,months,,,,
+Technology build overrun,0,%,,,,Applied to set-up lines flagged as tech build.
+Defer post-launch hires (roles starting month 13+),0,months,,,,Management mitigation: hold hiring until volume milestones are met.
+CALCULATED & STRUCTURAL,,,,,,
+First model month (period end),31-Jan-2027,,,,,Month 1 = January 2027.
+Effective launch month (incl. delay),7,,,,,
+Effective secondary-market month (incl. delay),31,,,,,
+Total employee on-cost rate,0.2145,,,,,
+Product mix check (must equal 100%),1,,,,,
+LISTS,,,,,,
+Entities,B-Catcher,Honey Pot,BHive,,,
+Opex drivers,,,,,,
+  1,Fixed $/month,,,,,
+  2,$/FTE/month,,,,,
+  3,$/active broker/month,,,,,
+  4,$/new broker,,,,,
+  5,$/new investor,,,,,
+  6,$/investor/month,,,,,
+  7,% of capital placed,,,,,
+  8,% of entity revenue,,,,,
