@@ -763,7 +763,8 @@ CR["rd"] = add(CG, "c_rd", "Other income - R&D tax incentive", sumpl("rd"), font
 CR["da"] = add(CG, "c_da", "Depreciation & amortisation", sumpl("da"), font=f_link)
 CR["ebit"] = add(CG, "c_ebit", "EBIT", lambda c, p, m: f"={c}{CR['ebitda']}+{c}{CR['rd']}-{c}{CR['da']}", bold=True, border=b_top)
 CR["int"] = add(CG, "c_int", "Interest income on group cash", lambda c, p, m: "=0")  # filled after cash flow
-CR["pbt"] = add(CG, "c_pbt", "PROFIT BEFORE TAX", lambda c, p, m: f"={c}{CR['ebit']}+{c}{CR['int']}", bold=True, fill=fill_tot)
+CR["intx"] = add(CG, "c_intx", "Interest & fees on loan facility", lambda c, p, m: "=0")  # filled after cash flow
+CR["pbt"] = add(CG, "c_pbt", "PROFIT BEFORE TAX", lambda c, p, m: f"={c}{CR['ebit']}+{c}{CR['int']}-{c}{CR['intx']}", bold=True, fill=fill_tot)
 CR["cumpbt"] = add(CG, "c_cumpbt", "Memo: cumulative PBT (tax losses carried forward)", lambda c, p, m: f"={c}{CR['pbt']}" + (f"+{p}{row}" if p else ""), total="last")
 CR["cumtax"] = add(CG, "c_cumtax", "Memo: cumulative tax payable", lambda c, p, m: f"=MAX(0,{c}{CR['cumpbt']})*TaxRate", total="last")
 CR["tax"] = add(CG, "c_tax", "Income tax expense", lambda c, p, m: f"={c}{CR['cumtax']}" + (f"-{p}{CR['cumtax']}" if p else ""))
@@ -794,7 +795,11 @@ FR["bbwc"] = add(FG, "f_bbwc", "Buy-back units purchased less cost of units reso
 sec(FG, "FINANCING CASH FLOW")
 FR["eq"] = add(FG, "f_eq", "Equity raised", lambda c, p, m: f"=IF({c}$3=SeedMonth,SeedAmt,0)+IF({c}$3=SeriesAMonth,SeriesAAmt,0)+IF({c}$3=SeriesBMonth,SeriesBAmt,0)", font=f_base)
 FR["eqc"] = add(FG, "f_eqc", "Capital-raising costs", lambda c, p, m: f"=-{c}{FR['eq']}*RaiseCostPct")
-FR["fcf"] = add(FG, "f_fcf", "Financing cash flow", lambda c, p, m: f"={c}{FR['eq']}+{c}{FR['eqc']}", bold=True, border=b_top)
+FR["draw"] = add(FG, "f_draw", "Loan facility drawn", lambda c, p, m: f"=IF({c}$3=FacDraw1,FacLimit/2,0)+IF({c}$3=FacDraw2,FacLimit/2,0)")
+FR["repay"] = add(FG, "f_repay", "Loan facility repaid", lambda c, p, m: f"=-IF(AND({c}$3>=FacRepayStart,{c}$3<FacRepayStart+FacRepayMonths),FacLimit/FacRepayMonths,0)")
+FR["intp"] = add(FG, "f_intp", "Facility interest & fees paid", lambda c, p, m: f"=-{P}!{c}{CR['intx']}", font=f_link)
+FR["fcf"] = add(FG, "f_fcf", "Financing cash flow", lambda c, p, m: f"={c}{FR['eq']}+{c}{FR['eqc']}+{c}{FR['draw']}+{c}{FR['repay']}+{c}{FR['intp']}", bold=True, border=b_top)
+FR["debt"] = add(FG, "f_debt", "Memo: loan facility balance (closing)", lambda c, p, m: f"={c}{FR['draw']}+{c}{FR['repay']}" + (f"+{p}{row}" if p else ""), total="last")
 row += 1
 FR["net"] = add(FG, "f_net", "NET CASH FLOW", lambda c, p, m: f"={c}{FR['ocf']}+{c}{FR['capex']}+{c}{FR['bbwc']}+{c}{FR['fcf']}", bold=True, fill=fill_tot)
 FR["open"] = add(FG, "f_open", "Opening cash", lambda c, p, m: (f"={p}{row+1}" if p else "=0"), total=None)
@@ -815,6 +820,7 @@ FR["cfflag"] = add(FG, "f_cfflag", "Cash flow before financing positive (1 = yes
 for m in range(1, NM + 1):
     c = CG.c(m)
     put(cs, f"{c}{CR['int']}", f"=MAX(0,{q('Cash Flow')}!{c}{FR['open']})*InterestRate/12", f_link, "money")
+    put(cs, f"{c}{CR['intx']}", (f"={q('Cash Flow')}!{FG.c(m-1)}{FR['debt']}*FacRate/12" if m > 1 else "=0") + f"+IF({c}$3=FacDraw1,FacLimit*FacFee,0)", f_link, "money")
 
 # =====================================================================================
 # BALANCE SHEET
@@ -834,11 +840,12 @@ BR["rdr"] = add(BG, "b_rdr", "R&D tax incentive receivable", lambda c, p, m: f"=
 BR["bbi"] = add(BG, "b_bbi", "Buy-back units held for resale", lambda c, p, m: f"=Revenue!{c}{R['bbInv']}", font=f_link, total="last")
 BR["ta"] = add(BG, "b_ta", "TOTAL ASSETS", lambda c, p, m: f"=SUM({c}{BR['cash']}:{c}{BR['bbi']})", bold=True, border=b_tot, fill=fill_tot, total="last")
 sec(BG, "EQUITY")
-BR["sc"] = add(BG, "b_sc", "Share capital (net of raising costs)", lambda c, p, m: f"={CFq}!{c}{FR['fcf']}" + (f"+{p}{row}" if p else ""), total="last")
+BR["debt"] = add(BG, "b_debt", "Loan facility (liability)", lambda c, p, m: f"={CFq}!{c}{FR['debt']}", font=f_link, total="last")
+BR["sc"] = add(BG, "b_sc", "Share capital (net of raising costs)", lambda c, p, m: f"={CFq}!{c}{FR['eq']}+{CFq}!{c}{FR['eqc']}" + (f"+{p}{row}" if p else ""), total="last")
 BR["re"] = add(BG, "b_re", "Retained earnings / (accumulated losses)", lambda c, p, m: f"={P}!{c}{CR['npat']}" + (f"+{p}{row}" if p else ""), total="last")
 BR["te"] = add(BG, "b_te", "TOTAL EQUITY", lambda c, p, m: f"={c}{BR['sc']}+{c}{BR['re']}", bold=True, border=b_tot, fill=fill_tot, total="last")
 row += 1
-BR["chk"] = add(BG, "b_chk", "Balance check: assets less equity (must be 0)", lambda c, p, m: f"=ROUND({c}{BR['ta']}-{c}{BR['te']},2)", total="max")
+BR["chk"] = add(BG, "b_chk", "Balance check: assets less liabilities less equity (must be 0)", lambda c, p, m: f"=ROUND({c}{BR['ta']}-{c}{BR['debt']}-{c}{BR['te']},2)", total="max")
 
 # =====================================================================================
 # ANNUAL SUMMARY
@@ -916,6 +923,7 @@ an_row("ebitdam", "EBITDA margin", None, lambda col, y: f"=IF({col}{AR['rev']}=0
 an_row("rd", "R&D tax incentive", "P&L Consolidated", CR["rd"])
 an_row("da", "Depreciation & amortisation", "P&L Consolidated", CR["da"])
 an_row("int", "Interest income", "P&L Consolidated", CR["int"])
+an_row("intx", "Loan facility interest & fees", "P&L Consolidated", CR["intx"])
 an_row("tax", "Income tax", "P&L Consolidated", CR["tax"])
 an_row("npat", "NET PROFIT AFTER TAX", "P&L Consolidated", CR["npat"], bold=True, fill=fill_tot, border=b_tot)
 an_sec("ENTITY EBITDA (incl. intercompany charges)")
@@ -1061,7 +1069,7 @@ r += 1
 for lab, f, fmt in [("Peak funding requirement (from cash flow)", f"='Annual Summary'!B{KM['peak']}", "money"),
                     ("Minimum cash incl. buy-back reserve (peak)", f"={CFq}!C{FR['req']}", "money"),
                     ("Required equity incl. buffer & raise costs", f"=(B{r}+B{r+1})/(1-RaiseCostPct)", "money"),
-                    ("Equity planned (Seed + Series A + Series B)", "=SeedAmt+SeriesAAmt+SeriesBAmt", "money"),
+                    ("Equity planned (Seed + Series A + Series B) plus loan facility", "=SeedAmt+SeriesAAmt+SeriesBAmt+FacLimit", "money"),
                     ("Surplus / (shortfall)", f"=B{r+3}-B{r+2}", "money")]:
     put(fr, f"A{r}", lab, f_bold if "Surplus" in lab else f_base)
     put(fr, f"B{r}", f, f_bold if "Surplus" in lab else f_link, fmt, fill_key if "Surplus" in lab else None)

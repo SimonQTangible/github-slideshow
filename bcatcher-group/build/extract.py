@@ -13,7 +13,7 @@ D = {}
 for k,l in [("cap","Capital placed through BHive"),("aum","Managed AUM - year end"),("inv","Investors on BHive - year end"),
             ("brk","Active accredited brokers - year end"),("rhp","Honey Pot - distribution"),("rbc","B-Catcher - structuring & management"),
             ("rbh","BHive - platform & marketplace"),("rev","GROUP NET REVENUE"),("gp","Gross profit"),("staff","Staff costs (salaries & on-costs)"),
-            ("opex","Total operating expenses"),("ebitda","EBITDA"),("npat","NET PROFIT AFTER TAX"),("cash","Closing cash - year end"),
+            ("opex","Total operating expenses"),("ebitda","EBITDA"),("npat","NET PROFIT AFTER TAX"),("intx","Loan facility interest & fees"),("cash","Closing cash - year end"),
             ("fte","FTE - GROUP (year end)"),("fte_bc","FTE - B-Catcher (year end)"),("fte_hp","FTE - Honey Pot (year end)"),("fte_bh","FTE - BHive (year end)"),
             ("eb_bc","B-Catcher"),("eb_hp","Honey Pot"),("eb_bh","BHive"),("cogs","Cost of sales (broker commissions, partner share, fund admin)"),
             ("setup","Set-up & launch costs (expensed)"),("rbb","BHive - buy-back resale gains"),("bbnav","Units bought back under buy-back facility (at valuation)"),("bbinv","Bought-back units held for resale - year end"),("bbres","Buy-back liquidity reserve required - year end"),("capex","Capital expenditure"),("trade","Secondary market value traded")]:

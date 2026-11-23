@@ -43,18 +43,19 @@ EBITDA,-4695993.57,-3422118.46,-202837.11,5542163.29,13292440.9,10513655.05
 EBITDA margin,-11.21,-0.94,-0.02,0.31,0.46,
 R&D tax incentive,32520.6,23825.91,21472.49,22224.03,23001.87,123044.89
 Depreciation & amortisation,204312.5,458500,664125,577645.83,372750,2277333.33
-Interest income,135287.98,198236.72,202692.76,332862.61,615818.33,1484898.41
-Income tax,0,0,0,0,2461066.26,2461066.26
-NET PROFIT AFTER TAX,-4732497.5,-3658555.83,-642796.86,5319604.1,11097444.85,7383198.77
+Interest income,124071.64,184791.7,144910.77,167061.19,371262.97,992098.28
+Loan facility interest & fees,0,280000,480000,370000,130000,1260000
+Income tax,0,0,0,0,2022866.22,2022866.22
+NET PROFIT AFTER TAX,-4743713.83,-3952000.85,-1180578.85,4783802.68,11161089.52,6068598.66
 ENTITY EBITDA (incl. intercompany charges),,,,,,
 B-Catcher,-2283273.82,-812099.85,957138.54,4573129.87,9640884.34,12075779.08
 Honey Pot,-1630972.16,-1775642.59,-530946.53,853242.4,2411119.38,-673199.49
 BHive,-781747.59,-834376.02,-629029.12,115791.02,1240437.17,-888924.54
 CASH & FUNDING,,,,,,
-Operating cash flow,-4560705.6,-3191361.14,23681.56,5896498.4,11469417.01,9637530.23
+Operating cash flow,-4571921.93,-3204806.16,-34100.44,5730696.97,11663061.68,9582930.13
 Capital expenditure,-1118250,-535500,-582750,-257250,0,-2493750
-Equity raised (net),13440000,0,4800000,0,0,18240000
-Closing cash - year end,7761044.4,3606802.44,7899736.32,13051533.85,23780506.74,
+Equity raised (net),11520000,3720000,-480000,-2370000,-2130000,10260000
+Closing cash - year end,5829828.07,5382141.09,4337292.97,6953289.08,15745906.64,
 PEOPLE,,,,,,
 FTE - B-Catcher (year end),2.3,5.3,7.4,7.4,7.4,
 FTE - Honey Pot (year end),2,3,3,3,3,
@@ -68,12 +69,12 @@ Revenue per FTE,74825.6,407626.65,863228.25,1630880.89,2614842.31,
 Capital placed per active broker,350000,725925.93,825000,944186.05,1056140.35,
 Operating cost per $1 of capital placed,0.57,0.09,0.05,0.03,0.02,
 KEY METRICS,,,,,,
-Peak funding requirement (lowest cumulative pre-financing cash),11682690.18,,,,,
-Total equity raised,19000000,,,,,
+Peak funding requirement (lowest cumulative pre-financing cash),11705853.34,,,,,
+Total equity raised,12000000,,,,,
 Lowest month-end cash balance,1213305.29,,,,,
 Month of lowest cash,2027-09-30 00:00:00,,,,,
 First month of positive group EBITDA,2029-07-31 00:00:00,,,,,
 First month of positive pre-financing cash flow,2029-07-31 00:00:00,,,,,
-Lowest headroom over minimum cash buffer,463305.29,,,,,
+Lowest headroom over minimum cash buffer,133736.32,,,,,
 Funding adequate? (cash never below buffer),YES,,,,,
 Total one-off set-up & build cost,4637325,,,,,

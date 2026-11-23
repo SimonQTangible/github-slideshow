@@ -217,7 +217,7 @@ phases = [
         ("SOC 2 Type I readiness & audit", "vCISO", "10-15", money(70000)),
         ("Month-18 pivot gate: placements run-rate vs plan; hiring decision", "Board", "18", "Decision"),
     ]),
-    ("Phase 5 - Own licence, Series B & marketplace build (months 19-30)", "Gate 6: own AFSL; Series B; AUM ~$100m", [
+    ("Phase 5 - Own licence & marketplace build (months 19-30)", "Gate 6: own AFSL; AUM ~$100m; facility drawn", [
         ("Hire Fund Operations & Finance Officer (trigger: ~1,000 investors)", "Head of Risk, Compliance & Ops", "19", "$110k + on-costs"),
         ("Hire Broker Relationship Manager (trigger: ~40 active brokers)", "Head of Distribution", "19", "$140k + on-costs"),
         ("Hire Compliance & AML Officer (trigger: own AFSL application)", "Head of Risk, Compliance & Ops", "22", "$130k + on-costs"),
@@ -227,7 +227,7 @@ phases = [
         ("Own AFSL granted; exit CAR arrangement", "Head of Risk, Compliance & Ops", "24-25", "ASIC levy $2.5k/month"),
         ("Platform release 3: SMSF, company & trust accounts, auto-reinvest, tax pack", "Product owner + build partner", "16-21", money(120000)),
         ("Expand build-partner retainer to $50k/month (no in-house engineers)", "Product owner + build partner", "25", "$50k/month"),
-        ("Close Series B (growth round, gated on volume)", "CEO / CFO", "28", money(D["rounds"][2][1])),
+        ("Draw loan facility tranche 2 (tranche 1 at month 16); no Series B", "CEO / CFO", "16-22", money(D["inputs"]["Loan facility (venture debt / working-capital line) - limit"])),
         ("Secondary-market pen test & surveillance validation", "vCISO", "30", money(50000)),
     ]),
     ("Phase 6 - Marketplace live & scale (months 31-60)", "Gate 7: secondary market authorised; any new product approved separately", [

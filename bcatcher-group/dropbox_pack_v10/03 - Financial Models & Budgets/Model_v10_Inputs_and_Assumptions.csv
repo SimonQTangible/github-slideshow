@@ -100,19 +100,26 @@ Months until R&D refund received,12,months,12,12,12,
 Minimum cash buffer (regulatory capital + safety),750000,$,750000,750000,750000,AFSL financial requirements + 3 months fixed costs.
 CORPORATE FUNDING (equity into B-Catcher Group),,,,,,
 "Existing shares (B-Catcher + BHive founders, merged)",10000000,shares,10000000,10000000,10000000,Merger ratio between legacy B-Catcher and BHive holders TO BE CONFIRMED.
-Group executive share pool (parent) - % of fully diluted shares after Seed,0.015,%,0.015,0.015,0.015,v10: created before Seed (inside the pre-money). Capped so founders stay at or above 51% after all three rounds. For group C-suite only.
+Group executive share pool (parent) - % of fully diluted shares after Seed,0.08,%,0.08,0.08,0.08,v10.2: created before Seed (inside the pre-money). Sized so founders stay at or above 51% after Seed and Series A. For C-suite and senior recruits from established finance firms.
 Honey Pot key-people pool (non-voting B-class shares / options in Honey Pot Pty Ltd),0.15,% of Honey Pot,0.15,0.15,0.15,"v10: for senior brokers (Queen tier), Head of Distribution, Broker Relationship Manager. Parent keeps 85% and all votes."
 BHive key-people pool (non-voting B-class shares / options in BHive Pty Ltd),0.15,% of BHive,0.15,0.15,0.15,v10: for a future CTO / Head of Product and senior platform hires. Parent keeps 85% and all votes.
 Founder ownership floor in B-Catcher Group (parent),0.51,%,0.51,0.51,0.51,Founder requirement: never below 51% of the parent.
 Seed round amount,6000000,$,6000000,6000000,6000000,"v8: $6m (SAFE / note at $14m cap) funds re-based build, licensing and launch to month 9 with the 4-person core team."
 Seed round close,1,model month,1,1,1,
 Seed pre-money valuation (SAFE / note cap),14000000,$,14000000,14000000,14000000,v8: $14m cap (was $18m priced) - in line with Australian fintech seed ranges; BHive prior pitch $10.5m pre.
-Series A amount,8000000,$,8000000,8000000,8000000,"Milestones: licences in place, platform live, first subscriptions, signed pipeline; funds buy-back reserve."
+Series A amount,6000000,$,6000000,6000000,6000000,"v10.2: cut from $8m - a loan facility carries the rest of the burn, so less dilution and more room for the key-people share plan."
 Series A close,10,model month,10,10,10,Three months after launch.
-Series A pre-money valuation,35000000,$,35000000,35000000,35000000,"v8: $35m (was $40m), set by licences live and first subscriptions."
-Series B / growth round amount (0 = none),5000000,$,5000000,5000000,5000000,v8: $5m growth round once the secondary market and own AFSL are live; gated on volume.
+Series A pre-money valuation,40000000,$,40000000,40000000,40000000,"v10.2: $40m (was $35m) - growth plan, licences live and first subscriptions."
+Series B / growth round amount (0 = none),0,$,0,0,0,v10.2: no Series B - replaced by the loan facility. Re-open only if the Downside case happens.
 Series B close,28,model month,28,28,28,
 Series B pre-money valuation,55000000,$,55000000,55000000,55000000,v8: $55m (was $65m).
+Loan facility (venture debt / working-capital line) - limit,4000000,$,4000000,4000000,4000000,v10.2: non-dilutive. Sized at ~1/3 of equity raised (typical venture-debt sizing). Lender TBC (venture-debt fund or bank).
+Facility tranche 1 drawn (50%),16,model month,16,16,16,After Series A; covers the burn before break-even.
+Facility tranche 2 drawn (50%),22,model month,22,22,22,
+Facility interest rate,0.12,% p.a.,0.12,0.13,0.115,Australian venture debt ~11-14%; interest-only until repayment starts.
+Facility establishment fee,0.02,% of limit,0.02,0.02,0.02,Paid at first drawdown. Lender warrants (small equity kicker) not modelled.
+Facility repayment starts,37,model month,37,37,37,Jan 2030 - after the group is cash-flow positive.
+Facility repayment period,24,months,24,24,24,Equal monthly principal; fully repaid by Dec 2031.
 "Capital-raising costs (legal, placement)",0.04,% of raise,0.04,0.05,0.04,
 Exit multiple - EBITDA (year 5),10,x,10,8,12,v8: 10x (was 12x) - about 60% of revenue is transactional.
 Exit multiple - revenue (year 5),4,x,4,3,5,v8: 4x (was 5x).

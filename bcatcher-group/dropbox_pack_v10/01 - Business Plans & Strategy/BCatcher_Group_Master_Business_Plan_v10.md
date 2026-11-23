@@ -6,7 +6,7 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 ## 1. Executive summary
 B-Catcher Group is an Australian wholesale private-markets group made of three companies with one controlled lifecycle: **B-Catcher** (parent) originates, structures and manages property trusts, private credit and private equity / pre-IPO investments; **Honey Pot** recruits, accredits and supervises the broker network that distributes approved offers; **BHive** is the single investor-facing platform where investors are verified, subscribe, hold, receive reporting and, once licensed, trade on a secondary market.
 
-The group needs **$4,637,325** of one-off set-up and build spend and a total of **$11.68m** of cumulative funding before it becomes cash-flow positive in **Jul 2029**. It reaches positive EBITDA in **Jul 2029** and, by 2031, **$28.76m** revenue, **$13.29m** EBITDA and **$756.98m** of managed AUM with **11** FTE.
+The group needs **$4,637,325** of one-off set-up and build spend and a total of **$11.71m** of cumulative funding before it becomes cash-flow positive in **Jul 2029**. It reaches positive EBITDA in **Jul 2029** and, by 2031, **$28.76m** revenue, **$13.29m** EBITDA and **$756.98m** of managed AUM with **11** FTE.
 
 ## 2. Group structure
 | Entity | Role | Revenue | Regulatory route |
@@ -20,7 +20,7 @@ The group needs **$4,637,325** of one-off set-up and build spend and a total of 
 |  | Company (equity) investors | BHive customers (product investors) |
 |---|---|---|
 | What they buy | Shares in B-Catcher Group | Units in property trusts and tokens, private-credit funds, PE / pre-IPO unit trusts, shares in Pty Ltd companies, ASX placements |
-| When | Seed month 1 (Jan 2027) · Series A month 10 · Series B month 28 | Buy from month 7 (Jul 2027); buy-back bridge from month 19; secondary market from month 31 |
+| When | Seed month 1 (Jan 2027) · Series A month 10 (no Series B - a loan facility covers the rest) | Buy from month 7 (Jul 2027); buy-back bridge from month 19; secondary market from month 31 |
 | Their money goes to | The group - pays for building and running the company | The trust / custodian - never group money |
 | Return | Growth in company value | Rent, interest and growth from the assets, after fees |
 | Who can invest | Sophisticated / professional investors | Verified wholesale investors at launch; retail and overseas access only as licences allow |
@@ -63,8 +63,8 @@ BHive charges its 0.25% p.a. technology fee, $30,000 per offer onboarded and a 0
 | Staff costs | ($1,268,177) | ($1,767,253) | ($2,413,195) | ($2,575,083) | ($2,665,211) |
 | Total operating expenses | ($5,007,740) | ($6,182,822) | ($7,620,958) | ($8,677,971) | ($9,856,097) |
 | EBITDA | ($4,695,994) | ($3,422,118) | ($202,837) | $5,542,163 | $13,292,441 |
-| NPAT | ($4,732,497) | ($3,658,556) | ($642,797) | $5,319,604 | $11,097,445 |
-| Closing cash | $7,761,044 | $3,606,802 | $7,899,736 | $13,051,534 | $23,780,507 |
+| NPAT | ($4,743,714) | ($3,952,001) | ($1,180,579) | $4,783,803 | $11,161,090 |
+| Closing cash | $5,829,828 | $5,382,141 | $4,337,293 | $6,953,289 | $15,745,907 |
 | FTE | 6 | 9 | 11 | 11 | 11 |
 
 ## 5. Cost of setting up the business
@@ -102,23 +102,25 @@ Full line-by-line register: folder 03, `Setup_Cost_Register_v10.csv`.
 ## 7. Funding
 | Round | Amount | Month | Pre-money | Post-round % |
 |---|---|---|---|---|
-| Seed | $6,000,000 | 1 | $14,000,000 | 22.4% |
-| Series A | $8,000,000 | 10 | $35,000,000 | 17.1% |
-| Series B (optional) | $5,000,000 | 28 | $55,000,000 | 8.3% |
+| Seed | $6,000,000 | 1 | $14,000,000 | 26.1% |
+| Series A | $6,000,000 | 10 | $40,000,000 | 13.0% |
+| Loan facility (non-dilutive) | $4,000,000 | 16 and 22 (2 tranches) | - | 0% |
 
-Founders and legacy B-Catcher/BHive holders retain 51.1% after all three rounds and a 1.1% group executive share pool (OK - founders 51.1%; floor 51%). Senior brokers and platform leaders receive non-voting shares in Honey Pot and BHive instead (see *04 - Organisation & Headcount / Key_People_Share_Plan_v1.md*). Lowest month-end cash with this plan: $1,213,305 (buffer $750k).
+The loan facility is venture debt or a working-capital line at 12% p.a. plus a 2% fee. It is interest-only until month 37 (Jan 2030), then repaid over 24 months from operating cash flow, and fully repaid by Dec 2031. Total interest and fees: $1,260,000. Replacing Series B with debt keeps the founders well above 51% and frees room for the key-people share plan. Ask the lender for a **$2m accordion** (extra limit on request) to absorb small shocks; a 6-month licensing or broker delay, or the Downside, would still need the board pivot gate and new money.
+
+Founders and legacy B-Catcher/BHive holders retain 53.9% after Seed and Series A and a 7.0% group executive share pool (8% after Seed) (OK - founders 53.9%; floor 51%). Senior brokers and platform leaders receive non-voting shares in Honey Pot and BHive instead (see *04 - Organisation & Headcount / Key_People_Share_Plan_v1.md*). Lowest month-end cash with this plan: $1,213,305 (buffer $750k).
 
 ## 8. Scenarios
 | Case | Revenue 2031 | EBITDA 2031 | Peak funding | Extra equity needed | EBITDA positive |
 |---|---|---|---|---|---|
-| Base case | $28,763,265 | $13,292,441 | $11,682,690 | - | Jul 2029 |
-| Downside | $8,502,432 | ($2,380,774) | $28,326,443 | $15,276,058 | > 2031 |
-| Upside | $45,649,606 | $26,772,395 | $7,075,019 | - | Jun 2028 |
-| Stress: 50% placement shortfall | $14,381,633 | $2,963,858 | $16,110,061 | $1,295,675 | Jul 2030 |
-| Stress: 6-month licensing delay | $23,163,867 | $9,128,764 | $14,945,297 | $126,251 | Jan 2030 |
-| Stress: 6-month broker ramp delay | $25,274,309 | $10,684,623 | $13,107,038 | - | Oct 2029 |
-| Stress: 25% technology build overrun | $28,763,265 | $13,292,441 | $12,232,184 | - | Jul 2029 |
-| Combined: Downside + 6-month delay | $6,760,461 | ($3,550,436) | $30,628,087 | $16,507,542 | > 2031 |
+| Base case | $28,763,265 | $13,292,441 | $11,705,853 | - | Jul 2029 |
+| Downside | $8,502,432 | ($2,380,774) | $28,351,496 | $23,309,444 | > 2031 |
+| Upside | $45,649,606 | $26,772,395 | $7,103,294 | - | Jun 2028 |
+| Stress: 50% placement shortfall | $14,381,633 | $2,963,858 | $16,254,933 | $8,609,741 | Jul 2030 |
+| Stress: 6-month licensing delay | $23,163,867 | $9,128,764 | $15,027,728 | $4,571,667 | Jan 2030 |
+| Stress: 6-month broker ramp delay | $25,274,309 | $10,684,623 | $13,139,719 | $2,774,774 | Oct 2029 |
+| Stress: 25% technology build overrun | $28,763,265 | $13,292,441 | $12,255,347 | $497,128 | Jul 2029 |
+| Combined: Downside + 6-month delay | $6,760,461 | ($3,550,436) | $30,653,130 | $24,540,918 | > 2031 |
 
 **Board pivot gate (month 18):** if run-rate placements are below ~$25m p.a. (about 80% of plan), hold the volume-triggered hires, cut outsourced and build-partner spend, defer the secondary-market build and stay under the principal licensee longer. At downside volumes the full three-company build does not pay for itself.
 

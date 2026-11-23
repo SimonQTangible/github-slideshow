@@ -48,14 +48,14 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 ## Phase 4 - Series A & scale (months 10-18)
 | Step | Owner | Month | Cost |
 |---|---|---|---|
-| Close Series A | CEO | 10 | $8,000,000 |
+| Close Series A | CEO | 10 | $6,000,000 |
 | Own AFSL application | Head of Risk, Compliance & Ops | 13-20 | $150,000 |
 | Market-operator route & legal | Product owner + build partner | 22-27 | $120,000 |
 | Platform release 2 + mobile apps; Investment Analyst hire (m13); buy-back bridge opens (m19, capped) | Product owner + CEO/CIO | 10-19 | $300,000 |
 | SOC 2 Type I | vCISO | 10-15 | $70,000 |
 | Month-18 pivot gate | Board | 18 | - |
 
-## Phase 5 - Own licence, Series B & marketplace build (months 19-30) - Gate 6
+## Phase 5 - Own licence & marketplace build (months 19-30) - Gate 6
 | Step | Owner | Month | Cost |
 |---|---|---|---|
 | Hire Fund Operations & Finance Officer (trigger ~1,000 investors) and Broker Relationship Manager (~40 brokers) | Head of Risk / Head of Distribution | 19 | $250k + on-costs |
@@ -63,7 +63,7 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Own AFSL granted; exit CAR | Head of Risk, Compliance & Ops | 24-25 | ASIC levy $2.5k/month |
 | Platform release 3 (SMSF/company/trust accounts, auto-reinvest, tax pack) | Product owner + build partner | 16-21 | $120,000 |
 | Expand build-partner retainer (no in-house engineers) | Product owner + build partner | 25 | $50k/month |
-| Close Series B (gated on volume) | CEO | 28 | $5,000,000 |
+| Draw loan facility tranches (non-dilutive) | CEO / CFO | 16 and 22 | $4,000,000 |
 | Secondary engine, operator route & integration; pen test | Product owner + build partner / vCISO | 22-30 | $680,000 |
 
 ## Phase 6 - Marketplace live & scale (months 31-60) - Gate 7: new products approved separately
@@ -86,5 +86,5 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Brokers | 18 | 68 | 140 | 215 | 285 |
 | Revenue | $0.42m | $3.63m | $9.50m | $17.94m | $28.76m |
 | EBITDA | ($4.70m) | ($3.42m) | ($0.20m) | $5.54m | $13.29m |
-| Cash | $7.76m | $3.61m | $7.90m | $13.05m | $23.78m |
+| Cash | $5.83m | $5.38m | $4.34m | $6.95m | $15.75m |
 

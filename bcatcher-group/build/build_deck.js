@@ -428,7 +428,7 @@ s.addText("The whole team", { x: 7.9, y: 1.9, w: 4.6, h: 0.45, fontSize: 16, bol
     { text: "Fractional contractors", options: { bold: true, breakLine: true } }, { text: con.join(" · ") },
   ], { x: 7.9, y: 2.35, w: 4.6, h: 3.3, fontSize: 10, paraSpaceAfter: 2, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "hc-list" });
 }
-s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. Equity to recruit from established finance firms: 1.5% group pool for C-suite, plus 15% non-voting pools in Honey Pot (senior brokers) and BHive (platform leaders). Founders keep at least 51%.`,
+s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. Equity to recruit from established finance firms: ${pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"])} group pool for C-suite, plus 15% non-voting pools in Honey Pot (senior brokers) and BHive (platform leaders). Founders keep at least 51%.`,
   { x: 7.9, y: 5.75, w: 4.6, h: 0.85, fontSize: 11, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "hc-note" });
 
 // 13 ENTITY PROFITABILITY
@@ -450,10 +450,10 @@ s.addText([
 
 // 14 CASH CURVE
 s = content("Financials", `Peak funding need is ${$m(D.km.peak)}; cash flow turns positive in ${D.km.cfm}`,
-  "Cumulative cash before financing vs closing cash with the planned equity rounds (quarter end, $m)");
+  "Cumulative cash before financing vs closing cash with the equity rounds and loan facility (quarter end, $m)");
 const qlab = Array.from({ length: 20 }, (_, i) => "Q" + ((i % 4) + 1) + " " + String(27 + Math.floor(i / 4)));
 s.addChart(pres.charts.LINE, [
-  { name: "Closing cash (with equity rounds)", labels: qlab, values: D.cash_q.map(v => +m(v, 2)) },
+  { name: "Closing cash (with equity + facility)", labels: qlab, values: D.cash_q.map(v => +m(v, 2)) },
   { name: "Cumulative cash before financing", labels: qlab, values: D.cum_q.map(v => +m(v, 2)) },
 ], { ...chartBase, x: 0.6, y: 1.75, w: 8.6, h: 4.95, chartColors: [HEX.teal, HEX.red], lineSize: 3, lineDataSymbol: "none",
   showLegend: true, legendPos: "b", showTitle: false, valAxisLabelFormatCode: "$0", catAxisLabelFontSize: 9, objectName: "cash-chart" });
@@ -464,12 +464,12 @@ stat(s, 9.85, 5.05, 2.7, D.km.ebm, "first month of positive group EBITDA", C.acc
 
 // 15 SCENARIOS
 s = content("Financials", "Results hinge on placement volume, not cost overruns",
-  "Results from running the full model under each case. A 25% tech overrun is absorbed; a 50% volume shortfall is not");
+  "Results from running the full model under each case. Small shocks are covered by a $2m accordion on the facility; a 50% volume shortfall needs new equity");
 const sr = D.scen.rows, cases = D.scen.cases;
 const pick = [0, 1, 2, 3, 4, 6, 7];
 const short = ["Base", "Downside", "Upside", "-50% volume", "6-mth licence delay", "+25% tech cost", "Downside + 6-mth delay"];
 const metr = [["Net revenue 2031", "Net revenue Y5", v => $m(v)], ["EBITDA 2031", "EBITDA Y5", v => $m(v)], ["Peak funding need", "Peak funding requirement", v => $m(v)],
-  [`Extra equity beyond ${$m(D.km.raised, 1)}`, "Extra equity needed (vs buffer + buy-back reserve)", v => (v > 0 ? $m(v) : "-")], ["First EBITDA-positive month", "First month EBITDA positive", v => (typeof v === "string" && v.includes("Beyond") ? "> 2031" : v)]];
+  [`Extra money beyond ${$m(D.km.raised, 1)} + facility`, "Extra equity needed (vs buffer + buy-back reserve)", v => (v > 0 ? $m(v) : "-")], ["First EBITDA-positive month", "First month EBITDA positive", v => (typeof v === "string" && v.includes("Beyond") ? "> 2031" : v)]];
 const stbl = [[{ text: "", options: { fill: { color: HEX.ink } } }].concat(short.map(h => ({ text: h, options: { bold: true, color: HEX.white, fill: { color: HEX.ink }, fontSize: 12, align: "center" } })))];
 metr.forEach(([lab, key, f], i) => stbl.push([{ text: lab, options: { bold: true, fontSize: 13, color: HEX.ink, fill: { color: i % 2 ? HEX.white : HEX.mist } } }].concat(
   pick.map(j => ({ text: String(f(sr[key][j])), options: { fontSize: 13, align: "center", color: (key.startsWith("Extra") && sr[key][j] > 0) ? HEX.red : HEX.ink, bold: key.startsWith("Extra") && sr[key][j] > 0, fill: { color: i % 2 ? HEX.white : HEX.mist } } })))));
@@ -481,27 +481,29 @@ s.addText([{ text: "Board pivot gate (month 18):  ", options: { bold: true, colo
 
 // 16 THE RAISE
 pres.addSection({ title: "The raise" });
-s = content("The raise", `Raising ${$m(D.km.raised, 1)} in ${["one","two","three"][D.rounds.filter(r => r[1] > 0).length - 1]} milestone-gated rounds`,
-  `Covers the ${$m(D.km.peak)} peak burn plus a $0.75m regulatory-capital and cash buffer and raising costs`);
+const FAC = D.inputs["Loan facility (venture debt / working-capital line) - limit"];
+s = content("The raise", `Raising ${$m(D.km.raised, 1)} of equity in ${["one","two","three"][D.rounds.filter(r => r[1] > 0).length - 1]} rounds, plus a ${$m(FAC, 1)} loan facility`,
+  `Covers the ${$m(D.km.peak)} peak burn plus a $0.75m regulatory-capital buffer; debt replaces a Series B, so founders keep ${pct(D.founder_pct, 1)} and an ${pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"])} share pool is funded`);
 const ms = ["Build platform, appoint licensee and trustee, first 3 offers documented, launch to wholesale investors (month 7)",
   "Licensed distribution live, platform in production, first subscriptions reconciled, signed issuer pipeline",
-  "Own AFSL granted, ~$100m AUM, ~90 accredited brokers; funds the secondary-market build (live month 31)"];
-const RR = D.rounds.filter(r => r[1] > 0);
+  `Non-dilutive venture debt at ${pct(I["Facility interest rate"])} p.a.: drawn months 16 and 22, interest-only, repaid Jan 2030 - Dec 2031 from cash flow`];
+const RR = D.rounds.filter(r => r[1] > 0).map((r, i) => [r[0], r[1], `${["Month 1", "Month 10", "Month 28"][i]}  ·  ${$m(r[2], 0)} pre-money  ·  ${pct(r[3], 1)}`]);
+if (FAC > 0) RR.push(["Loan facility", FAC, "Months 16 & 22  ·  no dilution"]);
 const cw = RR.length === 2 ? 5.95 : 3.8, cg = RR.length === 2 ? 6.15 : 4.1;
-RR.forEach(([n, amt, pre, own], i) => {
+RR.forEach(([n, amt, sub], i) => {
   const x = 0.6 + i * cg;
   const fill = [HEX.honey, HEX.navy, HEX.teal][i], tc = i === 0 ? HEX.ink : HEX.white;
   card(s, x, 1.85, cw, 1.6, fill, "r-head" + i);
   s.addText(n.replace(" (optional)", ""), { x: x + 0.3, y: 1.95, w: 3.2, h: 0.45, fontSize: 18, bold: true, color: tc, margin: 0, isTextBox: true, objectName: "r-n" + i });
   s.addText($m(amt, 1), { x: x + 0.3, y: 2.4, w: 3.2, h: 0.75, fontSize: 36, bold: true, color: tc, margin: 0, isTextBox: true, objectName: "r-a" + i });
-  s.addText(`${["Month 1", "Month 10", "Month 28"][i]}  ·  ${$m(pre, 0)} pre-money  ·  ${pct(own, 1)}`, { x: x + 0.3, y: 3.05, w: cw - 0.4, h: 0.35, fontSize: 12, color: tc, margin: 0, isTextBox: true, objectName: "r-d" + i });
+  s.addText(sub, { x: x + 0.3, y: 3.05, w: cw - 0.4, h: 0.35, fontSize: 12, color: tc, margin: 0, isTextBox: true, objectName: "r-d" + i });
   card(s, x, 3.55, cw, 1.55, HEX.mist, "r-ms" + i);
-  s.addText([{ text: "Milestones funded: ", options: { bold: true } }, { text: ms[i] }], { x: x + 0.25, y: 3.65, w: cw - 0.45, h: 1.4, fontSize: 12.5, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "r-mst" + i });
+  s.addText([{ text: (n === "Loan facility" ? "Terms: " : "Milestones funded: "), options: { bold: true } }, { text: ms[i] }], { x: x + 0.25, y: 3.65, w: cw - 0.45, h: 1.4, fontSize: 12.5, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "r-mst" + i });
 });
 s.addChart(pres.charts.BAR, [{ name: "Use of funds", labels: D.uses.map(u => u[0].replace(" (all entities)", "").replace(" (capitalised)", "").replace(" (recurring)", "")), values: D.uses.map(u => +(u[1] / 1e6).toFixed(2)) }], {
   ...chartBase, x: 0.6, y: 5.15, w: 12.1, h: 1.85, barDir: "bar", chartColors: [HEX.slate], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "$0.0\"m\"",
   showLegend: false, showTitle: false, valAxisHidden: true, catAxisOrientation: "maxMin", catAxisLabelFontSize: 9, dataLabelFontSize: 9, objectName: "uof-chart" });
-s.addNotes("Use of funds = gross spend in the first 24 months by bucket. Founders and existing B-Catcher/BHive holders retain " + pct(D.founder_pct) + " after all three rounds and a " + pct(D.esop_pct, 1) + " group executive share pool (floor: 51%). Key brokers and platform hires receive non-voting shares in Honey Pot and BHive instead. Valuations are placeholders for negotiation.");
+s.addNotes("Use of funds = gross spend in the first 24 months by bucket. Founders and existing B-Catcher/BHive holders retain " + pct(D.founder_pct) + " after Seed, Series A and the group executive share pool (floor: 51%). The loan facility replaces a Series B. Key brokers and platform hires receive non-voting shares in Honey Pot and BHive instead. Valuations are placeholders for negotiation.");
 
 // 17 RETURNS
 s = content("The raise", "Illustrative returns at the end of year 5",
@@ -514,7 +516,7 @@ RT.forEach(([n, inv, moic, irr], i) => {
   s.addText(moic.toFixed(1) + "x", { x: x + 0.3, y: 2.6, w: 3.2, h: 1.1, fontSize: 60, bold: true, color: [C.accent1, C.accent2, C.accent3][i], margin: 0, isTextBox: true, objectName: "ret-m" + i });
   s.addText(`money multiple on ${$m(inv, 1)}\n~${pct(irr)} p.a. IRR`, { x: x + 0.3, y: 3.75, w: 3.2, h: 1.0, fontSize: 15, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "ret-d" + i });
 });
-s.addText("Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution from later rounds (not modelled). Ownership includes the 1.5% group executive pool; exit value is after the 15% key-people stakes in Honey Pot and BHive. Founders keep at least 51%. Upside case reaches EBITDA break-even in " + D.scen.rows["First month EBITDA positive"][2] + ".",
+s.addText("Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution from later rounds (not modelled). Ownership includes the " + pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"]) + " group executive pool; exit value is after the 15% key-people stakes in Honey Pot and BHive. Founders keep at least 51%. Upside case reaches EBITDA break-even in " + D.scen.rows["First month EBITDA positive"][2] + ".",
   { x: 0.6, y: 5.6, w: 12.1, h: 0.7, fontSize: 13, italic: true, color: C.text2, margin: 0, isTextBox: true, objectName: "ret-note" });
 
 // 18 REGULATORY GATES
@@ -546,7 +548,7 @@ const phases = [["Months 1-2", "Foundation", "Entities, IP, counsel, data room, 
   ["Months 2-6", "Build & license", "MVP build, CAR appointment, trust templates, broker agreements", HEX.navy],
   ["Month 7", "Wholesale launch", "First offers to verified investors via BHive", HEX.honey],
   ["Months 10-12", "Series A", "Scale brokers; reconcile, report, tune commissions", HEX.honey],
-  ["Months 13-24", "Own AFSL + scale", "Licence application, mobile apps, growth hires, Series B prep", HEX.teal],
+  ["Months 13-24", "Own AFSL + scale", "Licence application, mobile apps, growth hires, loan facility drawn", HEX.teal],
   ["Month " + D.inputs["BHive secondary market activation"], "Secondary market live", "Activated once AUM covers fixed costs and partner is authorised", HEX.teal]];
 s.addShape(pres.shapes.LINE, { x: 0.8, y: 3.05, w: 11.7, h: 0, line: { color: HEX.grey, width: 2 }, objectName: "rm-line" });
 phases.forEach(([when, h, t, col], i) => {
@@ -578,7 +580,7 @@ risks.forEach(([h, t, col], i) => {
 // 21 CLOSE
 s = pres.addSlide({ masterName: "DARK", sectionTitle: "Execution" });
 s.addText(`The ask: ${$m(D.rounds[0][1], 1)} Seed to build, license and launch`, { placeholder: "title" });
-s.addText(`Part of a ${$m(D.km.raised, 1)} milestone-gated plan to a ${$m(D.aum[4], 0)} AUM, ${$m(D.rev[4], 0)}-revenue group by 2031`, { placeholder: "body" });
+s.addText(`Part of a ${$m(D.km.raised, 1)} equity + ${$m(D.inputs["Loan facility (venture debt / working-capital line) - limit"], 1)} loan plan to a ${$m(D.aum[4], 0)} AUM, ${$m(D.rev[4], 0)}-revenue group by 2031`, { placeholder: "body" });
 const nexts = ["Confirm entities, cap table and merger ratio of legacy B-Catcher and BHive holders", "Appoint financial services counsel and principal licensee", "Select first two asset types and issuer partners", "Commission BHive build partner and custody/registry providers"];
 s.addText(nexts.map((t, i) => ({ text: t, options: { bullet: true, breakLine: i < nexts.length - 1 } })),
   { x: 0.8, y: 5.0, w: 11.5, h: 1.6, fontSize: 15, color: C.background1, paraSpaceAfter: 6, margin: 0, isTextBox: true, objectName: "close-next" });
