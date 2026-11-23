@@ -156,7 +156,7 @@ Hero: "GET IN." + 20-second film + "Check if you qualify". Next: how it works in
 | Investor events & webinars | $6,000/month from month 7 |
 | Freelance marketing + AI content tools | $5,500/month from month 6 |
 | Product marketing / UX research (BHive) | $3,000/month from month 7 |
-| **Total marketing, first 24 months** | **about $0.75m** (2027 $173k + 2028 $378k marketing lines, plus $200k of set-up items); broker roadshows and events are additional under Broker Network |
+| **Total marketing, first 24 months** | **about $0.75m** (2027 $173k + 2028 $378k marketing lines, plus $200k of set-up items); broker roadshows are additional, under Broker Network |
 
 ### "World's best" needs an Accelerate option
 The model budget is a lean launch. To build a category-leading brand, I recommend an **Accelerate** layer funded only if Founding Member targets are hit (a gated spend):
