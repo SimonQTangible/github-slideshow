@@ -29,7 +29,7 @@ Investors subscribe directly through **BHive**. **Honey Pot** manages brokers an
 | 07 - Investor Deck & Capital Raise | Investor Deck v7 (.pptx - to upload); Deck v7 slide script (.md); Capital Raise Summary v7 (.md) | Investor Deck v3 Working; Content Brief v1 (evidence checklist still applies) |
 | 08 - Historical Reference | Archive Index (.md) - what was carried forward or excluded | All originals, unchanged |
 
-Every v4, v5 and v7 Markdown/CSV file in these folders is superseded by the matching v7 file. v7 is the four-person core team: 8 roles of which 4 are employees (v4 had 49 roles, v5 had 27); fractional contractors, outsourced providers, AI tools, the build partner and commission-only sales replace every other role.
+Every v4, v5 and v6 Markdown/CSV file in these folders is superseded by the matching v7 file. v7 is the four-person core team: 8 roles of which 4 are employees (v4 had 49 roles, v5 had 27); fractional contractors, outsourced providers, AI tools, the build partner and commission-only sales replace every other role.
 
 ## Files to upload manually
 The Dropbox connector can only write text files. Drag these three files (sent in the Claude session) into the folders shown:

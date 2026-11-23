@@ -87,7 +87,7 @@ reg += md_table(["Folder", "Current (v7)", "Superseded / reference only"], [
     ["06 - BHive", "BHive Build Plan & Budget v7 (.md)", "Product & Technical Requirements v1 (still valid for requirements)"],
     ["07 - Investor Deck & Capital Raise", "Investor Deck v7 (.pptx - to upload); Deck v7 slide script (.md); Capital Raise Summary v7 (.md)", "Investor Deck v3 Working; Content Brief v1 (evidence checklist still applies)"],
     ["08 - Historical Reference", "Archive Index (.md) - what was carried forward or excluded", "All originals, unchanged"]])
-reg += f"Every v4, v5 and v7 Markdown/CSV file in these folders is superseded by the matching v7 file. v7 is the four-person core team: {len(D['roles'])} roles of which 4 are employees (v4 had 49 roles, v5 had 27); fractional contractors, outsourced providers, AI tools, the build partner and commission-only sales replace every other role.\n\n"
+reg += f"Every v4, v5 and v6 Markdown/CSV file in these folders is superseded by the matching v7 file. v7 is the four-person core team: {len(D['roles'])} roles of which 4 are employees (v4 had 49 roles, v5 had 27); fractional contractors, outsourced providers, AI tools, the build partner and commission-only sales replace every other role.\n\n"
 reg += ("## Files to upload manually\nThe Dropbox connector can only write text files. Drag these three files (sent in the Claude session) into the folders shown:\n\n"
         "- `BCatcher_Group_Integrated_Financial_Model.xlsx` -> 03 - Financial Models & Budgets\n- `BCatcher_Group_Investor_Deck_v7.pptx` -> 07 - Investor Deck & Capital Raise\n"
         "- `BCatcher_Group_Launch_Playbook_and_Budget_Book.docx` -> 01 - Business Plans & Strategy\n")
