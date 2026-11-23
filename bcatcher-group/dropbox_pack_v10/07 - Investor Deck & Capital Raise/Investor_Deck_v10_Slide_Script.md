@@ -222,7 +222,7 @@ Text of every slide in `BCatcher_Group_Investor_Deck_v10.pptx` (upload the .pptx
 - 14 costed roles: 4 core employees, 6 hires triggered by volume (investment, broker, compliance, property and fund roles) and fractional contractors; everything else is outsourced, AI-driven or commission-only
 - The whole team
 - Core employees / Group CEO & Chief Investment Officer / Head of Risk, Compliance & Operations / Head of Distribution / Investor Communications & Business Development Manager / Hired as volume grows / Investment Analyst & Asset Manager (m13) / Fund Operations & Finance Officer (m19) / Broker Relationship Manager (m19) / Compliance & AML Officer (m22) / Asset Manager - Property (m25) / Fund Accountant & Registry Officer (m31) / Fractional contractors / Fractional CFO · Fractional Product Owner · Security Lead (vCISO) · UX/UI Designer
-- Staff cost $1.3m in 2027, $2.7m in 2031. Equity to recruit from established finance firms: 8% group pool for C-suite, plus 15% non-voting pools in Honey Pot (senior brokers) and BHive (platform leaders). Founders keep at least 51%.
+- Staff cost $1.3m in 2027, $2.7m in 2031. To recruit from established finance firms: 25% non-voting pools in Honey Pot (senior brokers) and BHive (platform leaders), plus a small 3% non-voting group pool. Founders keep 59.8% of the votes.
 - *Chart* B-Catcher: 2027=2.3, 2028=5.3, 2029=7.4, 2030=7.4, 2031=7.4
 - *Chart* Honey Pot: 2027=2.0, 2028=3.0, 2029=3.0, 2030=3.0, 2031=3.0
 - *Chart* BHive: 2027=1.3, 2028=0.6, 2029=0.6, 2030=0.6, 2031=0.6
@@ -256,7 +256,7 @@ Text of every slide in `BCatcher_Group_Investor_Deck_v10.pptx` (upload the .pptx
 - Board pivot gate (month 18):  if run-rate placements are below ~$25m p.a. (about 80% of plan), hold the volume-triggered hires, cut outsourced and build-partner spend, defer the secondary-market build and the buy-back reserve top-up. At downside volumes the full three-company build does not pay for itself.
 
 ## Slide 19: Raising $12.0m of equity in two rounds, plus a $4.0m loan facility
-- Covers the $11.7m peak burn plus a $0.75m regulatory-capital buffer; debt replaces a Series B, so founders keep 53.9% and an 8% share pool is funded
+- Covers the $11.7m peak burn plus a $0.75m regulatory-capital buffer; debt replaces a Series B, so founders keep 59.8% of the votes; key-people equity is non-voting
 - Seed
 - $6.0m
 - Month 1  ·  $14m pre-money  ·  26.1%
@@ -272,14 +272,14 @@ Text of every slide in `BCatcher_Group_Investor_Deck_v10.pptx` (upload the .pptx
 - *Chart* Use of funds: Team - salaries, on-costs & hiring=3.21, Platform & technology build=1.65, Licensing, legal, structuring & compliance set-up=1.99, Technology, hosting & security=1.33, Marketing, broker network & investor servicing=1.47, Regulatory, insurance, professional fees & governance=1.89, Premises, origination, travel & general=1.3
 
 ## Slide 20: Illustrative returns at the end of year 5
-- Exit run-rate: $34.0m revenue and $17.1m EBITDA (Q4 2031 annualised); equity value $164m after subsidiary key-people stakes, on blended 10x EBITDA / 4x revenue
+- Exit run-rate: $34.0m revenue and $17.1m EBITDA (Q4 2031 annualised); equity value $160m after subsidiary key-people stakes, on blended 10x EBITDA / 4x revenue
 - Seed investors
-- 7.1x
-- money multiple on $6.0m / ~48% p.a. IRR
+- 7.0x
+- money multiple on $6.0m / ~47% p.a. IRR
 - Series A investors
-- 3.6x
-- money multiple on $6.0m / ~35% p.a. IRR
-- Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution from later rounds (not modelled). Ownership includes the 8% group executive pool; exit value is after the 15% key-people stakes in Honey Pot and BHive. Founders keep at least 51%. Upside case reaches EBITDA break-even in Jun 2028.
+- 3.5x
+- money multiple on $6.0m / ~34% p.a. IRR
+- Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution from later rounds (not modelled). Ownership includes the 3% non-voting group pool; exit value is after the 25% key-people stakes in Honey Pot and BHive. Founders keep 59.8% of the votes. Upside case reaches EBITDA break-even in Jun 2028.
 
 ## Slide 21: Nothing regulated goes live until its gate is passed
 - Seven launch gates from the Master Business Plan; costs for each are in the set-up budget

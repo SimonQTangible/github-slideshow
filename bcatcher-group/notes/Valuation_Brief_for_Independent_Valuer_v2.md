@@ -1,20 +1,20 @@
-# Valuation Brief for an Independent Valuer - v1
+# Valuation Brief for an Independent Valuer - v2
 
-**B-Catcher Group** | 07 - Investor Deck & Capital Raise | Version 1 | 23 November 2026
+**B-Catcher Group** | 07 - Investor Deck & Capital Raise | Version 2 | 23 November 2026
 **Purpose:** give an independent valuation firm everything it needs to test and support the pre-money valuations in the capital raise, and to set the market value used for the key-people share plan. Every figure comes from *BCatcher_Group_Integrated_Financial_Model_v10.xlsx* (Base case unless stated). This is a confidential planning document and not an offer. The valuations below are **management's proposals**, to be tested by the valuer. They are not conclusions.
 
 ---
 
 ## 1. What we are asking the valuer to do
 
-1. **Seed round:** give an opinion on whether a **$14m pre-money valuation** (the cap on the Seed SAFE, which includes an 8% share pool) is fair and reasonable for a pre-revenue Australian wholesale private-markets group at Jan 2027.
+1. **Seed round:** give an opinion on whether a **$14m pre-money valuation** (the cap on the Seed SAFE, which includes a 3% non-voting share pool) is fair and reasonable for a pre-revenue Australian wholesale private-markets group at Jan 2027.
 2. **Series A:** give an indicative view on a **$40m pre-money valuation** at month 10 (Oct 2027), *conditional on* these milestones:
    - licences in place
    - platform live
    - first subscriptions reconciled
    - a signed issuer pipeline
 3. **Share plan market value:** set the market value per share at the grant date, for options in the group key-people pool. This is needed for the employee share scheme startup tax concession (Division 83A).
-4. **Subsidiary shares:** give an indicative market value of the non-voting B-class shares in **Honey Pot Pty Ltd** and **BHive Pty Ltd** (15% key-people pools in each).
+4. **Subsidiary shares:** give an indicative market value of the non-voting B-class shares in **Honey Pot Pty Ltd** and **BHive Pty Ltd** (25% key-people pools in each).
 5. **Optional:** check that the fees charged between the three companies are at arm's length (transfer pricing). These fees are B-Catcher's shared-services fees and BHive's platform licence fees, and they matter for the subsidiary minority holders.
 
 ---
@@ -23,13 +23,13 @@
 
 ### Cap table (fully diluted)
 
-| Holder | Shares | Price / share | After Seed | After Series A |
-|---|---|---|---|---|
-| Founders & legacy B-Catcher/BHive holders | 10,000,000 | - | 62.0% | **53.9%** |
-| Group key-people share pool (created before Seed) | 1,290,323 | - | 8.0% | 7.0% |
-| Seed investors ($6.0m) | 4,838,710 | **$1.24** | 30.0% | 26.1% |
-| Series A investors ($6.0m) | 2,419,355 | **$2.48** | - | 13.0% |
-| **Total** | **18,548,387** | | 100% | 100% |
+| Holder | Shares | Price / share | After Seed | After Series A | Votes after Series A |
+|---|---|---|---|---|---|
+| Founders & legacy B-Catcher/BHive holders | 10,000,000 | - | 67.0% | **58.3%** | **59.8%** |
+| Group executive pool (non-voting, created before Seed) | 447,761 | - | 3.0% | 2.6% | 0% |
+| Seed investors ($6.0m) | 4,477,612 | **$1.34** | 30.0% | 26.1% | 26.8% |
+| Series A investors ($6.0m) | 2,238,806 | **$2.68** | - | 13.0% | 13.4% |
+| **Total** | **17,164,179** | | 100% | 100% | 100% |
 
 - The 10,000,000 founder shares are a placeholder. The merger ratio between the legacy B-Catcher and BHive shareholders is still to be confirmed.
 
@@ -43,8 +43,9 @@
 
 **How the pool and debt affect dilution:**
 - **Share pool:** it sits *inside* the Seed pre-money valuation, so the founders absorb it, not the Seed investors.
-- **No Series B:** a $4m loan facility replaces it, so the founders stay above the 51% floor they require.
-- **Exit value:** the 15% key-people stakes in Honey Pot and BHive are deducted from the exit value, not from the parent cap table.
+- **Founder control:** the founders require **at least 51% of the votes**, and all key-people equity is non-voting.
+- **No Series B:** a $4m loan facility replaces it, which limits dilution.
+- **Exit value:** most key-people equity is **25% non-voting stakes in Honey Pot and BHive**. These are deducted from the exit value, not from the parent cap table.
 
 ### Current justification (and why it is not enough)
 
@@ -90,29 +91,29 @@ That is a negotiating position, not a valuation. This brief adds evidence the va
 ### Method A - Venture capital method (exit value discounted at the investor's required return)
 
 **Exit value at Dec 2031** (management estimate):
-- Base equity value = **$164m**. This is the average of 10x run-rate EBITDA ($17.1m) and 4x run-rate revenue ($34.0m), plus cash, less the subsidiary key-people stakes.
-- Upside equity value = **$353m**.
+- Base equity value = **$160m**. This is the average of 10x run-rate EBITDA ($17.1m) and 4x run-rate revenue ($34.0m), plus cash, less the subsidiary key-people stakes.
+- Upside equity value = **$343m**.
 - Downside = **about $0-20m**. EBITDA is still negative in 2031, so this is a sale of the platform and licences at best.
-- **Probability-weighted exit:** 50% Base, 20% Upside, 30% Downside (at ~$10m) = **$155.5m**.
+- **Probability-weighted exit:** 50% Base, 20% Upside, 30% Downside (at ~$10m) = **$151.8m**.
 
 **Seed** (exit 5 years away). Typical required returns for seed-stage investors are 40-60% a year.
 
 | Required return | Implied post-money (Base exit) | Implied pre-money | Implied pre-money (probability-weighted, after Series A dilution) |
 |---|---|---|---|
-| 40% | $30.5m | $24.5m | - |
-| 45% | $26.0m | $20.0m | $15.1m |
-| 50% | $21.6m | $15.6m | $11.8m |
-| 60% | $15.6m | $9.6m | - |
+| 40% | $29.8m | $23.8m | - |
+| 45% | $25.0m | $19.0m | $14.6m |
+| 50% | $21.1m | $15.1m | $11.4m |
+| 60% | $15.3m | $9.3m | - |
 
-- **Result:** the methods give **about $10m to $25m** pre-money. The most defensible point, at a 45-50% return on the probability-weighted exit, is **about $12-15m**.
+- **Result:** the methods give **about $9m to $24m** pre-money. The most defensible point, at a 45-50% return on the probability-weighted exit, is **about $11-15m**.
 - **Proposed $14m:** this sits inside the range.
 
 **Series A** (exit 4.25 years away; risk is lower once licences are live, so required returns are 30-40%).
 
 | Required return | Implied pre-money (Base exit) | Implied pre-money (probability-weighted) |
 |---|---|---|
-| 35% | $39.8m | $37.5m |
-| 40% | $33.2m | - |
+| 35% | $38.8m | $36.4m |
+| 40% | $32.4m | - |
 
 - **Result:** $40m pre-money is supported **only if** the Series A milestones are met. If they are not, expect $30-35m.
 
@@ -157,7 +158,7 @@ That is a negotiating position, not a valuation. This brief adds evidence the va
 
 **What the comparables say:**
 - **For us:** the proposed **$14m Seed cap** sits at the Australian market median ($15-16m). The **10x EBITDA / 4x revenue exit** is well below where listed managers (Qualitas) and platforms (HUB24) trade, so the exit value is conservative on a multiples basis.
-- **Against us:** on an **AUM basis**, our Base exit of $164m equals **about 22% of the $757m AUM**. A manager-only deal like Wingate (about 8% of FUM) would value the AUM at about **$60m**. Our higher figure relies on also valuing the distribution arm and the platform's own revenue (placement, technology and exchange fees). The valuer will test this, so the model's revenue split by company should be presented clearly.
+- **Against us:** on an **AUM basis**, our Base exit of $160m equals **about 21% of the $757m AUM**. A manager-only deal like Wingate (about 8% of FUM) would value the AUM at about **$60m**. Our higher figure relies on also valuing the distribution arm and the platform's own revenue (placement, technology and exchange fees). The valuer will test this, so the model's revenue split by company should be presented clearly.
 - **Market context:**
   - In Sept 2026, Metrics Credit Partners suspended trading in three of its listed funds, and independent valuations reduced the funds' net tangible asset values by up to 12%.
   - ASIC is scrutinising how private-credit funds value their assets (its 30 June notice to managers).
@@ -214,17 +215,17 @@ That is a negotiating position, not a valuation. This brief adds evidence the va
 | # | Item | Where |
 |---|---|---|
 | 1 | Integrated financial model v10 (60 months, scenarios, cap table) | 03 - Financial Models & Budgets |
-| 2 | Master Business Plan v10.2 | 01 - Business Plans & Strategy |
+| 2 | Master Business Plan v10.3 | 01 - Business Plans & Strategy |
 | 3 | Investor Deck v10 (24 slides) and Capital Raise Summary | 07 - Investor Deck & Capital Raise |
-| 4 | Key-People Share Plan v2 | 04 - Organisation & Headcount |
+| 4 | Key-People Share Plan v3 | 04 - Organisation & Headcount |
 | 5 | Legal & Licensing Workplan; regulatory perimeter opinion (when issued) | 02 - Corporate Structure & Legal |
 | 6 | Legacy entity documents: B-Catcher and BHive Capital Pty Ltd financials, cap tables, IP assignments, liabilities | 08 - Historical Reference Documents (to be completed) |
-| 7 | **To be supplied:** SAFE terms; signed issuer mandates / letters of intent; broker letters of intent; build-partner quotes; team CVs; IP register; draft shareholders' agreement (51% founder floor); loan facility term sheet | Founders |
+| 7 | **To be supplied:** SAFE terms; signed issuer mandates / letters of intent; broker letters of intent; build-partner quotes; team CVs; IP register; draft shareholders' agreement and constitutions (voting / non-voting classes; 51% founder voting floor); loan facility term sheet | Founders |
 
 ## 6. Questions for the valuer
 
 1. What range of Seed pre-money valuations would you support today? What would you need to see to support $14m (e.g. 2-3 signed anchor issuers)?
-2. Should the 8% share pool sit inside the pre-money valuation (as modelled) or outside it?
+2. Should the 3% non-voting parent pool sit inside the pre-money valuation (as modelled) or outside it? What discount, if any, applies to non-voting shares?
 3. What market value per share would you set for options granted at Seed? Can a startup-concession-compliant method be used?
 4. How should the non-voting B-class shares in Honey Pot and BHive be valued (minority and lack-of-control discounts)? How often should they be revalued?
 5. Are the fees charged between the three companies at arm's length?

@@ -302,7 +302,7 @@ ms = ["Build platform, appoint licensee and trustee, document first 3 offers, wh
       "Optional - not needed in Base; for Downside or faster expansion"]
 table(["Round", "Amount", "Pre-money", "Post-round %", "Milestones it funds"],
       [[r[0], money(r[1]), money(r[2]), f"{r[3]*100:.1f}%", ms[i]] for i, r in enumerate(D["rounds"]) if r[1]], widths=[2.5, 2, 2, 2, 8.5], size=8, right_from=-1)
-para(f"Founders and existing B-Catcher/BHive holders retain {D['founder_pct']*100:.1f}% after all planned rounds, before any ESOP. Valuations are negotiating placeholders.", size=9)
+para(f"Founders and existing B-Catcher/BHive holders keep {D['founder_pct']*100:.1f}% of the shares and {D['founder_votes']*100:.1f}% of the votes after all planned rounds. Key-people equity is non-voting (25% of Honey Pot, 25% of BHive, 3% group pool). Valuations are negotiating placeholders.", size=9)
 table(["Use of funds - first 24 months", "Amount"], [[u, money(v)] for u, v in D["uses"]], widths=[11, 3], size=8)
 table(["Investor", "Invested", "MOIC at year 5", "IRR"], [[n, money(a), f"{x:.1f}x", f"{y*100:.0f}%"] for n, a, x, y in D["returns"] if a], widths=[5, 3, 3, 3], size=8)
 

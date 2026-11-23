@@ -26,10 +26,10 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 ## Illustrative returns (end of year 5)
 | Investor | Invested | MOIC | IRR |
 |---|---|---|---|
-| Seed investors | $6,000,000 | 7.1x | 48% |
-| Series A investors | $6,000,000 | 3.6x | 35% |
+| Seed investors | $6,000,000 | 7.0x | 47% |
+| Series A investors | $6,000,000 | 3.5x | 34% |
 
-Exit basis: Q4 2031 annualised revenue $34.01m and EBITDA $17.14m; equity value $164.01m (average of 10x EBITDA and 4x revenue, plus cash, less the 15% key-people stakes in Honey Pot and BHive; the facility is repaid by then). Illustrative only; later rounds not modelled.
+Exit basis: Q4 2031 annualised revenue $34.01m and EBITDA $17.14m; equity value $160.35m (average of 10x EBITDA and 4x revenue, plus cash, less the 25% key-people stakes in Honey Pot and BHive; the facility is repaid by then). Illustrative only; later rounds not modelled.
 
 ## Evidence still required before external circulation (from Content Brief)
 - Verified market sizing and competitors

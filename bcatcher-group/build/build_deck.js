@@ -428,7 +428,7 @@ s.addText("The whole team", { x: 7.9, y: 1.9, w: 4.6, h: 0.45, fontSize: 16, bol
     { text: "Fractional contractors", options: { bold: true, breakLine: true } }, { text: con.join(" · ") },
   ], { x: 7.9, y: 2.35, w: 4.6, h: 3.3, fontSize: 10, paraSpaceAfter: 2, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "hc-list" });
 }
-s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. Equity to recruit from established finance firms: ${pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"])} group pool for C-suite, plus 15% non-voting pools in Honey Pot (senior brokers) and BHive (platform leaders). Founders keep at least 51%.`,
+s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. To recruit from established finance firms: ${pct(I["Honey Pot key-people pool (non-voting B-class shares / options in Honey Pot Pty Ltd)"])} non-voting pools in Honey Pot (senior brokers) and BHive (platform leaders), plus a small ${pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"])} non-voting group pool. Founders keep ${pct(D.founder_votes, 1)} of the votes.`,
   { x: 7.9, y: 5.75, w: 4.6, h: 0.85, fontSize: 11, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "hc-note" });
 
 // 13 ENTITY PROFITABILITY
@@ -483,7 +483,7 @@ s.addText([{ text: "Board pivot gate (month 18):  ", options: { bold: true, colo
 pres.addSection({ title: "The raise" });
 const FAC = D.inputs["Loan facility (venture debt / working-capital line) - limit"];
 s = content("The raise", `Raising ${$m(D.km.raised, 1)} of equity in ${["one","two","three"][D.rounds.filter(r => r[1] > 0).length - 1]} rounds, plus a ${$m(FAC, 1)} loan facility`,
-  `Covers the ${$m(D.km.peak)} peak burn plus a $0.75m regulatory-capital buffer; debt replaces a Series B, so founders keep ${pct(D.founder_pct, 1)} and an ${pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"])} share pool is funded`);
+  `Covers the ${$m(D.km.peak)} peak burn plus a $0.75m regulatory-capital buffer; debt replaces a Series B, so founders keep ${pct(D.founder_votes, 1)} of the votes; key-people equity is non-voting`);
 const ms = ["Build platform, appoint licensee and trustee, first 3 offers documented, launch to wholesale investors (month 7)",
   "Licensed distribution live, platform in production, first subscriptions reconciled, signed issuer pipeline",
   `Non-dilutive venture debt at ${pct(I["Facility interest rate"])} p.a.: drawn months 16 and 22, interest-only, repaid Jan 2030 - Dec 2031 from cash flow`];
@@ -503,7 +503,7 @@ RR.forEach(([n, amt, sub], i) => {
 s.addChart(pres.charts.BAR, [{ name: "Use of funds", labels: D.uses.map(u => u[0].replace(" (all entities)", "").replace(" (capitalised)", "").replace(" (recurring)", "")), values: D.uses.map(u => +(u[1] / 1e6).toFixed(2)) }], {
   ...chartBase, x: 0.6, y: 5.15, w: 12.1, h: 1.85, barDir: "bar", chartColors: [HEX.slate], showValue: true, dataLabelPosition: "outEnd", dataLabelFormatCode: "$0.0\"m\"",
   showLegend: false, showTitle: false, valAxisHidden: true, catAxisOrientation: "maxMin", catAxisLabelFontSize: 9, dataLabelFontSize: 9, objectName: "uof-chart" });
-s.addNotes("Use of funds = gross spend in the first 24 months by bucket. Founders and existing B-Catcher/BHive holders retain " + pct(D.founder_pct) + " after Seed, Series A and the group executive share pool (floor: 51%). The loan facility replaces a Series B. Key brokers and platform hires receive non-voting shares in Honey Pot and BHive instead. Valuations are placeholders for negotiation.");
+s.addNotes("Use of funds = gross spend in the first 24 months by bucket. Founders and existing B-Catcher/BHive holders keep " + pct(D.founder_pct) + " of the shares and " + pct(D.founder_votes) + " of the votes after Seed and Series A (floor: 51% of votes). All key-people equity is non-voting: " + pct(I["Honey Pot key-people pool (non-voting B-class shares / options in Honey Pot Pty Ltd)"]) + " of Honey Pot, " + pct(I["Honey Pot key-people pool (non-voting B-class shares / options in Honey Pot Pty Ltd)"]) + " of BHive and a " + pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"]) + " group pool. Valuations are placeholders for negotiation.");
 
 // 17 RETURNS
 s = content("The raise", "Illustrative returns at the end of year 5",
@@ -516,7 +516,7 @@ RT.forEach(([n, inv, moic, irr], i) => {
   s.addText(moic.toFixed(1) + "x", { x: x + 0.3, y: 2.6, w: 3.2, h: 1.1, fontSize: 60, bold: true, color: [C.accent1, C.accent2, C.accent3][i], margin: 0, isTextBox: true, objectName: "ret-m" + i });
   s.addText(`money multiple on ${$m(inv, 1)}\n~${pct(irr)} p.a. IRR`, { x: x + 0.3, y: 3.75, w: 3.2, h: 1.0, fontSize: 15, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "ret-d" + i });
 });
-s.addText("Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution from later rounds (not modelled). Ownership includes the " + pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"]) + " group executive pool; exit value is after the 15% key-people stakes in Honey Pot and BHive. Founders keep at least 51%. Upside case reaches EBITDA break-even in " + D.scen.rows["First month EBITDA positive"][2] + ".",
+s.addText("Illustrative only. Returns depend on achieving the forecast, exit multiples and further dilution from later rounds (not modelled). Ownership includes the " + pct(I["Group executive share pool (parent) - % of fully diluted shares after Seed"]) + " non-voting group pool; exit value is after the " + pct(I["Honey Pot key-people pool (non-voting B-class shares / options in Honey Pot Pty Ltd)"]) + " key-people stakes in Honey Pot and BHive. Founders keep " + pct(D.founder_votes, 1) + " of the votes. Upside case reaches EBITDA break-even in " + D.scen.rows["First month EBITDA positive"][2] + ".",
   { x: 0.6, y: 5.6, w: 12.1, h: 0.7, fontSize: 13, italic: true, color: C.text2, margin: 0, isTextBox: true, objectName: "ret-note" });
 
 // 18 REGULATORY GATES

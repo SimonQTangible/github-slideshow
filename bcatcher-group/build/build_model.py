@@ -1085,7 +1085,7 @@ c0 = r
 put(fr, f"A{r}", "Founders & existing holders (B-Catcher + BHive)")
 put(fr, f"E{r}", "=FounderShares", f_link, "num")
 r += 1
-put(fr, f"A{r}", "Group executive share pool (parent ESOP, created before Seed)")
+put(fr, f"A{r}", "Group executive share pool (parent, non-voting, created before Seed)")
 put(fr, f"E{r}", f"=EsopPct*(1+SeedAmt/SeedPre)*E{c0}/(1-EsopPct*(1+SeedAmt/SeedPre))", f_base, "num")
 r += 1
 put(fr, f"A{r}", "Seed")
@@ -1116,9 +1116,11 @@ put(fr, f"A{r+1}", "Post-money valuation after Series A", f_base)
 put(fr, f"B{r+1}", f"=SeriesAPre+SeriesAAmt", f_base, "money")
 put(fr, f"A{r+2}", "Post-money valuation after Series B (if raised)", f_base)
 put(fr, f"B{r+2}", f"=IF(SeriesBAmt=0,0,SeriesBPre+SeriesBAmt)", f_base, "money")
-put(fr, f"A{r+3}", "Founder control check: founders' ownership vs 51% floor", f_bold)
-put(fr, f"B{r+3}", f"=IF(F{c0}>=FounderFloor,\"OK - founders \"&TEXT(F{c0},\"0.0%\"),\"BREACH - founders \"&TEXT(F{c0},\"0.0%\"))", f_bold)
-r += 4
+put(fr, f"A{r+3}", "Founders' share of votes (share-plan shares are non-voting)", f_base)
+put(fr, f"B{r+3}", f"=E{c0}/(E{ctot}-E{c0+1})", f_base, "pct")
+put(fr, f"A{r+4}", "Founder control check: founders' votes vs 51% floor", f_bold)
+put(fr, f"B{r+4}", f"=IF(B{r+3}>=FounderFloor,\"OK - founders hold \"&TEXT(B{r+3},\"0.0%\")&\" of votes\",\"BREACH - founders hold \"&TEXT(B{r+3},\"0.0%\")&\" of votes\")", f_bold)
+r += 5
 section(fr, r, "USE OF FUNDS - FIRST 24 MONTHS (gross spend)", 6)
 r += 1
 uf0 = r

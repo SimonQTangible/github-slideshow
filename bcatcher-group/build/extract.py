@@ -40,8 +40,9 @@ fr = wb['Funding & Returns']
 rows = {fr.cell(r,1).value: r for r in range(1, fr.max_row+1) if fr.cell(r,1).value}
 D["rounds"] = [[n, fr.cell(rows[n],2).value, fr.cell(rows[n],3).value, fr.cell(rows[n],6).value] for n in ["Seed","Series A","Series B (optional)"]]
 D["founder_pct"] = fr.cell(rows["Founders & existing holders (B-Catcher + BHive)"],6).value
-D["esop_pct"] = fr.cell(rows["Group executive share pool (parent ESOP, created before Seed)"],6).value
-D["founder_check"] = fr.cell(rows["Founder control check: founders' ownership vs 51% floor"],2).value
+D["esop_pct"] = fr.cell(rows["Group executive share pool (parent, non-voting, created before Seed)"],6).value
+D["founder_check"] = fr.cell(rows["Founder control check: founders' votes vs 51% floor"],2).value
+D["founder_votes"] = fr.cell(rows["Founders' share of votes (share-plan shares are non-voting)"],2).value
 D["minority"] = fr.cell(rows["Less: key-people minority stakes in Honey Pot & BHive (at EBITDA multiple)"],2).value
 uses = ["Team - salaries, on-costs & hiring (all entities)","Platform & technology build (capitalised)","Licensing, legal, structuring & compliance set-up",
         "Technology, hosting & security (recurring)","Marketing, broker network & investor servicing","Regulatory, insurance, professional fees & governance",
