@@ -33,7 +33,7 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | CAR appointment | Head of Distribution | 4 | $25,000 + $12k/month |
 | Compliance framework; AML/CTF program | Head of Risk, Compliance & Ops | 3-6 | $100,000 |
 | Broker agreements; CRM & commission system; LMS | Honey Pot | 3-6 | $155,000 |
-| BHive MVP (3 portals + wallet) and integrations | Product owner + build partner | 3-8 | $635,000 |
+| BHive MVP (3 portals + wallet) and integrations | Product owner + build partner | 3-8 | $805,000 |
 | Privacy assessment; pre-launch pen test | vCISO + build partner | 5-6 | $65,000 |
 | Launch campaign & broker roadshow | Head of Distribution | 6-8 | $105,000 |
 

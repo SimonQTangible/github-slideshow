@@ -151,7 +151,7 @@ phases = [("Phase 0 - Foundation (months 1-2) - Gate 1: structure, ownership, IP
     ["Trustee/RE/custodian; fund admin & registry", "CEO/CIO / Fractional CFO", "5-6", "$30,000"], ["Trust deed & IM templates (property, credit, PE/UTEGBO)", "CEO/CIO / counsel", "3-6", "$130,000"],
     ["Due diligence on first 3 offers", "CEO/CIO + outsourced analysts", "4-6", "$105,000"], ["CAR appointment", "Head of Distribution", "4", "$25,000 + $12k/month"],
     ["Compliance framework; AML/CTF program", "Head of Risk, Compliance & Ops", "3-6", "$100,000"], ["Broker agreements; CRM & commission system; LMS", "Honey Pot", "3-6", "$155,000"],
-    ["BHive MVP (3 portals + wallet) and integrations", "Product owner + build partner", "3-8", "$635,000"], ["Privacy assessment; pre-launch pen test", "vCISO + build partner", "5-6", "$65,000"],
+    ["BHive MVP (3 portals + wallet) and integrations", "Product owner + build partner", "3-8", "$805,000"], ["Privacy assessment; pre-launch pen test", "vCISO + build partner", "5-6", "$65,000"],
     ["Launch campaign & broker roadshow", "Head of Distribution", "6-8", "$105,000"]]),
     ("Phase 3 - Wholesale launch (month 7) - Gate 5", [
     ["First offers live to verified wholesale investors", "CEO/CIO / Head of Distribution", "7", "-"], ["Accredit first brokers", "Head of Distribution", "7+", "$1,500 per broker"],
@@ -347,7 +347,7 @@ cr += f"## The ask\n**{mm(rounds[0][1])} Seed** to build, license and launch - p
 cr += md_table(["Round", "Amount", "Close", "Pre-money", "Post-round %", "Milestones funded"], [
     [rounds[0][0], money(rounds[0][1]), "Month 1 (Jan 2027)", money(rounds[0][2]), f"{rounds[0][3]*100:.1f}%", "Platform build, licensee & trustee, first 3 offers, wholesale launch month 7"],
     [rounds[1][0], money(rounds[1][1]), "Month 10 (Oct 2027)", money(rounds[1][2]), f"{rounds[1][3]*100:.1f}%", "Licensed distribution live, first reconciled subscriptions, signed pipeline"],
-] + ([["Series B", money(rounds[2][1]), "Month 28 (Apr 2029)", money(rounds[2][2]), f"{rounds[2][3]*100:.1f}%", "Secondary market live, ~$50m AUM, 60+ brokers, own AFSL"]] if rounds[2][1] else []))
+] + ([["Series B", money(rounds[2][1]), "Month 28 (Apr 2029)", money(rounds[2][2]), f"{rounds[2][3]*100:.1f}%", "Own AFSL granted, ~$90m AUM, 60+ brokers; funds the secondary-market build (live month 31)"]] if rounds[2][1] else []))
 cr += "## Use of funds - first 24 months\n" + md_table(["Use", "Amount"], [[u, money(v)] for u, v in D["uses"]])
 cr += "## Illustrative returns (end of year 5)\n" + md_table(["Investor", "Invested", "MOIC", "IRR"], [[n, money(a), f"{x:.1f}x", f"{y*100:.0f}%"] for n, a, x, y in D["returns"] if a])
 cr += (f"Exit basis: Q4 2031 annualised revenue {mm(D['exit']['rev_rr'])} and EBITDA {mm(D['exit']['ebitda_rr'])}; equity value {mm(D['exit']['eq'])} (average of {I['Exit multiple - EBITDA (year 5)']:.0f}x EBITDA and {I['Exit multiple - revenue (year 5)']:.0f}x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.\n\n"

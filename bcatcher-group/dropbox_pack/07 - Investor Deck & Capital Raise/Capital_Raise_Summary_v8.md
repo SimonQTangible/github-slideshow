@@ -10,7 +10,7 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 |---|---|---|---|---|---|
 | Seed | $6,000,000 | Month 1 (Jan 2027) | $14,000,000 | 22.4% | Platform build, licensee & trustee, first 3 offers, wholesale launch month 7 |
 | Series A | $8,000,000 | Month 10 (Oct 2027) | $35,000,000 | 17.1% | Licensed distribution live, first reconciled subscriptions, signed pipeline |
-| Series B | $5,000,000 | Month 28 (Apr 2029) | $55,000,000 | 8.3% | Secondary market live, ~$50m AUM, 60+ brokers, own AFSL |
+| Series B | $5,000,000 | Month 28 (Apr 2029) | $55,000,000 | 8.3% | Own AFSL granted, ~$90m AUM, 60+ brokers; funds the secondary-market build (live month 31) |
 
 ## Use of funds - first 24 months
 | Use | Amount |

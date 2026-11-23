@@ -195,7 +195,7 @@ phases = [
         ("AML/CTF program, AUSTRAC enrolment, independent review", "Head of Risk", "4-6", money(35000)),
         ("Broker agreement suite & commission policy", "Head of Distribution / counsel", "3-4", money(45000)),
         ("Broker CRM & commission system; LMS & accreditation content", "Head of Distribution", "3-6", money(110000)),
-        ("BHive MVP: investor, broker & admin portals, wallet (build partner)", "Product owner + build partner", "3-8", money(480000)),
+        ("BHive MVP: investor, broker & admin portals, wallet (build partner)", "Product owner + build partner", "3-8", money(650000)),
         ("Integrations: KYC, e-sign, registry, banking reconciliation", "Senior engineer + build partner", "4-7", money(155000)),
         ("Privacy impact assessment; pre-launch penetration test", "vCISO + build partner", "5-6", money(65000)),
         ("Launch campaign, broker roadshow, marketing compliance review", "Head of Distribution + Investor Comms & BDM", "6-8", money(105000)),
