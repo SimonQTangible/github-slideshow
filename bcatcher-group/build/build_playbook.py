@@ -177,7 +177,7 @@ phases = [
         ("Shareholders' agreement, constitution, ESOP plan", "CEO / counsel", "2-3", money(40000)),
         ("Group tax structuring (trusts, GST, transfer pricing, R&D)", "Fractional CFO", "2-3", money(35000)),
         ("Appoint Chair, adopt board charter, delegation matrix, risk appetite", "Board", "1", "Chair $90k p.a."),
-        ("Hire the 4 employees: CEO & CIO (m1), Head of Risk, Compliance & Ops (m1, 0.5 to m4), Head of Distribution (m3), Investor Communications & BDM (m5); contract fractional CFO, product owner, vCISO, UX. Two further hires only when volume triggers are met (Investment Analyst m13, Fund Operations m19). No other hires planned", "CEO", "1-3", "See section 4"),
+        ("Hire the 4 employees: CEO & CIO (m1), Head of Risk, Compliance & Ops (m1, 0.5 to m4), Head of Distribution (m3), Investor Communications & BDM (m5); contract fractional CFO, product owner, vCISO, UX. Six further hires only when volume triggers are met (Investment Analyst m13, Broker Relationship Manager m19, Fund Operations m19, Compliance & AML Officer m22, Property Asset Manager m25, Fund Accountant & Registry m31)", "CEO", "1-3", "See section 4"),
     ]),
     ("Phase 1 - Legal perimeter & design (months 1-3)", "Gate 2: written regulatory opinion", [
         ("Financial services perimeter opinion: AFSL, MIS, market, credit, AML scope per entity", "External counsel", "1-3", money(90000)),
@@ -217,8 +217,11 @@ phases = [
         ("SOC 2 Type I readiness & audit", "vCISO", "10-15", money(70000)),
         ("Month-18 pivot gate: placements run-rate vs plan; hiring decision", "Board", "18", "Decision"),
     ]),
-    ("Phase 5 - Own licence, Series B & marketplace build (months 19-30)", "Gate 6: own AFSL; Series B; AUM ~$150m", [
+    ("Phase 5 - Own licence, Series B & marketplace build (months 19-30)", "Gate 6: own AFSL; Series B; AUM ~$100m", [
         ("Hire Fund Operations & Finance Officer (trigger: ~1,000 investors)", "Head of Risk, Compliance & Ops", "19", "$110k + on-costs"),
+        ("Hire Broker Relationship Manager (trigger: ~40 active brokers)", "Head of Distribution", "19", "$140k + on-costs"),
+        ("Hire Compliance & AML Officer (trigger: own AFSL application)", "Head of Risk, Compliance & Ops", "22", "$130k + on-costs"),
+        ("Hire Property Asset Manager (trigger: ~$75m AUM)", "CEO/CIO", "25", "$165k + on-costs"),
         ("Market-operator route: partner, market rules, operating agreement", "Product owner + build partner", "22-27", money(120000)),
         ("Secondary market engine; operator integration", "Product owner + build partner", "22-30", money(510000)),
         ("Own AFSL granted; exit CAR arrangement", "Head of Risk, Compliance & Ops", "24-25", "ASIC levy $2.5k/month"),
@@ -233,6 +236,7 @@ phases = [
         ("Platform release 5: new offerings module (managed portfolios, insurance; retail-ready module subject to licence)", "Product owner + build partner / Board", "40-48", money(200000)),
         ("Digital token legal register opinion; tokenised register pilot", "Product owner / counsel", "30-39", money(130000)),
         ("Add commission-only BDMs in WA/SA and family-office channel", "Head of Distribution", "31-49", "See section 4"),
+        ("Hire Fund Accountant & Registry Officer (trigger: secondary market live)", "Head of Risk, Compliance & Ops", "31", "$115k + on-costs"),
         ("Capacity review: scale outsourced providers; hire only if they cannot hold service levels", "CEO / Board", "37-49", "See section 4"),
         ("Retail, payments, lending or BHive card only as separately funded projects", "Board", "-", "Not in model"),
     ]),
@@ -314,7 +318,7 @@ para("What this tells the board:", bold=True)
 bullets([
     ("Volume is the risk. ", "A 25% technology overrun costs ~$0.4m; a 50% placement shortfall adds ~$14m to the funding need."),
     ("The cost base is mostly fixed. ", "Deferring post-launch hires by 18 months reduces the downside funding need, but does not make it viable on its own."),
-    ("Month-18 pivot gate. ", "If run-rate placements are below ~$40m p.a. at month 18: freeze post-launch hiring, defer the secondary-market build, partner more of BHive's technology and operate Honey Pot under the principal licensee for longer."),
+    ("Month-18 pivot gate. ", "If run-rate placements are below ~$25m p.a. (about 80% of plan) at month 18: hold the volume-triggered hires, defer the secondary-market build, partner more of BHive's technology and operate Honey Pot under the principal licensee for longer."),
 ])
 
 # ------------------------------------------------------------------ KPI TARGETS

@@ -408,8 +408,8 @@ s.addText("Largest items: core platform & BHive wallet built up front ($650k), s
   { x: 8.9, y: 4.85, w: 3.6, h: 1.7, fontSize: 13, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "su-note" });
 
 // 12 TEAM / HEADCOUNT
-s = content("Financials", `Four core employees run all three companies`,
-  `${D.roles.length} costed roles: 4 core employees, 2 hires triggered by volume (Investment Analyst, Fund Operations) and fractional contractors; everything else is outsourced, AI-driven or commission-only`);
+s = content("Financials", `Four core employees at launch, ten by year 3 as volume grows`,
+  `${D.roles.length} costed roles: 4 core employees, 6 hires triggered by volume (investment, broker, compliance, property and fund roles) and fractional contractors; everything else is outsourced, AI-driven or commission-only`);
 s.addChart(pres.charts.BAR, [
   { name: "B-Catcher", labels: YRS, values: D.fte_bc.map(v => +v.toFixed(1)) },
   { name: "Honey Pot", labels: YRS, values: D.fte_hp.map(v => +v.toFixed(1)) },
@@ -419,9 +419,17 @@ s.addChart(pres.charts.BAR, [
 const firstHires = D.roles.filter(r => r[4] <= 7).map(r => r[2].replace(/ \(.*\)/, ""));
 card(s, 7.6, 1.75, 5.1, 4.95, HEX.mist, "hc-card");
 s.addText("The whole team", { x: 7.9, y: 1.9, w: 4.6, h: 0.45, fontSize: 16, bold: true, color: C.text1, margin: 0, isTextBox: true, objectName: "hc-h" });
-s.addText(D.roles.map(r => r[2].replace(" (contract)", "") + (r[3] === "Contractor" ? " - contract" : "")).join("\n"), { x: 7.9, y: 2.4, w: 4.6, h: 3.0, fontSize: 13, paraSpaceAfter: 6, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "hc-list" });
+{
+  const nm = r => r[2].replace(" (contract)", "").replace(/ \(.*\)/, "").replace("Information Security Lead", "Security Lead (vCISO)");
+  const core = D.roles.filter(r => r[3] !== "Contractor" && r[4] <= 7).map(nm), grow = D.roles.filter(r => r[3] !== "Contractor" && r[4] > 7).map(r => nm(r) + " (m" + r[4] + ")"), con = D.roles.filter(r => r[3] === "Contractor").map(nm);
+  s.addText([
+    { text: "Core employees", options: { bold: true, breakLine: true } }, ...core.map(t => ({ text: t, options: { breakLine: true } })),
+    { text: "Hired as volume grows", options: { bold: true, breakLine: true } }, ...grow.map(t => ({ text: t, options: { breakLine: true } })),
+    { text: "Fractional contractors", options: { bold: true, breakLine: true } }, { text: con.join(" · ") },
+  ], { x: 7.9, y: 2.35, w: 4.6, h: 3.3, fontSize: 10, paraSpaceAfter: 2, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "hc-list" });
+}
 s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. Outsourced service desk, accountants, analysts and build partner, plus AI agents and commission-only BDMs, do the rest.`,
-  { x: 7.9, y: 5.5, w: 4.6, h: 1.0, fontSize: 13, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "hc-note" });
+  { x: 7.9, y: 5.75, w: 4.6, h: 0.85, fontSize: 11, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "hc-note" });
 
 // 13 ENTITY PROFITABILITY
 s = content("Financials", "B-Catcher earns the margin; Honey Pot and BHive feed it",
@@ -468,7 +476,7 @@ metr.forEach(([lab, key, f], i) => stbl.push([{ text: lab, options: { bold: true
 s.addTable(stbl, { x: 0.6, y: 1.85, w: 12.1, colW: [2.75, 1.3, 1.3, 1.3, 1.3, 1.4, 1.3, 1.45], rowH: 0.55, border: { type: "solid", color: "E3E5EA", pt: 0.5 }, valign: "middle", objectName: "scen-table" });
 card(s, 0.6, 5.35, 12.1, 1.25, "FBEDEC", "scen-gate");
 s.addText([{ text: "Board pivot gate (month 18):  ", options: { bold: true, color: HEX.red } },
-  { text: "if run-rate placements are below ~$40m p.a., cut outsourced and build-partner spend, defer the secondary-market build and the buy-back reserve top-up. At downside volumes the full three-company build does not pay for itself." }],
+  { text: "if run-rate placements are below ~$25m p.a. (about 80% of plan), hold the volume-triggered hires, cut outsourced and build-partner spend, defer the secondary-market build and the buy-back reserve top-up. At downside volumes the full three-company build does not pay for itself." }],
   { x: 0.85, y: 5.45, w: 11.6, h: 1.05, fontSize: 14, color: C.text1, margin: 0, valign: "middle", isTextBox: true, objectName: "scen-gate-t" });
 
 // 16 THE RAISE
@@ -477,7 +485,7 @@ s = content("The raise", `Raising ${$m(D.km.raised, 1)} in ${["one","two","three
   `Covers the ${$m(D.km.peak)} peak burn plus a $0.75m regulatory-capital and cash buffer and raising costs`);
 const ms = ["Build platform, appoint licensee and trustee, first 3 offers documented, launch to wholesale investors (month 7)",
   "Licensed distribution live, platform in production, first subscriptions reconciled, signed issuer pipeline",
-  "Own AFSL granted, ~$90m AUM, 60+ accredited brokers; funds the secondary-market build (live month 31)"];
+  "Own AFSL granted, ~$100m AUM, ~90 accredited brokers; funds the secondary-market build (live month 31)"];
 const RR = D.rounds.filter(r => r[1] > 0);
 const cw = RR.length === 2 ? 5.95 : 3.8, cg = RR.length === 2 ? 6.15 : 4.1;
 RR.forEach(([n, amt, pre, own], i) => {
@@ -538,7 +546,7 @@ const phases = [["Months 1-2", "Foundation", "Entities, IP, counsel, data room, 
   ["Months 2-6", "Build & license", "MVP build, CAR appointment, trust templates, broker agreements", HEX.navy],
   ["Month 7", "Wholesale launch", "First offers to verified investors via BHive", HEX.honey],
   ["Months 10-12", "Series A", "Scale brokers; reconcile, report, tune commissions", HEX.honey],
-  ["Months 13-24", "Own AFSL + scale", "Licence application, mobile apps, Investment Analyst hire, Series B prep", HEX.teal],
+  ["Months 13-24", "Own AFSL + scale", "Licence application, mobile apps, growth hires, Series B prep", HEX.teal],
   ["Month " + D.inputs["BHive secondary market activation"], "Secondary market live", "Activated once AUM covers fixed costs and partner is authorised", HEX.teal]];
 s.addShape(pres.shapes.LINE, { x: 0.8, y: 3.05, w: 11.7, h: 0, line: { color: HEX.grey, width: 2 }, objectName: "rm-line" });
 phases.forEach(([when, h, t, col], i) => {

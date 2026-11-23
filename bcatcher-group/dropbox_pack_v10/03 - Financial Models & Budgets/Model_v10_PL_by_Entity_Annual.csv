@@ -1,0 +1,102 @@
+Entity,Line item,2027,2028,2029,2030,2031,5-yr total
+B-Catcher,Entry fees - property,59062,472500,1113750,1957500,2902500,6505312
+B-Catcher,Entry fees - credit & PE,59062,472500,1113750,1957500,2902500,6505312
+B-Catcher,Management fees - property,8870,188584,819735,2051765,4018936,7087890
+B-Catcher,Management fees - private credit,3801,74211,293716,671746,1209072,2252546
+B-Catcher,Management fees - private equity,4717,99584,429410,1066024,2071220,3670955
+B-Catcher,External revenue,135513,1307379,3770361,7704534,13104228,26022015
+B-Catcher,Shared-services fee from Honey Pot,250000,300000,300000,300000,300000,1450000
+B-Catcher,Shared-services fee from BHive,300000,300000,300000,300000,300000,1500000
+B-Catcher,Intercompany revenue,550000,600000,600000,600000,600000,2950000
+B-Catcher,TOTAL REVENUE,685513,1907379,4370361,8304534,13704228,28972015
+B-Catcher,Manager-borne fund administration,702,14573,61789,151192,290252,518508
+B-Catcher,Total cost of sales,702,14573,61789,151192,290252,518508
+B-Catcher,GROSS PROFIT,684811,1892806,4308572,8153342,13413976,28453507
+B-Catcher,"Salaries, superannuation & on-costs",659688,1012741,1565629,1697852,1757277,6693187
+B-Catcher,Recruitment & onboarding,10500,67500,49000,0,0,127000
+B-Catcher,Premises & Office,64554,70356,77729,80895,83322,376856
+B-Catcher,Board & Governance,111300,262032,269893,277990,286329,1207544
+B-Catcher,Insurance,45792,47166,48581,50038,51539,243116
+B-Catcher,"Professional Fees (Legal, Audit, Tax)",216372,297348,314740,341155,379323,1548938
+B-Catcher,"Licensing, Regulatory & Compliance",20352,34064,35086,36139,37223,162864
+B-Catcher,"Technology, Hosting & Software",18285,54699,69497,73667,75877,292025
+B-Catcher,Marketing & Investor Acquisition,0,0,0,0,0,0
+B-Catcher,Broker Network & Distribution,0,0,0,0,0,0
+B-Catcher,Investor Servicing & Onboarding,0,0,0,0,0,0
+B-Catcher,Investment Origination & Due Diligence,140450,304814,353348,442648,511599,1752859
+B-Catcher,Travel & General,95135,114311,122127,126485,130280,588338
+B-Catcher,BHive platform licence (intercompany),180000,360000,360000,360000,360000,1620000
+B-Catcher,"Set-up & launch costs (one-off, expensed)",1285725,0,0,0,0,1285725
+B-Catcher,Contingency,99898,59239,64550,71451,77775,372913
+B-Catcher,TOTAL OPERATING EXPENSES,2948051,2684270,3330180,3558320,3750544,16271365
+B-Catcher,EBITDA,-2263240,-791465,978393,4595022,9663433,12182143
+B-Catcher,Other income - R&D tax incentive (accrued),0,0,0,0,0,0
+B-Catcher,Memo: capitalised set-up spend,15750,0,0,0,0,15750
+B-Catcher,Depreciation & amortisation,3938,5250,5250,1312,0,15750
+B-Catcher,EBIT (before interest & tax - taxed at group level),-2267177,-796715,973143,4593709,9663433,12166393
+Honey Pot,Placement fees - property trusts,98438,787500,1856250,3262500,4837500,10842188
+Honey Pot,Placement fees - private credit,32812,262500,618750,1087500,1612500,3614062
+Honey Pot,Placement fees - private equity / pre-IPO,87500,700000,1650000,2900000,4300000,9637500
+Honey Pot,Placement fees - ASX placements / IPO,35000,280000,660000,1160000,1720000,3855000
+Honey Pot,External revenue,253750,2030000,4785000,8410000,12470000,27948750
+Honey Pot,TOTAL REVENUE,253750,2030000,4785000,8410000,12470000,27948750
+Honey Pot,Broker commissions,106575,852600,2009700,3532200,5237400,11738475
+Honey Pot,Total cost of sales,106575,852600,2009700,3532200,5237400,11738475
+Honey Pot,GROSS PROFIT,147175,1177400,2775300,4877800,7232600,16210275
+Honey Pot,"Salaries, superannuation & on-costs",359290,571938,683026,706932,731675,3052861
+Honey Pot,Recruitment & onboarding,64750,24500,0,0,0,89250
+Honey Pot,Premises & Office,0,0,0,0,0,0
+Honey Pot,Board & Governance,0,0,0,0,0,0
+Honey Pot,Insurance,30475,73797,95706,124028,155584,479590
+Honey Pot,"Professional Fees (Legal, Audit, Tax)",31800,65508,67473,69497,71582,305860
+Honey Pot,"Licensing, Regulatory & Compliance",179352,290856,171382,176523,181819,999932
+Honey Pot,"Technology, Hosting & Software",3816,6551,8097,8340,8590,35394
+Honey Pot,Marketing & Investor Acquisition,167082,589508,754905,968431,1206251,3686177
+Honey Pot,Broker Network & Distribution,109970,408958,723734,1088501,1470770,3801933
+Honey Pot,Investor Servicing & Onboarding,25770,58812,81755,126640,200272,493249
+Honey Pot,Investment Origination & Due Diligence,0,0,0,0,0,0
+Honey Pot,Travel & General,50880,78610,80968,83397,85899,379754
+Honey Pot,B-Catcher shared-services fee (intercompany),250000,300000,300000,300000,300000,1450000
+Honey Pot,BHive platform licence (intercompany),120000,240000,240000,240000,240000,1080000
+Honey Pot,"Set-up & launch costs (one-off, expensed)",338100,157500,0,0,0,495600
+Honey Pot,Contingency,46862,86505,99201,132268,169038,533874
+Honey Pot,TOTAL OPERATING EXPENSES,1778147,2953043,3306247,4024558,4821481,16883476
+Honey Pot,EBITDA,-1630972,-1775643,-530947,853242,2411119,-673201
+Honey Pot,Other income - R&D tax incentive (accrued),0,0,0,0,0,0
+Honey Pot,Memo: capitalised set-up spend,78750,0,0,0,0,78750
+Honey Pot,Depreciation & amortisation,16406,26250,26250,9844,0,78750
+Honey Pot,EBIT (before interest & tax - taxed at group level),-1647378,-1801893,-557197,843399,2411119,-751950
+BHive,Technology / platform fees,3510,72867,308944,755960,1451259,2592540
+BHive,Offer onboarding fees,26250,210000,495000,870000,1290000,2891250
+BHive,Exchange fees,0,0,14751,90408,217689,322848
+BHive,Buy-back resale gains,0,7631,121454,108788,230090,467963
+BHive,External revenue,29760,290498,940150,1825156,3189037,6274601
+BHive,Platform licence from Honey Pot,120000,240000,240000,240000,240000,1080000
+BHive,Platform licence from B-Catcher,180000,360000,360000,360000,360000,1620000
+BHive,Intercompany revenue,300000,600000,600000,600000,600000,2700000
+BHive,TOTAL REVENUE,329760,890498,1540150,2425156,3789037,8974601
+BHive,Market-operator partner share,0,0,5901,36163,87076,129140
+BHive,Total cost of sales,0,0,5901,36163,87076,129140
+BHive,GROSS PROFIT,329760,890498,1534249,2388993,3701962,8845462
+BHive,"Salaries, superannuation & on-costs",249200,182574,164540,170299,176260,942873
+BHive,Recruitment & onboarding,10500,0,0,0,0,10500
+BHive,Premises & Office,0,0,0,0,0,0
+BHive,Board & Governance,0,0,0,0,0,0
+BHive,Insurance,28620,58957,60726,62548,64424,275275
+BHive,"Professional Fees (Legal, Audit, Tax)",19080,39305,40484,41698,42949,183516
+BHive,"Licensing, Regulatory & Compliance",0,0,121452,250191,257696,629339
+BHive,"Technology, Hosting & Software",343048,902955,1108979,1163464,1233285,4751731
+BHive,Marketing & Investor Acquisition,19080,39305,40484,41698,42949,183516
+BHive,Broker Network & Distribution,0,0,0,0,0,0
+BHive,Investor Servicing & Onboarding,10703,42871,88221,157450,249425,548670
+BHive,Investment Origination & Due Diligence,0,0,0,0,0,0
+BHive,Travel & General,0,0,0,0,0,0
+BHive,B-Catcher shared-services fee (intercompany),300000,300000,300000,300000,300000,1500000
+BHive,"Set-up & launch costs (one-off, expensed)",105000,99750,157500,0,0,362250
+BHive,Contingency,26277,59157,80892,85853,94536,346715
+BHive,TOTAL OPERATING EXPENSES,1111508,1724874,2163278,2273202,2461525,9734387
+BHive,EBITDA,-781748,-834376,-629029,115791,1240437,-888925
+BHive,Other income - R&D tax incentive (accrued),32521,23826,21472,22224,23002,123045
+BHive,Memo: capitalised set-up spend,1023750,535500,582750,257250,0,2399250
+BHive,Depreciation & amortisation,183969,427000,632625,566490,372750,2182834
+BHive,EBIT (before interest & tax - taxed at group level),-933196,-1237550,-1240182,-428475,890689,-2948714
