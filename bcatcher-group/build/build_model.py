@@ -1170,6 +1170,44 @@ for lab, crow, mon in [("Seed investors", c0 + 1, "SeedMonth"), ("Series A inves
 put(fr, f"A{r+1}", "Illustrative only. Exit value depends on achieving forecasts, market multiples and dilution from later rounds and an ESOP (not modelled).", f_sub)
 
 # =====================================================================================
+# INVESTOR RETURNS (product-level net return to investors after all group fees)
+ir = ws_new("Investor Returns", GOLD)
+title(ir, "INVESTOR NET RETURNS - what an investor keeps after all fees (illustrative, per $1 invested)",
+      "Product-level disclosure. Uses the live fee inputs. Targets, not forecasts; capital at risk. Does not drive the group P&L.")
+for col, w in zip("ABCDEF", [58, 17, 17, 17, 17, 70]):
+    ir.column_dimensions[col].width = w
+hdrs = ["Per $1 of investor capital", "Property - geared", "Property - Debt-Free series", "Private credit", "PE / pre-IPO", "Notes"]
+for col, h in zip("ABCDEF", hdrs):
+    put(ir, f"{col}4", h, f_hdr, fill=fill_hdr, align=Alignment(wrap_text=True, horizontal="center"))
+ir.row_dimensions[4].height = 30
+rows = [
+    ("Gross asset exposure (GAV per $1 equity)", ["=1/(1-PropLVR)", "=1", "=1", "=1"], "dec2", "Geared trust borrows inside the trust; investor has no personal loan."),
+    ("Income: rent / interest earned", ["=IRPropYield*B5", "=IRPropYield*C5", "=IRCreditRate", "=0"], "pct", ""),
+    ("Less: interest on trust debt", ["=-IRPropDebtRate*(B5-1)", "=0", "=0", "=0"], "pct", "Debt-Free series carries no interest cost."),
+    ("Less: trust-level costs / expected losses", ["=-IRPropTrustCost*B5", "=-IRPropTrustCost*C5", "=-(IRCreditLoss+IRCreditTrustCost)", "=0"], "pct", ""),
+    ("Capital growth / gross return", ["=GrowthProp*B5", "=GrowthProp*C5", "=0", "=IRPEGross"], "pct", "PE is a high-risk target; outcomes range widely, including loss."),
+    ("GROSS RETURN BEFORE GROUP FEES", ["=SUM(B6:B9)", "=SUM(C6:C9)", "=SUM(D6:D9)", "=SUM(E6:E9)"], "pct", ""),
+    ("Ongoing: B-Catcher management fee", ["=-MgmtProp", "=-MgmtProp", "=-MgmtCredit", "=-MgmtPE"], "pct", "On equity (investor) capital."),
+    ("Ongoing: BHive technology fee", ["=-PlatformFee", "=-PlatformFee", "=-PlatformFee", "=-PlatformFee"], "pct", ""),
+    ("Up-front: placement + entry + onboarding (total)", ["=-(FeeProp+AcqFee+OfferFee/OfferSize)", "=-(FeeProp+AcqFee+OfferFee/OfferSize)", "=-(FeeCredit+StructFee+OfferFee/OfferSize)", "=-(FeePE+StructFee+OfferFee/OfferSize)"], "pct", "Placement fee funds broker commissions (60%)."),
+    ("Up-front fees spread over hold (per year)", ["=B13/IRHold", "=C13/IRHold", "=D13/IRHoldCredit", "=E13/IRHold"], "pct", "Property & PE over IRHold years; credit over IRHoldCredit years."),
+    ("NET RETURN TO INVESTOR (per year, approx.)", ["=B10+B11+B12+B14", "=C10+C11+C12+C14", "=D10+D11+D12+D14", "=E10+E11+E12+E14"], "pct", "Before personal tax. Target only - not guaranteed."),
+    ("Total group fees per year (ongoing + spread up-front)", ["=-(B11+B12+B14)", "=-(C11+C12+C14)", "=-(D11+D12+D14)", "=-(E11+E12+E14)"], "pct", "Disclose this all-in figure on every offer and in the BHive wallet."),
+    ("Share of gross return kept by investor", ["=IF(B10=0,0,B15/B10)", "=IF(C10=0,0,C15/C10)", "=IF(D10=0,0,D15/D10)", "=IF(E10=0,0,E15/E10)"], "pct", ""),
+    ("Example: $150,000 invested - net income/return in year 1 ($)", ["=150000*B15", "=150000*C15", "=150000*D15", "=150000*E15"], "money", "Illustrative only."),
+]
+for i, (lab, fs, fmt, note) in enumerate(rows):
+    r_ = 5 + i
+    bold = lab.isupper() or lab.startswith("NET")
+    put(ir, f"A{r_}", lab, f_bold if bold else f_base, fill=fill_tot if bold else None)
+    for col, f in zip("BCDE", fs):
+        put(ir, f"{col}{r_}", f, f_bold if bold else f_base, fmt, fill=fill_tot if bold else None)
+    put(ir, f"F{r_}", note, f_sub)
+put(ir, "A21", "Comparators (approx., for context): Fundrise ~1.0% p.a. all-in; unlisted property syndicates ~1-2% acquisition + 0.6-1.0% of GAV p.a.; private credit managers retain 2-6% margins (ASIC Rep 846).", f_sub)
+put(ir, "A22", "Buy-back: if used, units are bought at a discount to valuation (property 15/10/5%, trust units 10/8/5%) - an exit cost, not shown above.", f_sub)
+IRROW = {"net": 15, "fees": 16}
+
+# =====================================================================================
 # SCENARIOS (placeholder; filled by run_scenarios.py)
 sc = ws_new("Scenarios", GOLD)
 title(sc, "SCENARIO & STRESS-TEST RESULTS", "Snapshot values produced by running the model under each case. Re-run build to refresh. Live model reflects Inputs!B4 only.")
@@ -1227,6 +1265,7 @@ for sh, d in [("Inputs", "Scenario selector, every assumption with Base / Downsi
               ("Annual Summary", "Five-year P&L, volumes, entity EBITDA, cash, people, unit economics and key metrics."),
               ("Budget Y1-Y2", "Quarterly operating budget per cost centre and set-up budget by category."),
               ("Funding & Returns", "Funding requirement, cap table, use of funds, illustrative investor returns."),
+              ("Investor Returns", "Net return to investors per product after every group fee (disclosure)."),
               ("Scenarios", "Base / Downside / Upside and stress-test results side by side.")]:
     r += 1
     put(ws, f"B{r}", sh, f_bold)
@@ -1243,13 +1282,13 @@ section(ws, r, "  STATUS & LIMITATIONS", 3)
 for t in ["Planning model for board and investor discussion. Replace estimates with supplier quotes, signed issuer pipeline and legal fee proposals before external use.",
           "Regulated activities (AFSL, market operation, custody, credit) require external legal advice and authorisation before launch; costs here assume the partner/CAR routes in the v3 plan.",
           "Historic BHive projections ($731m AUM, $24.5m revenue) are NOT relied on. Historic B-Catcher mining, lottery and crypto-treasury activities are excluded from this group plan.",
-          "Excluded: GST timing, debtor/creditor days, ESOP dilution, performance fees, trust-level costs borne by investment vehicles, retail/lending/card products."]:
+          "Irrecoverable GST is included via the cost factors (+6% opex, +5% set-up). Excluded: GST timing, debtor/creditor days, ESOP dilution, performance fees, trust-level costs borne by investment vehicles, retail/lending/card products."]:
     r += 1
     put(ws, f"B{r}", t)
     ws[f"B{r}"].alignment = Alignment(wrap_text=False)
 
 # sheet order
-order = ["Cover", "Inputs", "Annual Summary", "Scenarios", "Funding & Returns", "Budget Y1-Y2", "P&L Consolidated",
+order = ["Cover", "Inputs", "Annual Summary", "Scenarios", "Investor Returns", "Funding & Returns", "Budget Y1-Y2", "P&L Consolidated",
          "P&L B-Catcher", "P&L Honey Pot", "P&L BHive", "Cash Flow", "Balance Sheet", "Revenue", "Headcount", "Setup Costs", "Opex"]
 wb._sheets = [wb[s] for s in order]
 wb.active = 0

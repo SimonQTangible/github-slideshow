@@ -28,7 +28,7 @@ METRICS = [
     ("Cumulative 5-yr NPAT", ("AR", "npat", "G"), "money"),
     ("Peak funding requirement", ("KM", "peak", "B"), "money"),
     ("Lowest month-end cash", ("KM", "mincash", "B"), "money"),
-    ("Extra equity needed to hold buffer", None, "money"),
+    ("Extra equity needed (vs buffer + buy-back reserve)", None, "money"),
     ("First month EBITDA positive", ("KM", "ebm", "B"), "mmm-yy"),
     ("Group FTE end Y5", ("AR", "fte_Group", "F"), "#,##0.0"),
 ]
@@ -55,8 +55,8 @@ for label, scen, levers in CASES:
         kind, key, col = ref
         r = (AR if kind == "AR" else KM)[key]
         row.append(an[f"{col}{r}"].value)
-    lowest = row[8]
-    row[9] = max(0.0, 750000 - lowest) if isinstance(lowest, (int, float)) else None
+    buf = an[f"B{KM['buf']}"].value
+    row[9] = max(0.0, -buf) if isinstance(buf, (int, float)) else None
     results.append((label, row))
     print(label, [round(x) if isinstance(x, float) else x for x in row])
 os.remove(tmp)
@@ -92,7 +92,7 @@ r = 5 + len(METRICS) + 1
 notes = [
     "Values are a snapshot produced by build_all.py, which runs the full model once per case (recalculated in LibreOffice). They do not change when you edit Inputs.",
     "To explore live, change Inputs!B4 (scenario) and the stress levers on the Inputs sheet; Cover and Annual Summary update immediately.",
-    "Extra equity needed = amount by which the lowest month-end cash falls below the $750k minimum buffer with the planned Seed + Series A + Series B.",
+    "Extra equity needed = shortfall of the lowest month-end cash against the required minimum ($750k buffer plus the buy-back reserve) with the planned rounds.",
     "Downside: lower placements, fees and broker growth, later launch and secondary market, 15% set-up overrun, 10% opex overrun, no R&D claim.",
 ]
 for n in notes:

@@ -1,6 +1,6 @@
-# Organisation Structure & Headcount Plan - Version 7
+# Organisation Structure & Headcount Plan - Version 8
 
-**B-Catcher Group** | 04 - Organisation & Headcount | Version 7.0 | 23 November 2026  
+**B-Catcher Group** | 04 - Organisation & Headcount | Version 8.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Supersedes the v4 plan (49 roles) and `BCatcher_BHive_Headcount_Org_Structure_36_Months.xlsx`. Every role below is costed monthly in the model.
@@ -10,13 +10,13 @@ Loaded cost = salary x FTE x (1 + 12% super + 5.45% payroll tax + 1% workers com
 ## FTE and cost by entity
 | Year-end FTE | 2027 | 2028 | 2029 | 2030 | 2031 |
 |---|---|---|---|---|---|
-| B-Catcher | 2.3 | 2.3 | 2.4 | 2.4 | 2.4 |
+| B-Catcher | 2.3 | 4.3 | 4.4 | 4.4 | 4.4 |
 | Honey Pot | 2.0 | 2.0 | 2.0 | 2.0 | 2.0 |
 | BHive | 1.3 | 0.6 | 0.6 | 0.6 | 0.6 |
-| **Group** | **5.6** | **4.9** | **5.0** | **5.0** | **5.0** |
-| Staff cost (salaries + on-costs) | $1,268,177 | $1,393,294 | $1,447,201 | $1,497,853 | $1,550,278 |
+| **Group** | **5.6** | **6.9** | **7.0** | **7.0** | **7.0** |
+| Staff cost (salaries + on-costs) | $1,268,177 | $1,638,410 | $1,772,452 | $1,834,487 | $1,898,694 |
 
-## Operating model: four employees, everything else bought in
+## Operating model: four core employees (+2 volume-triggered hires), everything else bought in
 ```
 Board (independent Chair; 2 NEDs from m13) + Investment Committee (independent member from m7)
 └── 1. Group CEO & CIO (acting CTO)          -> outsourced investment analysts, valuers & property managers; AI research tools
@@ -29,7 +29,7 @@ Board (independent Chair; 2 NEDs from m13) + Investment Committee (independent m
                                                   direct investors, family offices & new issuers; outsourced service desk + AI agent
 ```
 
-## Why four people can run $500m AUM
+## Why a small team can run $400-500m AUM
 Wholesale managers of this size commonly run with a handful of principals because the work is contracted out: the trustee/RE, custodian, fund administrator and registry hold assets and records; property managers run buildings; brokers are paid only on capital placed; and the platform is built and run by a technology partner. The four employees are the people who must exist inside the company: the accountable executive and investment decision-maker, the licensed responsible manager, the head of distribution, and the person investors, platform customers and new issuers actually hear from. Two of them (CEO and Head of Risk) are the AFSL responsible managers.
 
 ## What replaced each removed role (v4 had 49 roles)
@@ -46,7 +46,7 @@ Wholesale managers of this size commonly run with a handful of principals becaus
 
 
 ## Key-person and capacity risk
-With four employees the plan is exposed to any one person leaving. Mitigations: key-person insurance, documented processes with each provider, a deputy responsible manager arranged with the compliance consultant, and service-level agreements with every outsourced provider. Add an employee only when a provider cannot hold its service levels.
+With a core team of four (six with the triggered hires) the plan is exposed to any one person leaving. Mitigations: key-person insurance, documented processes with each provider, a deputy responsible manager arranged with the compliance consultant, and service-level agreements with every outsourced provider. Add an employee only when a provider cannot hold its service levels.
 
 ## B-Catcher roles
 | Role | Type | Start month | FTE | Base salary | Loaded p.a. |
@@ -54,6 +54,8 @@ With four employees the plan is exposed to any one person leaving. Mitigations: 
 | Group CEO & Chief Investment Officer (acting CTO) | Employee | 1 | 1.0 | $300,000 | $364,350 |
 | Head of Risk, Compliance & Operations (responsible manager) | Employee | 1 | 0.5 | $210,000 | $127,522 |
 | Fractional CFO (contract) | Contractor | 1 | 0.3 | $230,000 | $82,800 |
+| Investment Analyst & Asset Manager | Employee | 13 | 1.0 | $140,000 | $170,030 |
+| Fund Operations & Finance Officer | Employee | 19 | 1.0 | $110,000 | $133,595 |
 
 ## Honey Pot roles
 | Role | Type | Start month | FTE | Base salary | Loaded p.a. |

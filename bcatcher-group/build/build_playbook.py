@@ -152,7 +152,7 @@ table(["Measure", "Base case"], [
     ["Equity plan", "  ·  ".join(f"{r[0].replace(' (optional)','')} {money(r[1])}" for r in D["rounds"] if r[1])],
     ["Lowest cash balance with the equity plan", money(km["mincash"])],
     ["First month of positive group EBITDA", km["ebm"]],
-    ["Wholesale launch / secondary market live", f"Month {I['Controlled wholesale launch (first subscriptions)']} (Jul 2027) / month {I['BHive secondary market activation']} (Jul 2028)"],
+    ["Wholesale launch / secondary market live", f"Month {I['Controlled wholesale launch (first subscriptions)']} (Jul 2027) / month {I['BHive secondary market activation']} (Jul 2029)"],
     ["2031: capital placed / managed AUM", mm(D["cap"][4]) + " / " + mm(D["aum"][4])],
     ["2031: net revenue / EBITDA / NPAT", mm(D["rev"][4]) + " / " + mm(D["ebitda"][4]) + " / " + mm(D["npat"][4])],
     ["Team: FTE end 2027 / 2029 / 2031", f"{D['fte'][0]:.0f} / {D['fte'][2]:.0f} / {D['fte'][4]:.0f}"],
@@ -177,7 +177,7 @@ phases = [
         ("Shareholders' agreement, constitution, ESOP plan", "CEO / counsel", "2-3", money(40000)),
         ("Group tax structuring (trusts, GST, transfer pricing, R&D)", "Fractional CFO", "2-3", money(35000)),
         ("Appoint Chair, adopt board charter, delegation matrix, risk appetite", "Board", "1", "Chair $90k p.a."),
-        ("Hire the 4 employees: CEO & CIO (m1), Head of Risk, Compliance & Ops (m1, 0.5 to m4), Head of Distribution (m3), Investor Communications & BDM (m5); contract fractional CFO, product owner, vCISO, UX. No further hires planned", "CEO", "1-3", "See section 4"),
+        ("Hire the 4 employees: CEO & CIO (m1), Head of Risk, Compliance & Ops (m1, 0.5 to m4), Head of Distribution (m3), Investor Communications & BDM (m5); contract fractional CFO, product owner, vCISO, UX. Two further hires only when volume triggers are met (Investment Analyst m13, Fund Operations m19). No other hires planned", "CEO", "1-3", "See section 4"),
     ]),
     ("Phase 1 - Legal perimeter & design (months 1-3)", "Gate 2: written regulatory opinion", [
         ("Financial services perimeter opinion: AFSL, MIS, market, credit, AML scope per entity", "External counsel", "1-3", money(90000)),
@@ -211,19 +211,25 @@ phases = [
         ("Close Series A", "CEO / CFO", "10", money(D["rounds"][1][1])),
         ("Appoint commission-only regional BDMs (VIC/QLD first); no salaried hires", "Head of Distribution", "13-24", "0.20% sales commission pool"),
         ("Own AFSL application for Honey Pot (responsible managers, ASIC)", "Head of Risk, Compliance & Ops", "13-20", money(150000)),
-        ("Market-operator route: partner, market rules, operating agreement", "Product owner + build partner", "13-18", money(120000)),
-        ("Secondary market engine; operator integration; mobile apps", "Product owner + build partner", "10-18", money(590000)),
+        ("Hire Investment Analyst & Asset Manager (trigger: ~$50m placed / 10+ trusts)", "CEO/CIO", "13", "$140k + on-costs"),
+        ("Mobile apps (iOS & Android)", "Product owner + build partner", "13-18", money(180000)),
+        ("Buy-back windows open for PE trust units: secondary market first, group buys residual, capped at 5% a year", "CEO/CIO / Head of Risk", "13", "Funded from 1.5% reserve"),
         ("SOC 2 Type I readiness & audit", "vCISO", "10-15", money(70000)),
         ("Month-18 pivot gate: placements run-rate vs plan; hiring decision", "Board", "18", "Decision"),
     ]),
-    ("Phase 5 - Marketplace live (months 19-30)", "Gate 6: secondary market authorised", [
-        ("Secondary-market pen test & surveillance validation", "vCISO", "18", money(50000)),
-        ("Controlled secondary-market activation with licensed operator", "Product owner + build partner", "19", "$15k/month + 40% fee share"),
-        ("Own AFSL granted; exit CAR arrangement", "Head of Distribution", "24-25", "ASIC levy $2.5k/month"),
-        ("Digital token legal register opinion; tokenised register pilot", "Product owner / counsel", "22-30", money(130000)),
-        ("Expand build-partner retainer to $32k/month (no in-house engineers)", "Product owner + build partner", "25", "$32k/month"),
+    ("Phase 5 - Own licence, Series B & marketplace build (months 19-30)", "Gate 6: own AFSL; Series B; AUM ~$150m", [
+        ("Hire Fund Operations & Finance Officer (trigger: ~1,000 investors)", "Head of Risk, Compliance & Ops", "19", "$110k + on-costs"),
+        ("Market-operator route: partner, market rules, operating agreement", "Product owner + build partner", "22-27", money(120000)),
+        ("Secondary market engine; operator integration", "Product owner + build partner", "22-30", money(510000)),
+        ("Own AFSL granted; exit CAR arrangement", "Head of Risk, Compliance & Ops", "24-25", "ASIC levy $2.5k/month"),
+        ("Property-token buy-back ladder opens (15/10/5% below valuation; capped at 5% a year)", "CEO/CIO", "25", "Funded from 1.5% reserve"),
+        ("Expand build-partner retainer to $50k/month (no in-house engineers)", "Product owner + build partner", "25", "$50k/month"),
+        ("Close Series B (growth round, gated on volume)", "CEO / CFO", "28", money(D["rounds"][2][1])),
+        ("Secondary-market pen test & surveillance validation", "vCISO", "30", money(50000)),
     ]),
-    ("Phase 6 - Scale (months 31-60)", "Gate 7: any new product approved separately", [
+    ("Phase 6 - Marketplace live & scale (months 31-60)", "Gate 7: secondary market authorised; any new product approved separately", [
+        ("Controlled secondary-market activation with licensed operator", "Product owner + build partner", "31", "$15k/month + 40% fee share"),
+        ("Digital token legal register opinion; tokenised register pilot", "Product owner / counsel", "30-39", money(130000)),
         ("Add commission-only BDMs in WA/SA and family-office channel", "Head of Distribution", "31-49", "See section 4"),
         ("Capacity review: scale outsourced providers; hire only if they cannot hold service levels", "CEO / Board", "37-49", "See section 4"),
         ("Retail, payments, lending or BHive card only as separately funded projects", "Board", "-", "Not in model"),
@@ -297,7 +303,7 @@ table(["Investor", "Invested", "MOIC at year 5", "IRR"], [[n, money(a), f"{x:.1f
 # ------------------------------------------------------------------ SCENARIOS
 doc.add_heading("8. Scenarios, stress tests and the pivot gate", 1)
 cases, srows = D["scen"]["cases"], D["scen"]["rows"]
-keys = ["Net revenue Y5", "EBITDA Y5", "Peak funding requirement", "Extra equity needed to hold buffer", "First month EBITDA positive"]
+keys = ["Net revenue Y5", "EBITDA Y5", "Peak funding requirement", "Extra equity needed (vs buffer + buy-back reserve)", "First month EBITDA positive"]
 rows = []
 for j, cname in enumerate(cases):
     rows.append([cname] + [money(srows[k][j]) if not isinstance(srows[k][j], str) else ("> 2031" if "Beyond" in srows[k][j] else srows[k][j]) for k in keys])

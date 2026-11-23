@@ -66,6 +66,11 @@ for r in range(9, 200):
         D["roles"].append([hc.cell(r,1).value, hc.cell(r,2).value, hc.cell(r,3).value, hc.cell(r,4).value, hc.cell(r,13).value, hc.cell(r,6).value, hc.cell(r,10).value, hc.cell(r,12).value])
     elif D["roles"] and hc.cell(r,1).value is None: break
 inp = wb['Inputs']
+
+ir = wb['Investor Returns']
+D["ir"] = {"cols": ["Property - geared", "Property - Debt-Free", "Private credit", "PE / pre-IPO"]}
+for key, r in [("gross", 10), ("mgmt", 11), ("tech", 12), ("upfront", 13), ("upfront_pa", 14), ("net", 15), ("fees", 16), ("kept", 17), ("ex150", 18)]:
+    D["ir"][key] = [ir.cell(r, c).value for c in range(2, 6)]
 D["inputs"] = {inp.cell(r,1).value: inp.cell(r,2).value for r in range(9, inp.max_row+1) if inp.cell(r,1).value and inp.cell(r,2).value is not None}
 json.dump(D, open(out,"w"), indent=1, default=str)
 print("ok", len(D["roles"]), "roles", len(D["setup_items"]), "setup items")
