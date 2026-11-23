@@ -1,6 +1,6 @@
-# Financial Model v5 - Read Me
+# Financial Model v6 - Read Me
 
-**B-Catcher Group** | 03 - Financial Models & Budgets | Version 5.0 | 23 November 2026  
+**B-Catcher Group** | 03 - Financial Models & Budgets | Version 6.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 ## Status
@@ -20,7 +20,7 @@ Confidential planning document. All figures are AUD Base-case planning assumptio
 | P&L Consolidated / B-Catcher / Honey Pot / BHive | Monthly P&Ls; intercompany eliminated on consolidation |
 | Cash Flow / Balance Sheet | Monthly cash, funding, runway; balance check |
 | Revenue | Capital placed, AUM roll-forward, investors, brokers, every fee line, cost drivers |
-| Headcount | 27 roles; monthly FTE, loaded cost, hiring costs |
+| Headcount | 7 roles; monthly FTE, loaded cost, hiring costs |
 | Setup Costs / Opex | Every one-off and recurring cost with timing, driver and basis |
 
 ## How to use

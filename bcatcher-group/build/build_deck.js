@@ -116,9 +116,9 @@ pres.addSection({ title: "Business model" });
 s = content("Business model", "Three companies, one lifecycle",
   "Each entity owns one job and earns its own revenue - so each can be licensed, staffed and valued on its own");
 const ents = [
-  [HEX.navy, HEX.white, "B-Catcher", "Parent - originate & manage", ["Sources and structures property trusts, private credit, PE / pre-IPO", "Investment committee, asset management, group finance and risk", "Earns acquisition, structuring and management fees"]],
+  [HEX.navy, HEX.white, "B-Catcher", "Parent - originate & manage", ["Sources and structures property trusts, private credit, PE / pre-IPO", "Investment committee, asset management, group finance and risk", "Earns entry and management fees (BHive fee schedule)"]],
   [HEX.honey, HEX.ink, "Honey Pot", "Distribution & broker network", ["Recruits, accredits and supervises brokers", "Approves offers for distribution; owns lead attribution", "Earns placement fees; pays broker commissions"]],
-  [HEX.teal, HEX.white, "BHive", "Investor platform & marketplace", ["Onboarding, KYC, wholesale verification, e-sign", "Subscriptions, wallet, reporting, secondary market", "Earns platform, onboarding and transaction fees"]],
+  [HEX.teal, HEX.white, "BHive", "Investor platform & marketplace", ["Onboarding, KYC, wholesale verification, e-sign", "Subscriptions, wallet, reporting, secondary market", "Earns technology, onboarding, exchange and buy-back resale fees"]],
 ];
 ents.forEach(([fill, txt, name, role, pts], i) => {
   const x = 0.6 + i * 4.1;
@@ -194,28 +194,28 @@ mk.forEach(([h, t], i) => {
   s.addText(t, { x: x + 0.25, y: 3.3, w: 2.45, h: 1.1, fontSize: 13, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "mk-t" + i });
 });
 stat(s, 0.6, 4.9, 3.8, $m(D.trade[4]), "value traded in 2031 at " + pct(D.inputs["Secondary market turnover"]) + " annual turnover", C.accent3, C.text2, "mk-s1");
-stat(s, 4.7, 4.9, 3.8, pct(D.inputs["Secondary transaction fee (buyer + seller combined)"], 1), "combined buyer + seller fee", C.accent3, C.text2, "mk-s2");
-stat(s, 8.8, 4.9, 3.9, "No guarantees", "No guaranteed liquidity, buy-back or exit is offered or modelled", C.accent4, C.text2, "mk-s3");
+stat(s, 4.7, 4.9, 3.8, pct(D.inputs["Exchange fee per trade (BHive schedule)"], 2), "exchange fee per trade (BHive schedule)", C.accent3, C.text2, "mk-s2");
+stat(s, 8.8, 4.9, 3.9, "Buy-back ladder", "Tokens: 25% / 15% / 10% below valuation (yrs 3-5). Trust units: 15% / 10% / 8%. Funded reserve held in cash", C.accent2, C.text2, "mk-s3");
 
 // 8 PRODUCTS & FEES
 pres.addSection({ title: "Economics" });
 s = content("Economics", "Four product lines, priced at market and paid by the issuing vehicle",
-  "Fees are disclosed in each offer document; trust-level costs (trustee, custody, valuations, audit) are borne by the vehicle");
+  "BHive's investor fee schedule is kept; Honey Pot's placement fee pays broker introduction commissions");
 const I = D.inputs;
 const prows = [
   ["Product", "Mix", "Honey Pot placement fee", "B-Catcher upfront", "B-Catcher ongoing", "BHive"],
-  ["Property trusts (geared " + pct(I["Property trust gearing (debt / gross asset value)"]) + " LVR)", pct(I["Residential & commercial property trusts"]), pct(I["Placement fee - property trusts"], 1), pct(I["Property acquisition fee"], 1) + " of purchase price", pct(I["Management fee - property (on gross asset value)"], 2) + " of GAV p.a.", "rowspan"],
-  ["Private credit", pct(I["Private credit"]), pct(I["Placement fee - private credit"], 1), pct(I["Structuring / establishment fee - credit & PE products"], 1) + " of capital", pct(I["Net management fee - private credit"], 2) + " p.a.", ""],
-  ["Private equity / pre-IPO", pct(I["Private company equity / pre-IPO (incl. UTEGBO-style unit trusts)"]), pct(I["Placement fee - private equity / pre-IPO"], 1), pct(I["Structuring / establishment fee - credit & PE products"], 1) + " of capital", pct(I["Net management fee - private equity"], 2) + " p.a.", ""],
+  ["Property trusts / tokens", pct(I["Residential & commercial property trusts"]), pct(I["Placement fee - property trusts"], 1), pct(I["Property entry fee (BHive schedule)"], 1) + " entry fee", pct(I["Management fee - property (BHive schedule)"], 2) + " p.a.", "rowspan"],
+  ["Private credit", pct(I["Private credit"]), pct(I["Placement fee - private credit"], 1), pct(I["Entry fee - credit & PE products (BHive schedule)"], 1) + " entry fee", pct(I["Net management fee - private credit"], 2) + " p.a.", ""],
+  ["Private equity / pre-IPO", pct(I["Private company equity / pre-IPO (incl. UTEGBO-style unit trusts)"]), pct(I["Placement fee - private equity / pre-IPO"], 1), pct(I["Entry fee - credit & PE products (BHive schedule)"], 1) + " entry fee", pct(I["Net management fee - private equity"], 2) + " p.a.", ""],
   ["ASX placements / IPO", pct(I["ASX placements / IPO allocations (third-party issuers)"]), pct(I["Placement fee - ASX placements / IPO"], 1), "-", "-", ""],
 ];
-const bhiveCell = pct(I["Platform administration fee (charged to issuers/trusts)"], 2) + " of AUM p.a. + $" + Math.round(I["Offer onboarding fee (data room, workflows, registry set-up)"] / 1000) + "k per offer + secondary fees";
+const bhiveCell = pct(I["Technology / platform fee (BHive schedule)"], 2) + " technology fee p.a. + $" + Math.round(I["Offer onboarding fee (data room, workflows, registry set-up)"] / 1000) + "k per offer + " + pct(I["Exchange fee per trade (BHive schedule)"], 2) + " exchange fee";
 const tbl = prows.map((r, i) => r.filter(c => c !== "").map((c, j) => {
   if (c === "rowspan") return { text: bhiveCell, options: { rowspan: 4, valign: "middle", fontSize: 13, color: HEX.ink, fill: { color: "E8F2F3" } } };
   return { text: c, options: i === 0 ? { bold: true, color: HEX.white, fill: { color: HEX.ink }, fontSize: 13 } : { fontSize: 13, color: HEX.ink, fill: { color: i % 2 ? HEX.white : HEX.mist }, bold: j === 0 } };
 }));
 s.addTable(tbl, { x: 0.6, y: 1.85, w: 12.1, colW: [3.0, 0.9, 2.0, 2.2, 2.0, 2.0], rowH: 0.62, border: { type: "solid", color: "D9DCE3", pt: 0.75 }, valign: "middle", objectName: "fee-table" });
-s.addText(`Broker commissions: ${pct(I["Broker share of placement fee (commission)"])} of placement fee on broker-sourced capital. Average investor ticket $${Math.round(I["Average investor subscription"] / 1000)}k. Performance fees are excluded from the forecast.`,
+s.addText(`Broker commissions: ${pct(I["Broker share of placement fee (commission)"])} of placement fee on broker-sourced capital. Average investor ticket $${Math.round(I["Average investor subscription"] / 1000)}k. Buy-back ladder applies to property tokens and trust units. Performance fees excluded.`,
   { x: 0.6, y: 5.35, w: 12.1, h: 0.7, fontSize: 13, color: C.text2, margin: 0, isTextBox: true, objectName: "fee-note" });
 
 // 9 REVENUE BY ENTITY
@@ -265,8 +265,8 @@ s.addText("Largest items: MVP build partner ($480k), secondary market engine ($3
   { x: 8.9, y: 4.85, w: 3.6, h: 1.7, fontSize: 13, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "su-note" });
 
 // 12 TEAM / HEADCOUNT
-s = content("Financials", `A lean, AI-native team: ${D.fte[0].toFixed(0)} FTE in year 1 rising to ${D.fte[4].toFixed(0)} by 2031`,
-  `${D.roles.length} costed roles: one shared executive team across all three companies; CEO also covers CIO and acting CTO through the build; specialists only in years 4-5`);
+s = content("Financials", `Three employees run all three companies`,
+  `${D.roles.length} costed roles: 3 employees (CEO & CIO, Head of Risk & Ops, Head of Distribution) plus fractional contractors; everything else is outsourced, AI-driven or commission-only`);
 s.addChart(pres.charts.BAR, [
   { name: "B-Catcher", labels: YRS, values: D.fte_bc.map(v => +v.toFixed(1)) },
   { name: "Honey Pot", labels: YRS, values: D.fte_hp.map(v => +v.toFixed(1)) },
@@ -275,9 +275,9 @@ s.addChart(pres.charts.BAR, [
   showLegend: true, legendPos: "b", showTitle: true, title: "FTE by entity (year end)", showValue: true, dataLabelPosition: "ctr", dataLabelColor: "FFFFFF", valAxisHidden: true, objectName: "hc-chart" });
 const firstHires = D.roles.filter(r => r[4] <= 7).map(r => r[2].replace(/ \(.*\)/, ""));
 card(s, 7.6, 1.75, 5.1, 4.95, HEX.mist, "hc-card");
-s.addText("Pre-launch & launch team (months 1-7)", { x: 7.9, y: 1.9, w: 4.6, h: 0.45, fontSize: 16, bold: true, color: C.text1, margin: 0, isTextBox: true, objectName: "hc-h" });
-s.addText(firstHires.slice(0, 22).join("  ·  "), { x: 7.9, y: 2.4, w: 4.6, h: 3.0, fontSize: 12, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "hc-list" });
-s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. AI agents handle tier-1 support, AML monitoring and first-pass due diligence.`,
+s.addText("The whole team", { x: 7.9, y: 1.9, w: 4.6, h: 0.45, fontSize: 16, bold: true, color: C.text1, margin: 0, isTextBox: true, objectName: "hc-h" });
+s.addText(D.roles.map(r => r[2].replace(" (contract)", "") + (r[3] === "Contractor" ? " - contract" : "")).join("\n"), { x: 7.9, y: 2.4, w: 4.6, h: 3.0, fontSize: 13, paraSpaceAfter: 6, color: C.text1, margin: 0, valign: "top", isTextBox: true, objectName: "hc-list" });
+s.addText(`Staff cost ${$m(D.staff[0])} in 2027, ${$m(D.staff[4])} in 2031. Outsourced service desk, accountants, analysts and build partner, plus AI agents and commission-only BDMs, do the rest.`,
   { x: 7.9, y: 5.5, w: 4.6, h: 1.0, fontSize: 13, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "hc-note" });
 
 // 13 ENTITY PROFITABILITY
@@ -315,8 +315,8 @@ stat(s, 9.85, 5.05, 2.7, D.km.ebm, "first month of positive group EBITDA", C.acc
 s = content("Financials", "Results hinge on placement volume, not cost overruns",
   "Results from running the full model under each case. A 25% tech overrun is absorbed; a 50% volume shortfall is not");
 const sr = D.scen.rows, cases = D.scen.cases;
-const pick = [0, 1, 2, 3, 4, 6, 8];
-const short = ["Base", "Downside", "Upside", "-50% volume", "6-mth licence delay", "+25% tech cost", "Downside + hiring freeze"];
+const pick = [0, 1, 2, 3, 4, 6, 7];
+const short = ["Base", "Downside", "Upside", "-50% volume", "6-mth licence delay", "+25% tech cost", "Downside + 6-mth delay"];
 const metr = [["Net revenue 2031", "Net revenue Y5", v => $m(v)], ["EBITDA 2031", "EBITDA Y5", v => $m(v)], ["Peak funding need", "Peak funding requirement", v => $m(v)],
   [`Extra equity beyond ${$m(D.km.raised, 1)}`, "Extra equity needed to hold buffer", v => (v > 0 ? $m(v) : "-")], ["First EBITDA-positive month", "First month EBITDA positive", v => (typeof v === "string" && v.includes("Beyond") ? "> 2031" : v)]];
 const stbl = [[{ text: "", options: { fill: { color: HEX.ink } } }].concat(short.map(h => ({ text: h, options: { bold: true, color: HEX.white, fill: { color: HEX.ink }, fontSize: 12, align: "center" } })))];
@@ -325,7 +325,7 @@ metr.forEach(([lab, key, f], i) => stbl.push([{ text: lab, options: { bold: true
 s.addTable(stbl, { x: 0.6, y: 1.85, w: 12.1, colW: [2.75, 1.3, 1.3, 1.3, 1.3, 1.4, 1.3, 1.45], rowH: 0.55, border: { type: "solid", color: "E3E5EA", pt: 0.5 }, valign: "middle", objectName: "scen-table" });
 card(s, 0.6, 5.35, 12.1, 1.25, "FBEDEC", "scen-gate");
 s.addText([{ text: "Board pivot gate (month 18):  ", options: { bold: true, color: HEX.red } },
-  { text: "if run-rate placements are below ~$40m p.a., freeze post-launch hiring, defer the secondary-market build and partner more of BHive's technology. At downside volumes the full three-company build does not pay for itself." }],
+  { text: "if run-rate placements are below ~$40m p.a., cut outsourced and build-partner spend, defer the secondary-market build and the buy-back reserve top-up. At downside volumes the full three-company build does not pay for itself." }],
   { x: 0.85, y: 5.45, w: 11.6, h: 1.05, fontSize: 14, color: C.text1, margin: 0, valign: "middle", isTextBox: true, objectName: "scen-gate-t" });
 
 // 16 THE RAISE
@@ -412,7 +412,7 @@ s = content("Execution", "Key risks and how the plan manages them", null);
 const risks = [["Regulatory perimeter", "Written counsel opinions before launch; CAR + licensed partners; gated activation", HEX.red],
   ["Placement volume", "Hiring frozen until month-18 volume gate; broker pipeline tracked monthly", HEX.red],
   ["Broker misconduct", "Accreditation, supervision sampling, commission clawbacks, complaints register", HEX.honey],
-  ["Liquidity expectations", "No guaranteed exit or buy-back; dated valuations; clear risk warnings", HEX.honey],
+  ["Buy-back commitments", "Ladder discounts, funded cash reserve, legal & capital-adequacy opinion before launch", HEX.honey],
   ["Client money & reconciliation", "Funds only to trust/custody accounts; daily exception review", HEX.honey],
   ["Cyber & data", "MFA, SOC 2, pen tests, MDR service, tested recovery", HEX.teal]];
 risks.forEach(([h, t, col], i) => {

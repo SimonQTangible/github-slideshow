@@ -334,9 +334,9 @@ add(G, "hpRev", "Total placement fees", lambda c, p, m: f"=SUM({c}{R['hpP']}:{c}
 add(G, "hpComm", "Broker commissions (cost of sales)", lambda c, p, m: f"={c}{R['hpRev']}*BrokerChannel*BrokerPayout")
 
 sec(G, "B-CATCHER - INVESTMENT & ASSET MANAGEMENT REVENUE")
-add(G, "bcAcq", "Acquisition fees - property (on purchase price incl. debt)", lambda c, p, m: f"={c}{R['capP']}/(1-PropLVR)*AcqFee")
-add(G, "bcStruct", "Structuring / establishment fees - credit & PE", lambda c, p, m: f"=({c}{R['capC']}+{c}{R['capE']})*StructFee")
-add(G, "bcMP", "Management fees - property (on GAV)", lambda c, p, m: f"=({c}{R['aumOP']}+{c}{R['aumCP']})/2/(1-PropLVR)*MgmtProp/12")
+add(G, "bcAcq", "Entry fees - property (BHive 1.5% of equity raised)", lambda c, p, m: f"={c}{R['capP']}*AcqFee")
+add(G, "bcStruct", "Entry fees - credit & PE", lambda c, p, m: f"=({c}{R['capC']}+{c}{R['capE']})*StructFee")
+add(G, "bcMP", "Management fees - property (BHive 1.25% of AUM)", lambda c, p, m: f"=({c}{R['aumOP']}+{c}{R['aumCP']})/2*MgmtProp/12")
 add(G, "bcMC", "Management fees - private credit", lambda c, p, m: f"=({c}{R['aumOC']}+{c}{R['aumCC']})/2*MgmtCredit/12")
 add(G, "bcME", "Management fees - private equity", lambda c, p, m: f"=({c}{R['aumOE']}+{c}{R['aumCE']})/2*MgmtPE/12")
 add(G, "bcRev", "Total B-Catcher external revenue", lambda c, p, m: f"={c}{R['bcAcq']}+{c}{R['bcStruct']}+SUM({c}{R['bcMP']}:{c}{R['bcME']})", bold=True, border=b_top)
@@ -347,8 +347,21 @@ add(G, "bhPlat", "Platform administration fees", lambda c, p, m: f"={c}{R['aumAv
 add(G, "bhOffer", "Offer onboarding fees", lambda c, p, m: f"={c}{R['offers']}*OfferFee")
 add(G, "bhTraded", "Secondary market value traded", lambda c, p, m: f"={c}{R['seclive']}*{c}{R['aumAvg']}*SecTurnover/12*IF({c}{R['secm']}<=12,SecRamp,1)")
 add(G, "bhSec", "Secondary transaction fees", lambda c, p, m: f"={c}{R['bhTraded']}*SecFee")
-add(G, "bhRev", "Total BHive external revenue", lambda c, p, m: f"={c}{R['bhPlat']}+{c}{R['bhOffer']}+{c}{R['bhSec']}", bold=True, border=b_top)
+add(G, "bhRev", "Total BHive external revenue (excl. buy-back gains)", lambda c, p, m: f"={c}{R['bhPlat']}+{c}{R['bhOffer']}+{c}{R['bhSec']}", bold=True, border=b_top)
 add(G, "bhPartner", "Market-operator partner share (cost of sales)", lambda c, p, m: f"={c}{R['bhSec']}*SecPartnerShare")
+
+sec(G, "BUY-BACK FACILITY (exit ladder / UTEGBO) - group buys units at a discount and resells at valuation")
+add(G, "bbP", "Property tokens bought back (at valuation)", lambda c, p, m: f"=IF({c}{R['k']}>=BBStartProp,{c}{R['aumOP']}*BBRate/12,0)")
+add(G, "bbE", "PE / trust units bought back (at valuation)", lambda c, p, m: f"=IF({c}{R['k']}>=BBStartPE,{c}{R['aumOE']}*BBRate/12,0)")
+add(G, "bbNAV", "Total bought back (at valuation)", lambda c, p, m: f"={c}{R['bbP']}+{c}{R['bbE']}", bold=True)
+add(G, "bbCost", "Cash paid to investors (after ladder discount)", lambda c, p, m: f"={c}{R['bbP']}*(1-BBDiscProp)+{c}{R['bbE']}*(1-BBDiscPE)")
+add(G, "bbSoldNAV", "Units resold (valuation, after resale lag)", lambda c, p, m: f"=IF({c}$3>BBResaleMonths,INDEX($E${R['bbNAV']}:$BL${R['bbNAV']},{c}$3-BBResaleMonths),0)")
+add(G, "bbSoldCost", "Cost of units resold", lambda c, p, m: f"=IF({c}$3>BBResaleMonths,INDEX($E${R['bbCost']}:$BL${R['bbCost']},{c}$3-BBResaleMonths),0)")
+add(G, "bbProceeds", "Resale proceeds (net of resale costs)", lambda c, p, m: f"={c}{R['bbSoldNAV']}*(1-BBResaleCost)")
+add(G, "bbGain", "Buy-back resale gain (BHive revenue)", lambda c, p, m: f"={c}{R['bbProceeds']}-{c}{R['bbSoldCost']}", bold=True)
+add(G, "bbInv", "Units held for resale (group balance sheet)", lambda c, p, m: f"={c}{R['bbCost']}-{c}{R['bbSoldCost']}" + (f"+{p}{row}" if p else ""), total="last")
+add(G, "bbElig", "Eligible AUM for buy-back", lambda c, p, m: f"=IF({c}{R['k']}>=BBStartProp,{c}{R['aumCP']},0)+IF({c}{R['k']}>=BBStartPE,{c}{R['aumCE']},0)", total="last")
+add(G, "bbRes", "Required buy-back liquidity reserve", lambda c, p, m: f"={c}{R['bbElig']}*BBReserve", total="max")
 
 sec(G, "INTERCOMPANY (eliminated on consolidation)")
 add(G, "icSSFhp", "B-Catcher shared-services fee <- Honey Pot", lambda c, p, m: f"=IF({c}$3>=3,IC_SSF_HP,0)")
@@ -669,7 +682,7 @@ def entity_pl(ent, sheetname, revlines, iclines_in, cogs, icout, rd=False):
 
 
 entity_pl("B-Catcher", "P&L B-Catcher",
-          [("bcAcq", "Acquisition fees - property"), ("bcStruct", "Structuring fees - credit & PE"), ("bcMP", "Management fees - property (GAV)"),
+          [("bcAcq", "Entry fees - property"), ("bcStruct", "Entry fees - credit & PE"), ("bcMP", "Management fees - property"),
            ("bcMC", "Management fees - private credit"), ("bcME", "Management fees - private equity")],
           [("icSSFhp", "Shared-services fee from Honey Pot"), ("icSSFbh", "Shared-services fee from BHive")],
           [("bcAdmin", "Manager-borne fund administration")],
@@ -681,7 +694,7 @@ entity_pl("Honey Pot", "P&L Honey Pot",
           [("hpComm", "Broker commissions")],
           [("icSSFhp", "B-Catcher shared-services fee (intercompany)"), ("icLICbh", "BHive platform licence (intercompany)")])
 entity_pl("BHive", "P&L BHive",
-          [("bhPlat", "Platform administration fees"), ("bhOffer", "Offer onboarding fees"), ("bhSec", "Secondary transaction fees")],
+          [("bhPlat", "Technology / platform fees"), ("bhOffer", "Offer onboarding fees"), ("bhSec", "Exchange fees"), ("bbGain", "Buy-back resale gains")],
           [("icLICbh", "Platform licence from Honey Pot"), ("icLICbc", "Platform licence from B-Catcher")],
           [("bhPartner", "Market-operator partner share")],
           [("icSSFbh", "B-Catcher shared-services fee (intercompany)")], rd=True)
@@ -713,11 +726,12 @@ s_bc, _, r_bc = PL["B-Catcher"]
 s_hp, _, r_hp = PL["Honey Pot"]
 s_bh, _, r_bh = PL["BHive"]
 lines = [("Honey Pot - placement fees", s_hp, [r_hp[k] for k in ("hpP", "hpC", "hpE", "hpA")]),
-         ("B-Catcher - acquisition & structuring fees", s_bc, [r_bc["bcAcq"], r_bc["bcStruct"]]),
+         ("B-Catcher - entry fees", s_bc, [r_bc["bcAcq"], r_bc["bcStruct"]]),
          ("B-Catcher - management fees", s_bc, [r_bc[k] for k in ("bcMP", "bcMC", "bcME")]),
-         ("BHive - platform administration fees", s_bh, [r_bh["bhPlat"]]),
+         ("BHive - technology / platform fees", s_bh, [r_bh["bhPlat"]]),
          ("BHive - offer onboarding fees", s_bh, [r_bh["bhOffer"]]),
-         ("BHive - secondary transaction fees", s_bh, [r_bh["bhSec"]])]
+         ("BHive - exchange fees", s_bh, [r_bh["bhSec"]]),
+         ("BHive - buy-back resale gains", s_bh, [r_bh["bbGain"]])]
 first_rev = row
 for lab, sh, rows_ in lines:
     add(CG, lab, lab, lambda c, p, m, sh=sh, rows_=rows_: "=" + "+".join(f"{q(sh)}!{c}{x}" for x in rows_), font=f_link)
@@ -776,22 +790,24 @@ FR["rd"] = add(FG, "f_rd", "R&D tax refund received (lagged)", lambda c, p, m: f
 FR["ocf"] = add(FG, "f_ocf", "Operating cash flow", lambda c, p, m: f"=SUM({c}{FR['ebitda']}:{c}{FR['rd']})", bold=True, border=b_top)
 sec(FG, "INVESTING CASH FLOW")
 FR["capex"] = add(FG, "f_capex", "Platform build & capitalised set-up", lambda c, p, m: "=-(" + "+".join(f"{q(PL[e][0])}!{c}{PL[e][2]['capex']}" for e in ENTITIES) + ")", font=f_link)
+FR["bbwc"] = add(FG, "f_bbwc", "Buy-back units purchased less cost of units resold", lambda c, p, m: f"=-(Revenue!{c}{R['bbCost']}-Revenue!{c}{R['bbSoldCost']})", font=f_link)
 sec(FG, "FINANCING CASH FLOW")
 FR["eq"] = add(FG, "f_eq", "Equity raised", lambda c, p, m: f"=IF({c}$3=SeedMonth,SeedAmt,0)+IF({c}$3=SeriesAMonth,SeriesAAmt,0)+IF({c}$3=SeriesBMonth,SeriesBAmt,0)", font=f_base)
 FR["eqc"] = add(FG, "f_eqc", "Capital-raising costs", lambda c, p, m: f"=-{c}{FR['eq']}*RaiseCostPct")
 FR["fcf"] = add(FG, "f_fcf", "Financing cash flow", lambda c, p, m: f"={c}{FR['eq']}+{c}{FR['eqc']}", bold=True, border=b_top)
 row += 1
-FR["net"] = add(FG, "f_net", "NET CASH FLOW", lambda c, p, m: f"={c}{FR['ocf']}+{c}{FR['capex']}+{c}{FR['fcf']}", bold=True, fill=fill_tot)
+FR["net"] = add(FG, "f_net", "NET CASH FLOW", lambda c, p, m: f"={c}{FR['ocf']}+{c}{FR['capex']}+{c}{FR['bbwc']}+{c}{FR['fcf']}", bold=True, fill=fill_tot)
 FR["open"] = add(FG, "f_open", "Opening cash", lambda c, p, m: (f"={p}{row+1}" if p else "=0"), total=None)
 FR["close"] = add(FG, "f_close", "CLOSING CASH", lambda c, p, m: f"={c}{FR['open']}+{c}{FR['net']}", bold=True, border=b_tot, fill=fill_tot, total="min")
 put(cf, f"B{FR['close']}", "min >", f_sub)
 sec(FG, "FUNDING ANALYSIS")
-FR["pre"] = add(FG, "f_pre", "Cash flow before financing", lambda c, p, m: f"={c}{FR['ocf']}+{c}{FR['capex']}")
+FR["pre"] = add(FG, "f_pre", "Cash flow before financing", lambda c, p, m: f"={c}{FR['ocf']}+{c}{FR['capex']}+{c}{FR['bbwc']}")
 FR["cumpre"] = add(FG, "f_cumpre", "Cumulative cash flow before financing", lambda c, p, m: f"={c}{FR['pre']}" + (f"+{p}{row}" if p else ""), total="min")
 put(cf, f"B{FR['cumpre']}", "min >", f_sub)
 FR["burn"] = add(FG, "f_burn", "Average monthly burn (3-month)", lambda c, p, m: f"=-MIN(0,AVERAGE({FG.c(max(1,m-2))}{FR['pre']}:{c}{FR['pre']}))", total=None)
 FR["runway"] = add(FG, "f_runway", "Runway at current burn (months)", lambda c, p, m: f"=IF({c}{FR['burn']}=0,99,MIN(99,{c}{FR['close']}/{c}{FR['burn']}))", fmt="dec", total=None)
-FR["buf"] = add(FG, "f_buf", "Headroom over minimum cash buffer", lambda c, p, m: f"={c}{FR['close']}-MinCash", total="min")
+FR["req"] = add(FG, "f_req", "Required minimum cash (buffer + buy-back reserve)", lambda c, p, m: f"=MinCash+Revenue!{c}{R['bbRes']}", total="max")
+FR["buf"] = add(FG, "f_buf", "Headroom over required minimum cash", lambda c, p, m: f"={c}{FR['close']}-{c}{FR['req']}", total="min")
 put(cf, f"B{FR['buf']}", "min >", f_sub)
 FR["ebflag"] = add(FG, "f_ebflag", "EBITDA positive (1 = yes)", lambda c, p, m: f"=IF({P}!{c}{CR['ebitda']}>0,1,0)", fmt="int", total=None)
 FR["cfflag"] = add(FG, "f_cfflag", "Cash flow before financing positive (1 = yes)", lambda c, p, m: f"=IF({c}{FR['pre']}>0,1,0)", fmt="int", total=None)
@@ -815,7 +831,8 @@ BR["cash"] = add(BG, "b_cash", "Cash at bank", lambda c, p, m: f"={CFq}!{c}{FR['
 BR["cap"] = add(BG, "b_cap", "Capitalised platform & systems - cost", lambda c, p, m: f"=-{CFq}!{c}{FR['capex']}" + (f"+{p}{row}" if p else ""), total="last")
 BR["acc"] = add(BG, "b_acc", "Less accumulated amortisation", lambda c, p, m: f"=-{P}!{c}{CR['da']}" + (f"+{p}{row}" if p else ""), total="last")
 BR["rdr"] = add(BG, "b_rdr", "R&D tax incentive receivable", lambda c, p, m: f"={P}!{c}{CR['rd']}-{CFq}!{c}{FR['rd']}" + (f"+{p}{row}" if p else ""), total="last")
-BR["ta"] = add(BG, "b_ta", "TOTAL ASSETS", lambda c, p, m: f"=SUM({c}{BR['cash']}:{c}{BR['rdr']})", bold=True, border=b_tot, fill=fill_tot, total="last")
+BR["bbi"] = add(BG, "b_bbi", "Buy-back units held for resale", lambda c, p, m: f"=Revenue!{c}{R['bbInv']}", font=f_link, total="last")
+BR["ta"] = add(BG, "b_ta", "TOTAL ASSETS", lambda c, p, m: f"=SUM({c}{BR['cash']}:{c}{BR['bbi']})", bold=True, border=b_tot, fill=fill_tot, total="last")
 sec(BG, "EQUITY")
 BR["sc"] = add(BG, "b_sc", "Share capital (net of raising costs)", lambda c, p, m: f"={CFq}!{c}{FR['fcf']}" + (f"+{p}{row}" if p else ""), total="last")
 BR["re"] = add(BG, "b_re", "Retained earnings / (accumulated losses)", lambda c, p, m: f"={P}!{c}{CR['npat']}" + (f"+{p}{row}" if p else ""), total="last")
@@ -874,10 +891,14 @@ an_row("inv", "Investors on BHive - year end", "Revenue", R["cumInv"], "stock", 
 an_row("brk", "Active accredited brokers - year end", "Revenue", R["brk"], "stock", "num")
 an_row("offers", "Offers launched", "Revenue", R["offers"], "flow", "dec")
 an_row("trade", "Secondary market value traded", "Revenue", R["bhTraded"])
+an_row("bbnav", "Units bought back under buy-back facility (at valuation)", "Revenue", R["bbNAV"])
+an_row("bbinv", "Bought-back units held for resale - year end", "Revenue", R["bbInv"], "stock")
+an_row("bbres", "Buy-back liquidity reserve required - year end", "Revenue", R["bbRes"], "stock")
 an_sec("REVENUE BY ENTITY (external)")
 an_row("rhp", "Honey Pot - distribution", "Revenue", R["hpRev"])
 an_row("rbc", "B-Catcher - structuring & management", "Revenue", R["bcRev"])
 an_row("rbh", "BHive - platform & marketplace", "Revenue", R["bhRev"])
+an_row("rbb", "BHive - buy-back resale gains", "Revenue", R["bbGain"])
 an_row("rev", "GROUP NET REVENUE", "P&L Consolidated", CR["rev"], bold=True, fill=fill_tot)
 an_sec("CONSOLIDATED P&L")
 an_row("cogs", "Cost of sales (broker commissions, partner share, fund admin)", "P&L Consolidated", CR["cogs"])
@@ -1038,7 +1059,7 @@ r = 4
 section(fr, r, "FUNDING REQUIREMENT", 6)
 r += 1
 for lab, f, fmt in [("Peak funding requirement (from cash flow)", f"='Annual Summary'!B{KM['peak']}", "money"),
-                    ("Minimum cash buffer", "=MinCash", "money"),
+                    ("Minimum cash incl. buy-back reserve (peak)", f"={CFq}!C{FR['req']}", "money"),
                     ("Required equity incl. buffer & raise costs", f"=(B{r}+B{r+1})/(1-RaiseCostPct)", "money"),
                     ("Equity planned (Seed + Series A + Series B)", "=SeedAmt+SeriesAAmt+SeriesBAmt", "money"),
                     ("Surplus / (shortfall)", f"=B{r+3}-B{r+2}", "money")]:

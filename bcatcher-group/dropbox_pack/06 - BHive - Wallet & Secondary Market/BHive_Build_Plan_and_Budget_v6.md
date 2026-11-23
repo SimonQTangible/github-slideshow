@@ -1,6 +1,6 @@
-# BHive - Build Plan & Budget - Version 5
+# BHive - Build Plan & Budget - Version 6
 
-**B-Catcher Group** | 06 - BHive - Wallet & Secondary Market | Version 5.0 | 23 November 2026  
+**B-Catcher Group** | 06 - BHive - Wallet & Secondary Market | Version 6.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Requirements remain as in *Product & Technical Requirements v1*. This adds the build sequence, vendor stack, budget, team and platform economics.
@@ -38,17 +38,18 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 ## Platform P&L (incl. intercompany licence income)
 | $ | 2027 | 2028 | 2029 | 2030 | 2031 |
 |---|---|---|---|---|---|
-| Platform admin fees | $3,510 | $67,334 | $261,083 | $624,296 | $1,182,109 |
+| Technology fees (0.5% p.a.) | $5,851 | $112,224 | $435,138 | $1,040,493 | $1,970,182 |
 | Offer onboarding fees | $29,167 | $200,000 | $450,000 | $780,000 | $1,160,000 |
-| Secondary transaction fees | - | $6,622 | $56,808 | $166,479 | $315,229 |
+| Exchange fees (0.25%) | - | $3,104 | $26,629 | $78,037 | $147,764 |
+| Buy-back resale gains | - | $4,351 | $113,620 | $617,468 | $1,259,381 |
 | Intercompany licence income | $180,000 | $360,000 | $360,000 | $360,000 | $360,000 |
-| Operator share (cost of sales) | - | ($2,649) | ($22,723) | ($66,592) | ($126,092) |
-| Staff costs | ($509,404) | ($593,169) | ($1,170,557) | ($1,211,527) | ($1,665,062) |
-| Total operating expenses | ($1,291,497) | ($1,999,414) | ($2,608,173) | ($2,664,413) | ($3,283,145) |
-| EBITDA | ($1,078,820) | ($1,368,107) | ($1,503,006) | ($800,229) | ($391,898) |
-| R&D tax incentive (accrued) | $66,477 | $77,409 | $152,758 | $158,104 | $195,466 |
+| Operator share (cost of sales) | - | ($1,242) | ($10,651) | ($31,215) | ($59,105) |
+| Staff costs | ($249,200) | ($182,574) | ($164,540) | ($170,299) | ($176,260) |
+| Total operating expenses | ($1,013,530) | ($1,713,895) | ($1,764,365) | ($1,867,290) | ($1,996,704) |
+| EBITDA | ($798,513) | ($1,035,458) | ($389,631) | $977,494 | $2,841,517 |
+| R&D tax incentive (accrued) | $32,521 | $23,826 | $21,472 | $22,224 | $23,002 |
 | Capitalised build | $861,667 | $473,333 | $90,000 | - | - |
-| Value traded on secondary market | - | $662,193 | $5,680,755 | $16,647,895 | $31,522,910 |
+| Value traded on secondary market | - | $1,241,612 | $10,651,416 | $31,214,803 | $59,105,457 |
 | Investors on platform | 49 | 382 | 1,132 | 2,432 | 4,365 |
 
 ## Running costs
@@ -56,10 +57,12 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 |---|---|---|---|---|
 | Cloud hosting - base environments (AWS Sydney) | $7,000 Fixed $/month | $70,000 | $89,116 | $94,543 |
 | Cloud hosting - variable per investor | $0.60 $/investor/month | $78 | $5,543 | $27,519 |
-| Engineering tooling (GitHub, CI, monitoring, logging) | $250 $/FTE/month | $6,825 | $14,322 | $21,947 |
-| Build partner retainer: maintenance, DevOps & QA | $16,000 Fixed $/month | $64,000 | $203,693 | $216,098 |
+| Engineering tooling (GitHub, CI, monitoring, logging) | $250 $/FTE/month | $3,475 | $1,910 | $2,026 |
+| Build partner retainer: engineering, DevOps & QA (no in-house engineers) | $24,000 Fixed $/month | $96,000 | - | - |
+| Build partner retainer (expanded): secondary market, mobile & scale | $32,000 Fixed $/month | - | $407,386 | $432,195 |
 | Registry / fund-admin platform fees | $4,000 Fixed $/month | $24,000 | $50,923 | $54,024 |
-| AI support agent & AI ops tooling | $3,000 Fixed $/month | $18,000 | $38,192 | $40,518 |
+| AI support agent & AI ops tooling | $5,000 Fixed $/month | $30,000 | $63,654 | $67,531 |
+| AI support agent - volume usage | $0.40 $/investor/month | $52 | $3,695 | $18,346 |
 | Security operations (MDR/SIEM service) | $6,000 Fixed $/month | $36,000 | $76,385 | $81,037 |
 | Annual penetration testing | $4,000 Fixed $/month | - | $50,923 | $54,024 |
 | SOC 2 Type II annual audit | $5,000 Fixed $/month | - | $63,654 | $67,531 |
@@ -77,17 +80,24 @@ Requirements remain as in *Product & Technical Requirements v1*. This adds the b
 ## Team
 | Role | Type | Start month | FTE | Base salary |
 |---|---|---|---|---|
-| Head of Product & Delivery | Employee | 2 | 1.0 | $195,000 |
+| Fractional Product Owner (contract) | Contractor | 2 | 0.6 | $190,000 |
 | UX/UI Designer (contract) | Contractor | 2 | 0.5 | $140,000 |
-| Senior Full-stack Engineer | Employee | 4 | 1.0 | $185,000 |
 | Information Security Lead (fractional vCISO) | Contractor | 4 | 0.2 | $260,000 |
-| Chief Technology Officer | Employee | 25 | 1.0 | $240,000 |
-| Full-stack & Integrations Engineer | Employee | 25 | 1.0 | $175,000 |
-| Data & AI Engineer | Employee | 49 | 1.0 | $175,000 |
-| Platform & Market Operations Analyst | Employee | 49 | 1.0 | $120,000 |
 
 ## Vendor stack to procure (RFP list)
 Build partner; AWS Sydney; identity/KYC/AML provider; e-signature; CRM (shared with Honey Pot); fund administrator & registry; banking/payment reconciliation; document vault; MDR/SIEM security; penetration tester; SOC 2 auditor; licensed market operator; AI support agent tooling.
 
+## Buy-back facility (kept from BHive and B-Catcher)
+Property tokens: BHive exit ladder - buy-back at 25% (year 3), 15% (year 4) and 10% (year 5) below independent valuation. Trust units (PE / pre-IPO): UTEGBO windows at 15% (year 1), 10% (year 2) and 8% (year 4). The group buys exercised units, resells them through BHive / Honey Pot at valuation within ~3 months, and holds a cash reserve of 2% of eligible AUM. Model assumes 4% of eligible holdings exercise each year (8% Downside).
+
+| $ | 2027 | 2028 | 2029 | 2030 | 2031 |
+|---|---|---|---|---|---|
+| Units bought back (valuation) | - | $139,079 | $1,891,031 | $6,280,847 | $12,194,843 |
+| Resale gains | - | $4,351 | $113,620 | $617,468 | $1,259,381 |
+| Units held for resale (year end) | - | $79,104 | $798,177 | $1,775,551 | $3,242,816 |
+| Cash reserve required (year end) | - | $224,253 | $2,160,933 | $4,604,665 | $8,197,770 |
+
+Requires a legal and capital-adequacy opinion before launch ($40k in set-up).
+
 ## Not in scope
-BHive Coin, BHive Card, token lending, guaranteed buy-back ladder, retail access (all from the July 2026 BHive Capital pack) - excluded until separate legal and business cases.
+BHive Coin, BHive Card, token lending, retail access (all from the July 2026 BHive Capital pack) - excluded until separate legal and business cases.

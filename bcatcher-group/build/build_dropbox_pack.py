@@ -63,7 +63,7 @@ def annual(sheet, label, kind="flow"):
     raise KeyError(sheet + ":" + label)
 
 
-HDR = lambda title, folder: (f"# {title}\n\n**B-Catcher Group** | {folder} | Version 5.0 | {TODAY}  \n"
+HDR = lambda title, folder: (f"# {title}\n\n**B-Catcher Group** | {folder} | Version 6.0 | {TODAY}  \n"
                              "Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.\n\n")
 km = D["km"]
 rounds = D["rounds"]
@@ -71,47 +71,49 @@ rounds = D["rounds"]
 # =====================================================================  ROOT REGISTER
 reg = HDR("Document Register - B-Catcher Group workspace", "Root")
 reg += ("## Operating model\nInvestors subscribe directly through **BHive**. **Honey Pot** manages brokers and distribution behind that process. **B-Catcher** originates and manages the investments.\n\n"
-        "## Version 5 headline numbers (Base case)\n")
+        "## Version 6 headline numbers (Base case)\n")
 reg += md_table(["Measure", "Value"], [
     ["One-off set-up & build cost", money(km["setup"])], ["Peak funding requirement", money(km["peak"])],
     ["Equity plan", " / ".join(f"{r[0].replace(' (optional)','')} {mm(r[1])}" for r in rounds if r[1])],
     ["First month positive group EBITDA", km["ebm"]], ["2031 net revenue / EBITDA", f"{mm(D['rev'][4])} / {mm(D['ebitda'][4])}"],
     ["2031 managed AUM / investors / brokers", f"{mm(D['aum'][4])} / {D['inv'][4]:,.0f} / {D['brk'][4]:,.0f}"], ["Group FTE 2027 / 2031", f"{D['fte'][0]:.0f} / {D['fte'][4]:.0f}"]])
 reg += "## What is current in each folder\n"
-reg += md_table(["Folder", "Current (v5)", "Superseded / reference only"], [
-    ["01 - Business Plans & Strategy", "Master Business Plan v5 (.md); Launch Playbook & Roadmap v5 (.md); Launch Playbook & Budget Book (.docx - to upload)", "Master Business Plan v3; Execution Roadmap v1"],
-    ["02 - Corporate Structure & Legal", "Legal, Licensing & Corporate Workplan + Budget v5 (.md)", "Corporate & Regulatory Implementation v1 (still valid for regulatory scope)"],
-    ["03 - Financial Models & Budgets", "Integrated Financial Model v5 (.xlsx - to upload) + CSV exports: assumptions, annual summary, entity P&Ls, quarterly budgets, monthly consolidated P&L, cash flow, balance sheet, set-up & opex registers, scenarios", "BCatcher_BHive_36_Month_Financial_Model.xlsx (single cost line, no entity split; runs out of cash month 16)"],
-    ["04 - Organisation & Headcount", f"Headcount Plan v5 (.csv, {len(D['roles'])} roles); Organisation Structure v5 (.md)", "BCatcher_BHive_Headcount_Org_Structure_36_Months.xlsx"],
-    ["05 - Honey Pot", "Honey Pot Business Case & Budget v5 (.md); Broker Commission Schedule (.csv)", "Broker Network Operating Manual v1 (still valid for procedures)"],
-    ["06 - BHive", "BHive Build Plan & Budget v5 (.md)", "Product & Technical Requirements v1 (still valid for requirements)"],
-    ["07 - Investor Deck & Capital Raise", "Investor Deck v5 (.pptx - to upload); Deck v5 slide script (.md); Capital Raise Summary v5 (.md)", "Investor Deck v3 Working; Content Brief v1 (evidence checklist still applies)"],
+reg += md_table(["Folder", "Current (v6)", "Superseded / reference only"], [
+    ["01 - Business Plans & Strategy", "Master Business Plan v6 (.md); Launch Playbook & Roadmap v6 (.md); Launch Playbook & Budget Book (.docx - to upload)", "Master Business Plan v3; Execution Roadmap v1"],
+    ["02 - Corporate Structure & Legal", "Legal, Licensing & Corporate Workplan + Budget v6 (.md)", "Corporate & Regulatory Implementation v1 (still valid for regulatory scope)"],
+    ["03 - Financial Models & Budgets", "Integrated Financial Model v6 (.xlsx - to upload) + CSV exports: assumptions, annual summary, entity P&Ls, quarterly budgets, monthly consolidated P&L, cash flow, balance sheet, set-up & opex registers, scenarios", "BCatcher_BHive_36_Month_Financial_Model.xlsx (single cost line, no entity split; runs out of cash month 16)"],
+    ["04 - Organisation & Headcount", f"Headcount Plan v6 (.csv, {len(D['roles'])} roles); Organisation Structure v6 (.md)", "BCatcher_BHive_Headcount_Org_Structure_36_Months.xlsx"],
+    ["05 - Honey Pot", "Honey Pot Business Case & Budget v6 (.md); Broker Commission Schedule (.csv)", "Broker Network Operating Manual v1 (still valid for procedures)"],
+    ["06 - BHive", "BHive Build Plan & Budget v6 (.md)", "Product & Technical Requirements v1 (still valid for requirements)"],
+    ["07 - Investor Deck & Capital Raise", "Investor Deck v6 (.pptx - to upload); Deck v6 slide script (.md); Capital Raise Summary v6 (.md)", "Investor Deck v3 Working; Content Brief v1 (evidence checklist still applies)"],
     ["08 - Historical Reference", "Archive Index (.md) - what was carried forward or excluded", "All originals, unchanged"]])
-reg += f"Every v4 Markdown/CSV file in these folders (dated 22 Nov 2026) is superseded by the matching v5 file. v5 merges overlapping roles: {len(D['roles'])} roles instead of 49, one shared executive team across the three companies.\n\n"
+reg += f"Every v4 and v5 Markdown/CSV file in these folders is superseded by the matching v6 file. v6 is the three-person core team: {len(D['roles'])} roles of which 3 are employees (v4 had 49 roles, v5 had 27); fractional contractors, outsourced providers, AI tools, the build partner and commission-only sales replace every other role.\n\n"
 reg += ("## Files to upload manually\nThe Dropbox connector can only write text files. Drag these three files (sent in the Claude session) into the folders shown:\n\n"
-        "- `BCatcher_Group_Integrated_Financial_Model.xlsx` -> 03 - Financial Models & Budgets\n- `BCatcher_Group_Investor_Deck_v5.pptx` -> 07 - Investor Deck & Capital Raise\n"
+        "- `BCatcher_Group_Integrated_Financial_Model.xlsx` -> 03 - Financial Models & Budgets\n- `BCatcher_Group_Investor_Deck_v6.pptx` -> 07 - Investor Deck & Capital Raise\n"
         "- `BCatcher_Group_Launch_Playbook_and_Budget_Book.docx` -> 01 - Business Plans & Strategy\n")
-F["00 - Document Register v5.md"] = reg
+F["00 - Document Register v6.md"] = reg
 
-# =====================================================================  01 BUSINESS PLAN v5
+# =====================================================================  01 BUSINESS PLAN v6
 f01 = "01 - Business Plans & Strategy"
-bp = HDR("Master Business Plan - Version 5 (fully costed)", f01)
+bp = HDR("Master Business Plan - Version 6 (fully costed)", f01)
 bp += ("## 1. Executive summary\n"
        "B-Catcher Group is an Australian wholesale private-markets group made of three companies with one controlled lifecycle: **B-Catcher** (parent) originates, structures and manages property trusts, private credit and private equity / pre-IPO investments; **Honey Pot** recruits, accredits and supervises the broker network that distributes approved offers; **BHive** is the single investor-facing platform where investors are verified, subscribe, hold, receive reporting and, once licensed, trade on a secondary market.\n\n"
        f"The group needs **{money(km['setup'])}** of one-off set-up and build spend and a total of **{mm(D['km']['peak'])}** of cumulative funding before it becomes cash-flow positive in **{km['cfm']}**. It reaches positive EBITDA in **{km['ebm']}** and, by 2031, **{mm(D['rev'][4])}** revenue, **{mm(D['ebitda'][4])}** EBITDA and **{mm(D['aum'][4])}** of managed AUM with **{D['fte'][4]:.0f}** FTE.\n\n")
 bp += "## 2. Group structure\n"
 bp += md_table(["Entity", "Role", "Revenue", "Regulatory route"], [
-    ["B-Catcher (parent)", "Origination, investment committee, asset management, group finance, risk, shared services", "Property acquisition fee, structuring fees, management fees; intercompany shared-services fee", "Manager under external trustee/RE; no client money"],
+    ["B-Catcher (parent)", "Origination, investment committee, asset management, group finance, risk, shared services", "Entry fees (1.5%) and management fees (BHive schedule); intercompany shared-services fee", "Manager under external trustee/RE; no client money"],
     ["Honey Pot", "Broker recruitment, accreditation, supervision, offer approval, lead attribution, commissions", "Placement fees from issuers (net of broker commissions)", "CAR under principal licensee from month 4; own AFSL application months 13-20"],
-    ["BHive", "Investor, broker and admin portals; wallet; reporting; secondary market", "Platform admin fee on AUM, offer onboarding fees, secondary transaction fees; intercompany licence fees", "Technology provider; trading via licensed market-operator partner from month 19"],
+    ["BHive", "Investor, broker and admin portals; wallet; reporting; secondary market", "Technology fee (0.5% p.a.), offer onboarding fees, exchange fees (0.25%), buy-back resale gains; intercompany licence fees", "Technology provider; trading via licensed market-operator partner from month 19"],
     ["Investment trusts / SPVs", "Hold assets, issue units, carry trust-level debt", "N/A - investor money and assets are never group revenue or group cash", "External trustee, custodian, registry"]])
 bp += "## 3. Products and fees\n"
-bp += md_table(["Product", "Mix", "Honey Pot placement fee", "B-Catcher upfront", "B-Catcher ongoing"], [
-    ["Property trusts (45% LVR)", "45%", "3.0%", "1.5% of purchase price (GAV)", "0.65% of GAV p.a."],
-    ["Private credit", "25%", "1.5%", "1.0% of capital", "1.00% p.a."],
-    ["Private equity / pre-IPO (incl. UTEGBO-style trusts)", "20%", "5.0%", "1.0% of capital", "1.50% p.a."],
+bp += "Investor fees follow the BHive Capital fee schedule. Honey Pot's placement fee, paid by the issuer, funds broker introduction commissions.\n\n"
+bp += md_table(["Product", "Mix", "Honey Pot placement fee (broker commissions)", "B-Catcher entry fee", "B-Catcher management fee"], [
+    ["Property trusts / tokens", "45%", "3.0% (brokers 1.8%)", "1.5% (BHive)", "1.25% p.a. (BHive)"],
+    ["Private credit", "25%", "1.5% (brokers 0.9%)", "1.5%", "1.00% p.a."],
+    ["Private equity / pre-IPO (UTEGBO trusts)", "20%", "5.0% (brokers 3.0%)", "1.5%", "1.50% p.a."],
     ["ASX placements / IPO", "10%", "4.0%", "-", "-"]])
-bp += (f"BHive charges {I['Platform administration fee (charged to issuers/trusts)']*100:.2f}% p.a. on platform AUM, ${I['Offer onboarding fee (data room, workflows, registry set-up)']:,.0f} per offer onboarded and a {I['Secondary transaction fee (buyer + seller combined)']*100:.1f}% combined secondary fee (40% to the licensed operator). "
+bp += (f"BHive charges its {I['Technology / platform fee (BHive schedule)']*100:.2f}% p.a. technology fee, ${I['Offer onboarding fee (data room, workflows, registry set-up)']:,.0f} per offer onboarded and a {I['Exchange fee per trade (BHive schedule)']*100:.2f}% exchange fee per trade on {I['Secondary market turnover']*100:.0f}% annual turnover (40% to the licensed operator). "
+       "**Buy-back structure kept:** property tokens follow the BHive exit ladder (25% / 15% / 10% below independent valuation in years 3-5) and PE trust units follow the UTEGBO windows (15% / 10% / 8%). The group buys units back, resells them at valuation and holds a funded cash reserve of 2% of eligible AUM. "
        f"Brokers source {I['Share of capital sourced via brokers']*100:.0f}% of capital and receive {I['Broker share of placement fee (commission)']*100:.0f}% of the placement fee. Performance fees are excluded.\n\n")
 bp += "## 4. Five-year forecast (consolidated)\n"
 rows = []
@@ -121,7 +123,7 @@ for lab, key, sg in [("Capital placed (client money)", "cap", 1), ("Managed AUM 
 bp += md_table(["$"] + YRS, rows)
 bp += "## 5. Cost of setting up the business\n"
 bp += md_table(["Set-up category", "Amount"], [[k, money(v)] for k, v in sorted(D["setup_cat"].items(), key=lambda x: -x[1])] + [["**Total**", f"**{money(km['setup'])}**"]])
-bp += "Full line-by-line register: folder 03, `Setup_Cost_Register_v5.csv`.\n\n## 6. Operating costs by category\n"
+bp += "Full line-by-line register: folder 03, `Setup_Cost_Register_v6.csv`.\n\n## 6. Operating costs by category\n"
 bp += md_table(["Category"] + YRS, [[k] + [money(v) for v in vals] for k, vals in D["cats"].items()])
 bp += "## 7. Funding\n"
 bp += md_table(["Round", "Amount", "Month", "Pre-money", "Post-round %"], [[r[0], money(r[1]), m, money(r[2]), f"{r[3]*100:.1f}%"] for r, m in zip(rounds, ["1", "10", "28"])])
@@ -130,13 +132,13 @@ sr = D["scen"]["rows"]
 bp += md_table(["Case", "Revenue 2031", "EBITDA 2031", "Peak funding", "Extra equity needed", "EBITDA positive"],
                [[c, money(sr["Net revenue Y5"][j]), money(sr["EBITDA Y5"][j]), money(sr["Peak funding requirement"][j]), money(sr["Extra equity needed to hold buffer"][j]),
                  "> 2031" if "Beyond" in str(sr["First month EBITDA positive"][j]) else sr["First month EBITDA positive"][j]] for j, c in enumerate(D["scen"]["cases"])])
-bp += ("**Board pivot gate (month 18):** if run-rate placements are below ~$40m p.a., freeze post-launch hiring, defer the secondary-market build, partner more of BHive's technology and stay under the principal licensee longer. At downside volumes the full three-company build does not pay for itself.\n\n"
+bp += ("**Board pivot gate (month 18):** if run-rate placements are below ~$40m p.a., cut outsourced and build-partner spend, defer the secondary-market build and stay under the principal licensee longer. At downside volumes the full three-company build does not pay for itself.\n\n"
        "## 9. Governance and risk\nBoard with independent Chair (month 1) and two NEDs (month 13); independent investment-committee member (month 7); Head of Risk & Compliance reporting to the board. Key risks: regulatory perimeter, placement volume, broker misconduct, liquidity expectations (no guaranteed exits), client money reconciliation, cyber. See Launch Playbook for gates.\n\n"
        "## 10. Decisions required\n- Entity names, cap table and merger ratio of legacy B-Catcher and BHive shareholders\n- Licensing route (CAR then own AFSL - modelled)\n- First two asset types and issuer partners\n- BHive build partner; market-operator partner\n- Seed terms and ESOP pool\n- Approved hiring schedule with volume gates\n")
-F[f"{f01}/BCatcher_Group_Master_Business_Plan_v5.md"] = bp
+F[f"{f01}/BCatcher_Group_Master_Business_Plan_v6.md"] = bp
 
 # Playbook & roadmap
-pb = HDR("Launch Playbook & Execution Roadmap - Version 5", f01)
+pb = HDR("Launch Playbook & Execution Roadmap - Version 6", f01)
 pb += "Month 1 = January 2027. Costs are from the model's set-up and opex registers. The full formatted version is `BCatcher_Group_Launch_Playbook_and_Budget_Book.docx`.\n\n"
 phases = [("Phase 0 - Foundation (months 1-2) - Gate 1: structure, ownership, IP", [
     ["Close Seed; open group bank accounts", "CEO", "1", "raise costs 4%"], ["Incorporate Honey Pot, BHive, template SPV", "CEO / counsel", "1", "$8,000"],
@@ -144,36 +146,36 @@ phases = [("Phase 0 - Foundation (months 1-2) - Gate 1: structure, ownership, IP
     ["Group tax structuring", "Fractional CFO", "2-3", "$35,000"], ["Appoint Chair; board charter; delegation matrix", "Board", "1", "Chair $90k p.a."]]),
     ("Phase 1 - Legal perimeter & design (months 1-3) - Gate 2: written regulatory opinion", [
     ["Perimeter opinion: AFSL, MIS, market, credit, AML", "External counsel", "1-3", "$90,000"], ["Licensing route decision", "Board", "3", "-"],
-    ["Brand identity (3 brands)", "Marketing", "2-3", "$65,000"], ["BHive discovery & architecture; build partner RFP", "Head of Product & Delivery", "2-3", "$95,000"], ["Cloud landing zone", "Head of Product & Delivery", "2", "$15,000"]]),
+    ["Brand identity (3 brands)", "Marketing", "2-3", "$65,000"], ["BHive discovery & architecture; build partner RFP", "Product owner + build partner", "2-3", "$95,000"], ["Cloud landing zone", "Product owner + build partner", "2", "$15,000"]]),
     ("Phase 2 - Counterparties, products & build (months 3-6) - Gates 3-4", [
     ["Trustee/RE/custodian; fund admin & registry", "CEO/CIO / Fractional CFO", "5-6", "$30,000"], ["Trust deed & IM templates (property, credit, PE/UTEGBO)", "CEO/CIO / counsel", "3-6", "$130,000"],
-    ["Due diligence on first 3 offers", "Investment Director", "4-6", "$105,000"], ["CAR appointment", "Head of Distribution", "4", "$25,000 + $12k/month"],
-    ["Compliance framework; AML/CTF program", "Head of Risk & Compliance", "3-6", "$100,000"], ["Broker agreements; CRM & commission system; LMS", "Honey Pot", "3-6", "$155,000"],
-    ["BHive MVP (3 portals + wallet) and integrations", "Head of Product & Delivery", "3-8", "$635,000"], ["Privacy assessment; pre-launch pen test", "vCISO + build partner", "5-6", "$65,000"],
-    ["Launch campaign & broker roadshow", "Head of Distribution & Marketing", "6-8", "$105,000"]]),
+    ["Due diligence on first 3 offers", "CEO/CIO + outsourced analysts", "4-6", "$105,000"], ["CAR appointment", "Head of Distribution", "4", "$25,000 + $12k/month"],
+    ["Compliance framework; AML/CTF program", "Head of Risk, Compliance & Ops", "3-6", "$100,000"], ["Broker agreements; CRM & commission system; LMS", "Honey Pot", "3-6", "$155,000"],
+    ["BHive MVP (3 portals + wallet) and integrations", "Product owner + build partner", "3-8", "$635,000"], ["Privacy assessment; pre-launch pen test", "vCISO + build partner", "5-6", "$65,000"],
+    ["Launch campaign & broker roadshow", "Head of Distribution", "6-8", "$105,000"]]),
     ("Phase 3 - Wholesale launch (month 7) - Gate 5", [
     ["First offers live to verified wholesale investors", "CEO/CIO / Head of Distribution", "7", "-"], ["Accredit first brokers", "Head of Distribution", "7+", "$1,500 per broker"],
-    ["First reconciled subscriptions & reports", "Finance & Operations Manager", "7-9", "-"], ["Insurance in force (PI, cyber, D&O, tech E&O)", "Fractional CFO", "7", "~$11k/month"]]),
+    ["First reconciled subscriptions & reports", "Head of Risk & Ops + outsourced accountants", "7-9", "-"], ["Insurance in force (PI, cyber, D&O, tech E&O)", "Fractional CFO", "7", "~$11k/month"]]),
     ("Phase 4 - Series A & scale (months 10-18)", [
-    ["Close Series A", "CEO", "10", money(rounds[1][1])], ["Own AFSL application", "Head of Risk & Compliance", "13-20", "$150,000"],
-    ["Market-operator route & legal", "Head of Product & Delivery", "13-18", "$120,000"], ["Secondary engine, operator integration, mobile apps", "Head of Product & Delivery", "10-18", "$590,000"],
+    ["Close Series A", "CEO", "10", money(rounds[1][1])], ["Own AFSL application", "Head of Risk, Compliance & Ops", "13-20", "$150,000"],
+    ["Market-operator route & legal", "Product owner + build partner", "13-18", "$120,000"], ["Secondary engine, operator integration, mobile apps", "Product owner + build partner", "10-18", "$590,000"],
     ["SOC 2 Type I", "vCISO", "10-15", "$70,000"], ["Month-18 pivot gate", "Board", "18", "-"]]),
     ("Phase 5 - Marketplace live (months 19-30) - Gate 6", [
-    ["Secondary market pen test & surveillance validation", "vCISO", "18", "$50,000"], ["Activate secondary market with licensed operator", "Head of Product & Delivery", "19", "$15k/month + 40% fee share"],
-    ["Own AFSL granted; exit CAR", "Head of Distribution", "24-25", "ASIC levy $2.5k/month"], ["Token legal opinion; tokenised register pilot", "Head of Product / counsel", "22-30", "$130,000"], ["Hire CTO and second engineer (if gate passed)", "CEO", "25", "headcount plan"]]),
+    ["Secondary market pen test & surveillance validation", "vCISO", "18", "$50,000"], ["Activate secondary market with licensed operator", "Product owner + build partner", "19", "$15k/month + 40% fee share"],
+    ["Own AFSL granted; exit CAR", "Head of Distribution", "24-25", "ASIC levy $2.5k/month"], ["Token legal opinion; tokenised register pilot", "Product owner / counsel", "22-30", "$130,000"], ["Expand build-partner retainer (no in-house engineers)", "Product owner + build partner", "25", "$32k/month"]]),
     ("Phase 6 - Scale (months 31-60) - Gate 7: new products approved separately", [
-    ["BDM #3 (m37) and BDM #4 (m49)", "Head of Distribution", "37-49", "headcount plan"], ["Asset manager (m37); year-5 specialists", "CEO / Head of Risk", "37-49", "headcount plan"],
+    ["Commission-only regional BDMs (VIC/QLD, WA/SA, family office)", "Head of Distribution", "13-49", "0.20% commission pool"], ["Capacity review: scale outsourced providers; hire only if they cannot hold service levels", "CEO / Board", "37-49", "-"],
     ["Retail, payments, lending: separate business cases", "Board", "-", "not modelled"]])]
 for t, steps in phases:
     pb += f"## {t}\n" + md_table(["Step", "Owner", "Month", "Cost"], steps)
 pb += "## Monthly KPI targets (year end, Base)\n" + md_table(["KPI"] + YRS, [["Capital placed"] + [mm(v) for v in D["cap"]], ["Managed AUM"] + [mm(v) for v in D["aum"]],
                                                                         ["Investors"] + [f"{v:,.0f}" for v in D["inv"]], ["Brokers"] + [f"{v:,.0f}" for v in D["brk"]],
                                                                         ["Revenue"] + [mm(v) for v in D["rev"]], ["EBITDA"] + [mm(v) for v in D["ebitda"]], ["Cash"] + [mm(v) for v in D["cash"]]])
-F[f"{f01}/BCatcher_Group_Launch_Playbook_and_Roadmap_v5.md"] = pb
+F[f"{f01}/BCatcher_Group_Launch_Playbook_and_Roadmap_v6.md"] = pb
 
 # =====================================================================  02 LEGAL
 f02 = "02 - Corporate Structure & Legal"
-lg = HDR("Legal, Licensing & Corporate Workplan and Budget - Version 5", f02)
+lg = HDR("Legal, Licensing & Corporate Workplan and Budget - Version 6", f02)
 lg += "Costs and timing for every legal, licensing and regulatory workstream. Regulatory scope remains as in *Corporate & Regulatory Implementation v1*; this document adds owners, months and money.\n\n## One-off legal, licensing & structuring costs\n"
 legal_cats = ("Corporate & Legal Structure", "Licensing & Regulatory", "Product & Investment Structuring", "Security & Certification", "Corporate Raise Costs")
 lrows = [[e, c, it, money(a), f"{int(s)}-{int(s)+int(n)-1}" if n > 1 else str(int(s))] for e, c, it, a, s, n, t in D["setup_items"] if c in legal_cats]
@@ -191,7 +193,7 @@ lg += ("## Licensing pathway (modelled)\n"
        "6. **Month 22-24** - digital-token legal register opinion ($40k) before any tokenised register pilot.\n"
        "7. **Not modelled** - ACL for mortgage/credit brokers, retail MIS, payments/card, lending. Each needs a separate business case.\n\n"
        "## Corporate actions\n- Incorporate Honey Pot Pty Ltd and BHive Pty Ltd as wholly owned subsidiaries of the B-Catcher parent\n- Confirm legacy entities (B-Catcher, BHive Capital Pty Ltd) are free of liabilities; assign IP\n- Agree merger ratio for legacy shareholders (cap table placeholder: 10,000,000 founder shares)\n- Shareholders' agreement, ESOP, board charter, delegation matrix, intercompany agreements (shared services $25k/month per subsidiary; BHive licence $20k + $10k/month)\n")
-F[f"{f02}/BCatcher_Group_Legal_Licensing_Workplan_and_Budget_v5.md"] = lg
+F[f"{f02}/BCatcher_Group_Legal_Licensing_Workplan_and_Budget_v6.md"] = lg
 
 # =====================================================================  03 FINANCE (CSVs)
 f03 = "03 - Financial Models & Budgets"
@@ -201,13 +203,13 @@ for r in range(9, inp.max_row + 1):
     a = inp.cell(r, 1).value
     if a:
         irows.append([a] + [inp.cell(r, c).value if not isinstance(inp.cell(r, c).value, (dt.date, dt.datetime)) else inp.cell(r, c).value.strftime("%d-%b-%Y") for c in range(2, 8)])
-F[f"{f03}/Model_v5_Inputs_and_Assumptions.csv"] = to_csv(irows)
+F[f"{f03}/Model_v6_Inputs_and_Assumptions.csv"] = to_csv(irows)
 an = wb["Annual Summary"]
-F[f"{f03}/Model_v5_Annual_Summary_2027-2031.csv"] = to_csv([[an.cell(r, c).value if not isinstance(an.cell(r, c).value, float) else round(an.cell(r, c).value, 2) for c in range(1, 8)] for r in range(4, an.max_row + 1) if an.cell(r, 1).value])
+F[f"{f03}/Model_v6_Annual_Summary_2027-2031.csv"] = to_csv([[an.cell(r, c).value if not isinstance(an.cell(r, c).value, float) else round(an.cell(r, c).value, 2) for c in range(1, 8)] for r in range(4, an.max_row + 1) if an.cell(r, 1).value])
 bu = wb["Budget Y1-Y2"]
-F[f"{f03}/Budget_2027-2028_by_Cost_Centre_Quarterly_v5.csv"] = to_csv([[bu.cell(r, c).value if not isinstance(bu.cell(r, c).value, float) else round(bu.cell(r, c).value, 2) for c in range(1, 12)] for r in range(4, bu.max_row + 1) if bu.cell(r, 1).value])
+F[f"{f03}/Budget_2027-2028_by_Cost_Centre_Quarterly_v6.csv"] = to_csv([[bu.cell(r, c).value if not isinstance(bu.cell(r, c).value, float) else round(bu.cell(r, c).value, 2) for c in range(1, 12)] for r in range(4, bu.max_row + 1) if bu.cell(r, 1).value])
 for sh, fn in [("P&L Consolidated", "PL_Consolidated_Monthly"), ("Cash Flow", "Cash_Flow_Monthly"), ("Balance Sheet", "Balance_Sheet_Monthly")]:
-    F[f"{f03}/Model_v5_{fn}.csv"] = monthly_sheet_csv(sh)
+    F[f"{f03}/Model_v6_{fn}.csv"] = monthly_sheet_csv(sh)
 erows = [["Entity", "Line item"] + YRS + ["5-yr total"]]
 for sh, ent in [("P&L B-Catcher", "B-Catcher"), ("P&L Honey Pot", "Honey Pot"), ("P&L BHive", "BHive")]:
     ws = wb[sh]
@@ -218,12 +220,12 @@ for sh, ent in [("P&L B-Catcher", "B-Catcher"), ("P&L Honey Pot", "Honey Pot"), 
             continue
         yrs = [round(sum(v or 0 for v in vals[12 * y:12 * y + 12])) for y in range(5)]
         erows.append([ent, a] + yrs + [sum(yrs)])
-F[f"{f03}/Model_v5_PL_by_Entity_Annual.csv"] = to_csv(erows)
-F[f"{f03}/Setup_Cost_Register_v5.csv"] = to_csv([["Entity", "Category", "Item", "Amount", "Start month", "Months", "Treatment"]] + D["setup_items"] + [["TOTAL", "", "", km["setup"]]])
-F[f"{f03}/Opex_Register_v5.csv"] = to_csv([["Entity", "Category", "Item", "Rate", "Driver", "Start month", "End month"] + YRS] + [o[:3] + [f"{o[3]*100:.2f}%" if str(o[4]).startswith("%") else o[3]] + o[4:7] + [round(x) for x in o[7:]] for o in D["opex_items"]])
+F[f"{f03}/Model_v6_PL_by_Entity_Annual.csv"] = to_csv(erows)
+F[f"{f03}/Setup_Cost_Register_v6.csv"] = to_csv([["Entity", "Category", "Item", "Amount", "Start month", "Months", "Treatment"]] + D["setup_items"] + [["TOTAL", "", "", km["setup"]]])
+F[f"{f03}/Opex_Register_v6.csv"] = to_csv([["Entity", "Category", "Item", "Rate", "Driver", "Start month", "End month"] + YRS] + [o[:3] + [f"{o[3]*100:.2f}%" if str(o[4]).startswith("%") else o[3]] + o[4:7] + [round(x) for x in o[7:]] for o in D["opex_items"]])
 sc = wb["Scenarios"]
-F[f"{f03}/Scenarios_and_Stress_Tests_v5.csv"] = to_csv([[sc.cell(r, c).value.strftime("%b-%Y") if isinstance(sc.cell(r, c).value, (dt.date, dt.datetime)) else (round(sc.cell(r, c).value, 0) if isinstance(sc.cell(r, c).value, float) else sc.cell(r, c).value) for c in range(1, sc.max_column + 1)] for r in range(4, 17) if sc.cell(r, 1).value])
-fr = HDR("Financial Model v5 - Read Me", f03)
+F[f"{f03}/Scenarios_and_Stress_Tests_v6.csv"] = to_csv([[sc.cell(r, c).value.strftime("%b-%Y") if isinstance(sc.cell(r, c).value, (dt.date, dt.datetime)) else (round(sc.cell(r, c).value, 0) if isinstance(sc.cell(r, c).value, float) else sc.cell(r, c).value) for c in range(1, sc.max_column + 1)] for r in range(4, 17) if sc.cell(r, 1).value])
+fr = HDR("Financial Model v6 - Read Me", f03)
 fr += ("## Status\n- **Current:** `BCatcher_Group_Integrated_Financial_Model.xlsx` (upload to this folder from the Claude session). 16 sheets, ~38,000 live formulas, zero errors, balance sheet balances.\n"
        "- **Superseded:** `BCatcher_BHive_36_Month_Financial_Model.xlsx` - one flat cost line, no entity split, no broker commissions or headcount link, cash negative from month 16.\n"
        "- The CSV files here are value exports of each sheet (Base case) so the numbers are readable in Dropbox without the workbook.\n\n"
@@ -235,7 +237,7 @@ fr += ("## Status\n- **Current:** `BCatcher_Group_Integrated_Financial_Model.xls
            ["Revenue", "Capital placed, AUM roll-forward, investors, brokers, every fee line, cost drivers"], ["Headcount", f"{len(D['roles'])} roles; monthly FTE, loaded cost, hiring costs"],
            ["Setup Costs / Opex", "Every one-off and recurring cost with timing, driver and basis"]]) +
        "## How to use\nChange `Inputs!B4` to switch scenario; change blue cells to update assumptions; stress levers (placement multiplier, licensing delay, broker delay, tech overrun, hiring deferral) sit at the bottom of Inputs.\n")
-F[f"{f03}/00 - Financial Model v5 Read Me.md"] = fr
+F[f"{f03}/00 - Financial Model v6 Read Me.md"] = fr
 
 # =====================================================================  04 HEADCOUNT
 f04 = "04 - Organisation & Headcount"
@@ -252,42 +254,45 @@ for i in range(N):
     fte = [hc.cell(r, 14 + 12 * y + 11).value or 0 for y in range(5)]
     cost = [sum((hc.cell(cost0 + i, 14 + mth).value or 0) for mth in range(12 * y, 12 * y + 12)) for y in range(5)] if cost0 else [""] * 5
     hrows.append([hc.cell(r, c).value for c in range(1, 11)] + [round(hc.cell(r, 12).value or 0), hc.cell(r, 11).value] + fte + [round(x) if isinstance(x, (int, float)) else x for x in cost])
-F[f"{f04}/Headcount_Plan_v5_{len(D['roles'])}_Roles.csv"] = to_csv(hrows)
-org = HDR("Organisation Structure & Headcount Plan - Version 5", f04)
+F[f"{f04}/Headcount_Plan_v6_{len(D['roles'])}_Roles.csv"] = to_csv(hrows)
+org = HDR("Organisation Structure & Headcount Plan - Version 6", f04)
 org += ("Supersedes the v4 plan (49 roles) and `BCatcher_BHive_Headcount_Org_Structure_36_Months.xlsx`. Every role below is costed monthly in the model.\n\n"
         f"Loaded cost = salary x FTE x (1 + 12% super + 5.45% payroll tax + 1% workers comp + 3% other). Contractors: salary equivalent + 20%. Recruitment 15% of salary for hires after month 1; $3,500 equipment per starter; wages +3.5% p.a.\n\n## FTE and cost by entity\n")
 org += md_table(["Year-end FTE"] + YRS, [["B-Catcher"] + [f"{v:.1f}" for v in D["fte_bc"]], ["Honey Pot"] + [f"{v:.1f}" for v in D["fte_hp"]], ["BHive"] + [f"{v:.1f}" for v in D["fte_bh"]],
                                          ["**Group**"] + [f"**{v:.1f}**" for v in D["fte"]], ["Staff cost (salaries + on-costs)"] + [money(v) for v in D["staff"]]])
-org += ("## Reporting lines (one shared team runs all three companies)\n```\n"
+org += ("## Operating model: three employees, everything else bought in\n```\n"
         "Board (independent Chair; 2 NEDs from m13) + Investment Committee (independent member from m7)\n"
-        "└── Group CEO & CIO (acting CTO to m24)\n"
-        "    ├── Investment Director -> Investment Analyst (m10), Asset Manager (m37), Credit & PE Director (m49)\n"
-        "    ├── Fractional CFO (to m48; CFO from m49) -> Finance & Operations Manager (m7), Fund & Commission Accountant (m37)\n"
-        "    ├── Head of Risk & Compliance - group + Honey Pot responsible manager (independent line to board) -> Analyst (m49)\n"
-        "    ├── Head of Distribution & Marketing (Honey Pot) -> BDMs (m7, m19, m37, m49), Client Services (m7, m31), Digital Marketing (contract)\n"
-        "    └── Head of Product & Delivery (BHive) -> build partner, Senior Engineer (m4), vCISO, UX (contract); CTO (m25) + Engineer (m25)\n"
+        "└── 1. Group CEO & CIO (acting CTO)          -> outsourced investment analysts, valuers & property managers; AI research tools\n"
+        "    │                                          -> fractional CFO; fractional product owner + build partner; vCISO\n"
+        "    ├── 2. Head of Risk, Compliance & Operations -> external compliance consultant; outsourced bookkeeping & fund accounting;\n"
+        "    │                                             outsourced fund admin & registry; AI compliance monitoring & reconciliation\n"
+        "    └── 3. Head of Distribution (Honey Pot)    -> commission-only regional BDMs; external brokers (commission); outsourced\n"
+        "                                                  service desk + AI agent; freelance marketing + AI content tools\n"
         "```\n\n"
-        "## Roles merged or removed (v4 -> v5)\n")
-org += md_table(["v5 role", "Replaces these v4 roles"], [
-    ["Group CEO & CIO (acting CTO to m24)", "CEO; Chief Investment Officer; Chief Technology Officer (to m24)"],
-    ["Head of Risk & Compliance (group + Honey Pot responsible manager)", "Head of Risk & Compliance; Distribution Compliance Manager; Compliance Officer; Risk Analyst (to m48)"],
-    ["Investment Director (property, credit & PE)", "Property Investment Director; Private Credit & Equity Director (to m48); Investment Analyst #2; Asset Manager #2"],
-    ["Fractional CFO (to m48) + Finance & Operations Manager", "Chief Financial Officer (to m48); Financial Controller; Fund Accountant (to m36); Executive Assistant / Office Manager"],
-    ["Head of Distribution & Marketing", "Honey Pot Managing Director; Broker Network Manager; Head of Marketing & Growth; Investor Relations Manager"],
-    ["BDMs (4 by year 5)", "5 state BDMs; Broker Accreditation & Training Coordinator (BDM #1 + LMS)"],
-    ["Client Services & Broker Operations Officer", "Investor Services Officers; Broker & Commission Operations Officers; Platform Support Specialists"],
-    ["Head of Product & Delivery + build partner retainer", "Head of Product; Head of Secondary Market; Backend, DevOps and QA engineers (build partner covers); Registry/Tokenisation Engineer"],
-    ["Outsourced HR & payroll ($1.5k/month)", "People & Culture (fractional)"],
+        "## Why three people can run $500m AUM\n"
+        "Wholesale managers of this size commonly run with a handful of principals because the work is contracted out: the trustee/RE, custodian, fund administrator and registry hold assets and records; property managers run buildings; brokers are paid only on capital placed; and the platform is built and run by a technology partner. The three employees are the people who must exist inside the company: the accountable executive and investment decision-maker, the licensed responsible manager, and the head of distribution. Two of them (CEO and Head of Risk) are the AFSL responsible managers.\n\n"
+        "## What replaced each removed role (v4 had 49 roles)\n")
+org += md_table(["Removed role(s)", "Replaced by (annual cost in model, year 5)"], [
+    ["CIO, CTO, Head of Product, Head of Secondary Market, all engineers, data/AI engineer, market-ops analyst", "CEO (combined) + fractional product owner + build partner retainer ($32k/month) + licensed market operator"],
+    ["CFO, Financial Controller, Finance & Operations Manager, fund & commission accountants, EA", "Fractional CFO + Head of Risk & Ops + outsourced bookkeeping/fund accounting ($6k/month + $0.80/investor) + AI reconciliation"],
+    ["Compliance managers, officers and analysts", "Head of Risk, Compliance & Ops + external compliance consultant + AI compliance monitoring"],
+    ["Investment directors, analysts, asset managers", "CEO/CIO + outsourced analysis & asset-management support ($7k/month, $15k from m37) + external property managers (paid by trusts) + AI research"],
+    ["Honey Pot MD, broker network manager, marketing staff, IR manager", "Head of Distribution + freelance marketing ($4k/month) + AI content tools"],
+    ["All salaried BDMs except the Head of Distribution", "Commission-only regional BDMs (0.20% of capital placed)"],
+    ["Investor services, commission ops, platform support officers", "Outsourced service desk ($4k/month + $2/investor) + AI support agent"],
+    ["People & culture; office", "Outsourced HR & payroll; co-working ($3.5k/month)"],
 ])
+org += ("\n## Key-person and capacity risk\n"
+        "With three employees the plan is exposed to any one person leaving. Mitigations: key-person insurance, documented processes with each provider, a deputy responsible manager arranged with the compliance consultant, and service-level agreements with every outsourced provider. Add an employee only when a provider cannot hold its service levels.\n\n")
 for ent in ["B-Catcher", "Honey Pot", "BHive"]:
     org += f"## {ent} roles\n" + md_table(["Role", "Type", "Start month", "FTE", "Base salary", "Loaded p.a."],
                                          [[r[2], r[3], int(r[4]), f"{r[5]:.1f}", money(r[6]), money(r[7])] for r in sorted([x for x in D["roles"] if x[0] == ent], key=lambda x: x[4])])
 org += "## Outsourced / partner services\nPrincipal licensee (CAR), trustee/RE, custodian, fund administrator & registry, external audit & tax, legal counsel, build partner, penetration testing, MDR security service, licensed market operator, property managers. All costed in the Setup and Opex registers.\n"
-F[f"{f04}/Organisation_Structure_and_Headcount_v5.md"] = org
+F[f"{f04}/Organisation_Structure_and_Headcount_v6.md"] = org
 
 # =====================================================================  05 HONEY POT
 f05 = "05 - Honey Pot - Distribution & Brokers"
-hp = HDR("Honey Pot - Business Case & Budget - Version 5", f05)
+hp = HDR("Honey Pot - Business Case & Budget - Version 6", f05)
 hpl = {k: annual("P&L Honey Pot", l) for k, l in [("ext", "External revenue"), ("comm", "Broker commissions"), ("gp", "GROSS PROFIT"), ("staff", "Salaries, superannuation & on-costs"),
                                                   ("opex", "TOTAL OPERATING EXPENSES"), ("ebitda", "EBITDA")]}
 hp += ("Procedures remain as in the *Broker Network Operating Manual v1*. This document adds the economics, budget, staffing and targets.\n\n## Role in the group\nHoney Pot is the distribution engine: it pays away most of its fees to brokers and its strategic value is the capital and AUM it feeds to B-Catcher and BHive. It runs as a cost centre at a loss until scale, while the group consolidates to profit.\n\n## Five-year P&L (incl. intercompany charges)\n")
@@ -303,14 +308,14 @@ hp += "## Set-up costs\n" + md_table(["Item", "Cost", "Month"], [[x[2], money(x[
 hp += "## Recurring costs\n" + md_table(["Item", "Rate / driver", "2027", "2029", "2031"], [[o[2], (f"{o[3]*100:.2f}% of capital" if str(o[4]).startswith('%') else f"${o[3]:,.0f} {o[4]}"), money(o[7]), money(o[9]), money(o[11])] for o in D["opex_items"] if o[0] == "Honey Pot"])
 hp += "## Team\n" + md_table(["Role", "Start month", "Base salary"], [[r[2], int(r[4]), money(r[6])] for r in sorted([x for x in D["roles"] if x[0] == "Honey Pot"], key=lambda x: x[4])])
 hp += "## KPIs\nActive compliant brokers; productive brokers; qualified referrals; referral-to-subscription conversion; capital per broker; cost of acquisition; time-to-subscribe; complaints & breaches; clawbacks; net fee yield.\n"
-F[f"{f05}/Honey_Pot_Business_Case_and_Budget_v5.md"] = hp
-F[f"{f05}/Honey_Pot_Broker_Commission_Schedule_v5.csv"] = to_csv([["Product", "Mix of capital", "Placement fee % of capital", "Broker share of fee", "Broker commission % of capital", "Honey Pot retained % of capital", "Condition"]] +
+F[f"{f05}/Honey_Pot_Business_Case_and_Budget_v6.md"] = hp
+F[f"{f05}/Honey_Pot_Broker_Commission_Schedule_v6.csv"] = to_csv([["Product", "Mix of capital", "Placement fee % of capital", "Broker share of fee", "Broker commission % of capital", "Honey Pot retained % of capital", "Condition"]] +
                                                                 [[p, mx, f, 0.6, round(f * 0.6, 4), round(f * 0.4, 4), "Cleared & accepted subscriptions only; clawback on refund"] for p, mx, f in [("Property trusts", 0.45, 0.03), ("Private credit", 0.25, 0.015), ("PE / pre-IPO", 0.2, 0.05), ("ASX placements / IPO", 0.1, 0.04)]])
 
 # =====================================================================  06 BHIVE
 f06 = "06 - BHive - Wallet & Secondary Market"
-bh = HDR("BHive - Build Plan & Budget - Version 5", f06)
-bpl = {k: annual("P&L BHive", l) for k, l in [("plat", "Platform administration fees"), ("offer", "Offer onboarding fees"), ("sec", "Secondary transaction fees"), ("ext", "External revenue"), ("ic", "Intercompany revenue"),
+bh = HDR("BHive - Build Plan & Budget - Version 6", f06)
+bpl = {k: annual("P&L BHive", l) for k, l in [("plat", "Technology / platform fees"), ("offer", "Offer onboarding fees"), ("sec", "Exchange fees"), ("bb", "Buy-back resale gains"), ("ext", "External revenue"), ("ic", "Intercompany revenue"),
                                               ("cogs", "Total cost of sales"), ("staff", "Salaries, superannuation & on-costs"), ("opex", "TOTAL OPERATING EXPENSES"), ("ebitda", "EBITDA"), ("rd", "Other income - R&D tax incentive (accrued)"), ("capex", "Memo: capitalised set-up spend")]}
 bh += "Requirements remain as in *Product & Technical Requirements v1*. This adds the build sequence, vendor stack, budget, team and platform economics.\n\n## Build sequence and cost\n"
 bh += md_table(["Item", "Cost", "Months", "Treatment"], [[x[2], money(x[3]), f"{int(x[4])}-{int(x[4])+int(x[5])-1}" if x[5] > 1 else int(x[4]), x[6]] for x in D["setup_items"] if x[0] == "BHive"])
@@ -318,19 +323,22 @@ bh += f"**Total BHive set-up: {money(D['setup_ent']['BHive'])}** (capex amortise
 bh += ("## Release plan\n- **MVP (months 3-8):** onboarding, KYC/AML, wholesale verification, offers & data room, e-sign subscriptions, registry reconciliation, wallet/portfolio, broker portal, admin portal\n"
        "- **Launch (month 7):** live with first offers; platform support + AI tier-1 agent\n- **Months 10-18:** secondary engine (listings, order book, transfer & settlement workflow), operator integration, mobile apps, SOC 2 Type I\n"
        "- **Month 19:** secondary market activated with licensed operator (40% fee share + $15k/month)\n- **Months 25-30:** tokenised register pilot only after legal register opinion\n\n## Platform P&L (incl. intercompany licence income)\n")
-bh += md_table(["$"] + YRS, [["Platform admin fees"] + [money(v) for v in bpl["plat"]], ["Offer onboarding fees"] + [money(v) for v in bpl["offer"]], ["Secondary transaction fees"] + [money(v) for v in bpl["sec"]],
+bh += md_table(["$"] + YRS, [["Technology fees (0.5% p.a.)"] + [money(v) for v in bpl["plat"]], ["Offer onboarding fees"] + [money(v) for v in bpl["offer"]], ["Exchange fees (0.25%)"] + [money(v) for v in bpl["sec"]], ["Buy-back resale gains"] + [money(v) for v in bpl["bb"]],
                              ["Intercompany licence income"] + [money(v) for v in bpl["ic"]], ["Operator share (cost of sales)"] + [money(-v) for v in bpl["cogs"]], ["Staff costs"] + [money(-v) for v in bpl["staff"]],
                              ["Total operating expenses"] + [money(-v) for v in bpl["opex"]], ["EBITDA"] + [money(v) for v in bpl["ebitda"]], ["R&D tax incentive (accrued)"] + [money(v) for v in bpl["rd"]],
                              ["Capitalised build"] + [money(v) for v in bpl["capex"]], ["Value traded on secondary market"] + [money(v) for v in D["trade"]], ["Investors on platform"] + [f"{v:,.0f}" for v in D["inv"]]])
 bh += "## Running costs\n" + md_table(["Item", "Rate / driver", "2027", "2029", "2031"], [[o[2], f"${o[3]:,.2f} {o[4]}" if o[3] < 10 else f"${o[3]:,.0f} {o[4]}", money(o[7]), money(o[9]), money(o[11])] for o in D["opex_items"] if o[0] == "BHive"])
 bh += "## Team\n" + md_table(["Role", "Type", "Start month", "FTE", "Base salary"], [[r[2], r[3], int(r[4]), f"{r[5]:.1f}", money(r[6])] for r in sorted([x for x in D["roles"] if x[0] == "BHive"], key=lambda x: x[4])])
 bh += ("## Vendor stack to procure (RFP list)\nBuild partner; AWS Sydney; identity/KYC/AML provider; e-signature; CRM (shared with Honey Pot); fund administrator & registry; banking/payment reconciliation; document vault; MDR/SIEM security; penetration tester; SOC 2 auditor; licensed market operator; AI support agent tooling.\n\n"
-       "## Not in scope\nBHive Coin, BHive Card, token lending, guaranteed buy-back ladder, retail access (all from the July 2026 BHive Capital pack) - excluded until separate legal and business cases.\n")
-F[f"{f06}/BHive_Build_Plan_and_Budget_v5.md"] = bh
+       "## Buy-back facility (kept from BHive and B-Catcher)\nProperty tokens: BHive exit ladder - buy-back at 25% (year 3), 15% (year 4) and 10% (year 5) below independent valuation. Trust units (PE / pre-IPO): UTEGBO windows at 15% (year 1), 10% (year 2) and 8% (year 4). The group buys exercised units, resells them through BHive / Honey Pot at valuation within ~3 months, and holds a cash reserve of 2% of eligible AUM. Model assumes 4% of eligible holdings exercise each year (8% Downside).\n\n"
+       + md_table(["$"] + YRS, [["Units bought back (valuation)"] + [money(v) for v in D["bbnav"]], ["Resale gains"] + [money(v) for v in D["rbb"]], ["Units held for resale (year end)"] + [money(v) for v in D["bbinv"]], ["Cash reserve required (year end)"] + [money(v) for v in D["bbres"]]])
+       + "Requires a legal and capital-adequacy opinion before launch ($40k in set-up).\n\n"
+       "## Not in scope\nBHive Coin, BHive Card, token lending, retail access (all from the July 2026 BHive Capital pack) - excluded until separate legal and business cases.\n")
+F[f"{f06}/BHive_Build_Plan_and_Budget_v6.md"] = bh
 
 # =====================================================================  07 INVESTOR
 f07 = "07 - Investor Deck & Capital Raise"
-cr = HDR("Capital Raise Summary - Version 5", f07)
+cr = HDR("Capital Raise Summary - Version 6", f07)
 cr += f"## The ask\n**{mm(rounds[0][1])} Seed** to build, license and launch - part of a **{mm(km['raised'])}** milestone-gated plan.\n\n"
 cr += md_table(["Round", "Amount", "Close", "Pre-money", "Post-round %", "Milestones funded"], [
     [rounds[0][0], money(rounds[0][1]), "Month 1 (Jan 2027)", money(rounds[0][2]), f"{rounds[0][3]*100:.1f}%", "Platform build, licensee & trustee, first 3 offers, wholesale launch month 7"],
@@ -340,11 +348,11 @@ cr += "## Use of funds - first 24 months\n" + md_table(["Use", "Amount"], [[u, m
 cr += "## Illustrative returns (end of year 5)\n" + md_table(["Investor", "Invested", "MOIC", "IRR"], [[n, money(a), f"{x:.1f}x", f"{y*100:.0f}%"] for n, a, x, y in D["returns"] if a])
 cr += (f"Exit basis: Q4 2031 annualised revenue {mm(D['exit']['rev_rr'])} and EBITDA {mm(D['exit']['ebitda_rr'])}; equity value {mm(D['exit']['eq'])} (average of 12x EBITDA and 5x revenue, plus cash). Illustrative only; ESOP and later rounds not modelled.\n\n"
        "## Evidence still required before external circulation (from Content Brief)\n- Verified market sizing and competitors\n- Final legal names, ownership and merger ratio\n- Legal opinions on AFSL / market pathway\n- Signed issuer pipeline and broker letters of intent\n- Supplier quotes replacing model estimates\n- Founder and team bios\n- Independent review of the model and raise terms\n")
-F[f"{f07}/Capital_Raise_Summary_v5.md"] = cr
+F[f"{f07}/Capital_Raise_Summary_v6.md"] = cr
 # slide script from pptx
 from pptx import Presentation
-prs = Presentation(os.path.join(os.path.dirname(MODEL), "BCatcher_Group_Investor_Deck_v5.pptx"))
-ss = HDR("Investor Deck v5 - Slide Script", f07) + "Text of every slide in `BCatcher_Group_Investor_Deck_v5.pptx` (upload the .pptx to this folder). Chart data is listed under each slide.\n\n"
+prs = Presentation(os.path.join(os.path.dirname(MODEL), "BCatcher_Group_Investor_Deck_v6.pptx"))
+ss = HDR("Investor Deck v6 - Slide Script", f07) + "Text of every slide in `BCatcher_Group_Investor_Deck_v6.pptx` (upload the .pptx to this folder). Chart data is listed under each slide.\n\n"
 for i, slide in enumerate(prs.slides, 1):
     texts, charts = [], []
     for shp in slide.shapes:
@@ -358,20 +366,20 @@ for i, slide in enumerate(prs.slides, 1):
             for row in shp.table.rows:
                 texts.append(" | ".join(c.text.replace("\n", " ") for c in row.cells))
     ss += f"## Slide {i}: {texts[0] if texts else ''}\n" + "".join(f"- {t}\n" for t in texts[1:] if "Confidential planning document  |" not in t) + "".join(f"- *Chart* {c}\n" for c in charts) + "\n"
-F[f"{f07}/Investor_Deck_v5_Slide_Script.md"] = ss
+F[f"{f07}/Investor_Deck_v6_Slide_Script.md"] = ss
 
 # =====================================================================  08 ARCHIVE
 f08 = "08 - Historical Reference Documents"
 ar = HDR("Archive Index - what was carried forward", f08)
-ar += md_table(["Document", "Origin", "Carried into v5", "Excluded / not relied on"], [
+ar += md_table(["Document", "Origin", "Carried into v6", "Excluded / not relied on"], [
     ["B-Catcher-9.pdf, B-Catcher 2.0.pdf", "B-Catcher 2025 investor memorandum", "Group name, tokenised RWA concept, wallet concept, governance intent", "DOGE mining (5.4 MW), Moonshot lottery, blockchain insurance, THORChain treasury, $100m valuation"],
-    ["UTEGBO term sheets (Mac Archive / Deals / Crypto)", "B-Catcher 2025", "PE / pre-IPO unit trust with buy-back windows as a product template ($40k structuring)", "Any guaranteed buy-back without funded, contracted support"],
-    ["BHive Capital Finance Model.xlsx / Platform Forecast", "BHive July 2026", "Fee types (entry, management, technology, exchange), investor tiers as reference", "$731m AUM, $24.5m revenue, 15x valuation; lending, BHive Coin revenue"],
-    ["BHive Capital Executive Summary / IM / Legal Brief / Token Architecture / Retail Structure", "BHive July 2026", "Single platform concept, ERC-1400 as candidate design, CAR under licensee route, RE takes ~1/3 of mgmt fee benchmark, AI-native operating model", "Retail from day one, guaranteed exit ladder, BHive Card/Coin, token lending"],
+    ["UTEGBO term sheets (Mac Archive / Deals / Crypto)", "B-Catcher 2025", "PE / pre-IPO unit trust with buy-back windows (15% / 10% / 8%) - kept, with a funded reserve", "-"],
+    ["BHive Capital Finance Model.xlsx / Platform Forecast", "BHive July 2026", "Fee schedule adopted in full (entry, management, technology, exchange); investor tiers as reference", "$731m AUM, $24.5m revenue, 15x valuation; lending, BHive Coin revenue"],
+    ["BHive Capital Executive Summary / IM / Legal Brief / Token Architecture / Retail Structure", "BHive July 2026", "Single platform, ERC-1400 tokens, CAR route, full investor fee schedule (1.5% entry, 1.25% management, 0.5% technology, 0.25% exchange), exit ladder (25% / 15% / 10%), AI-native operating model", "Retail from day one, BHive Card/Coin, token lending"],
     ["BCatcher_Group_Operational_Business_Plan_v2.docx", "Nov 2026", "Entity boundaries, broker categories, stress tests, launch gates", "-"],
-    ["BCatcher_Rebuilt_Investor_Deck_2026.pptx", "Nov 2026", "Slide sequence", "Superseded by Investor Deck v5"]])
+    ["BCatcher_Rebuilt_Investor_Deck_2026.pptx", "Nov 2026", "Slide sequence", "Superseded by Investor Deck v6"]])
 ar += "Originals are unchanged. Legacy shareholder positions in B-Catcher and BHive Capital Pty Ltd must be reconciled into the group cap table (placeholder 10,000,000 founder shares).\n"
-F[f"{f08}/00 - Archive Index v5.md"] = ar
+F[f"{f08}/00 - Archive Index v6.md"] = ar
 
 os.makedirs(OUTDIR, exist_ok=True)
 for rel, content in F.items():

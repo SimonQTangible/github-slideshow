@@ -1,6 +1,6 @@
-# Legal, Licensing & Corporate Workplan and Budget - Version 5
+# Legal, Licensing & Corporate Workplan and Budget - Version 6
 
-**B-Catcher Group** | 02 - Corporate Structure & Legal | Version 5.0 | 23 November 2026  
+**B-Catcher Group** | 02 - Corporate Structure & Legal | Version 6.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Costs and timing for every legal, licensing and regulatory workstream. Regulatory scope remains as in *Corporate & Regulatory Implementation v1*; this document adds owners, months and money.
@@ -13,6 +13,7 @@ Costs and timing for every legal, licensing and regulatory workstream. Regulator
 | B-Catcher | Corporate & Legal Structure | Shareholders' agreement, constitution, ESOP plan | $40,000 | 2-3 |
 | B-Catcher | Corporate & Legal Structure | Group tax structuring (trusts, GST, transfer pricing, R&D) | $35,000 | 2-3 |
 | B-Catcher | Licensing & Regulatory | Financial services perimeter opinion (AFSL, MIS, market, credit, AML) | $90,000 | 1-3 |
+| B-Catcher | Licensing & Regulatory | Buy-back facility legal & capital-adequacy opinion (property tokens & trust units) | $40,000 | 3-5 |
 | B-Catcher | Product & Investment Structuring | Property trust deed & IM template (wholesale unit trust) | $45,000 | 3-5 |
 | B-Catcher | Product & Investment Structuring | Private credit fund IM, loan & security templates | $45,000 | 4-6 |
 | B-Catcher | Product & Investment Structuring | PE / pre-IPO unit trust with buy-back option deed (UTEGBO) | $40,000 | 4-6 |
@@ -34,11 +35,13 @@ Costs and timing for every legal, licensing and regulatory workstream. Regulator
 | BHive | Security & Certification | SOC 2 Type I readiness & audit | $70,000 | 10-15 |
 | BHive | Security & Certification | Secondary market pen test & surveillance validation | $50,000 | 18 |
 
-**Total legal, licensing, structuring, security & raise set-up: $1,240,000**
+**Total legal, licensing, structuring, security & raise set-up: $1,280,000**
 
 ## Recurring regulatory, legal & governance costs
 | Entity | Item | Rate | Start month | 2027 | 2031 |
 |---|---|---|---|---|---|
+| B-Catcher | Outsourced bookkeeping, fund & commission accounting | $6,000 (Fixed $/month) | 7 | $36,000 | $81,037 |
+| B-Catcher | Outsourced accounting - volume | $1 ($/investor/month) | 7 | $104 | $36,692 |
 | B-Catcher | Independent Chair fee | $7,500 (Fixed $/month) | 1 | $90,000 | $101,296 |
 | B-Catcher | Two independent non-executive directors | $10,000 (Fixed $/month) | 13 | - | $135,061 |
 | B-Catcher | Independent investment committee member | $2,500 (Fixed $/month) | 7 | $15,000 | $33,765 |
@@ -58,6 +61,7 @@ Costs and timing for every legal, licensing and regulatory workstream. Regulator
 | Honey Pot | Professional indemnity insurance (AFSL) | $4,500 (Fixed $/month) | 7 | $27,000 | $60,777 |
 | Honey Pot | PI uplift with distribution volume | 0.02% of capital | 7 | $1,458 | $58,000 |
 | Honey Pot | Distribution legal (offer & marketing reviews) | $5,000 (Fixed $/month) | 7 | $30,000 | $67,531 |
+| B-Catcher | AI compliance monitoring (AML, communications, breach register) | $2,000 (Fixed $/month) | 7 | $12,000 | $27,012 |
 | BHive | Market-operator partner fixed platform fee | $15,000 (Fixed $/month) | 19 | - | $202,592 |
 | BHive | Market surveillance tooling & transaction reporting | $3,000 (Fixed $/month) | 19 | - | $40,518 |
 | BHive | Cyber liability insurance | $3,000 (Fixed $/month) | 7 | $18,000 | $40,518 |

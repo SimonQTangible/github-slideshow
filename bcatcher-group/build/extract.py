@@ -16,7 +16,7 @@ for k,l in [("cap","Capital placed through BHive"),("aum","Managed AUM - year en
             ("opex","Total operating expenses"),("ebitda","EBITDA"),("npat","NET PROFIT AFTER TAX"),("cash","Closing cash - year end"),
             ("fte","FTE - GROUP (year end)"),("fte_bc","FTE - B-Catcher (year end)"),("fte_hp","FTE - Honey Pot (year end)"),("fte_bh","FTE - BHive (year end)"),
             ("eb_bc","B-Catcher"),("eb_hp","Honey Pot"),("eb_bh","BHive"),("cogs","Cost of sales (broker commissions, partner share, fund admin)"),
-            ("setup","Set-up & launch costs (expensed)"),("capex","Capital expenditure"),("trade","Secondary market value traded")]:
+            ("setup","Set-up & launch costs (expensed)"),("rbb","BHive - buy-back resale gains"),("bbnav","Units bought back under buy-back facility (at valuation)"),("bbinv","Bought-back units held for resale - year end"),("bbres","Buy-back liquidity reserve required - year end"),("capex","Capital expenditure"),("trade","Secondary market value traded")]:
     D[k] = yrs(l)
 D["cats"] = {}
 from data_cats import CATS

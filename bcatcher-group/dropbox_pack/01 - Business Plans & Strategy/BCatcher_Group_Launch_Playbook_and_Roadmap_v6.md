@@ -1,6 +1,6 @@
-# Launch Playbook & Execution Roadmap - Version 5
+# Launch Playbook & Execution Roadmap - Version 6
 
-**B-Catcher Group** | 01 - Business Plans & Strategy | Version 5.0 | 23 November 2026  
+**B-Catcher Group** | 01 - Business Plans & Strategy | Version 6.0 | 23 November 2026  
 Confidential planning document. All figures are AUD Base-case planning assumptions from *BCatcher_Group_Integrated_Financial_Model.xlsx*. Not an offer or financial advice.
 
 Month 1 = January 2027. Costs are from the model's set-up and opex registers. The full formatted version is `BCatcher_Group_Launch_Playbook_and_Budget_Book.docx`.
@@ -21,37 +21,37 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Perimeter opinion: AFSL, MIS, market, credit, AML | External counsel | 1-3 | $90,000 |
 | Licensing route decision | Board | 3 | - |
 | Brand identity (3 brands) | Marketing | 2-3 | $65,000 |
-| BHive discovery & architecture; build partner RFP | Head of Product & Delivery | 2-3 | $95,000 |
-| Cloud landing zone | Head of Product & Delivery | 2 | $15,000 |
+| BHive discovery & architecture; build partner RFP | Product owner + build partner | 2-3 | $95,000 |
+| Cloud landing zone | Product owner + build partner | 2 | $15,000 |
 
 ## Phase 2 - Counterparties, products & build (months 3-6) - Gates 3-4
 | Step | Owner | Month | Cost |
 |---|---|---|---|
 | Trustee/RE/custodian; fund admin & registry | CEO/CIO / Fractional CFO | 5-6 | $30,000 |
 | Trust deed & IM templates (property, credit, PE/UTEGBO) | CEO/CIO / counsel | 3-6 | $130,000 |
-| Due diligence on first 3 offers | Investment Director | 4-6 | $105,000 |
+| Due diligence on first 3 offers | CEO/CIO + outsourced analysts | 4-6 | $105,000 |
 | CAR appointment | Head of Distribution | 4 | $25,000 + $12k/month |
-| Compliance framework; AML/CTF program | Head of Risk & Compliance | 3-6 | $100,000 |
+| Compliance framework; AML/CTF program | Head of Risk, Compliance & Ops | 3-6 | $100,000 |
 | Broker agreements; CRM & commission system; LMS | Honey Pot | 3-6 | $155,000 |
-| BHive MVP (3 portals + wallet) and integrations | Head of Product & Delivery | 3-8 | $635,000 |
+| BHive MVP (3 portals + wallet) and integrations | Product owner + build partner | 3-8 | $635,000 |
 | Privacy assessment; pre-launch pen test | vCISO + build partner | 5-6 | $65,000 |
-| Launch campaign & broker roadshow | Head of Distribution & Marketing | 6-8 | $105,000 |
+| Launch campaign & broker roadshow | Head of Distribution | 6-8 | $105,000 |
 
 ## Phase 3 - Wholesale launch (month 7) - Gate 5
 | Step | Owner | Month | Cost |
 |---|---|---|---|
 | First offers live to verified wholesale investors | CEO/CIO / Head of Distribution | 7 | - |
 | Accredit first brokers | Head of Distribution | 7+ | $1,500 per broker |
-| First reconciled subscriptions & reports | Finance & Operations Manager | 7-9 | - |
+| First reconciled subscriptions & reports | Head of Risk & Ops + outsourced accountants | 7-9 | - |
 | Insurance in force (PI, cyber, D&O, tech E&O) | Fractional CFO | 7 | ~$11k/month |
 
 ## Phase 4 - Series A & scale (months 10-18)
 | Step | Owner | Month | Cost |
 |---|---|---|---|
-| Close Series A | CEO | 10 | $7,500,000 |
-| Own AFSL application | Head of Risk & Compliance | 13-20 | $150,000 |
-| Market-operator route & legal | Head of Product & Delivery | 13-18 | $120,000 |
-| Secondary engine, operator integration, mobile apps | Head of Product & Delivery | 10-18 | $590,000 |
+| Close Series A | CEO | 10 | $7,000,000 |
+| Own AFSL application | Head of Risk, Compliance & Ops | 13-20 | $150,000 |
+| Market-operator route & legal | Product owner + build partner | 13-18 | $120,000 |
+| Secondary engine, operator integration, mobile apps | Product owner + build partner | 10-18 | $590,000 |
 | SOC 2 Type I | vCISO | 10-15 | $70,000 |
 | Month-18 pivot gate | Board | 18 | - |
 
@@ -59,16 +59,16 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Step | Owner | Month | Cost |
 |---|---|---|---|
 | Secondary market pen test & surveillance validation | vCISO | 18 | $50,000 |
-| Activate secondary market with licensed operator | Head of Product & Delivery | 19 | $15k/month + 40% fee share |
+| Activate secondary market with licensed operator | Product owner + build partner | 19 | $15k/month + 40% fee share |
 | Own AFSL granted; exit CAR | Head of Distribution | 24-25 | ASIC levy $2.5k/month |
-| Token legal opinion; tokenised register pilot | Head of Product / counsel | 22-30 | $130,000 |
-| Hire CTO and second engineer (if gate passed) | CEO | 25 | headcount plan |
+| Token legal opinion; tokenised register pilot | Product owner / counsel | 22-30 | $130,000 |
+| Expand build-partner retainer (no in-house engineers) | Product owner + build partner | 25 | $32k/month |
 
 ## Phase 6 - Scale (months 31-60) - Gate 7: new products approved separately
 | Step | Owner | Month | Cost |
 |---|---|---|---|
-| BDM #3 (m37) and BDM #4 (m49) | Head of Distribution | 37-49 | headcount plan |
-| Asset manager (m37); year-5 specialists | CEO / Head of Risk | 37-49 | headcount plan |
+| Commission-only regional BDMs (VIC/QLD, WA/SA, family office) | Head of Distribution | 13-49 | 0.20% commission pool |
+| Capacity review: scale outsourced providers; hire only if they cannot hold service levels | CEO / Board | 37-49 | - |
 | Retail, payments, lending: separate business cases | Board | - | not modelled |
 
 ## Monthly KPI targets (year end, Base)
@@ -78,7 +78,7 @@ Month 1 = January 2027. Costs are from the model's set-up and opex registers. Th
 | Managed AUM | $6.45m | $48.89m | $140.41m | $293.47m | $513.63m |
 | Investors | 49 | 382 | 1,132 | 2,432 | 4,365 |
 | Brokers | 12 | 42 | 80 | 120 | 160 |
-| Revenue | $0.40m | $2.95m | $7.23m | $13.47m | $21.39m |
-| EBITDA | ($4.89m) | ($3.76m) | ($1.26m) | $2.46m | $7.03m |
-| Cash | $6.76m | $2.75m | $1.53m | $4.22m | $11.64m |
+| Revenue | $0.38m | $2.84m | $7.15m | $13.85m | $22.47m |
+| EBITDA | ($4.08m) | ($2.77m) | $0.47m | $5.29m | $11.82m |
+| Cash | $6.60m | $3.48m | $3.27m | $7.77m | $15.96m |
 

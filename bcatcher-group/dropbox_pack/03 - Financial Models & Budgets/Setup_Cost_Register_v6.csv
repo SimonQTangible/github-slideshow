@@ -4,6 +4,7 @@ B-Catcher,Corporate & Legal Structure,"Group restructure: legacy B-Catcher & BHi
 B-Catcher,Corporate & Legal Structure,"Shareholders' agreement, constitution, ESOP plan",40000,2,2,Opex
 B-Catcher,Corporate & Legal Structure,"Group tax structuring (trusts, GST, transfer pricing, R&D)",35000,2,2,Opex
 B-Catcher,Licensing & Regulatory,"Financial services perimeter opinion (AFSL, MIS, market, credit, AML)",90000,1,3,Opex
+B-Catcher,Licensing & Regulatory,Buy-back facility legal & capital-adequacy opinion (property tokens & trust units),40000,3,3,Opex
 B-Catcher,Product & Investment Structuring,Property trust deed & IM template (wholesale unit trust),45000,3,3,Opex
 B-Catcher,Product & Investment Structuring,"Private credit fund IM, loan & security templates",45000,4,3,Opex
 B-Catcher,Product & Investment Structuring,PE / pre-IPO unit trust with buy-back option deed (UTEGBO),40000,4,3,Opex
@@ -43,5 +44,5 @@ BHive,Security & Certification,Privacy impact assessment & data processing agree
 BHive,Security & Certification,SOC 2 Type I readiness & audit,70000,10,6,Opex
 BHive,Security & Certification,Secondary market pen test & surveillance validation,50000,18,1,Opex
 BHive,Technology Build (Capitalised),"Cloud landing zone, environments, domains & app store accounts",15000,2,1,Capex
-B-Catcher,Contingency,Set-up contingency (on all lines above),303500,1,12,Opex
-TOTAL,,,3338500
+B-Catcher,Contingency,Set-up contingency (on all lines above),307500,1,12,Opex
+TOTAL,,,3382500

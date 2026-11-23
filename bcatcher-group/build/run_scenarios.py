@@ -17,7 +17,6 @@ CASES = [
     ("Stress: 6-month broker ramp delay", "Base", {"BrokerDelay": 6}),
     ("Stress: 25% technology build overrun", "Base", {"DevOverrun": 0.25}),
     ("Combined: Downside + 6-month delay", "Downside", {"LaunchDelay": 6}),
-    ("Downside + mitigation (defer post-launch hires 18 mths)", "Downside", {"HireDeferral": 18}),
 ]
 METRICS = [
     ("5-yr capital placed", ("AR", "cap", "G"), "money"),

@@ -29,12 +29,12 @@ Active accredited brokers - end op. year 4,140,brokers,140,70,200,
 Active accredited brokers - end op. year 5,180,brokers,180,90,250,
 Broker churn (replaced each year),0.15,% p.a.,0.15,0.2,0.1,Drives onboarding cost of replacement brokers.
 B-CATCHER - INVESTMENT & ASSET MANAGEMENT ECONOMICS,,,,,,
-Property trust gearing (debt / gross asset value),0.45,%,0.45,0.4,0.5,"Typical wholesale property syndicate LVR 40-50%. Debt sits in the trust, not the group."
-Property acquisition fee,0.015,% of purchase price (GAV),0.015,0.01,0.02,"Market standard 1-2% of purchase price, paid by trust on settlement."
-Structuring / establishment fee - credit & PE products,0.01,% of capital,0.01,0.0075,0.0125,Charged to fund/SPV (not ASX placements).
-Management fee - property (on gross asset value),0.0065,% GAV p.a.,0.0065,0.0055,0.007,Wholesale property trusts 0.5-0.85% of GAV; trustee/custody fees borne separately by trust.
+Property trust gearing (debt / gross asset value),0.45,%,0.45,0.4,0.5,"Memo only (gross asset value); fees follow BHive schedule on equity AUM. Debt sits in the trust, not the group."
+Property entry fee (BHive schedule),0.015,% of equity raised,0.015,0.01,0.02,BHive Capital Finance Model: entry fee 1.5% of new AUM at each property class launch.
+Entry fee - credit & PE products (BHive schedule),0.015,% of capital,0.015,0.01,0.015,BHive entry fee 1.5% applied to all B-Catcher products (not ASX placements).
+Management fee - property (BHive schedule),0.0125,% AUM p.a.,0.0125,0.01,0.0125,BHive Capital Finance Model: 1.25% p.a. on average AUM. Trustee/custody fees borne separately by the trust.
 Net management fee - private credit,0.01,% AUM p.a.,0.01,0.0085,0.011,
-Net management fee - private equity,0.015,% AUM p.a.,0.015,0.0125,0.0175,BHive BPPF 1.5-2.0%.
+Net management fee - private equity,0.015,% AUM p.a.,0.015,0.0125,0.0175,BHive Private Property Fund 1.5-2.0% p.a.
 Property equity AUM revaluation growth,0.03,% p.a.,0.03,0,0.04,BHive model used 5%; reduced.
 PE AUM revaluation growth,0.05,% p.a.,0.05,0,0.08,
 Property AUM run-off (sales/redemptions),0.05,% p.a.,0.05,0.08,0.04,
@@ -42,13 +42,22 @@ Private credit run-off (loan repayments),0.4,% p.a.,0.4,0.5,0.35,Avg loan term ~
 PE AUM run-off (exits / buy-backs),0.1,% p.a.,0.1,0.12,0.08,UTEGBO buy-back windows yr1/2/4.
 Fund administration borne by manager,0.0005,% AUM p.a.,0.0005,0.0006,0.0004,"Trust-level costs (RE, custody, valuations, trust audit) are borne by the vehicles, not the group."
 BHIVE - PLATFORM & MARKETPLACE ECONOMICS,,,,,,
-Platform administration fee (charged to issuers/trusts),0.003,% AUM p.a.,0.003,0.002,0.0035,BHive model used 0.5%. Australian platforms charge ~0.25-0.5% admin.
+Technology / platform fee (BHive schedule),0.005,% AUM p.a.,0.005,0.0035,0.005,BHive Capital Finance Model: technology fee 0.5% p.a. on average AUM.
 Average offer size,5000000,$,5000000,5000000,5000000,Drives number of offers onboarded.
 "Offer onboarding fee (data room, workflows, registry set-up)",20000,$ per offer,20000,12500,25000,"Prior model $7,500 issuer fee; covers data room, workflows, registry set-up, investor reporting."
-Secondary market turnover,0.08,% of AUM p.a.,0.08,0.04,0.12,BHive model assumed 15%.
-Secondary transaction fee (buyer + seller combined),0.01,% of value,0.01,0.008,0.012,
+Secondary market turnover,0.15,% of AUM p.a.,0.15,0.08,0.2,BHive Capital Finance Model: 15% of average AUM traded per year.
+Exchange fee per trade (BHive schedule),0.0025,% of value,0.0025,0.002,0.003,BHive Capital Finance Model: 0.25% per trade.
 Licensed market-operator partner share,0.4,% of fee,0.4,0.5,0.35,Partner route avoids BHive holding its own market licence.
 Turnover achieved in first 12 months live,0.5,% of run-rate,0.5,0.35,0.6,
+BUY-BACK FACILITY (BHive exit ladder for property tokens; UTEGBO windows for trust units),,,,,,
+Holdings exercising buy-back each year,0.04,% of eligible AUM p.a.,0.04,0.08,0.02,Assumption; most holders keep units or use the secondary market first.
+Buy-back discount - property tokens (blended ladder),0.15,% below valuation,0.15,0.1,0.15,"BHive exit ladder: 25% (yr 3), 15% (yr 4), 10% (yr 5) below independent valuation."
+Buy-back discount - PE / pre-IPO trust units (blended),0.1,% below valuation,0.1,0.08,0.1,"B-Catcher UTEGBO term sheet: 15% (yr 1), 10% (yr 2), 8% (yr 4)."
+Trust-unit buy-back available from operating month,13,op. month,13,13,13,UTEGBO first window at end of year 1.
+Property-token buy-back available from operating month,25,op. month,25,25,25,Ladder from year 3 of holding; first cohorts eligible from operating year 3.
+Months to resell bought-back units,3,months,3,6,2,Resold via BHive secondary market / Honey Pot at valuation.
+"Resale costs (placement, transfer, valuation)",0.015,% of value,0.015,0.025,0.01,
+Buy-back liquidity reserve held in cash,0.02,% of eligible AUM,0.02,0.03,0.015,Held on top of the minimum cash buffer so the promise is funded.
 INTERCOMPANY CHARGES (eliminated on consolidation),,,,,,
 B-Catcher shared-services fee charged to Honey Pot,25000,$ / month,25000,25000,25000,"Finance, compliance, office, executive. From month 3."
 B-Catcher shared-services fee charged to BHive,25000,$ / month,25000,25000,25000,From month 1.
@@ -79,10 +88,10 @@ Months until R&D refund received,12,months,12,12,12,
 Minimum cash buffer (regulatory capital + safety),750000,$,750000,750000,750000,AFSL financial requirements + 3 months fixed costs.
 CORPORATE FUNDING (equity into B-Catcher Group),,,,,,
 "Existing shares (B-Catcher + BHive founders, merged)",10000000,shares,10000000,10000000,10000000,Merger ratio between legacy B-Catcher and BHive holders TO BE CONFIRMED.
-Seed round amount,5500000,$,5500000,5500000,5500000,"Funds build, licensing and launch to month 9 with the lean team."
+Seed round amount,5000000,$,5000000,5000000,5000000,"Funds build, licensing and launch to month 9 with the 3-person core team."
 Seed round close,1,model month,1,1,1,
 Seed pre-money valuation,18000000,$,18000000,18000000,18000000,BHive prior Series A pitch: $10.5m pre.
-Series A amount,7500000,$,7500000,7500000,7500000,"Milestones: licences in place, platform live, first subscriptions, signed pipeline."
+Series A amount,7000000,$,7000000,7000000,7000000,"Milestones: licences in place, platform live, first subscriptions, signed pipeline."
 Series A close,10,model month,10,10,10,Three months after launch.
 Series A pre-money valuation,40000000,$,40000000,40000000,40000000,
 Series B / growth round amount (0 = none),0,$,0,0,0,Not needed in Base with the lean team; use for Downside or faster expansion.
