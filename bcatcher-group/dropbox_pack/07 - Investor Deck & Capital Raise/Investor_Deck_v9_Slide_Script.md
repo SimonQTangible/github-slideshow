@@ -105,13 +105,13 @@ Text of every slide in `BCatcher_Group_Investor_Deck_v9.pptx` (upload the .pptx 
 ## Slide 10: What an investor keeps after every fee
 - Illustrative net return per year after all group fees (targets, not forecasts; capital at risk)
 - Per year, per $1 invested | Property - geared | Property - Debt-Free | Private credit | PE / pre-IPO
-- Gross return before group fees | 9.4% | 8.1% | 9.2% | 15.0%
+- Gross return before group fees | 10.3% | 8.6% | 9.2% | 15.0%
 - Ongoing group fees | 1.5% | 1.5% | 1.3% | 1.7%
 - Up-front fees, spread over the hold | 0.9% | 0.9% | 1.1% | 1.4%
-- Net return to investor | 7.0% | 5.7% | 6.9% | 11.9%
-- Share of gross return the investor keeps | 75% | 71% | 74% | 79%
-- $150k invested: year-1 net return | $10,574 | $8,610 | $10,275 | $17,835
-- Assumptions on the model's Investor Returns sheet: property net yield 5.5% of gross assets, 3% growth, 45% trust gearing at 6.5% (Debt-Free series has no gearing); credit 10% loan rate less 0.5% loss allowance; PE 15% gross target. Before personal tax. For comparison: Fundrise ~1% p.a. all-in; unlisted syndicates ~1-2% up-front + 0.6-1.0% of gross assets p.a.
+- Net return to investor | 8.0% | 6.2% | 6.9% | 11.9%
+- Share of gross return the investor keeps | 77% | 73% | 74% | 79%
+- $150k invested: year-1 net return | $11,937 | $9,360 | $10,275 | $17,835
+- Assumptions on the model's Investor Returns sheet: property rent 7% gross less 1% vacancy/outgoings, 3% growth, 45% trust gearing at 6.5% (Debt-Free series has no gearing); credit 10% loan rate less 0.5% loss allowance; PE 15% gross target. Before personal tax. For comparison: Fundrise ~1% p.a. all-in; unlisted syndicates ~1-2% up-front + 0.6-1.0% of gross assets p.a.
 
 ## Slide 11: Revenue shifts from one-off placement fees to recurring AUM fees
 - Group revenue grows to $16.0m in 2031 as managed AUM reaches $421m; Honey Pot falls from 61% to 43% of revenue

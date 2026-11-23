@@ -1182,7 +1182,7 @@ for col, h in zip("ABCDEF", hdrs):
 ir.row_dimensions[4].height = 30
 rows = [
     ("Gross asset exposure (GAV per $1 equity)", ["=1/(1-PropLVR)", "=1", "=1", "=1"], "dec2", "Geared trust borrows inside the trust; investor has no personal loan."),
-    ("Income: rent / interest earned", ["=IRPropYield*B5", "=IRPropYield*C5", "=IRCreditRate", "=0"], "pct", ""),
+    ("Income: net rent (7% gross less vacancy & outgoings) / interest", ["=(IRPropYield-IRPropOutgoings)*B5", "=(IRPropYield-IRPropOutgoings)*C5", "=IRCreditRate", "=0"], "pct", "Rent is received by the trust and paid to unit holders; it is not group revenue."),
     ("Less: interest on trust debt", ["=-IRPropDebtRate*(B5-1)", "=0", "=0", "=0"], "pct", "Debt-Free series carries no interest cost."),
     ("Less: trust-level costs / expected losses", ["=-IRPropTrustCost*B5", "=-IRPropTrustCost*C5", "=-(IRCreditLoss+IRCreditTrustCost)", "=0"], "pct", ""),
     ("Capital growth / gross return", ["=GrowthProp*B5", "=GrowthProp*C5", "=0", "=IRPEGross"], "pct", "PE is a high-risk target; outcomes range widely, including loss."),

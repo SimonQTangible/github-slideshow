@@ -92,7 +92,8 @@ INPUT_SECTIONS = [
     ("INVESTOR NET RETURNS (product level - disclosure; does not drive group P&L)", [
         ("IRHold", "Assumed investor holding period - property & PE", "years", 5, 5, 5, "Up-front fees spread over the hold.", "int"),
         ("IRHoldCredit", "Assumed investor holding period - private credit", "years", 3, 3, 3, "", "int"),
-        ("IRPropYield", "Property net rental yield on gross asset value", "% p.a.", 0.055, 0.050, 0.060, "Net of outgoings; commercial/residential blend.", "pct"),
+        ("IRPropYield", "Property gross rental yield on purchase price (rent received by the trust)", "% p.a.", 0.07, 0.065, 0.075, "v9.1: 7% gross rent (founder assumption) - suits commercial, industrial, medical/childcare and other leased assets; residential gross yields are typically 3-5%.", "pct"),
+        ("IRPropOutgoings", "Less: vacancy, letting and non-recoverable outgoings", "% of property value p.a.", 0.01, 0.015, 0.0075, "On net leases most outgoings are recovered from tenants; allowance for vacancy, letting fees and unrecovered costs.", "pct"),
         ("IRPropDebtRate", "Interest rate on trust debt (geared series)", "% p.a.", 0.065, 0.075, 0.060, "Debt sits in the trust, not with the investor.", "pct"),
         ("IRPropTrustCost", "Trust-level costs (trustee, custody, valuations, audit)", "% of GAV p.a.", 0.004, 0.005, 0.0035, "", "pct"),
         ("IRCreditRate", "Private credit: interest charged to borrowers", "% p.a.", 0.100, 0.095, 0.105, "Senior first-mortgage loans; all borrower fees passed through to investors (v8 policy).", "pct"),

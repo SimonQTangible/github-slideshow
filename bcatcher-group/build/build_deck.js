@@ -251,7 +251,7 @@ s = content("Economics", "What an investor keeps after every fee",
   const tb = [head, ...rowsIR.map(([l, vals], i) => [{ text: l, options: { bold: true, fontSize: 13, color: HEX.ink, fill: { color: i === 3 ? "FFF4D6" : (i % 2 ? HEX.white : HEX.mist) } } },
     ...vals.map(v => ({ text: v, options: { fontSize: 13, align: "center", bold: i === 3, color: HEX.ink, fill: { color: i === 3 ? "FFF4D6" : (i % 2 ? HEX.white : HEX.mist) } } }))])];
   s.addTable(tb, { x: 0.6, y: 1.85, w: 12.1, colW: [3.7, 2.1, 2.1, 2.1, 2.1], rowH: 0.55, border: { type: "solid", color: "D9DCE3", pt: 0.75 }, valign: "middle", objectName: "ir-table" });
-  s.addText("Assumptions on the model's Investor Returns sheet: property net yield 5.5% of gross assets, 3% growth, 45% trust gearing at 6.5% (Debt-Free series has no gearing); credit 10% loan rate less 0.5% loss allowance; PE 15% gross target. Before personal tax. For comparison: Fundrise ~1% p.a. all-in; unlisted syndicates ~1-2% up-front + 0.6-1.0% of gross assets p.a.",
+  s.addText("Assumptions on the model's Investor Returns sheet: property rent 7% gross less 1% vacancy/outgoings, 3% growth, 45% trust gearing at 6.5% (Debt-Free series has no gearing); credit 10% loan rate less 0.5% loss allowance; PE 15% gross target. Before personal tax. For comparison: Fundrise ~1% p.a. all-in; unlisted syndicates ~1-2% up-front + 0.6-1.0% of gross assets p.a.",
     { x: 0.6, y: 5.85, w: 12.1, h: 0.9, fontSize: 12, color: C.text2, margin: 0, valign: "top", isTextBox: true, objectName: "ir-note" });
 }
 
