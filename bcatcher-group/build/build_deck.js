@@ -188,6 +188,112 @@ steps.forEach((t, i) => {
 s.addText([{ text: "Who does what:  ", options: { bold: true } }, { text: "Honey Pot approves eligibility and offer access (steps 2-4); the issuer/RE accepts and allots (7); BHive displays and reconciles (8) and runs the order workflow with a licensed operator (9)." }],
   { x: 0.6, y: 6.25, w: 12.1, h: 0.55, fontSize: 13, color: C.text2, margin: 0, isTextBox: true, objectName: "j-note" });
 
+// 5b BHIVE APP MOCK-UP (illustrative screens)
+s = content("Business model", "What investors see: the BHive app",
+  "Illustrative mock-up of the wallet built up front at launch (month 7). Names and figures are examples only, not real offers");
+{
+  const PW = 2.5, PH = 4.45, PY = 1.72;
+  const PX = [1.05, 5.42, 9.78];
+  const exFee = D.inputs["Exchange fee per trade (BHive schedule)"];
+  const ir = D.ir, inv = 50000;
+  const upF = Math.round(-ir.upfront[1] * inv), onF = Math.round((-ir.mgmt[1] - ir.tech[1]) * inv);
+  const money = (v) => "$" + Math.round(v).toLocaleString("en-AU");
+  const T = (sl, t, x, y, w, h, o, n) => sl.addText(t, Object.assign({ x, y, w, h, margin: 0, isTextBox: true, valign: "middle", fontSize: 8, color: HEX.ink, objectName: n }, o));
+  function phone(i, name) {
+    const x = PX[i];
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x, y: PY, w: PW, h: PH, rectRadius: 0.22, fill: { color: HEX.ink }, line: { color: HEX.ink }, shadow: { type: "outer", blur: 6, offset: 3, angle: 90, color: "000000", opacity: 0.25 }, objectName: name + "-bezel" });
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: x + 0.1, y: PY + 0.12, w: PW - 0.2, h: PH - 0.24, rectRadius: 0.15, fill: { color: HEX.white }, line: { color: HEX.white }, objectName: name + "-screen" });
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: x + 0.1, y: PY + 0.12, w: PW - 0.2, h: 0.5, rectRadius: 0.15, fill: { color: HEX.navy }, line: { color: HEX.navy }, objectName: name + "-bar" });
+    s.addShape(pres.shapes.RECTANGLE, { x: x + 0.1, y: PY + 0.42, w: PW - 0.2, h: 0.2, fill: { color: HEX.navy }, line: { color: HEX.navy }, objectName: name + "-bar2" });
+    return { x0: x + 0.2, w: PW - 0.4, y0: PY + 0.12 };
+  }
+  function nav(i, active, name) {
+    const x = PX[i] + 0.1, y = PY + PH - 0.52, w = PW - 0.2;
+    s.addShape(pres.shapes.LINE, { x, y, w, h: 0, line: { color: "E3E5EA", width: 0.75 }, objectName: name + "-navline" });
+    ["Wallet", "Offers", "Market", "Profile"].forEach((t, k) => T(s, t, x + k * w / 4, y + 0.04, w / 4, 0.3, { align: "center", fontSize: 7, bold: k === active, color: k === active ? HEX.honey : HEX.grey }, name + "-nav" + k));
+  }
+  function caption(i, head, body, n) {
+    hexBadge(s, PX[i] - 0.45, 6.3, 0.38, HEX.honey, String(i + 1), HEX.ink, n + "-num");
+    s.addText([{ text: head + "  ", options: { bold: true, color: HEX.ink } }, { text: body, options: { color: HEX.slate } }],
+      { x: PX[i], y: 6.24, w: 3.35, h: 0.62, fontSize: 10.5, valign: "top", margin: 0, isTextBox: true, objectName: n + "-cap" });
+  }
+
+  // Screen 1 - wallet
+  let p = phone(0, "m1");
+  T(s, "BHive", p.x0, p.y0 + 0.08, 1.2, 0.34, { fontSize: 12, bold: true, color: HEX.honey }, "m1-logo");
+  s.addShape(pres.shapes.HEXAGON, { x: p.x0 + p.w - 0.3, y: p.y0 + 0.12, w: 0.28, h: 0.25, fill: { color: HEX.honey }, line: { color: HEX.honey }, objectName: "m1-avatar" });
+  T(s, "Total portfolio value", p.x0, p.y0 + 0.6, p.w, 0.2, { fontSize: 7, color: HEX.grey }, "m1-l1");
+  T(s, "$152,480", p.x0, p.y0 + 0.8, p.w, 0.38, { fontSize: 20, bold: true }, "m1-val");
+  T(s, "Income received this year  $3,018", p.x0, p.y0 + 1.18, p.w, 0.2, { fontSize: 7, color: HEX.teal, bold: true }, "m1-inc");
+  const mix = [[0.56, HEX.honey], [0.25, HEX.navy], [0.19, HEX.teal]];
+  let cx = p.x0;
+  mix.forEach(([f, c], k) => { s.addShape(pres.shapes.RECTANGLE, { x: cx, y: p.y0 + 1.45, w: p.w * f, h: 0.1, fill: { color: c }, line: { color: c }, objectName: "m1-mix" + k }); cx += p.w * f; });
+  T(s, "Property 56%  ·  Private credit 25%  ·  PE 19%", p.x0, p.y0 + 1.57, p.w, 0.18, { fontSize: 6, color: HEX.grey }, "m1-mixl");
+  T(s, "My holdings", p.x0, p.y0 + 1.82, p.w, 0.22, { fontSize: 8.5, bold: true }, "m1-hh");
+  const hold = [["Northern Logistics Hub", "Property token · Debt-Free", "$51,200", HEX.honey], ["Brisbane Medical Centre", "Property trust units", "$34,890", HEX.honey],
+    ["B-Credit Income Fund", "Private credit · 9.5% target", "$38,040", HEX.navy], ["HealthTech Pre-IPO Trust", "Private equity", "$28,350", HEX.teal]];
+  hold.forEach(([n1, n2, v, c], k) => {
+    const y = p.y0 + 2.08 + k * 0.43;
+    s.addShape(pres.shapes.HEXAGON, { x: p.x0, y: y + 0.06, w: 0.26, h: 0.23, fill: { color: c }, line: { color: c }, objectName: "m1-h" + k + "i" });
+    T(s, n1, p.x0 + 0.33, y, 1.3, 0.2, { fontSize: 7, bold: true }, "m1-h" + k + "a");
+    T(s, n2, p.x0 + 0.33, y + 0.18, 1.3, 0.18, { fontSize: 6, color: HEX.grey }, "m1-h" + k + "b");
+    T(s, v, p.x0 + 1.5, y + 0.02, p.w - 1.5, 0.3, { fontSize: 7.5, bold: true, align: "right" }, "m1-h" + k + "v");
+  });
+  nav(0, 0, "m1");
+  caption(0, "Wallet.", "Every holding, income payment and tax statement in one place.", "c1");
+
+  // Screen 2 - offer
+  p = phone(1, "m2");
+  T(s, "‹  Offers", p.x0, p.y0 + 0.08, 1.5, 0.34, { fontSize: 10, bold: true, color: HEX.white }, "m2-back");
+  s.addShape(pres.shapes.RECTANGLE, { x: PX[1] + 0.1, y: p.y0 + 0.5, w: PW - 0.2, h: 0.75, fill: { color: HEX.pale }, line: { color: HEX.pale }, objectName: "m2-img" });
+  [[0.25, 0.35, 0.5], [0.8, 0.2, 0.65], [1.5, 0.3, 0.45]].forEach(([dx, dy, bw], k) => s.addShape(pres.shapes.RECTANGLE, { x: PX[1] + 0.1 + dx, y: p.y0 + 0.5 + dy, w: bw, h: 0.75 - dy, fill: { color: k === 1 ? HEX.honey : "E9C46A" }, line: { color: "D9B45A" }, objectName: "m2-bld" + k }));
+  T(s, "Brisbane Medical Centre Trust", p.x0, p.y0 + 1.3, p.w, 0.24, { fontSize: 9, bold: true }, "m2-t");
+  T(s, "Property · Debt-Free series · Wholesale", p.x0, p.y0 + 1.52, p.w, 0.18, { fontSize: 6.5, color: HEX.grey }, "m2-tag");
+  const kv = [["Target net return", pct(ir.net[1], 1) + " p.a."], ["Gross rent", "7.0% p.a."], ["Minimum", "$10,000"], ["Raising", "$10m"]];
+  kv.forEach(([k1, v], k) => {
+    const x = p.x0 + (k % 2) * (p.w / 2), y = p.y0 + 1.76 + Math.floor(k / 2) * 0.42;
+    T(s, k1, x, y, p.w / 2, 0.16, { fontSize: 6, color: HEX.grey }, "m2-k" + k);
+    T(s, v, x, y + 0.15, p.w / 2, 0.22, { fontSize: 9, bold: true, color: k === 0 ? HEX.teal : HEX.ink }, "m2-v" + k);
+  });
+  s.addShape(pres.shapes.RECTANGLE, { x: p.x0, y: p.y0 + 2.62, w: p.w, h: 0.06, fill: { color: "E3E5EA" }, line: { color: "E3E5EA" }, objectName: "m2-pb" });
+  s.addShape(pres.shapes.RECTANGLE, { x: p.x0, y: p.y0 + 2.62, w: p.w * 0.62, h: 0.06, fill: { color: HEX.teal }, line: { color: HEX.teal }, objectName: "m2-pf" });
+  T(s, "62% filled · closes in 12 days", p.x0, p.y0 + 2.7, p.w, 0.16, { fontSize: 6, color: HEX.grey }, "m2-pt");
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: p.x0, y: p.y0 + 2.92, w: p.w, h: 0.5, rectRadius: 0.05, fill: { color: HEX.mist }, line: { color: HEX.mist }, objectName: "m2-fee" });
+  T(s, [{ text: "B-SURE  fees on $50,000", options: { bold: true, breakLine: true } }, { text: `Up-front ${money(upF)}  ·  Ongoing ${money(onF)} a year` }], p.x0 + 0.06, p.y0 + 2.94, p.w - 0.1, 0.46, { fontSize: 6.5 }, "m2-feet");
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: p.x0, y: p.y0 + 3.48, w: p.w, h: 0.3, rectRadius: 0.08, fill: { color: HEX.honey }, line: { color: HEX.honey }, objectName: "m2-btn" });
+  T(s, "B-Smart: Invest", p.x0, p.y0 + 3.48, p.w, 0.3, { fontSize: 8.5, bold: true, align: "center" }, "m2-btnt");
+  nav(1, 1, "m2");
+  caption(1, "Offer.", "AI-sourced, committee-approved deal with every fee shown in dollars before you invest. Capital at risk.", "c2");
+
+  // Screen 3 - market
+  p = phone(2, "m3");
+  T(s, "Market", p.x0, p.y0 + 0.08, 1.2, 0.34, { fontSize: 10, bold: true, color: HEX.white }, "m3-h");
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: p.x0, y: p.y0 + 0.58, w: p.w, h: 0.28, rectRadius: 0.08, fill: { color: HEX.mist }, line: { color: HEX.mist }, objectName: "m3-tab" });
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: p.x0 + p.w / 2, y: p.y0 + 0.58, w: p.w / 2, h: 0.28, rectRadius: 0.08, fill: { color: HEX.navy }, line: { color: HEX.navy }, objectName: "m3-tabon" });
+  T(s, "Buy", p.x0, p.y0 + 0.58, p.w / 2, 0.28, { fontSize: 7.5, align: "center", color: HEX.grey }, "m3-buy");
+  T(s, "Sell", p.x0 + p.w / 2, p.y0 + 0.58, p.w / 2, 0.28, { fontSize: 7.5, align: "center", bold: true, color: HEX.white }, "m3-sell");
+  T(s, "Northern Logistics Hub", p.x0, p.y0 + 0.95, p.w, 0.22, { fontSize: 9, bold: true }, "m3-n");
+  T(s, "50,000 units  ·  valued $51,200", p.x0, p.y0 + 1.15, p.w, 0.18, { fontSize: 6.5, color: HEX.grey }, "m3-u");
+  const ob = [["Best bid", "$1.018"], ["Best offer", "$1.026"], ["Last trade", "$1.022"]];
+  ob.forEach(([a, b], k) => {
+    const x = p.x0 + k * p.w / 3;
+    T(s, a, x, p.y0 + 1.4, p.w / 3, 0.16, { fontSize: 6, color: HEX.grey, align: "center" }, "m3-oa" + k);
+    T(s, b, x, p.y0 + 1.55, p.w / 3, 0.22, { fontSize: 9, bold: true, align: "center", color: k === 0 ? HEX.teal : HEX.ink }, "m3-ob" + k);
+  });
+  const opts = [["Sell on the market", `To other verified investors · ${pct(exFee, 2)} fee`, HEX.navy, true], ["Request a buy-back", "Exit bridge until the market opens · capped", HEX.grey, false]];
+  opts.forEach(([a, b, c, on], k) => {
+    const y = p.y0 + 1.92 + k * 0.6;
+    s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: p.x0, y, w: p.w, h: 0.5, rectRadius: 0.05, fill: { color: on ? "E8EEF5" : HEX.white }, line: { color: c, width: on ? 1.25 : 0.75 }, objectName: "m3-o" + k });
+    T(s, a, p.x0 + 0.08, y + 0.04, p.w - 0.15, 0.2, { fontSize: 7.5, bold: true }, "m3-o" + k + "a");
+    T(s, b, p.x0 + 0.08, y + 0.24, p.w - 0.15, 0.2, { fontSize: 6, color: HEX.grey }, "m3-o" + k + "b");
+  });
+  T(s, "Quantity  50,000    Price  $1.024", p.x0, p.y0 + 3.15, p.w, 0.2, { fontSize: 7 }, "m3-q");
+  s.addShape(pres.shapes.ROUNDED_RECTANGLE, { x: p.x0, y: p.y0 + 3.48, w: p.w, h: 0.3, rectRadius: 0.08, fill: { color: HEX.navy }, line: { color: HEX.navy }, objectName: "m3-btn" });
+  T(s, "Place sell order", p.x0, p.y0 + 3.48, p.w, 0.3, { fontSize: 8.5, bold: true, align: "center", color: HEX.white }, "m3-btnt");
+  nav(2, 2, "m3");
+  caption(2, "Exit.", `Buy-back bridge from month ${D.inputs["Property-token buy-back available from operating month"] + D.inputs["Controlled wholesale launch (first subscriptions)"] - 1}; secondary market from month ${D.inputs["BHive secondary market activation"]}.`, "c3");
+}
+
 // 6 HONEY POT ENGINE
 s = content("Business model", "Honey Pot turns brokers into a scalable, supervised sales channel",
   `${pct(D.inputs["Share of capital sourced via brokers"])} of capital is modelled through brokers, who receive ${pct(D.inputs["Broker share of placement fee (commission)"])} of the placement fee on cleared subscriptions`);
