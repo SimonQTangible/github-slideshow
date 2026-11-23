@@ -1182,7 +1182,7 @@ for lab, crow, mon in [("Seed investors", c0 + 2, "SeedMonth"), ("Series A inves
     put(fr, f"E{r}", f"=IF(B{r}=0,0,D{r}/B{r})", f_bold, "mult")
     put(fr, f"F{r}", f"=IF(E{r}<=0,0,E{r}^(12/(60-{mon}+1))-1)", f_base, "pct")
     r += 1
-put(fr, f"A{r+1}", "Illustrative only. Exit value depends on achieving forecasts, market multiples and dilution from later rounds. The 12% ESOP pool is included in the cap table.", f_sub)
+put(fr, f"A{r+1}", "Illustrative only. Exit value depends on achieving forecasts, market multiples and dilution from later rounds. The group executive share pool is included in the cap table; the Honey Pot and BHive key-people stakes are deducted above.", f_sub)
 
 # =====================================================================================
 # INVESTOR RETURNS (product-level net return to investors after all group fees)

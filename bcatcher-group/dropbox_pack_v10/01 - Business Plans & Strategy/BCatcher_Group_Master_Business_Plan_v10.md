@@ -108,7 +108,7 @@ Full line-by-line register: folder 03, `Setup_Cost_Register_v10.csv`.
 
 The loan facility is venture debt or a working-capital line at 12% p.a. plus a 2% fee. It is interest-only until month 37 (Jan 2030), then repaid over 24 months from operating cash flow, and fully repaid by Dec 2031. Total interest and fees: $1,260,000. Replacing Series B with debt keeps the founders well above 51% and frees room for the key-people share plan. Ask the lender for a **$2m accordion** (extra limit on request) to absorb small shocks; a 6-month licensing or broker delay, or the Downside, would still need the board pivot gate and new money.
 
-Founders and legacy B-Catcher/BHive holders retain 53.9% after Seed and Series A and a 7.0% group executive share pool (8% after Seed) (OK - founders 53.9%; floor 51%). Senior brokers and platform leaders receive non-voting shares in Honey Pot and BHive instead (see *04 - Organisation & Headcount / Key_People_Share_Plan_v1.md*). Lowest month-end cash with this plan: $1,213,305 (buffer $750k).
+Founders and legacy B-Catcher/BHive holders retain 53.9% after Seed and Series A and a 7.0% group executive share pool (8% after Seed) (OK - founders 53.9%; floor 51%). Senior brokers and platform leaders receive non-voting shares in Honey Pot and BHive instead (see *04 - Organisation & Headcount / Key_People_Share_Plan_v2.md*). Lowest month-end cash with this plan: $1,213,305 (buffer $750k).
 
 ## 8. Scenarios
 | Case | Revenue 2031 | EBITDA 2031 | Peak funding | Extra equity needed | EBITDA positive |
