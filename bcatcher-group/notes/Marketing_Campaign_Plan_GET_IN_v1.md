@@ -165,7 +165,7 @@ The model budget is a lean launch. To build a category-leading brand, I recommen
 |---|---|---|---|
 | Base (in model) | about $0.37m | about $0.38m | - |
 | Accelerate: hero film production | $120k | - | Seed closed |
-| Accelerate: paid media boost (LinkedIn, YouTube, podcasts) | $150k | $300k | Cost per verified investor < $400 |
+| Accelerate: paid media boost (LinkedIn, YouTube, podcasts) | $150k | $300k | Cost per verified investor ≤ $600 |
 | Accelerate: PR agency retainer | $60k | $72k | Launch month |
 | Accelerate: events (founders' dinners, Hive nights) | $40k | $80k | First 3 offers placed |
 | **Accelerate total** | **$370k** | **$452k** | Gated |
