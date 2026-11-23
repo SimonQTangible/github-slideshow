@@ -932,7 +932,7 @@ for e in ENTITIES:
 an_sec("CASH & FUNDING")
 an_row("ocf", "Operating cash flow", "Cash Flow", FR["ocf"])
 an_row("capex", "Capital expenditure", "Cash Flow", FR["capex"])
-an_row("eq", "Equity raised (net)", "Cash Flow", FR["fcf"])
+an_row("eq", "Financing cash flow (equity + loan facility, net)", "Cash Flow", FR["fcf"])
 an_row("cash", "Closing cash - year end", "Cash Flow", FR["close"], "stock", bold=True)
 an_sec("PEOPLE")
 for e in ENTITIES + ["Group"]:
